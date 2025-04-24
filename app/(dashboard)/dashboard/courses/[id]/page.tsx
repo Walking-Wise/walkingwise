@@ -17,8 +17,3 @@ export default function CoursePlayerPage() {
     </div>
   );
 }
-
-
-
-
-// 06f21d28-dc2b-448f-900a-f187ebafcec4.JbsfnBY5xCzrNPBiewZIHmek5YsL0pbxU0jeedSaRco4lp

@@ -174,9 +174,8 @@ export async function getAllSpeakerNotes() {
   });
 }
 
-// lib/db/queries.ts
 export async function getCurrentUserWithOnboardingStatus() {
-  const user = await getUser(); // your existing session-based lookup
+  const user = await getUser();
   if (!user) return null;
 
   return { id: user.id, completedOnboarding: user.completedOnboarding };

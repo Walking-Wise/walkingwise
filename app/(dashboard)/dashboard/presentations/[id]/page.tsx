@@ -1,17 +1,28 @@
 import { notFound } from "next/navigation";
-import { getClassroomPresentationById } from "@/lib/db/queries";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 
 const guideUrl =
   "https://walking-wise-assets.s3.amazonaws.com/wp-content/uploads/20250305211440/Walking_Wise_Education_Guide-Child_Sex_Trafficking-3-5-2025.pdf";
 
-export default async function PresentationPage({ params }: { params: any }) {
-  const { id } = await params;
-  const presentationId = Number(id);
+async function fetchPresentation(id: string) {
+  const res = await fetch(
+    `${process.env.NEXT_PUBLIC_BASE_URL}/api/presentations/${id}`,
+    {
+      cache: "no-store",
+    }
+  );
 
-  if (isNaN(presentationId)) notFound();
-  const presentation = await getClassroomPresentationById(presentationId);
+  if (!res.ok) return null;
+  return res.json();
+}
+
+export default async function PresentationPage({
+  params,
+}: {
+  params: { id: string };
+}) {
+  const presentation = await fetchPresentation(params.id);
   if (!presentation) notFound();
 
   return (
@@ -101,7 +112,7 @@ export default async function PresentationPage({ params }: { params: any }) {
                         </a>
                       </li>
                     )}
-                    {presentation.handouts?.map((handout) => (
+                    {presentation.handouts?.map((handout: any) => (
                       <li key={handout.id}>
                         <a
                           href={handout.fileUrl}

@@ -1,9 +1,16 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import Link from "next/link";
-import { getClassroomPresentations } from "@/lib/db/queries";
+
+async function getPresentations() {
+  const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/presentations`, {
+    cache: 'no-store',
+  });
+  if (!res.ok) throw new Error('Failed to fetch presentations');
+  return res.json();
+}
 
 export default async function PresentationsPage() {
-  const presentations = await getClassroomPresentations();
+  const presentations = await getPresentations();
 
   return (
     <section className="flex-1 p-4 lg:p-8">
@@ -17,7 +24,7 @@ export default async function PresentationsPage() {
       </p>
 
       <div className="grid gap-6 md:grid-cols-2">
-        {presentations.map((presentation) => (
+        {presentations.map((presentation: any) => (
           <Link
             key={presentation.id}
             href={`/dashboard/presentations/${presentation.id}`}
