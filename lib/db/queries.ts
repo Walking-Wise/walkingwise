@@ -1,11 +1,21 @@
-import { desc, and, eq, isNull } from 'drizzle-orm';
-import { db } from './drizzle';
-import { activityLogs, teamMembers, teams, users } from './schema';
-import { cookies } from 'next/headers';
-import { verifyToken } from '@/lib/auth/session';
+import { desc, and, eq, isNull } from "drizzle-orm";
+import { db } from "./drizzle";
+import {
+  activityLogs,
+  teamMembers,
+  teams,
+  users,
+  classroomPresentations,
+  videos,
+  speakerNotes,
+  classroomPowerpoints,
+  handouts,
+} from "./schema";
+import { cookies } from "next/headers";
+import { verifyToken } from "@/lib/auth/session";
 
 export async function getUser() {
-  const sessionCookie = (await cookies()).get('session');
+  const sessionCookie = (await cookies()).get("session");
   if (!sessionCookie || !sessionCookie.value) {
     return null;
   }
@@ -14,7 +24,7 @@ export async function getUser() {
   if (
     !sessionData ||
     !sessionData.user ||
-    typeof sessionData.user.id !== 'number'
+    typeof sessionData.user.id !== "number"
   ) {
     return null;
   }
@@ -81,7 +91,7 @@ export async function getUserWithTeam(userId: number) {
 export async function getActivityLogs() {
   const user = await getUser();
   if (!user) {
-    throw new Error('User not authenticated');
+    throw new Error("User not authenticated");
   }
 
   return await db
@@ -126,4 +136,48 @@ export async function getTeamForUser(userId: number) {
   });
 
   return result?.teamMembers[0]?.team || null;
+}
+
+export async function getClassroomPresentations() {
+  return await db.query.classroomPresentations.findMany({
+    orderBy: (presentations, { desc }) => [desc(presentations.createdAt)],
+  });
+}
+
+export async function getClassroomPresentationById(id: number) {
+  return await db.query.classroomPresentations.findFirst({
+    where: eq(classroomPresentations.id, id),
+    with: {
+      video: true,
+      speakerNotes: true,
+      powerpoint: true,
+      handouts: true,
+    },
+  });
+}
+
+export async function getAllVideos() {
+  return await db.query.videos.findMany({
+    orderBy: (videos, { desc }) => [desc(videos.createdAt)],
+  });
+}
+
+export async function getAllPowerpoints() {
+  return await db.query.classroomPowerpoints.findMany({
+    orderBy: (powerpoints, { desc }) => [desc(powerpoints.createdAt)],
+  });
+}
+
+export async function getAllSpeakerNotes() {
+  return await db.query.speakerNotes.findMany({
+    orderBy: (notes, { desc }) => [desc(notes.createdAt)],
+  });
+}
+
+// lib/db/queries.ts
+export async function getCurrentUserWithOnboardingStatus() {
+  const user = await getUser(); // your existing session-based lookup
+  if (!user) return null;
+
+  return { id: user.id, completedOnboarding: user.completedOnboarding };
 }
