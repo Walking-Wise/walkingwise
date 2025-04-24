@@ -2,6 +2,11 @@ import { notFound } from "next/navigation";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 
+interface PresentationPageProps {
+  params: any;
+  searchParams: Promise<{ sortOrder: string }>;
+}
+
 const guideUrl =
   "https://walking-wise-assets.s3.amazonaws.com/wp-content/uploads/20250305211440/Walking_Wise_Education_Guide-Child_Sex_Trafficking-3-5-2025.pdf";
 
@@ -19,9 +24,7 @@ async function fetchPresentation(id: string) {
 
 export default async function PresentationPage({
   params,
-}: {
-  params: { id: string };
-}) {
+}: PresentationPageProps) {
   const presentation = await fetchPresentation(params.id);
   if (!presentation) notFound();
 

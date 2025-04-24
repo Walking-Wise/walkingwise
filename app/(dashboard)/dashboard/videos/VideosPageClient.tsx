@@ -13,7 +13,7 @@ export default function VideosPage({ videos }: { videos: Video[] }) {
   const [activeVideo, setActiveVideo] = useState<Video | null>(null);
 
   useEffect(() => {
-    const idParam = searchParams.get("id");
+    const idParam = searchParams?.get("id") || "";
     if (idParam) {
       const match = videos.find((v) => String(v.id) === idParam);
       if (match) setActiveVideo(match);
@@ -22,7 +22,7 @@ export default function VideosPage({ videos }: { videos: Video[] }) {
 
   const closeModal = () => {
     setActiveVideo(null);
-    const params = new URLSearchParams(searchParams.toString());
+    const params = new URLSearchParams(searchParams?.toString() || "");
     params.delete("id");
     router.replace(`/dashboard/videos?${params.toString()}`, { scroll: false });
   };
