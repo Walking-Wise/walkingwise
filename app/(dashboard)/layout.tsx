@@ -89,23 +89,23 @@ function Header() {
 
   const user = use(userPromise);
 
-  if (user) {
-    return (
-      <header className="border-b border-gray-200">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between relative">
-          <Link href="/" className="flex items-center">
-            <Image
-              src={`https://www.walkingwise.com/wp-content/uploads/WW_LogoDevelopment_B0628-768x358.png`}
-              alt="Walking Wise logo"
-              width={500}
-              height={500}
-              className="h-15 w-auto object-contain"
-            />
-          </Link>
-        </div>
-      </header>
-    );
-  }
+  // if (user) {
+  //   return (
+  //     <header className="border-b border-gray-200">
+  //       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between relative">
+  //         <Link href="/" className="flex items-center">
+  //           <Image
+  //             src={`https://www.walkingwise.com/wp-content/uploads/WW_LogoDevelopment_B0628-768x358.png`}
+  //             alt="Walking Wise logo"
+  //             width={500}
+  //             height={500}
+  //             className="h-15 w-auto object-contain"
+  //           />
+  //         </Link>
+  //       </div>
+  //     </header>
+  //   );
+  // }
 
   return (
     <header className="border-b border-gray-200">
