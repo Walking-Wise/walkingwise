@@ -8,11 +8,11 @@ import {
   Users,
   Settings,
   Shield,
-  Activity,
   Menu,
   ChevronDown,
   ChevronRight,
   Rocket,
+  Home,
 } from "lucide-react";
 import { useUser } from "@/lib/auth";
 
@@ -108,6 +108,16 @@ export default function DashboardLayout({
           }`}
         >
           <nav className="h-full overflow-y-auto p-4 space-y-4">
+            <Link href={"/dashboard"} passHref>
+              <Button
+                variant={pathname === "/dashboard" ? "secondary" : "ghost"}
+                className="cursor-pointer w-full mb-4 justify-start items-center"
+                onClick={() => setIsSidebarOpen(false)}
+              >
+                <Home className="h-4 w-4 mr-2" />
+                {"Home"}
+              </Button>
+            </Link>
             {!user?.completedOnboarding && (
               <div>
                 <h3 className="text-xs font-semibold text-gray-500 px-2 mb-2 uppercase tracking-wide">
