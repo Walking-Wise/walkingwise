@@ -111,7 +111,7 @@ function Header() {
     <header className="border-b border-gray-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between relative">
         <div className="flex items-center">
-          <Link href="/" className="flex items-center">
+          <Link href={!user ? "/" : "/dashboard"} className="flex items-center">
             <Image
               src={`https://www.walkingwise.com/wp-content/uploads/WW_LogoDevelopment_B0628-768x358.png`}
               alt="Walking Wise logo"
@@ -120,69 +120,73 @@ function Header() {
               className="h-20 mr-10 w-auto object-contain"
             />
           </Link>
-          <div className="hidden md:flex justify-center">
-            <nav className="flex items-center space-x-6 py-2">
-              <DropdownMenu>
-                <DropdownMenuTrigger
-                  className={`cursor-pointer text-2xl font-medium text-gray-700 hover:text-gray-900 ${bebasNeue.className}`}
-                >
-                  Our Education
-                </DropdownMenuTrigger>
-                <DropdownMenuContent className="flex flex-col gap-1">
-                  <DropdownMenuItem>
-                    <Link href="/resources/handouts" className="w-full">
-                      Online Course for Adults
-                    </Link>
-                  </DropdownMenuItem>
-                  <DropdownMenuItem>
-                    <Link href="/resources/videos" className="w-full">
-                      Curriculum for Youth
-                    </Link>
-                  </DropdownMenuItem>
-                  <DropdownMenuItem>
-                    <Link href="/resources/guides" className="w-full">
-                      Animated Video Series
-                    </Link>
-                  </DropdownMenuItem>
-                </DropdownMenuContent>
-              </DropdownMenu>
+          {!user && (
+            <div className="hidden md:flex justify-center">
+              <nav className="flex items-center space-x-6 py-2">
+                <DropdownMenu>
+                  <DropdownMenuTrigger
+                    className={`cursor-pointer text-2xl font-medium text-gray-700 hover:text-gray-900 ${bebasNeue.className}`}
+                  >
+                    Our Education
+                  </DropdownMenuTrigger>
+                  <DropdownMenuContent className="flex flex-col gap-1">
+                    <DropdownMenuItem>
+                      <Link href="/resources/handouts" className="w-full">
+                        Online Course for Adults
+                      </Link>
+                    </DropdownMenuItem>
+                    <DropdownMenuItem>
+                      <Link href="/resources/videos" className="w-full">
+                        Curriculum for Youth
+                      </Link>
+                    </DropdownMenuItem>
+                    <DropdownMenuItem>
+                      <Link href="/resources/guides" className="w-full">
+                        Animated Video Series
+                      </Link>
+                    </DropdownMenuItem>
+                  </DropdownMenuContent>
+                </DropdownMenu>
 
-              <Link
-                href="/about"
-                className={`text-2xl font-medium text-gray-700 hover:text-gray-900 ${bebasNeue.className}`}
-              >
-                About
-              </Link>
-              <Link
-                href="/blog"
-                className={`text-2xl font-medium text-gray-700 hover:text-gray-900 ${bebasNeue.className}`}
-              >
-                Blog
-              </Link>
-              <Link
-                href="/contact"
-                className={`text-2xl font-medium text-gray-700 hover:text-gray-900 ${bebasNeue.className}`}
-              >
-                Contact
-              </Link>
-            </nav>
-          </div>
+                <Link
+                  href="/about"
+                  className={`text-2xl font-medium text-gray-700 hover:text-gray-900 ${bebasNeue.className}`}
+                >
+                  About
+                </Link>
+                <Link
+                  href="/blog"
+                  className={`text-2xl font-medium text-gray-700 hover:text-gray-900 ${bebasNeue.className}`}
+                >
+                  Blog
+                </Link>
+                <Link
+                  href="/contact"
+                  className={`text-2xl font-medium text-gray-700 hover:text-gray-900 ${bebasNeue.className}`}
+                >
+                  Contact
+                </Link>
+              </nav>
+            </div>
+          )}
         </div>
 
-        {/* Right: Desktop only - Book a Demo + UserMenu */}
         <div className="hidden md:flex items-center space-x-4">
-          <Button variant="outline" size="sm" asChild>
-            <Link href="/book-demo">Book a demo</Link>
-          </Button>
+          {!user && (
+            <Button variant="outline" size="sm" asChild>
+              <Link href="/book-demo">Book a demo</Link>
+            </Button>
+          )}
           <Suspense fallback={<div className="h-9" />}>
             <UserMenu />
           </Suspense>
         </div>
 
-        {/* Hamburger menu - Mobile only */}
-        <button className="md:hidden" onClick={() => setMenuOpen(!menuOpen)}>
-          {menuOpen ? <X size={24} /> : <Menu size={24} />}
-        </button>
+        {!user && (
+          <button className="md:hidden" onClick={() => setMenuOpen(!menuOpen)}>
+            {menuOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
+        )}
       </div>
 
       {/* Mobile menu dropdown */}
