@@ -108,7 +108,6 @@ const signUpSchema = z.object({
 
 export const signUp = validatedAction(signUpSchema, async (data, formData) => {
   const { email, password, inviteId } = data;
-  console.log(data);
 
   const existingUser = await db
     .select()
@@ -176,6 +175,7 @@ export const signUp = validatedAction(signUpSchema, async (data, formData) => {
         .from(teams)
         .where(eq(teams.id, teamId))
         .limit(1);
+
     } else {
       return { error: "Invalid or expired invitation.", email, password };
     }

@@ -15,6 +15,7 @@ import {
   Home,
 } from "lucide-react";
 import { useUser } from "@/lib/auth";
+import { Plans } from "@/lib/plans";
 
 export default function DashboardLayout({
   children,
@@ -24,30 +25,55 @@ export default function DashboardLayout({
   const pathname = usePathname();
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const [isSettingsOpen, setIsSettingsOpen] = useState(false);
-  const { userPromise } = useUser();
+  const { userPromise, teamPromise } = useUser();
   const user = use(userPromise);
+  const team = use(teamPromise);
 
-  const navItems = [
-    {
-      href: "/dashboard/guides",
-      icon: Rocket,
-      label: "Implementation",
-      highlight: true,
-    },
-    {
-      href: "/dashboard/presentations",
-      icon: Users,
-      label: "Classroom Presentations",
-    },
-    { href: "/dashboard/videos", icon: Users, label: "Video Library" },
-    { href: "/dashboard/courses", icon: Users, label: "Online Course" },
-  ];
+  // if user has a online course plan, show course tab
+  // if user is on individual or professional, hide team tab
 
-  const settingsItems = [
-    { href: "/dashboard/team-settings", icon: Users, label: "Team" },
-    { href: "/dashboard/general", icon: Settings, label: "General" },
-    { href: "/dashboard/security", icon: Shield, label: "Security" },
-  ];
+  console.log(team)
+
+  function getNavItems(plan: Plans) {
+    const baseNavItems = [
+      {
+        href: "/dashboard/guides",
+        icon: Rocket,
+        label: "Implementation",
+        highlight: true,
+      },
+      {
+        href: "/dashboard/presentations",
+        icon: Users,
+        label: "Classroom Presentations",
+      },
+      { href: "/dashboard/videos", icon: Users, label: "Video Library" },
+    ];
+    const baseSettingsItems = [
+      { href: "/dashboard/general", icon: Settings, label: "General" },
+      { href: "/dashboard/security", icon: Shield, label: "Security" },
+    ];
+    const extraItems = [];
+    const extraSettingsItems = [];
+    if (plan === Plans.Plus) {
+      extraItems.push({
+        href: "/dashboard/courses",
+        icon: Users,
+        label: "Online Course",
+      });
+      extraSettingsItems.push({
+        href: "/dashboard/team-settings",
+        icon: Users,
+        label: "Team",
+      });
+    }
+    const navItems = [...baseNavItems, ...extraItems];
+    const settingsItems = [...baseSettingsItems, ...extraSettingsItems];
+
+    return { navItems, settingsItems };
+  }
+
+  const { navItems, settingsItems } = getNavItems(team?.planName as Plans);
 
   function renderImplementationTab() {
     return (

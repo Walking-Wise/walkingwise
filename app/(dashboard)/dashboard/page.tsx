@@ -7,7 +7,6 @@ import Link from "next/link";
 
 export default async function HomePage() {
   const user = await getUser();
-  console.log(user)
 
   if (!user) {
     redirect("/sign-in");
@@ -21,7 +20,6 @@ export default async function HomePage() {
 
   return (
     <section className="space-y-6 p-4 lg:p-8 max-w-7xl mx-auto">
-      {/* Welcome / Getting Started */}
       <Card>
         <CardHeader>
           <CardTitle>👋 Welcome to Your Dashboard</CardTitle>

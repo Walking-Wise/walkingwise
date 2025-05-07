@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { getUser } from "@/lib/db/queries";
 
 const courses = [
   {
@@ -9,7 +10,8 @@ const courses = [
     description: "Learn the basics of something cool.",
     lessons: [],
     students: [],
-    courseImage: "https://walking-wise-assets.s3.amazonaws.com/wp-content/uploads/20241217202646/eLearning-The-Groomers-1.jpg", // Dummy image
+    courseImage:
+      "https://walking-wise-assets.s3.amazonaws.com/wp-content/uploads/20241217202646/eLearning-The-Groomers-1.jpg", // Dummy image
   },
   {
     id: "course-2",
@@ -17,7 +19,8 @@ const courses = [
     description: "Dive deeper into intermediate topics.",
     lessons: [],
     students: [],
-    courseImage: "https://walking-wise-assets.s3.amazonaws.com/wp-content/uploads/20241217202651/eLearning-The-Vulnerable-1.jpg",
+    courseImage:
+      "https://walking-wise-assets.s3.amazonaws.com/wp-content/uploads/20241217202651/eLearning-The-Vulnerable-1.jpg",
   },
   {
     id: "course-3",
@@ -25,11 +28,16 @@ const courses = [
     description: "Master advanced concepts with hands-on examples.",
     lessons: [],
     students: [],
-    courseImage: "https://walking-wise-assets.s3.amazonaws.com/wp-content/uploads/20241217201346/eLearning-The-Predators-1.jpg",
+    courseImage:
+      "https://walking-wise-assets.s3.amazonaws.com/wp-content/uploads/20241217201346/eLearning-The-Predators-1.jpg",
   },
 ];
 
-export default function CoursesPage() {
+export default async function CoursesPage() {
+  const user = await getUser();
+
+  console.log(user)
+
   return (
     <section className="flex-1 p-4 lg:p-8">
       <h1 className="text-lg lg:text-2xl font-medium text-gray-900 mb-6">
@@ -50,7 +58,9 @@ export default function CoursesPage() {
               </CardHeader>
               <CardContent className="pt-0 px-4 pb-4">
                 <CardTitle className="mb-2">{course.name}</CardTitle>
-                <p className="text-sm text-gray-600 line-clamp-1">{course.description}</p>
+                <p className="text-sm text-gray-600 line-clamp-1">
+                  {course.description}
+                </p>
               </CardContent>
             </Card>
           </Link>
