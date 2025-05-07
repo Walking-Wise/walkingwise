@@ -128,7 +128,15 @@ export const signUp = validatedAction(signUpSchema, async (data, formData) => {
   const newUser: NewUser = {
     email,
     passwordHash,
-    role: "owner", // Default role, will be overridden if there's an invitation
+    role: "owner",
+    companyName: "",
+    taxId: "",
+    jobTitle: "",
+    phone: "",
+    street: "",
+    city: "",
+    state: "",
+    zipCode: "",
   };
 
   const [createdUser] = await db.insert(users).values(newUser).returning();
@@ -175,7 +183,6 @@ export const signUp = validatedAction(signUpSchema, async (data, formData) => {
         .from(teams)
         .where(eq(teams.id, teamId))
         .limit(1);
-
     } else {
       return { error: "Invalid or expired invitation.", email, password };
     }
@@ -325,16 +332,60 @@ export const deleteAccount = validatedActionWithUser(
 const updateAccountSchema = z.object({
   name: z.string().min(1, "Name is required").max(100),
   email: z.string().email("Invalid email address"),
+  company_name: z.string().min(1, "Company/School Name is required").max(150),
+  school_district: z.string().max(150),
+  tax_id: z.string().min(1, "Tax ID is required").max(100),
+  department: z.string().max(100),
+  job_title: z.string().min(1, "Job Title is required").max(100),
+  phone: z.string().min(1, "Phone is required").max(20),
+  website: z.string().url("Invalid website URL"),
+  street: z.string().min(1, "Street is required").max(255),
+  city: z.string().min(1, "City is required").max(100),
+  state: z.string().min(1, "State is required").max(100),
+  zip_code: z.string().min(1, "Zip Code is required").max(20),
 });
 
 export const updateAccount = validatedActionWithUser(
   updateAccountSchema,
   async (data, _, user) => {
-    const { name, email } = data;
+
+    const {
+      name,
+      email,
+      company_name,
+      school_district,
+      tax_id,
+      department,
+      job_title,
+      phone,
+      website,
+      street,
+      city,
+      state,
+      zip_code,
+    } = data;
+
     const userWithTeam = await getUserWithTeam(user.id);
 
     await Promise.all([
-      db.update(users).set({ name, email }).where(eq(users.id, user.id)),
+      db
+        .update(users)
+        .set({
+          name,
+          email,
+          companyName: company_name,
+          schoolDistrict: school_district,
+          taxId: tax_id,
+          department,
+          jobTitle: job_title,
+          phone,
+          website,
+          street,
+          city,
+          state,
+          zipCode: zip_code,
+        })
+        .where(eq(users.id, user.id)),
       logActivity(userWithTeam?.teamId, user.id, ActivityType.UPDATE_ACCOUNT),
     ]);
 
@@ -447,7 +498,6 @@ const markOnboardingCompleteSchema = z.object({});
 export const markOnboardingComplete = validatedActionWithUser(
   markOnboardingCompleteSchema,
   async (_data, _formData, user) => {
-    console.log(user);
     await db
       .update(users)
       .set({ completedOnboarding: true })

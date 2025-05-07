@@ -13,6 +13,7 @@ import {
   ChevronRight,
   Rocket,
   Home,
+  Currency,
 } from "lucide-react";
 import { useUser } from "@/lib/auth";
 import { Plans } from "@/lib/plans";
@@ -32,8 +33,6 @@ export default function DashboardLayout({
   // if user has a online course plan, show course tab
   // if user is on individual or professional, hide team tab
 
-  console.log(team)
-
   function getNavItems(plan: Plans) {
     const baseNavItems = [
       {
@@ -52,6 +51,11 @@ export default function DashboardLayout({
     const baseSettingsItems = [
       { href: "/dashboard/general", icon: Settings, label: "General" },
       { href: "/dashboard/security", icon: Shield, label: "Security" },
+      {
+        href: "/dashboard/subscription-settings",
+        icon: Currency,
+        label: "My Subscription",
+      },
     ];
     const extraItems = [];
     const extraSettingsItems = [];

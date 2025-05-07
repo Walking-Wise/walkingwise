@@ -20,25 +20,27 @@ export default async function HomePage() {
 
   return (
     <section className="space-y-6 p-4 lg:p-8 max-w-7xl mx-auto">
-      <Card>
-        <CardHeader>
-          <CardTitle>👋 Welcome to Your Dashboard</CardTitle>
-        </CardHeader>
-        <CardContent className="text-sm text-gray-700 space-y-3">
-          <p>
-            This platform is designed to help you confidently teach and prepare
-            students with trauma-informed, age-appropriate lessons on
-            trafficking prevention.
-          </p>
-          <p>
-            New here? Start with our implementation guide to set up your
-            classroom for success.
-          </p>
-          <Link href="/dashboard/guides">
-            <Button className="mt-1">View Implementation Guide</Button>
-          </Link>
-        </CardContent>
-      </Card>
+      {!user.completedOnboarding && (
+        <Card>
+          <CardHeader>
+            <CardTitle>👋 Welcome to Your Dashboard</CardTitle>
+          </CardHeader>
+          <CardContent className="text-sm text-gray-700 space-y-3">
+            <p>
+              This platform is designed to help you confidently teach and
+              prepare students with trauma-informed, age-appropriate lessons on
+              trafficking prevention.
+            </p>
+            <p>
+              New here? Start with our implementation guide to set up your
+              classroom for success.
+            </p>
+            <Link href="/dashboard/guides">
+              <Button className="mt-1">View Implementation Guide</Button>
+            </Link>
+          </CardContent>
+        </Card>
+      )}
 
       {/* Toolkit Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -91,7 +93,7 @@ export default async function HomePage() {
               lesson topic.
             </p>
             <Link href="/dashboard/courses">
-              <Button variant="outline">Take a Course</Button>
+              <Button variant="outline">Take the Course</Button>
             </Link>
           </CardContent>
         </Card>
