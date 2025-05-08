@@ -1,6 +1,13 @@
 "use client";
 
-import { startTransition, use, useActionState, useEffect } from "react";
+import {
+  startTransition,
+  use,
+  useActionState,
+  useEffect,
+  useState,
+} from "react";
+import { useRouter } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -8,7 +15,7 @@ import { Label } from "@/components/ui/label";
 import { Loader2 } from "lucide-react";
 import { useUser } from "@/lib/auth";
 import { updateAccount } from "@/app/(login)/actions";
-import { useRouter } from "next/navigation";
+import { ServiceAgreement } from "./serviceAgreement";
 
 type ActionState = {
   error?: string;
@@ -22,20 +29,34 @@ export default function OnboardingForm() {
     updateAccount,
     { error: "", success: "" }
   );
-  const router = useRouter()
+  const router = useRouter();
+
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  
+  const [hasAgreed, setHasAgreed] = useState(false);
+  const [scrolledToBottom, setScrolledToBottom] = useState(false);
 
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    // If you call the Server Action directly, it will automatically
-    // reset the form. We don't want that here, because we want to keep the
-    // client-side values in the inputs. So instead, we use an event handler
-    // which calls the action. You must wrap direct calls with startTransition.
-    // When you use the `action` prop it automatically handles that for you.
-    // Another option here is to persist the values to local storage. I might
-    // explore alternative options.
     startTransition(() => {
       formAction(new FormData(event.currentTarget));
     });
+  };
+
+  const handleScroll = (e: React.UIEvent<HTMLDivElement>) => {
+    const target = e.currentTarget;
+    if (target.scrollTop + target.clientHeight >= target.scrollHeight - 10) {
+      setScrolledToBottom(true);
+    }
+  };
+  const openModal = () => {
+    setIsModalOpen(true);
+    setScrolledToBottom(false); // reset scroll detection when re-opening
+  };
+
+  const handleAgree = () => {
+    setIsModalOpen(false);
+    setHasAgreed(true);
   };
 
   useEffect(() => {
@@ -219,6 +240,21 @@ export default function OnboardingForm() {
               </div>
             </div>
 
+            {/* Service Agreement Checkbox */}
+            <div className="flex items-start space-x-2">
+              <input
+                id="serviceAgreement"
+                type="checkbox"
+                checked={hasAgreed}
+                onChange={openModal}
+                className="mt-1 cursor-pointer"
+              />
+              <Label htmlFor="serviceAgreement" className="text-sm select-none">
+                I have read and accept the{" "}
+                <span className="underline">Service Agreement</span>.
+              </Label>
+            </div>
+
             {/* Feedback Messages */}
             {state.error && (
               <p className="text-red-500 text-sm">{state.error}</p>
@@ -227,11 +263,11 @@ export default function OnboardingForm() {
               <p className="text-green-500 text-sm">{state.success}</p>
             )}
 
-            {/* Save Button */}
+            {/* Submit Button */}
             <Button
               type="submit"
               className="bg-orange-500 hover:bg-orange-600 text-white"
-              disabled={isPending}
+              disabled={isPending || !hasAgreed}
             >
               {isPending ? (
                 <>
@@ -245,6 +281,29 @@ export default function OnboardingForm() {
           </form>
         </CardContent>
       </Card>
+
+      {/* Service Agreement Modal */}
+      {isModalOpen && (
+        <div className="fixed inset-0 flex items-center justify-center bg-black/50 z-50">
+          <div className="bg-white rounded-lg w-full max-w-2xl max-h-[80vh] overflow-hidden shadow-lg">
+            <div
+              className="p-6 overflow-y-auto h-[60vh]"
+              onScroll={handleScroll}
+            >
+              <ServiceAgreement />
+            </div>
+            <div className="p-4 border-t flex justify-end">
+              <Button
+                onClick={handleAgree}
+                disabled={!scrolledToBottom}
+                className="bg-green-500 hover:bg-green-600 text-white"
+              >
+                I Agree
+              </Button>
+            </div>
+          </div>
+        </div>
+      )}
     </section>
   );
 }
