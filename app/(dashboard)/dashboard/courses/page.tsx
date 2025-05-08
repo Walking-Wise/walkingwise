@@ -36,8 +36,6 @@ const courses = [
 export default async function CoursesPage() {
   const user = await getUser();
 
-  console.log(user)
-
   return (
     <section className="flex-1 p-4 lg:p-8">
       <h1 className="text-lg lg:text-2xl font-medium text-gray-900 mb-6">

@@ -1,6 +1,6 @@
 "use client";
 
-import { startTransition, use, useActionState } from "react";
+import { startTransition, use, useActionState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -8,19 +8,21 @@ import { Label } from "@/components/ui/label";
 import { Loader2 } from "lucide-react";
 import { useUser } from "@/lib/auth";
 import { updateAccount } from "@/app/(login)/actions";
+import { useRouter } from "next/navigation";
 
 type ActionState = {
   error?: string;
   success?: string;
 };
 
-export default function GeneralPage() {
+export default function OnboardingForm() {
   const { userPromise } = useUser();
   const user = use(userPromise);
   const [state, formAction, isPending] = useActionState<ActionState, FormData>(
     updateAccount,
     { error: "", success: "" }
   );
+  const router = useRouter()
 
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -35,6 +37,12 @@ export default function GeneralPage() {
       formAction(new FormData(event.currentTarget));
     });
   };
+
+  useEffect(() => {
+    if (state.success) {
+      router.push("/dashboard");
+    }
+  }, [state, router]);
 
   return (
     <section className="flex-1 p-4 lg:p-8">
@@ -231,7 +239,7 @@ export default function GeneralPage() {
                   Saving...
                 </>
               ) : (
-                "Save Changes"
+                "Complete Onboarding"
               )}
             </Button>
           </form>

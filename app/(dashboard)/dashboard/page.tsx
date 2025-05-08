@@ -18,6 +18,11 @@ export default async function HomePage() {
     throw new Error("Team not found");
   }
 
+  // Check to see if user has completed the onboarding form
+  if(!user.companyName) {
+    redirect("/onboarding")
+  }
+
   return (
     <section className="space-y-6 p-4 lg:p-8 max-w-7xl mx-auto">
       {!user.completedOnboarding && (
