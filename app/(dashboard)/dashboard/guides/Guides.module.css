@@ -1,0 +1,76 @@
+/* === implementation.css === */
+
+.implementationSection {
+    padding: 1rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    flex: 1;
+  }
+  
+  .implementationTitle {
+    font-size: 1.125rem;
+    font-weight: 500;
+    color: rgb(17 24 39); /* gray-900 */
+    margin-bottom: 0.5rem;
+  }
+  
+  .implementationDescription {
+    color: rgb(55 65 81); /* gray-700 */;
+    margin-bottom: 1.5rem;
+    max-width: 42rem;
+  }
+  
+  .guidesGrid {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(1, 1fr);
+  }
+  
+  @media (min-width: 768px) {
+    .guidesGrid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  .guideCard {
+    transition: box-shadow 0.2s;
+    cursor: pointer;
+    height: 100%;
+  }
+  
+  .guideCard:hover {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .guideCard img {
+    width: 100%;
+    object-fit: cover;
+  }
+  
+  .guideCardTitle {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    color: rgb(31 41 55); /* gray-800 */
+  }
+  
+  .guideCardContent {
+    font-size: 0.875rem;
+    color: rgb(75 85 99); /* gray-600 */
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  .completeImplementationWrapper {
+    margin-top: 2rem;
+  }
+  
+  .completeImplementationButton {
+    margin-top: 1rem;
+  }
+  
