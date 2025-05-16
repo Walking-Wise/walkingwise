@@ -1,0 +1,170 @@
+/* app/(dashboard)/DashboardLayout.module.css */
+/*────────────────────────────────────────────*/
+/*  Dashboard – Sidebar Layout (scoped)       */
+/*────────────────────────────────────────────*/
+
+/* ====== Tokens ====== */
+:root {
+    --header-h: 68px;            /* global header height */
+    --sidebar-w: 15rem;          /* 240 px */
+    --sidebar-w-compact: 4rem;   /* 64 px  */
+  }
+  
+  /* ====== Frame ====== */
+  .page {
+    max-width: 100rem;
+    margin-inline: auto;
+    width: 100%;
+    min-height: calc(100dvh - var(--header-h));
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* ====== Mobile header (Dashboard label + burger) ====== */
+  .mobileHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--color-surface);
+    border-bottom: 1px solid var(--color-border);
+    padding: 0 1rem;
+    height: var(--header-h);
+  }
+  
+  @media (min-width: 64rem) {        /* lg */
+    .mobileHeader { display: none; }
+  }
+  
+  /* ====== Shell ====== */
+  .shell {
+    flex: 1;
+    display: flex;
+    overflow: hidden;
+  }
+  
+  /* ====== Sidebar ====== */
+  .sidebar {
+    --sidebar-current-w: var(--sidebar-w);      /* default width */
+  
+    width: var(--sidebar-current-w);
+    background: color-mix(in srgb, var(--color-bg) 92%, #000 8%);
+    border-right: 1px solid var(--color-border);
+  
+    position: fixed;            /* sticky nav */
+    top: var(--header-h);
+    bottom: 0;
+    left: 0;
+    z-index: 10;                /* below top header */
+  
+    transform: translateX(-100%);
+    transition: transform var(--motion-fast), width var(--motion-fast);
+  }
+  
+  .sidebar.open {
+    transform: translateX(0);
+  }
+  
+  /* compact mode (icon‑only) */
+  .sidebar.compact {
+    --sidebar-current-w: var(--sidebar-w-compact);
+    width: var(--sidebar-current-w);
+  }
+  
+  @media (min-width: 64rem) {       /* ≥ lg: sidebar always visible */
+    .sidebar {
+      transform: translateX(0);
+    }
+  }
+  
+  /* ====== Nav scroll area ====== */
+  .nav {
+    height: 100%;
+    overflow-y: auto;
+    padding: 1rem 2rem 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  /* ====== Section heading ====== */
+  .sectionHeading {
+    font-size: 0.625rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--color-muted);
+    margin: 0 0 0.5rem 0.75rem;
+  }
+  
+  /* ====== Navigation button ====== */
+  .navBtn {
+    all: unset;
+    display: flex;
+    align-items: center;
+    gap: 0.625rem;
+    width: 100%;
+    padding: 0.5rem 0.75rem;
+    border-radius: var(--radius-sm);
+    font-size: 0.8125rem;
+    color: var(--color-text);
+    cursor: pointer;
+    white-space: nowrap;
+    transition: background var(--motion-fast), color var(--motion-fast);
+  }
+  
+  .navBtn:hover {
+    background: rgb(from var(--color-muted) r g b / 0.08);
+  }
+  
+  .navBtn.active {
+    background: rgb(from var(--color-primary) r g b / 0.12);
+    color: var(--color-primary);
+    font-weight: 600;
+  }
+  
+  /* icon‑only mode */
+  .sidebar.compact .navBtn {
+    justify-content: center;
+    padding-block: 0.5rem;
+  }
+  
+  .sidebar.compact .navBtn span {       /* hide label */
+    display: none;
+  }
+  
+  /* ====== CTA pill (“Start here”) ====== */
+  .pill {
+    background: rgb(from var(--color-primary) r g b / 0.14);
+    color: var(--color-primary);
+    font-size: 0.625rem;
+    padding: 0.125rem 0.5rem;
+    border-radius: 9999px;
+    margin-left: auto;
+  }
+  
+  /* ====== Dropdown toggle ====== */
+  .dropdownToggle {
+    justify-content: space-between;
+    box-shadow: none;  /* override shadcn */
+    font-weight: bold;
+  }
+  
+  /* ====== Main content ====== */
+  .main {
+    flex: 1;
+    margin-left: var(--sidebar-w);          /* keep in sync */
+    padding: 1rem 1.5rem 2rem;
+    transition: margin-left var(--motion-fast);
+  }
+  
+  .main.compact {
+    margin-left: var(--sidebar-w-compact);
+  }
+  
+  @media (max-width: 63.999rem) {          /* < lg  - sidebar overlays */
+    .main,
+    .main.compact {
+      margin-left: 0;
+    }
+  }
+  

@@ -3,7 +3,6 @@
 import { use, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Button } from "@/components/ui/button";
 import {
   Users,
   Settings,
@@ -15,200 +14,147 @@ import {
   Home,
   Currency,
 } from "lucide-react";
+
+import { Button } from "@/components/ui/button";
 import { useUser } from "@/lib/auth";
 import { Plans } from "@/lib/plans";
+
+import styles from "./DashboardLayout.module.css";
 
 export default function DashboardLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
+  /* ── data ─────────────────────────── */
   const pathname = usePathname();
-  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
-  const [isSettingsOpen, setIsSettingsOpen] = useState(false);
+  const [isSidebarOpen, setSidebarOpen] = useState(false);
+  const [isSettingsOpen, setSettingsOpen] = useState(false);
+
   const { userPromise, teamPromise } = useUser();
   const user = use(userPromise);
   const team = use(teamPromise);
 
-  // if user has a online course plan, show course tab
-  // if user is on individual or professional, hide team tab
-
-  function getNavItems(plan: Plans) {
-    const baseNavItems = [
-      {
-        href: "/dashboard/guides",
-        icon: Rocket,
-        label: "Implementation",
-        highlight: true,
-      },
-      {
-        href: "/dashboard/presentations",
-        icon: Users,
-        label: "Classroom Presentations",
-      },
-      { href: "/dashboard/videos", icon: Users, label: "Video Library" },
-    ];
-    const baseSettingsItems = [
-      { href: "/dashboard/general", icon: Settings, label: "General" },
-      { href: "/dashboard/security", icon: Shield, label: "Security" },
-      {
-        href: "/dashboard/subscription-settings",
-        icon: Currency,
-        label: "My Subscription",
-      },
-    ];
-    const extraItems = [];
-    const extraSettingsItems = [];
-    if (plan === Plans.Plus) {
-      extraItems.push({
-        href: "/dashboard/courses",
-        icon: Users,
-        label: "Online Course",
-      });
-      extraSettingsItems.push({
-        href: "/dashboard/team-settings",
-        icon: Users,
-        label: "Team",
-      });
-    }
-    const navItems = [...baseNavItems, ...extraItems];
-    const settingsItems = [...baseSettingsItems, ...extraSettingsItems];
-
-    return { navItems, settingsItems };
+  /* ── nav helpers ──────────────────── */
+  const baseNav = [
+    { href: "/dashboard/guides", icon: Rocket, label: "Implementation", highlight: true },
+    { href: "/dashboard/presentations", icon: Users, label: "Classroom Presentations" },
+    { href: "/dashboard/videos", icon: Users, label: "Video Library" },
+  ];
+  const baseSettings = [
+    { href: "/dashboard/general", icon: Settings, label: "General" },
+    { href: "/dashboard/security", icon: Shield, label: "Security" },
+    { href: "/dashboard/subscription-settings", icon: Currency, label: "My Subscription" },
+  ];
+  if (team?.planName === Plans.Plus) {
+    baseNav.push({ href: "/dashboard/courses", icon: Users, label: "Online Course" });
+    baseSettings.push({ href: "/dashboard/team-settings", icon: Users, label: "Team" });
   }
 
-  const { navItems, settingsItems } = getNavItems(team?.planName as Plans);
+  /* ── render helpers ───────────────── */
+  const NavButton = ({
+    item,
+    activeClass,
+    after,
+  }: {
+    item: { href: string; icon: any; label: string };
+    activeClass?: boolean;
+    after?: React.ReactNode;
+  }) => (
+    <Link href={item.href} onClick={() => setSidebarOpen(false)}>
+      <span className={`${styles.navBtn} ${activeClass ? styles.active : ""}`}>
+        <item.icon size={16} />
+        {item.label}
+        {after}
+      </span>
+    </Link>
+  );
 
-  function renderImplementationTab() {
-    return (
-      <>
-        {navItems
-          .filter((item) => item.highlight)
-          .map((item) => (
-            <Link key={item.href} href={item.href} passHref>
-              <Button
-                variant={pathname === item.href ? "secondary" : "ghost"}
-                className={`cursor-pointer w-full justify-between items-center ${
-                  pathname === item.href
-                    ? "border-blue-600 bg-blue-50 text-blue-900 font-semibold"
-                    : "border-transparent"
-                }`}
-                onClick={() => setIsSidebarOpen(false)}
-              >
-                <span className="flex items-center gap-2">
-                  <item.icon className="h-4 w-4 mr-2" />
-                  {item.label}
-                </span>
-                {!user?.completedOnboarding && (
-                  <span className="bg-blue-100 text-blue-800 text-xs px-2 py-0.5 rounded-full">
-                    Start here
-                  </span>
-                )}
-              </Button>
-            </Link>
-          ))}
-      </>
-    );
-  }
+  const ImplementationTab = () =>
+    baseNav
+      .filter((n) => n.highlight)
+      .map((item) => (
+        <NavButton
+          key={item.href}
+          item={item}
+          activeClass={pathname === item.href}
+          after={
+            !user?.completedOnboarding && (
+              <span className={styles.pill}>Start here</span>
+            )
+          }
+        />
+      ));
 
+  /* ── component ────────────────────── */
   return (
-    <div className="flex flex-col min-h-[calc(100dvh-68px)] max-w-7xl mx-auto w-full">
+    <div className={styles.page}>
       {/* Mobile header */}
-      <div className="lg:hidden flex items-center justify-between bg-white border-b border-gray-200 p-4">
-        <div className="flex items-center">
-          <span className="font-medium">Dashboard</span>
-        </div>
+      <header className={styles.mobileHeader}>
+        <span className="font-medium">Dashboard</span>
         <Button
-          className="-mr-3"
           variant="ghost"
-          onClick={() => setIsSidebarOpen(!isSidebarOpen)}
+          size="icon"
+          onClick={() => setSidebarOpen(!isSidebarOpen)}
         >
-          <Menu className="h-6 w-6" />
+          <Menu size={24} />
           <span className="sr-only">Toggle sidebar</span>
         </Button>
-      </div>
+      </header>
 
-      <div className="flex flex-1 overflow-hidden h-full">
+      {/* Shell */}
+      <div className={styles.shell}>
         {/* Sidebar */}
         <aside
-          className={`w-64 bg-white lg:bg-gray-50 border-r border-gray-200 lg:block ${
-            isSidebarOpen ? "block" : "hidden"
-          } lg:relative absolute inset-y-0 left-0 z-40 transform transition-transform duration-300 ease-in-out lg:translate-x-0 ${
-            isSidebarOpen ? "translate-x-0" : "-translate-x-full"
-          }`}
+          className={`${styles.sidebar} ${isSidebarOpen ? styles.open : ""}`}
+          aria-label="Sidebar navigation"
         >
-          <nav className="h-full overflow-y-auto p-4 space-y-4">
-            <Link href={"/dashboard"} passHref>
-              <Button
-                variant={pathname === "/dashboard" ? "secondary" : "ghost"}
-                className="cursor-pointer w-full mb-4 justify-start items-center"
-                onClick={() => setIsSidebarOpen(false)}
-              >
-                <Home className="h-4 w-4 mr-2" />
-                {"Home"}
-              </Button>
-            </Link>
-            {!user?.completedOnboarding && (
-              <div>
-                <h3 className="text-xs font-semibold text-gray-500 px-2 mb-2 uppercase tracking-wide">
-                  Step 1
-                </h3>
-                {renderImplementationTab()}
-              </div>
+          <nav className={styles.nav}>
+            {/* Home */}
+            <NavButton
+              item={{ href: "/dashboard", icon: Home, label: "Home" }}
+              activeClass={pathname === "/dashboard"}
+            />
+
+            {/* Implementation step */}
+            {!user?.completedOnboarding && team?.planName && (
+              <>
+                <h3 className={styles.sectionHeading}>Step 1</h3>
+                <ImplementationTab />
+              </>
             )}
 
-            <div>
-              <h3 className="text-xs font-semibold text-gray-500 px-2 mb-2 uppercase tracking-wide">
-                Resources
-              </h3>
-              {navItems
-                .filter((item) => !item.highlight)
-                .map((item) => (
-                  <Link key={item.href} href={item.href} passHref>
-                    <Button
-                      variant={pathname === item.href ? "secondary" : "ghost"}
-                      className="cursor-pointer w-full justify-start items-center"
-                      onClick={() => setIsSidebarOpen(false)}
-                    >
-                      <item.icon className="h-4 w-4 mr-2" />
-                      {item.label}
-                    </Button>
-                  </Link>
-                ))}
-            </div>
+            {/* Resources */}
+            <h3 className={styles.sectionHeading}>Resources</h3>
+            {baseNav
+              .filter((n) => !n.highlight)
+              .map((item) => (
+                <NavButton
+                  key={item.href}
+                  item={item}
+                  activeClass={pathname === item.href}
+                />
+              ))}
 
             {/* Settings dropdown */}
-            <div className="mt-6">
-              <Button
-                variant="ghost"
-                className="cursor-pointer w-full justify-between shadow-none"
-                onClick={() => setIsSettingsOpen(!isSettingsOpen)}
+            <div>
+              <button
+                className={`${styles.navBtn} ${styles.dropdownToggle}`}
+                onClick={() => setSettingsOpen(!isSettingsOpen)}
               >
-                <span className="flex items-center">
-                  <Settings className="h-4 w-4 mr-2" />
-                  Settings
-                </span>
-                {isSettingsOpen ? (
-                  <ChevronDown className="h-4 w-4" />
-                ) : (
-                  <ChevronRight className="h-4 w-4" />
-                )}
-              </Button>
+                Settings
+                {isSettingsOpen ? <ChevronDown size={16} /> : <ChevronRight size={16} />}
+              </button>
               {isSettingsOpen && (
-                <div className="mt-2 ml-4 space-y-1">
-                  {settingsItems.map((item) => (
-                    <Link key={item.href} href={item.href} passHref>
-                      <Button
-                        variant={pathname === item.href ? "secondary" : "ghost"}
-                        className="cursor-pointer w-full justify-start shadow-none text-sm"
-                        onClick={() => setIsSidebarOpen(false)}
-                      >
-                        <item.icon className="h-4 w-4 mr-2" />
-                        {item.label}
-                      </Button>
-                    </Link>
+                <div style={{ marginTop: "0.5rem", marginLeft: "1rem" }}>
+                  {baseSettings.map((item) => (
+                    <NavButton
+                      key={item.href}
+                      item={item}
+                      activeClass={pathname === item.href}
+                    />
                   ))}
-                  {user?.completedOnboarding && renderImplementationTab()}
+                  {user?.completedOnboarding && team?.planName && <ImplementationTab />}
                 </div>
               )}
             </div>
@@ -216,7 +162,7 @@ export default function DashboardLayout({
         </aside>
 
         {/* Main content */}
-        <main className="flex-1 overflow-y-auto p-0 lg:p-4">{children}</main>
+        <main className={styles.main}>{children}</main>
       </div>
     </div>
   );

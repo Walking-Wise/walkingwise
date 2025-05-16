@@ -1,7 +1,13 @@
 "use client";
 
 import { useState } from "react";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import {
+  Card,
+  CardContent,
+  CardHeader,
+  CardTitle,
+  LandscapeCard,
+} from "@/components/ui/card";
 import { FileText } from "lucide-react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
@@ -20,7 +26,7 @@ const guides = [
   },
   {
     title: "5-Step Process",
-    description: "A shortened version of the implementation process...",
+    description: "A shortened version of the implementation process A shortened version of the implementation process A shortened version of the implementation process...",
     imageUrl:
       "https://walking-wise-assets.s3.amazonaws.com/wp-content/uploads/20250211170039/Implementation-5-Step-Process2-1.png",
     href: "https://walking-wise-assets.s3.amazonaws.com/wp-content/uploads/20250216182543/Five_Step_Implementation_Process-Walking_Wise_Implementation_Guide-2-17-2025.pdf",
@@ -77,19 +83,20 @@ export default function ImplementationPage({
             rel="noopener noreferrer"
             onClick={() => handleClick(guide.title)}
           >
-            <Card className={styles.guideCard}>
+            <LandscapeCard className={styles.guideCard}>
               <img src={guide.imageUrl} alt={guide.title} />
-
-              <CardHeader>
-                <CardTitle className={styles.guideCardTitle}>
-                  <FileText className={styles.guideCardContent} />
-                  {guide.title}
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className={styles.guideCardContent}>{guide.description}</p>
-              </CardContent>
-            </Card>
+              <div>
+                <CardHeader>
+                  <CardTitle className={styles.guideCardTitle}>
+                    <FileText className={styles.guideCardContent} />
+                    {guide.title}
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className={styles.guideCardContent}>{guide.description}</p>
+                </CardContent>
+              </div>
+            </LandscapeCard>
           </Link>
         ))}
       </div>

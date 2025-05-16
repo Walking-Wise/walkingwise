@@ -1,143 +1,161 @@
+// app/(dashboard)/page.tsx
 import { redirect } from "next/navigation";
-import { getTeamForUser, getUser } from "@/lib/db/queries";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Rocket, Users, Video, BookOpen, MessageSquare } from "lucide-react";
 import Link from "next/link";
+import { Rocket, Users, Video, BookOpen, MessageSquare } from "lucide-react";
+import { getTeamForUser, getUser } from "@/lib/db/queries";
+
+import styles from "./HomePage.module.css";
+
+type Resource = {
+  key: string;
+  title: string;
+  copy: string;
+  href: string;
+  icon: React.ReactNode;
+  img: string;
+};
 
 export default async function HomePage() {
-  const user = await getUser();
+  const images = {
+    classroom:
+      "https://walking-wise-assets.s3.amazonaws.com/wp-content/uploads/20241218214448/Icon-Classroom-Presentations.png",
+    videos:
+      "https://walking-wise-assets.s3.amazonaws.com/wp-content/uploads/20241218213932/Icon-Animated-Videos-Girl-Crying-12-2024.png",
+    implementation:
+      "https://walking-wise-assets.s3.amazonaws.com/wp-content/uploads/20250312000503/Dash-Implementation-Guide-3-11-2025.png",
+    course:
+      "https://walking-wise-assets.s3.amazonaws.com/wp-content/uploads/20241218214940/Icon-Learning-for-Adults-1.png",
+  };
 
-  if (!user) {
-    redirect("/sign-in");
-  }
+  // ── Auth / data fetch ─────────────────
+  const user = await getUser();
+  if (!user) redirect("/sign-in");
 
   const teamData = await getTeamForUser(user.id);
+  if (!teamData) throw new Error("Team not found");
 
-  if (!teamData) {
-    throw new Error("Team not found");
-  }
+  if (!user.companyName) redirect("/onboarding");
 
-  // Check to see if user has completed the onboarding form
-  if(!user.companyName) {
-    redirect("/onboarding")
-  }
+  const isFreeUser = !teamData?.planName;
 
+  const resources: Resource[] = [
+    {
+      key: "classroom",
+      title: "Classroom Presentations",
+      copy: "Browse ready‑to‑teach slide decks with speaker notes and student handouts.",
+      href: "/dashboard/presentations",
+      icon: <Users size={16} />,
+      img: images.classroom,
+    },
+    {
+      key: "videos",
+      title: "Video Library",
+      copy: "Use these companion videos alongside presentations or as standalone content.",
+      href: "/dashboard/videos",
+      icon: <Video size={16} />,
+      img: images.videos,
+    },
+    {
+      key: "course",
+      title: "Online Courses",
+      copy: "Complete short, self‑paced trainings to better understand each lesson topic.",
+      href: isFreeUser ? "/pricing" : "/dashboard/courses",
+      icon: <BookOpen size={16} />,
+      img: images.course,
+    },
+    {
+      key: "implementation",
+      title: "Implementation Guide",
+      copy: "A step‑by‑step guide to help you bring the curriculum to your school or district.",
+      href: isFreeUser ? "/pricing" : "/dashboard/guides",
+      icon: <Rocket size={16} />,
+      img: images.implementation,
+    },
+  ];
+
+  // ── UI ────────────────────────────────
   return (
-    <section className="space-y-6 p-4 lg:p-8 max-w-7xl mx-auto">
-      {!user.completedOnboarding && (
-        <Card>
-          <CardHeader>
-            <CardTitle>👋 Welcome to Your Dashboard</CardTitle>
-          </CardHeader>
-          <CardContent className="text-sm text-gray-700 space-y-3">
-            <p>
-              This platform is designed to help you confidently teach and
-              prepare students with trauma-informed, age-appropriate lessons on
-              trafficking prevention.
-            </p>
-            <p>
-              New here? Start with our implementation guide to set up your
-              classroom for success.
-            </p>
-            <Link href="/dashboard/guides">
-              <Button className="mt-1">View Implementation Guide</Button>
-            </Link>
-          </CardContent>
-        </Card>
+    <section className={styles.page}>
+      {/* Hero */}
+      {!user.completedOnboarding && teamData.planName && (
+        <div className={styles.heroCard}>
+          <h1 className={styles.heroTitle}>👋 Welcome to Walking Wise</h1>
+          <p className={styles.heroText}>
+            This platform is designed to help you confidently teach and prepare
+            students with trauma‑informed, age‑appropriate lessons on
+            trafficking prevention. New here? Start with our implementation
+            guide to set up your classroom for success.
+          </p>
+          <Link href="/dashboard/guides" className={styles.ctaBtn}>
+            View Implementation Guide
+          </Link>
+        </div>
+      )}
+      {isFreeUser && (
+        <div className={styles.heroCard}>
+          <h1 className={styles.heroTitle}>👋 Welcome to Walking Wise</h1>
+          <p className={styles.heroText}>
+            This platform is designed to help you confidently teach and prepare
+            students with trauma‑informed, age‑appropriate lessons on
+            trafficking prevention. When you're ready, upgrade your account to
+            see everything the Walking Wise platform has to offer.
+          </p>
+          <Link href="/pricing" className={styles.ctaBtn}>
+            Upgrade your account
+          </Link>
+        </div>
       )}
 
-      {/* Toolkit Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-        <Card>
-          <CardHeader>
-            <CardTitle className="flex items-center gap-2">
-              <Users className="h-4 w-4" />
-              Classroom Presentations
-            </CardTitle>
-          </CardHeader>
-          <CardContent className="text-sm text-gray-700 space-y-2">
-            <p>
-              Browse ready-to-teach slide decks with speaker notes and student
-              handouts.
-            </p>
-            <Link href="/dashboard/presentations">
-              <Button variant="outline">Browse Presentations</Button>
-            </Link>
-          </CardContent>
-        </Card>
-
-        <Card>
-          <CardHeader>
-            <CardTitle className="flex items-center gap-2">
-              <Video className="h-4 w-4" />
-              Video Library
-            </CardTitle>
-          </CardHeader>
-          <CardContent className="text-sm text-gray-700 space-y-2">
-            <p>
-              Use these companion videos alongside presentations or as
-              standalone content.
-            </p>
-            <Link href="/dashboard/videos">
-              <Button variant="outline">View Videos</Button>
-            </Link>
-          </CardContent>
-        </Card>
-
-        <Card>
-          <CardHeader>
-            <CardTitle className="flex items-center gap-2">
-              <BookOpen className="h-4 w-4" />
-              Online Courses
-            </CardTitle>
-          </CardHeader>
-          <CardContent className="text-sm text-gray-700 space-y-2">
-            <p>
-              Complete short, self-paced trainings to better understand each
-              lesson topic.
-            </p>
-            <Link href="/dashboard/courses">
-              <Button variant="outline">Take the Course</Button>
-            </Link>
-          </CardContent>
-        </Card>
-
-        <Card>
-          <CardHeader>
-            <CardTitle className="flex items-center gap-2">
-              <Rocket className="h-4 w-4" />
-              Implementation Guide
-            </CardTitle>
-          </CardHeader>
-          <CardContent className="text-sm text-gray-700 space-y-2">
-            <p>
-              A step-by-step guide to help you bring the curriculum to your
-              school or district.
-            </p>
-            <Link href="/dashboard/guides">
-              <Button variant="outline">Get the Guide</Button>
-            </Link>
-          </CardContent>
-        </Card>
+      {/* Resource Grid */}
+      <div className={styles.resourceGrid}>
+        {resources.map((r) => (
+          <article key={r.key} className={styles.card}>
+            <img
+              src={r.img}
+              alt=""
+              className={styles.cardImage}
+              loading="lazy"
+            />
+            <div className={styles.cardBody}>
+              <h2 className={styles.cardTitle}>
+                {r.icon}
+                {r.title}
+              </h2>
+              <p className={styles.cardText}>{r.copy}</p>
+              <Link href={r.href} className={styles.ctaBtn}>
+                {r.key === "classroom"
+                  ? "Browse Presentations"
+                  : r.key === "videos"
+                  ? "View Videos"
+                  : r.key === "course"
+                  ? isFreeUser
+                    ? "Upgrade to Take the Course"
+                    : "Take the Course"
+                  : r.key === "implementation"
+                  ? isFreeUser
+                    ? "Upgrade to Get the Guide"
+                    : "Get the Guide"
+                  : ""}
+              </Link>
+            </div>
+          </article>
+        ))}
       </div>
 
       {/* Support */}
-      <Card>
-        <CardHeader>
-          <CardTitle className="flex items-center gap-2">
-            <MessageSquare className="h-4 w-4" />
-            Need Help or Want to Request a Resource?
-          </CardTitle>
-        </CardHeader>
-        <CardContent className="text-sm text-gray-700 space-y-2">
-          <p>
-            We’re here to support you. Let us know if you need help or have an
-            idea for a lesson.
-          </p>
-          <Button variant="outline">Contact Support</Button>
-        </CardContent>
-      </Card>
+      <div className={styles.supportCard}>
+        <h2 className={styles.supportTitle}>
+          <MessageSquare size={16} />
+          Need Help or Want to Request a Resource?
+        </h2>
+        <p className={styles.supportText}>
+          We’re here to support you. Let us know if you need help or have an
+          idea for a lesson.
+        </p>
+        <Link href="/dashboard/support" className={styles.ctaBtn}>
+          Contact Support
+        </Link>
+      </div>
     </section>
   );
 }

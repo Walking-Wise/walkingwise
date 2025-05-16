@@ -118,6 +118,39 @@
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
 
+  :root {
+    /* — Core aliases — */
+    --color-bg: var(--background);
+    --color-surface: var(--card);
+    --color-primary: var(--primary);
+    --color-accent: var(--accent);
+    --color-text: var(--foreground);
+    --color-muted: var(--muted-foreground);
+  
+    /* — Radius — */
+    --radius-sm: calc(var(--radius) - 4px);
+    --radius-md: calc(var(--radius) - 0px);   /* default 8 px */
+    --radius-lg: calc(var(--radius) + 4px);
+  
+    /* — Elevation — */
+    --elevation-1: 0 2px 4px rgb(0 0 0 / .06);
+    --elevation-2: 0 4px 16px rgb(0 0 0 / .08);
+  
+    /* — Motion — */
+    --motion-fast: 200ms ease;
+  }
+  
+  /* Mirror tokens for dark theme (optional) — most
+     are already covered by your .dark overrides.  */
+  .dark {
+    --color-bg: var(--background);      /* now dark‑bg */
+    --color-surface: var(--card);
+    --color-text: var(--foreground);
+    --color-muted: var(--muted-foreground);
+    /* rest inherit automatically */
+  }
+  
+
   .dark {
     --background: 222.2 84% 4.9%;
     --foreground: 210 40% 98%;

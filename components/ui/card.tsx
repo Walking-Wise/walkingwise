@@ -2,6 +2,19 @@ import * as React from "react";
 
 import { cn } from "@/lib/utils";
 
+function LandscapeCard({ className, ...props }: React.ComponentProps<"div">) {
+  return (
+    <div
+      data-slot="card"
+      className={cn(
+        "bg-card text-card-foreground flex rounded-xl border py-6 shadow-sm",
+        className
+      )}
+      {...props}
+    />
+  );
+}
+
 function Card({ className, ...props }: React.ComponentProps<"div">) {
   return (
     <div
@@ -82,11 +95,12 @@ function CardFooter({ className, ...props }: React.ComponentProps<"div">) {
 }
 
 export {
+  LandscapeCard,
   Card,
   CardHeader,
   CardFooter,
   CardTitle,
   CardAction,
   CardDescription,
-  CardContent
+  CardContent,
 };

@@ -1,0 +1,120 @@
+/* app/components/Header.module.css */
+/*────────────────────────────────────────────*/
+/*  Sticky top‑nav bar                       */
+/*────────────────────────────────────────────*/
+
+:root {
+    --header-h: 68px;            /* keep in sync with Dashboard */
+  }
+  
+  /* ===== Bar ===== */
+  .bar {
+    position: sticky;
+    top: 0;
+    z-index: 50;                 /* above sidebar (z‑10) */
+    height: var(--header-h);
+  
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  
+    background: var(--color-surface);
+    border-bottom: 1px solid var(--color-border);
+    padding-inline: 1rem;
+  }
+  
+  .barInner {
+    max-width: 100rem;           /* matches dashboard page width */
+    width: 100%;
+    margin: 0 auto;
+  
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.25rem;
+  }
+  
+  /* ===== Logo ===== */
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+  
+  .logoImg {
+    height: 3.5rem;              /* ≈ 40px */
+    width: auto;
+    object-fit: contain;
+    margin-right: 20px;
+  }
+  
+  /* ===== Nav ===== */
+  .nav {
+    display: none;
+  }
+  
+  @media (min-width: 48rem) {    /* md ≥ 768px */
+    .nav {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+    }
+  }
+  
+  .navLink {
+    font-family: var(--font-heading, "Bebas Neue", system-ui, sans-serif);
+    font-size: 1.25rem;          /* matches Bebas Neue height */
+    font-weight: 500;
+    color: var(--color-text);
+    transition: color var(--motion-fast);
+    text-decoration: none;
+  }
+  
+  .navLink:hover {
+    color: var(--color-primary);
+  }
+  
+  /* ===== Buttons group ===== */
+  .actions {
+    display: none;
+  }
+  
+  @media (min-width: 48rem) {
+    .actions {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+  }
+  
+  /* ===== Mobile burger ===== */
+  .burger {
+    display: block;
+    cursor: pointer;
+  }
+  
+  @media (min-width: 48rem) {
+    .burger { display: none; }
+  }
+  
+  /* ===== Mobile dropdown ===== */
+  .mobileMenu {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem 1rem 2rem;
+    background: var(--color-surface);
+    border-bottom: 1px solid var(--color-border);
+  }
+  
+  .mobileLink {
+    font-family: var(--font-heading, "Poppins", system-ui, sans-serif);
+    font-size: 1.25rem;
+    color: var(--color-text);
+    text-decoration: none;
+  }
+  
+  .mobileLink:hover {
+    color: var(--color-primary);
+  }
+  
