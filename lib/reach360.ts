@@ -18,8 +18,18 @@ async function reach<T>(path: string, opts: FetchOpts = {}): Promise<T> {
   if (!res.ok) {
     throw new Error(`Reach360 ${res.status} – ${await res.text()}`);
   }
-  console.log(res);
-  return res.json() as Promise<T>;
+    // Nothing to parse? Just return void.
+    if (res.status === 204 || (res.headers.get("content-length") ?? "0") === "0") {
+        return undefined as unknown as T;
+      }
+    
+    // Defensive: be sure it's JSON
+    const ct = res.headers.get("content-type") ?? "";
+    if (!ct.includes("application/json")) {
+      throw new Error(`Expected JSON but got ${ct}`);
+    }
+  
+    return res.json() as Promise<T>;
 }
 
 // ────────────────────────────────────────────────────────────
@@ -39,4 +49,12 @@ export const createInvite = (
   reach<any>("/invitations", {
     method: "POST",
     body: { email, firstName: first, lastName: last, groups: [groupName] },
+  });
+
+export const enrollGroupInLearningPath = (
+  groupId: string,
+  learningPathId: string
+) =>
+  reach<void>(`/learning-paths/${learningPathId}/groups/${groupId}`, {
+    method: "PUT",
   });
