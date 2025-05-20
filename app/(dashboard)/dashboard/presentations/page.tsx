@@ -1,5 +1,8 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import Link from "next/link";
+import { getTeamForUser, getUser } from "@/lib/db/queries";
+import { redirect } from "next/navigation";
+import styles from "@/app/styles/ResourceCard.module.css";
 
 async function getPresentations() {
   const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/presentations`, {
@@ -10,7 +13,14 @@ async function getPresentations() {
 }
 
 export default async function PresentationsPage() {
+  const user = await getUser();
+  if (!user) redirect("/sign-in");
+  
+  const teamData = await getTeamForUser(user.id);
+  if (!teamData) throw new Error("Team not found");
+  
   const presentations = await getPresentations();
+  const isFreeUser = !teamData.planName;
 
   return (
     <section className="flex-1 p-4 lg:p-8">
@@ -23,29 +33,34 @@ export default async function PresentationsPage() {
         classroom to start important conversations.
       </p>
 
-      <div className="grid gap-6 md:grid-cols-2">
-        {presentations.map((presentation: any) => (
+      <div className={styles.resourceGrid}>
+        {presentations.map((presentation: any, index: number) => (
           <Link
             key={presentation.id}
-            href={`/dashboard/presentations/${presentation.id}`}
+            href={isFreeUser && index > 0 ? '/pricing' : `/dashboard/presentations/${presentation.id}`}
           >
-            <Card className="pt-0 pb-4 hover:shadow-md transition-shadow cursor-pointer h-full overflow-hidden">
+            <article className={styles.card}>
               {presentation.imageUrl && (
                 <img
                   src={presentation.imageUrl}
                   alt={presentation.name}
-                  className="w-full object-cover"
+                  className={styles.cardImage}
                 />
               )}
-              <CardHeader>
-                <CardTitle>{presentation.name}</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-sm text-gray-600 line-clamp-4">
+              <div className={styles.cardBody}>
+                <h2 className={styles.cardTitle}>
+                  {presentation.name}
+                  {isFreeUser && index > 0 && (
+                    <span className="ml-2 text-sm text-orange-500">
+                      (Upgrade to Access)
+                    </span>
+                  )}
+                </h2>
+                <p className={styles.cardText}>
                   {presentation.description}
                 </p>
-              </CardContent>
-            </Card>
+              </div>
+            </article>
           </Link>
         ))}
       </div>

@@ -4,10 +4,15 @@ import { useSearchParams, useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import { Dialog } from "@headlessui/react";
 import Image from "next/image";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Video } from "@/lib/db/schema";
+import styles from "@/app/styles/ResourceCard.module.css";
 
-export default function VideosPage({ videos }: { videos: Video[] }) {
+interface VideosPageProps {
+  videos: Video[];
+  isFreeUser: boolean;
+}
+
+export default function VideosPage({ videos, isFreeUser }: VideosPageProps) {
   const searchParams = useSearchParams();
   const router = useRouter();
   const [activeVideo, setActiveVideo] = useState<Video | null>(null);
@@ -16,9 +21,28 @@ export default function VideosPage({ videos }: { videos: Video[] }) {
     const idParam = searchParams?.get("id") || "";
     if (idParam) {
       const match = videos.find((v) => String(v.id) === idParam);
-      if (match) setActiveVideo(match);
+      if (match) {
+        // Only set active video if user has access to it
+        if (!isFreeUser || videos.indexOf(match) === 0) {
+          setActiveVideo(match);
+        } else {
+          router.replace('/pricing');
+        }
+      }
     }
-  }, [searchParams, videos]);
+  }, [searchParams, videos, isFreeUser, router]);
+
+  const handleVideoClick = (video: Video) => {
+    const index = videos.indexOf(video);
+    if (isFreeUser && index > 0) {
+      router.push('/pricing');
+    } else {
+      setActiveVideo(video);
+      router.replace(`/dashboard/videos?id=${video.id}`, {
+        scroll: false,
+      });
+    }
+  };
 
   const closeModal = () => {
     setActiveVideo(null);
@@ -33,31 +57,31 @@ export default function VideosPage({ videos }: { videos: Video[] }) {
         Video Library
       </h1>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-        {videos.map((video) => (
-          <Card
+      <div className={styles.resourceGrid}>
+        {videos.map((video, index) => (
+          <article
             key={video.id}
-            onClick={() => {
-              setActiveVideo(video);
-              router.replace(`/dashboard/videos?id=${video.id}`, {
-                scroll: false,
-              });
-            }}
-            className="pt-0 cursor-pointer transition-shadow hover:shadow-lg"
+            onClick={() => handleVideoClick(video)}
+            className={styles.card}
           >
-            <CardHeader className="p-0">
-              <Image
-                src={video.imageUrl || ""}
-                alt={`${video.title} thumbnail`}
-                width={400}
-                height={225}
-                className="w-full h-48 object-cover rounded-t-md"
-              />
-            </CardHeader>
-            <CardContent className="p-4">
-              <CardTitle className="text-base">{video.title}</CardTitle>
-            </CardContent>
-          </Card>
+            <Image
+              src={video.imageUrl || ""}
+              alt={`${video.title} thumbnail`}
+              width={400}
+              height={225}
+              className={styles.cardImage}
+            />
+            <div className={styles.cardBody}>
+              <h2 className={styles.cardTitle}>
+                {video.title}
+                {isFreeUser && index > 0 && (
+                  <span className="ml-2 text-sm text-orange-500">
+                    (Upgrade to Access)
+                  </span>
+                )}
+              </h2>
+            </div>
+          </article>
         ))}
       </div>
 

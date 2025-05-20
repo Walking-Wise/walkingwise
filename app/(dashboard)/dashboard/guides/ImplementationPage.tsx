@@ -1,17 +1,11 @@
 "use client";
 
 import { useState } from "react";
-import {
-  Card,
-  CardContent,
-  CardHeader,
-  CardTitle,
-  LandscapeCard,
-} from "@/components/ui/card";
 import { FileText } from "lucide-react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { markOnboardingComplete } from "@/app/(login)/actions";
+import resourceStyles from "@/app/styles/ResourceCard.module.css";
 import styles from "./Guides.module.css";
 
 // TODO - Tie this to s3 files that can be changed by Karla Dynamically
@@ -65,6 +59,7 @@ export default function ImplementationPage({
   };
 
   const allGuidesViewed = clickedGuides.size === guides.length;
+
   return (
     <section className={styles.implementationSection}>
       <h1 className={styles.implementationTitle}>Implementation</h1>
@@ -74,7 +69,7 @@ export default function ImplementationPage({
         setting up a sex trafficking awareness program step by step.
       </p>
 
-      <div className={styles.guidesGrid}>
+      <div className={resourceStyles.landscapeGrid}>
         {guides.map((guide) => (
           <Link
             key={guide.title}
@@ -83,20 +78,22 @@ export default function ImplementationPage({
             rel="noopener noreferrer"
             onClick={() => handleClick(guide.title)}
           >
-            <LandscapeCard className={styles.guideCard}>
-              <img src={guide.imageUrl} alt={guide.title} />
-              <div>
-                <CardHeader>
-                  <CardTitle className={styles.guideCardTitle}>
-                    <FileText className={styles.guideCardContent} />
-                    {guide.title}
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className={styles.guideCardContent}>{guide.description}</p>
-                </CardContent>
+            <article className={resourceStyles.landscapeCard}>
+              <img
+                src={guide.imageUrl}
+                alt={guide.title}
+                className={resourceStyles.cardImage}
+              />
+              <div className={resourceStyles.cardBody}>
+                <h2 className={resourceStyles.cardTitle}>
+                  <FileText size={16} />
+                  {guide.title}
+                </h2>
+                <p className={resourceStyles.cardText}>
+                  {guide.description}
+                </p>
               </div>
-            </LandscapeCard>
+            </article>
           </Link>
         ))}
       </div>

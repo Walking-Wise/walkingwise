@@ -213,6 +213,11 @@
   --chart-4: hsl(43 74% 66%);
   --chart-5: hsl(27 87% 67%);
   --radius: 0.6rem;
+  
+    --header-h: 68px;            /* global header height */
+    --sidebar-w: 15rem;          /* 240 px */
+    --sidebar-w-compact: 4rem;   /* 64 px  */
+  
 }
 
 /*

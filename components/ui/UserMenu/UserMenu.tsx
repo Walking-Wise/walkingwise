@@ -1,9 +1,8 @@
 import { signOut } from "@/app/(login)/actions";
 import { User } from "@/lib/db/schema";
-import { Link, Home, LogOut } from "lucide-react";
+import { Home, LogOut } from "lucide-react";
 import { useRouter } from "next/navigation";
 import React, { FC, useState } from "react";
-import { Button } from "../button";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -45,10 +44,10 @@ export const UserMenu: FC<UserMenuProps> = ({ user }) => {
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end" className="flex flex-col gap-1">
         <DropdownMenuItem className="cursor-pointer">
-          <Link href="/dashboard" className="flex w-full items-center">
+          <a href="/dashboard" className="flex w-full items-center">
             <Home className="mr-2 h-4 w-4" />
             <span>Dashboard</span>
-          </Link>
+          </a>
         </DropdownMenuItem>
         <form action={handleSignOut} className="w-full">
           <button type="submit" className="flex w-full">

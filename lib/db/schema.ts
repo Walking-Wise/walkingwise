@@ -9,12 +9,21 @@ import {
 } from "drizzle-orm/pg-core";
 import { relations } from "drizzle-orm";
 
+export const groups = pgTable("groups", {
+  id: serial("id").primaryKey(),
+  name: varchar("name", { length: 100 }).notNull(),
+  reachId: varchar("reachId", { length: 100 }).notNull(),
+  createdAt: timestamp("created_at").notNull().defaultNow(),
+  updatedAt: timestamp("updated_at").notNull().defaultNow(),
+});
+
 export const users = pgTable("users", {
   id: serial("id").primaryKey(),
   name: varchar("name", { length: 100 }),
   email: varchar("email", { length: 255 }).notNull().unique(),
   passwordHash: text("password_hash").notNull(),
   role: varchar("role", { length: 20 }).notNull().default("member"),
+  groupId: integer("group_id").references(() => groups.id),
   completedOnboarding: boolean("completed_onboarding").default(false),
   companyName: varchar("company_name", { length: 150 }).notNull(),
   schoolDistrict: varchar("school_district", { length: 150 }),
@@ -88,9 +97,13 @@ export const teamsRelations = relations(teams, ({ many }) => ({
   invitations: many(invitations),
 }));
 
-export const usersRelations = relations(users, ({ many }) => ({
+export const usersRelations = relations(users, ({ many, one }) => ({
   teamMembers: many(teamMembers),
   invitationsSent: many(invitations),
+  group: one(groups, {
+    fields: [users.groupId],
+    references: [groups.id],
+  }),
 }));
 
 export const invitationsRelations = relations(invitations, ({ one }) => ({
@@ -211,6 +224,10 @@ export const handoutsRelations = relations(handouts, ({ one }) => ({
   }),
 }));
 
+export const groupsRelations = relations(groups, ({ many }) => ({
+  users: many(users),
+}));
+
 export type User = typeof users.$inferSelect;
 export type NewUser = typeof users.$inferInsert;
 export type Team = typeof teams.$inferSelect;
@@ -227,6 +244,8 @@ export type TeamDataWithMembers = Team & {
   })[];
 };
 export type Video = typeof videos.$inferSelect;
+export type Group = typeof groups.$inferSelect;
+export type NewGroup = typeof groups.$inferInsert;
 
 export enum ActivityType {
   SIGN_UP = "SIGN_UP",

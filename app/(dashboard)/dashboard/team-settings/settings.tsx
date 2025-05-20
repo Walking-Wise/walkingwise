@@ -8,6 +8,7 @@ import { useActionState } from "react";
 import { TeamDataWithMembers, User } from "@/lib/db/schema";
 import { removeTeamMember } from "@/app/(login)/actions";
 import { InviteTeamMember } from "../invite-team";
+import styles from "./TeamSettings.module.css";
 
 type ActionState = {
   error?: string;
@@ -25,17 +26,17 @@ export function Settings({ teamData }: { teamData: TeamDataWithMembers }) {
   };
 
   return (
-    <section className="flex-1 p-4 lg:p-8">
-      <h1 className="text-lg lg:text-2xl font-medium mb-6">Team Settings</h1>
-      <Card className="mb-8">
+    <section className={styles.container}>
+      <h1 className={styles.title}>Team Settings</h1>
+      <Card className={styles.card}>
         <CardHeader>
           <CardTitle>Team Members</CardTitle>
         </CardHeader>
         <CardContent>
-          <ul className="space-y-4">
+          <ul className={styles.membersList}>
             {teamData.teamMembers.map((member, index) => (
-              <li key={member.id} className="flex items-center justify-between">
-                <div className="flex items-center space-x-4">
+              <li key={member.id} className={styles.memberItem}>
+                <div className={styles.memberInfo}>
                   <Avatar>
                     <AvatarImage
                       src={`/placeholder.svg?height=32&width=32`}
@@ -49,12 +50,10 @@ export function Settings({ teamData }: { teamData: TeamDataWithMembers }) {
                     </AvatarFallback>
                   </Avatar>
                   <div>
-                    <p className="font-medium">
+                    <p className={styles.memberName}>
                       {getUserDisplayName(member.user)}
                     </p>
-                    <p className="text-sm text-muted-foreground capitalize">
-                      {member.role}
-                    </p>
+                    <p className={styles.memberRole}>{member.role}</p>
                   </div>
                 </div>
                 {index > 1 ? (
@@ -74,7 +73,7 @@ export function Settings({ teamData }: { teamData: TeamDataWithMembers }) {
             ))}
           </ul>
           {removeState?.error && (
-            <p className="text-red-500 mt-4">{removeState.error}</p>
+            <p className={styles.errorMessage}>{removeState.error}</p>
           )}
         </CardContent>
       </Card>

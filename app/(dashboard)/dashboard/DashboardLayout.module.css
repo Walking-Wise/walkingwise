@@ -3,12 +3,6 @@
 /*  Dashboard – Sidebar Layout (scoped)       */
 /*────────────────────────────────────────────*/
 
-/* ====== Tokens ====== */
-:root {
-    --header-h: 68px;            /* global header height */
-    --sidebar-w: 15rem;          /* 240 px */
-    --sidebar-w-compact: 4rem;   /* 64 px  */
-  }
   
   /* ====== Frame ====== */
   .page {

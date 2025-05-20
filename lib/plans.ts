@@ -1,4 +1,5 @@
 export enum Plans {
+  Demo = "Demo",
   Individual = "Individual",
   Plus = "Plus",
   Professional = "Professional",

@@ -1,7 +1,9 @@
 import Link from "next/link";
 import Image from "next/image";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { getUser } from "@/lib/db/queries";
+import { redirect } from "next/navigation";
+import { getUser, getTeamForUser } from "@/lib/db/queries";
+import styles from "@/app/styles/ResourceCard.module.css";
+import CreateGroupForm from "./CreateGroupForm";
 
 const courses = [
   {
@@ -35,32 +37,57 @@ const courses = [
 
 export default async function CoursesPage() {
   const user = await getUser();
+  if (!user) redirect("/sign-in");
+
+  const teamData = await getTeamForUser(user.id);
+  if (!teamData) throw new Error("Team not found");
+
+  // Redirect to pricing if user is on free plan
+  if (!teamData.planName) {
+    redirect("/pricing");
+  }
+
+  const firstName = user.name?.split(" ")[0] || "";
+  const lastName = user.name?.split(" ").slice(1).join(" ") || "";
+
+  // If user doesn't have a group, show the group creation form
+  if (!user.groupId) {
+    return (
+      <section className="flex-1 p-4 lg:p-8">
+        <h1 className="text-lg lg:text-2xl font-medium text-gray-900 mb-6">
+          Create Your Group
+        </h1>
+        <CreateGroupForm
+          userId={user.id}
+          email={user.email}
+          firstName={firstName}
+          lastName={lastName}
+        />
+      </section>
+    );
+  }
 
   return (
     <section className="flex-1 p-4 lg:p-8">
       <h1 className="text-lg lg:text-2xl font-medium text-gray-900 mb-6">
         All Courses
       </h1>
-      <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+      <div className={styles.resourceGrid}>
         {courses.map((course) => (
           <Link key={course.id} href={`/dashboard/courses/${course.id}`}>
-            <Card className="cursor-pointer transition-shadow hover:shadow-md overflow-hidden p-0">
-              <CardHeader className="p-0">
-                <Image
-                  src={`${course.courseImage}`}
-                  alt={`${course.name} cover`}
-                  width={400}
-                  height={200}
-                  className="w-full object-cover rounded-t-md"
-                />
-              </CardHeader>
-              <CardContent className="pt-0 px-4 pb-4">
-                <CardTitle className="mb-2">{course.name}</CardTitle>
-                <p className="text-sm text-gray-600 line-clamp-1">
-                  {course.description}
-                </p>
-              </CardContent>
-            </Card>
+            <article className={styles.card}>
+              <Image
+                src={course.courseImage}
+                alt={`${course.name} cover`}
+                width={400}
+                height={225}
+                className={styles.cardImage}
+              />
+              <div className={styles.cardBody}>
+                <h2 className={styles.cardTitle}>{course.name}</h2>
+                <p className={styles.cardText}>{course.description}</p>
+              </div>
+            </article>
           </Link>
         ))}
       </div>
