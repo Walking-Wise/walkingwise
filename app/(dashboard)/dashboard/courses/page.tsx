@@ -1,39 +1,9 @@
 import Link from "next/link";
-import Image from "next/image";
 import { redirect } from "next/navigation";
 import { getUser, getTeamForUser } from "@/lib/db/queries";
-import styles from "@/app/styles/ResourceCard.module.css";
 import CreateGroupForm from "./CreateGroupForm";
 
-const courses = [
-  {
-    id: "course-1",
-    name: "Part 1: The Groomers",
-    description: "Learn the basics of something cool.",
-    lessons: [],
-    students: [],
-    courseImage:
-      "https://walking-wise-assets.s3.amazonaws.com/wp-content/uploads/20241217202646/eLearning-The-Groomers-1.jpg", // Dummy image
-  },
-  {
-    id: "course-2",
-    name: "Part 2: The Vulnerable",
-    description: "Dive deeper into intermediate topics.",
-    lessons: [],
-    students: [],
-    courseImage:
-      "https://walking-wise-assets.s3.amazonaws.com/wp-content/uploads/20241217202651/eLearning-The-Vulnerable-1.jpg",
-  },
-  {
-    id: "course-3",
-    name: "Part 3: The Predators",
-    description: "Master advanced concepts with hands-on examples.",
-    lessons: [],
-    students: [],
-    courseImage:
-      "https://walking-wise-assets.s3.amazonaws.com/wp-content/uploads/20241217201346/eLearning-The-Predators-1.jpg",
-  },
-];
+const PATH_URL = process.env.REACH360_PATH_URL;
 
 export default async function CoursesPage() {
   const user = await getUser();
@@ -70,26 +40,25 @@ export default async function CoursesPage() {
   return (
     <section className="flex-1 p-4 lg:p-8">
       <h1 className="text-lg lg:text-2xl font-medium text-gray-900 mb-6">
-        All Courses
+        Complete Your Course
       </h1>
-      <div className={styles.resourceGrid}>
-        {courses.map((course) => (
-          <Link key={course.id} href={`/dashboard/courses/${course.id}`}>
-            <article className={styles.card}>
-              <Image
-                src={course.courseImage}
-                alt={`${course.name} cover`}
-                width={400}
-                height={225}
-                className={styles.cardImage}
-              />
-              <div className={styles.cardBody}>
-                <h2 className={styles.cardTitle}>{course.name}</h2>
-                <p className={styles.cardText}>{course.description}</p>
-              </div>
-            </article>
+      <div className="max-w-2xl mx-auto bg-white rounded-lg shadow-md p-6">
+        <div className="text-center">
+          <h2 className="text-xl font-semibold text-gray-900 mb-4">
+            Complete the course on Reach360
+          </h2>
+          <p className="text-gray-600 mb-6">
+            Click the button below to access your course on Reach360 and continue your learning journey.
+          </p>
+          <Link
+            href={PATH_URL || "#"}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block bg-blue-600 text-white px-6 py-3 rounded-md hover:bg-blue-700 transition-colors"
+          >
+            Go to Reach360 Course
           </Link>
-        ))}
+        </div>
       </div>
     </section>
   );

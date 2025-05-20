@@ -56,6 +56,18 @@ export default function CreateGroupForm({ userId, email, firstName, lastName }: 
         }
         console.log("Group created in database");
 
+        // Enroll group in Reach360 Learning Paths
+        const enrollResponse = await fetch("/api/reach360/enrollments", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ groupId: reachData.id }),
+        });
+
+        if (!enrollResponse.ok) {
+          throw new Error("Failed to enroll group in Reach360 Learning Paths");
+        }
+        console.log("Group enrolled in Reach360 Learning Paths");
+
         // Invite user to newly created group on reach360
         const reachInviteResponse = await fetch("/api/reach360/invitations", {
           method: "POST",

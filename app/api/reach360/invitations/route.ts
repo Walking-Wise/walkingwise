@@ -11,7 +11,6 @@ export async function GET() {
 
 export async function POST(req: NextRequest) {
   const { groupName, email, firstName, lastName } = await req.json();
-  console.log(groupName, email, firstName, lastName);
   if (!groupName || !email || !firstName || !lastName) {
     return NextResponse.json(
       { error: "groupName, email, firstName, lastName are all required" },
