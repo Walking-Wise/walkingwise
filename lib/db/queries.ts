@@ -140,7 +140,7 @@ export async function getTeamForUser(userId: number) {
 
 export async function getClassroomPresentations() {
   return await db.query.classroomPresentations.findMany({
-    orderBy: (presentations, { desc }) => [desc(presentations.createdAt)],
+    orderBy: (presentations, { asc }) => [asc(presentations.createdAt)],
   });
 }
 
@@ -158,13 +158,13 @@ export async function getClassroomPresentationById(id: number) {
 
 export async function getAllVideos() {
   return await db.query.videos.findMany({
-    orderBy: (videos, { desc }) => [desc(videos.createdAt)],
+    orderBy: (videos, { asc }) => [asc(videos.createdAt)],
   });
 }
 
 export async function getAllPowerpoints() {
   return await db.query.classroomPowerpoints.findMany({
-    orderBy: (powerpoints, { desc }) => [desc(powerpoints.createdAt)],
+    orderBy: (powerpoints, { asc }) => [asc(powerpoints.createdAt)],
   });
 }
 

@@ -8,7 +8,7 @@
   }
   
   .implementationTitle {
-    font-size: 1.125rem;
+    font-size: 1.5rem;
     font-weight: 500;
     color: rgb(17 24 39); /* gray-900 */
     margin-bottom: 0.5rem;
@@ -17,7 +17,7 @@
   .implementationDescription {
     color: rgb(55 65 81); /* gray-700 */;
     margin-bottom: 1.5rem;
-    max-width: 42rem;
+    
   }
   
   .guidesGrid {
@@ -28,7 +28,7 @@
   
   @media (min-width: 768px) {
     .guidesGrid {
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: repeat(1, 1fr);
     }
   }
   
@@ -43,7 +43,7 @@
   }
   
   .guideCard img {
-    width: 100%;
+    width: 25%;
     object-fit: cover;
   }
   
@@ -51,7 +51,7 @@
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    font-size: 1rem;
+    font-size: 1.2rem;
     font-weight: 600;
     color: rgb(31 41 55); /* gray-800 */
   }

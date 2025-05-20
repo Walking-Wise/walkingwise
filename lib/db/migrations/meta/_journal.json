@@ -36,6 +36,13 @@
       "when": 1746642149162,
       "tag": "0004_bitter_praxagora",
       "breakpoints": true
+    },
+    {
+      "idx": 5,
+      "version": "7",
+      "when": 1747682476653,
+      "tag": "0005_add_group_table",
+      "breakpoints": true
     }
   ]
 }

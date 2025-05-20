@@ -8,7 +8,10 @@ type UserContextType = {
   teamPromise: Promise<Team | null>;
 };
 
-const UserContext = createContext<UserContextType | null>(null);
+export const UserContext = createContext<UserContextType>({
+  userPromise: Promise.resolve(null),
+  teamPromise: Promise.resolve(null),
+});
 
 export function useUser(): UserContextType {
   let context = useContext(UserContext);

@@ -1,0 +1,137 @@
+/* app/(dashboard)/HomePage.module.css */
+/* Dashboard – UI scaffolding (no token defs here) */
+
+.page {
+    max-width: 90rem;
+    margin-inline: auto;
+    padding: var(--space-6, 1.5rem) var(--space-4, 1rem);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-8, 2rem);
+    font-family: var(--font-body, "Inter", system-ui, sans-serif);
+    color: var(--color-text);
+  }
+  
+  /* Hero ---------------------------------------------------- */
+  .heroCard {
+    background: var(--color-surface);
+    border-radius: var(--radius-md);
+    box-shadow: var(--elevation-1);
+    padding: var(--space-6, 1.5rem);
+  }
+  
+  .heroTitle {
+    font-family: var(--font-heading, "Poppins", system-ui, sans-serif);
+    font-size: clamp(1.4rem, 2.5vw, 1.875rem);
+    margin-bottom: var(--space-4, 1rem);
+  }
+  
+  .heroText {
+    color: var(--color-muted);
+    line-height: 1.6;
+    margin-bottom: var(--space-4, 1rem);
+  }
+  
+  .resourceGrid {
+    display: grid;
+    gap: var(--space-6, 1.5rem);
+    /* Auto‑fit keeps cards tidy as the viewport widens */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
+  
+  
+  @media (min-width: 48rem) {
+    .resourceGrid {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+  
+  /* Resource Card ------------------------------------------ */
+  .card {
+    background: var(--color-surface);
+    border-radius: var(--radius-md);
+    box-shadow: var(--elevation-1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform var(--motion-fast), box-shadow var(--motion-fast);
+    max-width: 340px;             /* prevents “monster” cards */
+  margin-inline: auto;    
+  }
+  
+  .card:hover,
+  .card:focus-within {
+    transform: translateY(-2px);
+    box-shadow: var(--elevation-2);
+  }
+  
+  .cardImage {
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    object-fit: cover;
+  }
+  
+  .cardBody {
+    padding: var(--space-5, 1.25rem);
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+  }
+  
+  .cardTitle {
+    font-family: var(--font-heading, "Poppins", system-ui, sans-serif);
+    font-size: 1.125rem;
+    display: flex;
+    align-items: center;
+    gap: var(--space-2, 0.5rem);
+    margin-bottom: var(--space-2, 0.5rem);
+  }
+  
+  .cardText {
+    color: var(--color-muted);
+    font-size: 0.875rem;
+    line-height: 1.6;
+    flex: 1;
+    margin-bottom: var(--space-4, 1rem);
+  }
+  
+  .ctaBtn {
+    padding: var(--space-2, 0.5rem) var(--space-4, 1rem);
+    border-radius: var(--radius-sm);
+    background: var(--color-primary);
+    color: #fff;
+    font-weight: 600;
+    font-size: 0.875rem;
+    text-align: center;
+    transition: background var(--motion-fast);
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .ctaBtn:hover,
+  .ctaBtn:focus-visible {
+    background: color-mix(in srgb, var(--color-primary) 85%, #000); /* ≈ 15 % darker */
+  }
+  
+  /* Support block ------------------------------------------ */
+  .supportCard {
+    background: var(--color-surface);
+    border-radius: var(--radius-md);
+    box-shadow: var(--elevation-1);
+    padding: var(--space-6, 1.5rem);
+  }
+  
+  .supportTitle {
+    font-family: var(--font-heading, "Poppins", system-ui, sans-serif);
+    display: flex;
+    align-items: center;
+    gap: var(--space-2, 0.5rem);
+    font-size: 1.125rem;
+    margin-bottom: var(--space-2, 0.5rem);
+  }
+  
+  .supportText {
+    color: var(--color-muted);
+    margin-bottom: var(--space-4, 1rem);
+  }
+  

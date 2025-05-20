@@ -36,6 +36,10 @@ export default function OnboardingForm() {
   const [hasAgreed, setHasAgreed] = useState(false);
   const [scrolledToBottom, setScrolledToBottom] = useState(false);
 
+  const stateAbbreviations = [
+    "AL", "AK", "AZ", "AR", "CA", "CO", "CT", "DE", "FL", "GA", "HI", "ID", "IL", "IN", "IA", "KS", "KY", "LA", "ME", "MD", "MA", "MI", "MN", "MS", "MO", "MT", "NE", "NV", "NH", "NJ", "NM", "NY", "NC", "ND", "OH", "OK", "OR", "PA", "RI", "SC", "SD", "TN", "TX", "UT", "VT", "VA", "WA", "WV", "WI", "WY",
+  ];
+
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     startTransition(() => {
@@ -223,13 +227,19 @@ export default function OnboardingForm() {
                 />
               </div>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <Input
+                <select
                   id="state"
+                  className="w-full bg-white border border-gray-300 rounded-md p-2 text-gray-800 text-sm cursor-pointer"
                   name="state"
-                  placeholder="State"
                   defaultValue={user?.state || ""}
                   required
-                />
+                >
+                  {stateAbbreviations.map((state) => (
+                    <option key={state} value={state}>
+                      {state}
+                    </option>
+                  ))}
+                </select>
                 <Input
                   id="zip_code"
                   name="zip_code"
