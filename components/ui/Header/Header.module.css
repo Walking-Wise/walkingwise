@@ -38,7 +38,7 @@
   }
   
   .logoImg {
-    height: 3.5rem;              /* ≈ 40px */
+    height: 4rem;              /* ≈ 40px */
     width: auto;
     object-fit: contain;
     margin-right: 20px;
@@ -59,7 +59,7 @@
   
   .navLink {
     font-family: var(--font-heading, "Bebas Neue", system-ui, sans-serif);
-    font-size: 1.25rem;          /* matches Bebas Neue height */
+    font-size: 1.75rem;          /* matches Bebas Neue height */
     font-weight: 500;
     color: var(--color-text);
     transition: color var(--motion-fast);

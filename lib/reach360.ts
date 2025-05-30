@@ -39,6 +39,9 @@ export const listGroups = () => reach<any>("/groups");
 export const createGroup = (name: string) =>
   reach<any>("/groups", { method: "POST", body: { name } });
 
+export const getGroupMembers = (groupId: string) =>
+  reach<any>(`/groups/${groupId}/users`);
+
 export const listInvites = () => reach<any>("/invitations");
 export const createInvite = (
   email: string,

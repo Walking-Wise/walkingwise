@@ -5,7 +5,7 @@ const nextConfig: NextConfig = {
     ppr: true,
   },
   images: {
-    domains: ["walking-wise-assets.s3.amazonaws.com", "via.placeholder.com", "www.walkingwise.com"],
+    domains: ["walking-wise-assets.s3.amazonaws.com", "via.placeholder.com", "www.walkingwise.com", "walking-wise-assets.s3.us-east-1.amazonaws.com"],
   },
 };
 
