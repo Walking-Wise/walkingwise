@@ -1,0 +1,41 @@
+.metricBar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-sea-blue);
+  padding: 2rem;
+}
+
+.metricBarInner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.metricBarTitle {
+  font-size: 4.5rem;
+  line-height: 1;
+  color: var(--color-ww-gray);
+  font-family: var(--font-heading, "Bebas Neue", system-ui, sans-serif);
+}
+.metricBarValue {
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--color-ww-gray);
+}
+.metricBarDescription {
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: white;
+  text-align: center;
+  padding-bottom: 1rem;
+}
+.metricBarCitation {
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: var(--color-ww-gray);
+  text-decoration: underline;
+}
