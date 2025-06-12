@@ -18,21 +18,21 @@ const PartOne = () => {
   return (
     <>
       {/* Hero Image Section */}
-       <div className="w-full bg-[#303030]">
+      <div className="w-full relative bg-[#303030]">
         <div
           className="w-full h-[400px] md:h-[500px] lg:h-[600px] mb-10 bg-cover bg-center bg-no-repeat"
           style={{ backgroundImage: "url('/assets/HME.jpg')" }}
         >
           {/* Right-aligned version - shows on screens ≥ 768px (md) */}
-          <div className="hidden md:block absolute bottom-80 right-4 sm:right-8 md:right-10 lg:right-16 xl:right-20 2xl:right-24">
-            <h1 className="text-3xl sm:text-5xl  text-white md:text-6xl lg:text-7xl xl:text-8xl p-1 bg-black/50">
+          <div className="hidden md:block absolute bottom-70 right-4 sm:right-8 md:right-10 lg:right-16 xl:right-20 2xl:right-24">
+            <h1 className="text-3xl text-white sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl p-1 bg-black/50">
               Home education
             </h1>
           </div>
 
           {/* Centered version - shows on screens < 768px */}
           <div className="md:hidden flex h-full justify-center items-center">
-            <h1 className="text-5xl  text-white p-1 bg-black/50">  Home education</h1>
+            <h1 className="text-5xl text-white sm:text-7xl p-1 bg-black/50">Home education</h1>
           </div>
         </div>
       </div>
@@ -47,7 +47,7 @@ const PartOne = () => {
       </div>
 
       {/* Parent Engagement Section */}
-      <section className="flex  max-w-screen-2xl mx-auto flex-col xl:flex-row justify-between mt-40 lg:mt-70 items-center gap-8 px-4 py-5">
+      <section className="flex  max-w-screen-2xl mx-auto flex-col xl:flex-row justify-between mt-40 lg:mt-30 items-center gap-8 px-4 py-5">
         <div className="w-full max-w-4xl text-black text-base sm:text-lg md:text-3xl lg:text-left px-4">
           <h1 className="text-4xl sm:text-6xl">Parent & Caregiver Engagement</h1>
           <p className={`${robotoopo.className} tracking-wide leading-7 lg:leading-10  mt-5`}>

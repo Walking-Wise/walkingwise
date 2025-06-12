@@ -70,7 +70,7 @@ const PartTwo = () => {
         {cardData.map((card, index) => (
           <div
             key={index}
-            className="bg-white h-[280px] sm:h-[320px] md:h-[350px] lg:h-[400px] w-full max-w-[400px] mx-auto flex justify-evenly p-4 items-center flex-col"
+            className="bg-white w-full max-w-[400px] mx-auto flex justify-evenly p-4 items-center flex-col"
           >
             <div className="text-center flex flex-col gap-1 sm:gap-2">
               <h2

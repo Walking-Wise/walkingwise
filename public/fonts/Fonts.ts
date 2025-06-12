@@ -37,3 +37,9 @@ export const robot = Roboto({
   style: ["normal"],
   display: 'swap',
 })
+export const robotoBold = Roboto({
+  subsets: ['latin'],
+  weight: '900',
+  style: ["normal"],
+  display: 'swap',
+})

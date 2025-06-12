@@ -77,7 +77,7 @@ export default function CoursesClient({ initialUser, initialTeamData }: CoursesC
       </h1>
       <GroupMembershipCheck userId={initialUser.id.toString()} onMembershipChange={setIsInGroup} />
       {isInGroup && (
-        <div className="max-w-2xl mx-auto bg-white rounded-lg shadow-md p-6 mt-6">
+        <div className="mx-auto bg-white rounded-lg shadow-md p-6 mt-6">
           <div className="text-center">
             <h2 className="text-xl font-semibold text-gray-900 mb-4">
               Complete the course on Reach360

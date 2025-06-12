@@ -66,7 +66,7 @@ const Card: React.FC<CardProps> = ({
         className={`bg-[#303030] ${roboto.className} mt-5 rounded-full text-sm sm:text-xl py-2 sm:py-3 px-10 text-white flex items-center whitespace-nowrap`}
       >
         {buttonText}
-        <i className="bg-white text-black font-bold rounded-full p-1 ml-1 flex items-center justify-center">
+        <i className="bg-white text-black font-bold rounded-full p-1 ml-3 flex items-center justify-center">
           <ChevronRight
             strokeWidth={3}
             className="w-4 h-4 sm:w-5 sm:h-5 lg:w-7 lg:h-7"

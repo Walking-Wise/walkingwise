@@ -29,7 +29,7 @@ const PartOne = () => {
                 <h1 className="text-5xl sm:text-7xl font-bold text-white mb-3">
                   walking wise
                 </h1>
-                <h1 className="text-2xl sm:text-4xl font-bold text-[#68D2DF] mb-3">
+                <h1 className="text-2xl sm:text-4xl font-bold text-[#00c1d5] mb-3">
                   empowering youth
                 </h1>
                 <h1 className="text-xl sm:text-2xl font-medium text-white">
@@ -43,7 +43,7 @@ const PartOne = () => {
           <div className="hidden lg:block my-auto absolute bottom-0 right-10">
             <div className="bg-black/70 p-1 flex flex-col w-[450px]">
               <h1 className="text-8xl text-white">walking wise</h1>
-              <p className={`${roboto.className} text-5xl text-[#68D2DF]`}>
+              <p className={`${roboto.className} text-5xl text-[#00c1d5]`}>
                 Empowering Youth
               </p>
             </div>
@@ -63,7 +63,7 @@ const PartOne = () => {
             DAUGHTER REPORTED AN ‘UNSAFE ADULT’ IN HER LIFE.”
           </p>
           <span
-            className={`${robotoItalic.className} text-[#68D2DF] block sm:text-2xl `}
+            className={`${robotoItalic.className} text-[#00c1d5] block sm:text-2xl `}
           >
             Proactive Father
           </span>

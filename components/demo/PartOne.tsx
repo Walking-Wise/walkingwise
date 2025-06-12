@@ -100,7 +100,7 @@ const PartOne = () => {
       </div>
 
       {/* Resources Section */}
-      <div className="bg-[#2aaabb] z-[200] py-10 w-full">
+      <div className="bg-[#00c1d5] z-[200] py-10 w-full">
         <div className="p-10 max-w-screen-2xl mx-auto">
           <div className="flex justify-between flex-wrap">
             <h1 className="text-4xl sm:text-6xl text-[#303030]">

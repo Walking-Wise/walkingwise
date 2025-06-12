@@ -55,7 +55,7 @@ const PartOne = () => {
         <div className="w-full lg:w-auto flex flex-col justify-center md:mt-20 items-center gap-8">
           {/* Testimonial Circle */}
           <div className="bg-[#303030] w-[250px] h-[250px] sm:w-[400px] sm:h-[400px] lg:w-[350px] lg:h-[350px] xl:w-[500px] xl:h-[500px] p-4 rounded-full flex flex-col justify-center items-center text-center text-white">
-            <p className={`${robotoItalicop.className} text-[#68D2DF] text-sm sm:text-2xl lg:text-xl xl:text-6xl px-4 sm:px-8`}>
+            <p className={`${robotoItalicop.className} text-[#00c1d5] text-sm sm:text-2xl lg:text-xl xl:text-6xl px-4 sm:px-8`}>
               CME Credits
             </p>
             <p className={`${robotoItalicop.className} text-white text-sm sm:text-2xl lg:text-xl xl:text-4xl px-4 sm:px-8`}>

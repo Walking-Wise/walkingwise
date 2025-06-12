@@ -9,13 +9,13 @@ const PartOne = () => {
 
   return (
     <>
-      <div className="w-full bg-[#303030]">
+     <div className="w-full relative bg-[#303030]">
         <div
           className="w-full h-[400px] md:h-[500px] lg:h-[600px] mb-10 bg-cover bg-center bg-no-repeat"
           style={{ backgroundImage: "url('/assets/EUD.jpg')" }}
         >
           {/* Right-aligned version - shows on screens ≥ 768px (md) */}
-          <div className="hidden md:block absolute bottom-80 right-4 sm:right-8 md:right-10 lg:right-16 xl:right-20 2xl:right-24">
+          <div className="hidden md:block absolute bottom-70 right-4 sm:right-8 md:right-10 lg:right-16 xl:right-20 2xl:right-24">
             <h1 className="text-3xl  text-white sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl p-1 bg-black/50">
               Youth Curriculum
             </h1>
@@ -23,7 +23,9 @@ const PartOne = () => {
 
           {/* Centered version - shows on screens < 768px */}
           <div className="md:hidden flex h-full justify-center items-center">
-            <h1 className="text-5xl  text-white p-1 bg-black/50"> Youth Curriculum</h1>
+            <h1 className="text-5xl  text-white p-1 bg-black/50">
+              Youth Curriculum
+            </h1>
           </div>
         </div>
       </div>

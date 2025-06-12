@@ -74,7 +74,7 @@ const PartOne = () => {
             WISE PROVIDES CLEAR AND TARGETED EDUCATION.”
           </p>
           <span
-            className={`${robotoopo.className} text-[#68D2DF] block text-sm sm:text-xl lg:text-2xl px-4 sm:px-20 mt-4`}
+            className={`${robotoopo.className} text-[#00c1d5] block text-sm sm:text-xl lg:text-2xl px-4 sm:px-20 mt-4`}
           >
             Seth W. Boughton Anti-Human Trafficking Applied Data Analyst
           </span>
@@ -82,7 +82,7 @@ const PartOne = () => {
       </div>
 
       {/* 5-Step Framework */}
-      <div className="bg-[#26b2c4] relative xl:-top-24  py-10 w-full">
+      <div className="bg-[#00c1d5] relative xl:-top-24  py-10 w-full">
         <div className="px-4 sm:px-10 max-w-screen-2xl mx-auto">
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-[#303030] font-bold">
             5-Step Framework Provides a Clear Roadmap

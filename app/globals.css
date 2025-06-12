@@ -354,5 +354,10 @@ h1{
 }
 nav a{
    font-family: 'Bebas Neue';
-  
+}
+nav span{
+   font-family: 'Bebas Neue';
+}
+button {
+  cursor: pointer !important;
 }

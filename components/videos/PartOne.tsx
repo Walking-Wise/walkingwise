@@ -42,7 +42,11 @@ const PartOne = () => {
       <div className="mt-40 lg:mt-70 mb-20 px-10 text-[#303030] !bg-white">
         <h1 className="text-4xl  max-w-screen-2xl mx-auto sm:text-6xl">Explanation Animation</h1>
         <p className={`${robotoopo.className} tracking-wide max-w-screen-2xl mx-auto leading-7 lg:leading-10  text-base sm:text-xl md:text-2xl lg:text-3xl mt-4 sm:mt-6`}>
-          Many schools invite guest speakers—subject matter experts (SMEs)—to present on sex trafficking for staff, parents, and students. While valuable, these one-time presentations often fade from memory. Today, Walking Wise partners with SMEs to provide a long-term, sustainable approach to child exploitation education, ensuring that critical knowledge gets reinforced over time.
+        Storytelling creates a strong connection with audiences, while visual learning enhances
+comprehension and retention. By combining these elements, explainer-style animation becomes
+a powerful educational tool that resonates with both children and adults. Walking Wise®
+subscribers receive full access to an animated video series that covers 12 key issues related to
+child exploitation
         </p>
       </div>
 

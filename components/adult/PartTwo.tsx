@@ -49,7 +49,7 @@ const PartTwo = () => {
           <p
             className={`${robotoopo.className} tracking-wide leading-7 lg:leading-10  sm:text-3xl text-white`}
           >
-            Our Walking Wise subscription gives you 365 days to complete this
+            Our Walking Wise subscription gives you 6 months to complete our
             12-hour online course.
           </p>
 
@@ -59,8 +59,8 @@ const PartTwo = () => {
           <p
             className={`${robotoopo.className} tracking-wide leading-7 lg:leading-10  sm:text-3xl text-white`}
           >
-            Dedicate just one hour per month to complete each lesson and reach
-            the Walking Wise finish line by year-end!
+            Dedicate about two per month to complete each lesson and reach
+            the Walking Wise finish line by in 6 months!
           </p>
 
           <div className="flex flex-wrap justify-center items-center mt-10 gap-10">

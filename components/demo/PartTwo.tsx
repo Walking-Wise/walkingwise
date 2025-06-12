@@ -89,7 +89,7 @@ const PartTwo = () => {
       {/* Education Topics Section */}
       <div className="bg-[#303030] mt-10">
         <div className="px-4 sm:px-6 md:px-10 py-8 md:py-10 max-w-screen-2xl mx-auto">
-          <h1 className="text-[#68D2DF] text-3xl sm:text-4xl md:text-5xl lg:text-6xl">
+          <h1 className="text-[#00c1d5] text-3xl sm:text-4xl md:text-5xl lg:text-6xl">
             12 education topics
           </h1>
 

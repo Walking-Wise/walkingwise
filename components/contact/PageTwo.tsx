@@ -36,7 +36,7 @@ const PageTwo = () => {
       </div>
 
      <div className="mt-50 flex justify-center mb-20 items-center px-4 sm:px-10">
-  <div className="w-full max-w-6xl p-6 text-[#303030] sm:p-10 bg-[#68D2DF] rounded-md">
+  <div className="w-full max-w-6xl p-6 text-[#303030] sm:p-10 bg-[#00c1d5] rounded-md">
     {/* Heading */}
     <div>
       <h1 className={`${robotoopo.className} text-[#303030] text-3xl sm:text-4xl`}>

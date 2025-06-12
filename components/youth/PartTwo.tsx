@@ -94,7 +94,7 @@ const PartTwo = () => {
                   key={index}
                   className={`${robotoopo.className} text-base sm:text-xl tracking-wide leading-7 lg:leading-10  md:text-2xl lg:text-4xl mt-4`}
                 >
-                  <strong className="text-[#68D2DF]">{step.label}</strong>{" "}
+                  <strong className="text-[#00c1d5]">{step.label}</strong>{" "}
                   {step.description}
                 </li>
               ))}
@@ -111,7 +111,7 @@ const PartTwo = () => {
               />
             </div>
             <p
-              className={`${robotoopo.className} text-xl text-center text-[#68D2DF] mt-4`}
+              className={`${robotoopo.className} text-xl text-center text-[#00c1d5] mt-4`}
             >
               Earn Continuing Education Credits
             </p>

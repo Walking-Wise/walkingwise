@@ -40,7 +40,9 @@ const PartOne = () => {
 
           {/* Centered version - shows on screens < 768px */}
           <div className="md:hidden flex h-full justify-center items-center">
-            <h1 className="text-5xl  text-white p-1 bg-black/50">Online course</h1>
+            <h1 className="text-5xl  text-white p-1 bg-black/50">
+              Online course
+            </h1>
           </div>
         </div>
       </div>
@@ -60,30 +62,30 @@ const PartOne = () => {
           <h1 className="text-4xl sm:text-6xl">
             Walking Wise: Sexual Exploitation Education
           </h1>
-
-          <div className="flex flex-col sm:flex-row justify-between">
-            <h1 className="text-[#303030] text-4xl sm:text-6xl mt-8 md:mt-10">
-              <span className="text-[#68D2DF] me-3">part 1</span> the grommers
-            </h1>
-            <div className="hidden xl:block mt-4 sm:mt-0">
-              <div className="flex justify-center items-center gap-4 sm:gap-7">
-                <button
-                  className={`bg-[#1C4675] text-lg sm:text-xl lg:text-2xl px-6 sm:px-8 lg:px-10 py-1 sm:py-2 rounded-4xl ${robotoop.className} text-white`}
-                >
-                  CME Accreditation
-                </button>
-                <div className="relative h-[80px] sm:h-[100px] lg:h-[150px] w-[80px] sm:w-[100px] lg:w-[150px]">
-                  <Image
-                    src="/assets/home-1.png"
-                    alt="Logo"
-                    fill
-                    className="object-cover"
-                  />
+          <div className="flex justify-end">
+            <div className="flex flex-col sm:flex-row justify-between">
+              <div className="hidden xl:block mt-4 sm:mt-0">
+                <div className="flex justify-center items-center gap-4 sm:gap-7">
+                  <button
+                    className={`bg-[#1C4675] text-lg sm:text-xl lg:text-2xl px-6 sm:px-8 lg:px-10 py-1 sm:py-2 rounded-4xl ${robotoop.className} text-white`}
+                  >
+                    CME Accreditation
+                  </button>
+                  <div className="relative h-[80px] sm:h-[100px] lg:h-[150px] w-[80px] sm:w-[100px] lg:w-[150px]">
+                    <Image
+                      src="/assets/home-1.png"
+                      alt="Logo"
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-
+          <h1 className="text-[#303030] text-4xl sm:text-6xl mt-8 md:mt-10">
+            <span className="text-[#00c1d5] me-3">part 1</span> the groomers
+          </h1>
           <p
             className={`${robotoopo.className} tracking-wide leading-7 lg:leading-10  text-base sm:text-3xl mt-4`}
           >
@@ -94,7 +96,7 @@ const PartOne = () => {
           </p>
 
           <h1 className="text-[#303030] text-4xl sm:text-6xl mt-8 md:mt-10">
-            <span className="text-[#68D2DF] me-3">1st SESSION</span> Description
+            <span className="text-[#00c1d5] me-3">1st SESSION</span> Description
           </h1>
 
           <p
@@ -113,9 +115,9 @@ const PartOne = () => {
           </p>
 
           {/* Blue Box */}
-          <div className="bg-[#26b2c4] w-full max-w-7xl min-h-[200px] ps-2 py-5 sm:px-6 md:px-10 lg:px-20 mx-auto my-10 sm:my-12 md:my-16 lg:my-20">
+          <div className="bg-[#00c1d5] w-full max-w-7xl min-h-[200px] ps-2 py-5 pb-15 sm:px-6 md:px-10 lg:px-20 mx-auto my-10 sm:my-12 md:my-16 lg:my-20">
             <h1
-              className={`${roboto.className} text-4xl sm:text-5xl mt-4 sm:mt-10 sm:pt-5 text-center sm:text-left`}
+              className={`${roboto.className} text-4xl sm:text-5xl mt-4 sm:mt-10 sm:pt-5 md:pt-0 text-center sm:text-left`}
             >
               THE GROOMERS
             </h1>
@@ -148,13 +150,13 @@ const PartOne = () => {
           </div>
 
           {/* Objectives */}
-          <div className="flex flex-col sm:flex-row justify-between items-center mt-8 md:mt-10">
+          <div className="flex flex-col sm:flex-row justify-between items-center mt-8 md:mt-10 md:mb-10">
             <h1 className="text-[#303030] text-4xl sm:text-6xl">
-              <span className="text-[#68D2DF] me-3">1st SESSION</span>{" "}
+              <span className="text-[#00c1d5] me-3">1st SESSION</span>{" "}
               objectives
             </h1>
             <button
-              className={`bg-purple-600 hover:bg-purple-700 text-white px-6 sm:px-8 lg:px-10 py-2 sm:py-3 lg:py-4 mt-4 sm:mt-6 md:mt-8 lg:mt-10 rounded-4xl transition-colors ${robotoopo.className} text-lg sm:text-xl`}
+              className={`bg-purple-600 hover:bg-purple-700 text-white px-6 sm:px-8 lg:px-10 py-2 sm:py-3 lg:py-4 rounded-4xl transition-colors ${robotoopo.className} text-lg sm:text-xl`}
               onClick={() => router.push("/course")}
             >
               Start Course

@@ -77,9 +77,9 @@ export default function GroupMembershipCheck({ userId, onMembershipChange }: Gro
   }
 
   return (
-    <Card className="max-w-2xl mx-auto bg-white rounded-lg shadow-md">
+    <Card className="mx-auto bg-white rounded-lg shadow-md">
       <CardHeader>
-        <CardTitle className="text-xl font-semibold text-gray-900">
+        <CardTitle className="text-xl text-center font-semibold text-gray-900">
           Check Your Email
         </CardTitle>
       </CardHeader>

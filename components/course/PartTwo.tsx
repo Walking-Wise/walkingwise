@@ -11,7 +11,7 @@ const sessionData = [
     color: "#303030",
     textColor: "text-white",
     boxColor: "bg-purple-600",
-    highlightColor: "#68D2DF",
+    highlightColor: "#00c1d5",
     objectives: [
       "Discuss how the use of electronic devices and online platforms can increase an individual's vulnerability to sexual predators and traffickers in the commercial sex trade.",
       "Examine how societal factors contribute to the overlooked sexual exploitation of young males and understand the barriers that may discourage them from seeking help.",
@@ -30,7 +30,7 @@ const sessionData = [
     part: "part 3",
     title: "the predators",
     session: "3rd SESSION",
-    color: "#68D2DF",
+    color: "#00c1d5",
     textColor: "text-[#303030]",
     boxColor: "bg-[#303030]",
     highlightColor: "#303030",
@@ -69,7 +69,7 @@ const PartTwo = () => {
           >
             <div className=" mx-auto">
               <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
-                <h1 className="text-4xl sm:text-6xl text-white my-10">
+                <h1 className="text-4xl sm:text-6xl text-white my-4">
                   <span
                     className={`me-3`}
                     style={{ color: session.highlightColor }}
@@ -111,7 +111,7 @@ const PartTwo = () => {
                 className={`${session.boxColor} text-white w-full max-w-5xl py-5 min-h-[200px] px-4 sm:px-6 md:px-10 lg:px-16 mx-auto my-12`}
               >
                 <h1
-                  className={`${roboto.className} text-xl sm:text-2xl md:text-3xl lg:text-4xl mt-8 sm:mt-10 text-center sm:text-left`}
+                  className={`${roboto.className} text-xl sm:text-2xl md:text-3xl lg:text-4xl mt-8 sm:mt-10 md:mt-0 text-center sm:text-left`}
                 >
                   {session.boxTitle}
                 </h1>
@@ -131,7 +131,7 @@ const PartTwo = () => {
                 </div>
               </div>
 
-              <div className="flex flex-col sm:flex-row justify-between items-center my-10 sm:items-center gap-4">
+              <div className="flex flex-col sm:flex-row justify-between items-center my-4 sm:items-center gap-4">
                 <h1 className="text-4xl text-white sm:text-6xl">
                   <span
                     className={`me-3`}
@@ -143,7 +143,7 @@ const PartTwo = () => {
                 </h1>
                 <button
                   onClick={() => router.push("/course")}
-                  className={`bg-purple-600 hover:bg-purple-700 text-white sm:text-2xl px-6 py-3 sm:px-10 sm:py-4 mt-4 sm:mt-10 rounded-3xl transition-colors ${robotoop.className}`}
+                  className={`bg-purple-600 hover:bg-purple-700 text-white sm:text-2xl px-6 py-3 sm:px-10 sm:py-4 rounded-3xl transition-colors ${robotoop.className}`}
                 >
                   Start Course
                 </button>
