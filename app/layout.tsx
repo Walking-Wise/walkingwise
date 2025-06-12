@@ -1,6 +1,7 @@
 import "./globals.css";
 import type { Metadata, Viewport } from "next";
 import { Roboto } from "next/font/google";
+import { Geist, Geist_Mono } from "next/font/google";
 import { UserProvider } from "@/lib/auth";
 import { getTeamForUser, getUser } from "@/lib/db/queries";
 import { Team } from "@/lib/db/schema";
@@ -15,6 +16,16 @@ export const viewport: Viewport = {
 };
 
 const roboto = Roboto({ subsets: ["latin"] });
+
+const geistSans = Geist({
+  variable: "--font-geist-sans",
+  subsets: ["latin"],
+});
+
+const geistMono = Geist_Mono({
+  variable: "--font-geist-mono",
+  subsets: ["latin"],
+});
 
 export default async function RootLayout({
   children,
@@ -33,9 +44,9 @@ export default async function RootLayout({
   return (
     <html
       lang="en"
-      className={`bg-white dark:bg-gray-950 text-black dark:text-white ${roboto.className}`}
+      className={`bg-white dark:bg-gray-950 text-black dark:text-white ${roboto.className} ${geistSans.variable} ${geistMono.variable}`}
     >
-      <body className="min-h-[100dvh] bg-gray-50">
+      <body className="min-h-[100dvh] bg-gray-50 antialiased">
         <UserProvider
           userPromise={Promise.resolve(user)}
           teamPromise={teamPromise}
