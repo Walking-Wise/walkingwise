@@ -21,7 +21,7 @@
   }
   
   .heroTitle {
-    font-family: var(--font-heading, "Poppins", system-ui, sans-serif);
+    font-family: var(--font-heading, "Roboto", system-ui, sans-serif);
     font-size: clamp(1.4rem, 2.5vw, 1.875rem);
     margin-bottom: var(--space-4, 1rem);
   }
@@ -79,12 +79,13 @@
   }
   
   .cardTitle {
-    font-family: var(--font-heading, "Poppins", system-ui, sans-serif);
+    font-family: var(--font-heading, "Roboto", system-ui, sans-serif);
     font-size: 1.125rem;
     display: flex;
     align-items: center;
     gap: var(--space-2, 0.5rem);
     margin-bottom: var(--space-2, 0.5rem);
+    color: var(--color-primary);
   }
   
   .cardText {
@@ -122,12 +123,13 @@
   }
   
   .supportTitle {
-    font-family: var(--font-heading, "Poppins", system-ui, sans-serif);
+    font-family: var(--font-heading, "Roboto", system-ui, sans-serif);
     display: flex;
     align-items: center;
     gap: var(--space-2, 0.5rem);
     font-size: 1.125rem;
     margin-bottom: var(--space-2, 0.5rem);
+    color: var(--color-primary);
   }
   
   .supportText {

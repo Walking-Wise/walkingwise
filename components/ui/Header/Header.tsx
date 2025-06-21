@@ -37,7 +37,7 @@ export default function Header() {
           <div className={styles.logo}>
             <Link href={user ? "/dashboard" : "/"} aria-label="Walking Wise">
               <Image
-                src="https://www.walkingwise.com/wp-content/uploads/WW_LogoDevelopment_B0628-768x358.png"
+                src="/assets/logo.png"
                 alt="Walking Wise logo"
                 width={500}
                 height={358}

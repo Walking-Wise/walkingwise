@@ -20,6 +20,7 @@ import { useUser } from "@/lib/auth";
 import { Plans } from "@/lib/plans";
 
 import styles from "./DashboardLayout.module.css";
+import Header from "@/components/ui/Header/Header";
 
 export default function DashboardLayout({
   children,
@@ -88,7 +89,9 @@ export default function DashboardLayout({
 
   /* ── component ────────────────────── */
   return (
+    
     <div className={styles.page}>
+      <Header />
       {/* Mobile header */}
       <header className={styles.mobileHeader}>
         <span className="font-medium">Dashboard</span>
