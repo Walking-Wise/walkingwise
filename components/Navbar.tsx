@@ -62,7 +62,7 @@ const Navbar = () => {
             </Link>
             <Link href="/demo">Enroll</Link>
           </div>
-          <Link href="/">Login</Link>
+          <Link href="/sign-in">Login</Link>
         </div>
 
         {/* Mobile Menu Button */}
