@@ -159,7 +159,7 @@ const PartTwo = () => {
             Management Systems (LMS), allowing organizations to deliver
             education efficiently within their existing training platforms. Our
             SCORM-compliant modules can be uploaded directly into your LMS,
-            ensuring associates have on-demand access to the 12 lesson series  <Link href="/contact" className="underline">Contact us</Link>    explore implementation options.
+            ensuring associates have on-demand access to the 12 lesson series  <Link href="https://www.walkingwise.com/contact-us-v2/" className="underline">Contact us</Link>    explore implementation options.
           </p>
 
           <h1 className="text-4xl text-white sm:text-6xl mb-3 mt-8 sm:mt-10">
@@ -173,7 +173,7 @@ const PartTwo = () => {
             provides associates with individual login access to the Walking Wise
             Learning Platform. This flexible, on-demand model allows
             professionals to complete the lessons at their own pace while
-            meeting compliance and development requirements. <Link href="/contact" className="underline">Schedule</Link> a platform
+            meeting compliance and development requirements. <Link href="https://www.walkingwise.com/contact-us-v2/" className="underline">Schedule</Link> a platform
             tour today to discover how Walking Wise can support your
             organization’s education initiatives.
           </p>
