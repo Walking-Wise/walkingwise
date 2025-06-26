@@ -108,7 +108,7 @@ const PartOne = () => {
             </h1>
             <button
               className={`bg-purple-600 hover:bg-purple-700 text-white px-6 sm:px-8 md:px-10 py-2 sm:py-3 md:py-4 rounded-4xl transition-colors ${robotoopo.className} text-sm sm:text-base md:text-xl`}
-              onClick={()=>router.push('/demo')}
+              onClick={() => window.location.href = "https://www.walkingwise.com/contact-us-v2/"}
             >
               ENROLL Today!
             </button>
