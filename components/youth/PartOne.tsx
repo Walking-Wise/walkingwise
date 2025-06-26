@@ -11,7 +11,7 @@ const PartOne = () => {
     <>
      <div className="w-full relative bg-[#303030]">
         <div
-          className="w-full h-[400px] md:h-[500px] lg:h-[600px] mb-10 bg-cover bg-center bg-no-repeat"
+          className="w-full h-[400px] md:h-[500px] lg:h-[600px] bg-cover bg-center bg-no-repeat"
           style={{ backgroundImage: "url('/assets/EUD.jpg')" }}
         >
           {/* Right-aligned version - shows on screens ≥ 768px (md) */}
@@ -31,15 +31,15 @@ const PartOne = () => {
       </div>
 
       <div className="relative z-10">
-        <div className="absolute z-[-100] top-[-40px]  bg-[#303030] w-full h-[130px] sm:h-[180px] flex items-center ps-4 sm:ps-10">
-          <h1 className="text-4xl sm:text-6xl lg:text-8xl text-white">
+        <div className="z-[-100] top-[-40px]  bg-[#303030] w-full py-3 flex items-center px-4">
+          <h1 className="sm:text-6xl lg:text-5xl text-white">
             curriculum for youth
           </h1>
         </div>
       </div>
 
-      <div className="mt-50  max-w-screen-2xl mx-auto lg:mt-70 mb-10 text-[#303030]">
-        <div className="px-10">
+      <div className="mt-8 max-w-screen-2xl mx-auto lg:mt-8 mb-10 text-[#303030]">
+        <div className="max-sm:px-10">
           <div className="flex justify-between">
             <h1 className="text-4xl sm:text-6xl"> Youth Education </h1>
             <div className=" h-[50px] w-[50px]  pt-[5px] border-[#303030] hidden sm:block text-[#115a64] rounded-full text-xl ps-2 border-5 border-r-transparent">
@@ -107,7 +107,7 @@ const PartOne = () => {
             </button>
             <button
               className={`bg-purple-600 hover:bg-purple-700 text-white  py-2 text-2xl mt-4 sm:mt-10 rounded-4xl transition-colors ${robotoopo.className}`}
-              onClick={() => router.push("/demo")}
+              onClick={() => window.location.href = "https://www.walkingwise.com/contact-us-v2/"}
             >
               ENROLL Today!
             </button>

@@ -37,7 +37,7 @@ const PartTwo = () => {
   return (
     <>
       <div className="py-10 max-w-screen-2xl mx-auto">
-        <div className="px-10 text-[#303030]">
+        <div className="max-sm:px-10 text-[#303030]">
           <h1 className="text-4xl sm:text-6xl">education guide</h1>
           <p
             className={`${robotoopo.className} mt-4 tracking-wide leading-7 lg:leading-10  text-xl sm:text-3xl`}
@@ -83,7 +83,7 @@ const PartTwo = () => {
       </div>
 
       <div className="bg-[#303030] py-10 sm:py-15 mt-5 text-white w-full ">
-        <div className="px-4 sm:px-6 max-w-screen-2xl mx-auto md:px-10 flex flex-col justify-center items-center xl:flex-row gap-10">
+        <div className="max-sm:px-10 max-w-screen-2xl mx-auto flex flex-col justify-center items-center xl:flex-row gap-10">
           <div>
             <h1 className="text-4xl sm:text-5xl md:text-6xl">
               streamlined execution
@@ -117,6 +117,7 @@ const PartTwo = () => {
             </p>
             <button
               className={`bg-purple-600 hover:bg-purple-700 text-white px-10 py-4 mt-4 rounded-4xl transition-colors ${roboto.className}`}
+              onClick={() => window.location.href = "https://www.walkingwise.com/contact-us-v2/"}
             >
               ENROLL Today!
             </button>
