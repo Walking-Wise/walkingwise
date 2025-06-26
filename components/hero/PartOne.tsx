@@ -24,16 +24,16 @@ const PartOne = () => {
             className="lg:hidden w-full h-[500px] bg-cover bg-center bg-no-repeat relative"
             style={{ backgroundImage: "url('/assets/HOME.jpg')" }}
           >
-            <div className="absolute inset-0 flex justify-center items-center">
-              <div className="bg-black/70 p-6 mx-4 text-center max-w-[90%]">
-                <h1 className="text-5xl sm:text-7xl font-bold text-white mb-3">
-                  walking wise
+            <div className="absolute inset-0 flex justify-start items-end px-4 pb-6">
+              <div className="text-left leading-none">
+                <h1 className="inline-block bg-black/60 px-4 pt-2 text-5xl sm:text-7xl font-bold text-white">
+                  Walking Wise
                 </h1>
-                <h1 className="text-2xl sm:text-4xl font-bold text-[#00c1d5] mb-3">
-                  empowering youth
-                </h1>
-                <h1 className="text-xl sm:text-2xl font-medium text-white">
-                  educating communities to combat child exploitation
+                <p className={`${roboto.className} inline-block bg-black/60 px-4 py-0 pb-1 text-2xl sm:text-4xl font-bold text-[#00c1d5] tracking-wider`}>
+                  Empowering Youth
+                </p>
+                <h1 className={`${roboto.className} inline-block bg-black/60 px-4 pb-2 text-xl sm:text-xl font-small text-white`}>
+                  Educating Communities to Combat Child Exploitation
                 </h1>
               </div>
             </div>
@@ -41,21 +41,21 @@ const PartOne = () => {
 
           {/* Original right-aligned text - shown only on larger screens */}
           <div className="hidden lg:block my-auto absolute bottom-0 right-10">
-            <div className="bg-black/70 p-1 flex flex-col w-[450px]">
-              <h1 className="text-8xl text-white">walking wise</h1>
+            <div className="bg-black/60 px-4 pt-4 flex flex-col w-[470px]">
+              <h1 className="text-8xl text-white">Walking Wise</h1>
               <p className={`${roboto.className} text-5xl text-[#00c1d5]`}>
                 Empowering Youth
               </p>
             </div>
-            <h1 className="text-5xl text-white bg-black/70 ps-1 pb-1">
-              educating communities to combat child exploitation
+            <h1 className={`${roboto.className} text-4xl text-white bg-black/60 px-4 py-4`}>
+              Educating Communities to Combat Child Exploitation
             </h1>
           </div>
         </div>
       </div>
       <div className="flex relative flex-col xl:flex-row justify-center  items-center gap-8 px-4 py-5 bg-white">
-        <div className="absolute z-[-100px] top-[-40px] 2xl:top-0  bg-[#303030] w-full h-[100px]" />
-        <div className="bg-[#303030] w-[300px] h-[300px]  z-50 sm:min-w-[500px] sm:h-[500px] p-4 border-t-3 border-white rounded-full flex flex-col justify-evenly items-center text-center text-white ">
+        <div className="absolute z-[-100px] top-[-40px] 2xl:top-0  bg-[#303030] w-full h-[75px]" />
+        <div className="bg-[#303030] w-[300px] h-[300px] z-50 sm:min-w-[500px] sm:h-[500px] p-4 border-t-3 border-white rounded-full flex flex-col justify-evenly items-center text-center text-white ">
           <p
             className={`${robotoItalic.className} text-md  sm:text-4xl mt-10 px-9`}
           >
@@ -68,9 +68,9 @@ const PartOne = () => {
             Proactive Father
           </span>
         </div>
-        <div className="w-full max-w-4xl text-black text-xl md:text-3xl text-left  px-4">
-          <p className={`${robotoopo.className} tracking-wide mt-10`}>
-            Sexual predators and child traffickers can deceive adults and entir
+        <div className="w-full max-w-4xl text-black text-xl md:text-3xl text-left px-4">
+          <p className={`${robotoopo.className} tracking-wide lg:mt-10`}>
+            Sexual predators and child traffickers can deceive adults and entire
             communities.
             <br /> <br />
             Predators groom victims by gaining their trust before gradually

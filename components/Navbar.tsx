@@ -7,8 +7,8 @@ import { Menu, X, ChevronDown } from "lucide-react";
 import { Roboto } from "next/font/google";
 
 const roboto = Roboto({
-  weight: ['400', '500', '700'],
-  subsets: ['latin'],
+  weight: ["400", "500", "700"],
+  subsets: ["latin"],
 });
 
 const Navbar = () => {
@@ -41,14 +41,34 @@ const Navbar = () => {
               className="flex items-center space-x-2 text-black cursor-pointer"
             >
               <span>Our Education</span>
-              <ChevronDown size={24} className={`transform transition-transform ${isEducationOpen ? 'rotate-180' : ''}`} />
+              <ChevronDown
+                size={24}
+                className={`transform transition-transform ${
+                  isEducationOpen ? "rotate-180" : ""
+                }`}
+              />
             </button>
             {isEducationOpen && (
               <div className="absolute left-0 mt-2 w-48 bg-white rounded-lg shadow-lg py-2 z-50">
-                <Link href="/course" className={`block px-4 py-2 text-lg hover:bg-gray-100 ${roboto.className}`}>Online course for adults</Link>
-                <Link href="/youth-curriculum" className={`block px-4 py-2 text-lg hover:bg-gray-100 ${roboto.className}`}>Curriculum for youth</Link>
-                <Link href="/videos" className={`block px-4 py-2 text-lg hover:bg-gray-100 ${roboto.className}`}>Animated video series</Link>
-                <Link href="/pricing" className={`block px-4 py-2 text-lg hover:bg-gray-100 ${roboto.className}`}>Pricing</Link>
+                <Link
+                  href="/course"
+                  className={`block px-4 py-2 text-lg hover:bg-gray-100 ${roboto.className}`}
+                >
+                  Online Course for Adults
+                </Link>
+                <Link
+                  href="/youth-curriculum"
+                  className={`block px-4 py-2 text-lg hover:bg-gray-100 ${roboto.className}`}
+                >
+                  Curriculum for Youth
+                </Link>
+                <Link
+                  href="/videos"
+                  className={`block px-4 py-2 text-lg hover:bg-gray-100 ${roboto.className}`}
+                >
+                  Animated Video Series
+                </Link>
+                {/* <Link href="/pricing" className={`block px-4 py-2 text-lg hover:bg-gray-100 ${roboto.className}`}>Pricing</Link> */}
               </div>
             )}
           </div>
@@ -62,7 +82,12 @@ const Navbar = () => {
             </Link>
             <Link href="/demo">Enroll</Link>
           </div>
-          <Link href="/sign-in">Login</Link>
+          <Link
+            href="https://www.walkingwise.com/contact-us-v2/"
+            target="_blank"
+          >
+            Login
+          </Link>
         </div>
 
         {/* Mobile Menu Button */}
@@ -79,43 +104,71 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="lg:hidden flex text-2xl flex-col mt-2 space-y-4 text-black font-bold">
+        <div className="lg:hidden flex flex-col text-2xl mt-2 space-y-4 text-black font-bold relative min-h-[60vh]">
+          {/* ... your menu items ... */}
           <Link href="/" onClick={() => setIsOpen(false)}>
             Home
           </Link>
+
+          {/* Dropdown menu logic stays the same */}
           <div className="flex flex-col">
             <button
               onClick={toggleEducation}
               className="flex items-center space-x-2 text-black"
             >
               <span>Our Education</span>
-              <ChevronDown size={24} className={`transform transition-transform ${isEducationOpen ? 'rotate-180' : ''}`} />
+              <ChevronDown
+                size={24}
+                className={`transform transition-transform ${
+                  isEducationOpen ? "rotate-180" : ""
+                }`}
+              />
             </button>
             {isEducationOpen && (
               <div className="pl-4 mt-2 space-y-2">
-                <Link href="/course" onClick={() => setIsOpen(false)} className={`block ${roboto.className}`}>Online course for adults</Link>
-                <Link href="/education/methodology" onClick={() => setIsOpen(false)} className={`block ${roboto.className}`}>Methodology</Link>
-                <Link href="/education/resources" onClick={() => setIsOpen(false)} className={`block ${roboto.className}`}>Resources</Link>
-                <Link href="/education/success-stories" onClick={() => setIsOpen(false)} className={`block ${roboto.className}`}>Success Stories</Link>
+                <Link
+                  href="/course"
+                  className={`block px-4 py-2 text-lg hover:bg-gray-100 ${roboto.className}`}
+                >
+                  Online Course for Adults
+                </Link>
+                <Link
+                  href="/youth-curriculum"
+                  className={`block px-4 py-2 text-lg hover:bg-gray-100 ${roboto.className}`}
+                >
+                  Curriculum for Youth
+                </Link>
+                <Link
+                  href="/videos"
+                  className={`block px-4 py-2 text-lg hover:bg-gray-100 ${roboto.className}`}
+                >
+                  Animated Video Series
+                </Link>
               </div>
             )}
           </div>
+
           <Link href="/about" onClick={() => setIsOpen(false)}>
             About
           </Link>
           <Link href="/demo" onClick={() => setIsOpen(false)}>
             Enroll
           </Link>
-          <Link href="/" onClick={() => setIsOpen(false)}>
+          <Link
+            href="https://www.walkingwise.com/contact-us-v2/"
+            onClick={() => setIsOpen(false)}
+          >
             Login
           </Link>
-          <div className="flex justify-center items-start flex-col space-y-2">
+
+          {/* Button at bottom */}
+          <div className="absolute bottom-0 left-0 right-0 p-4">
             <Link
               href="/demo"
-              className="bg-[#303030] text-white px-4 py-2 rounded-lg"
+              className="bg-[#303030] text-white w-full text-center py-3 rounded-lg block"
               onClick={() => setIsOpen(false)}
             >
-              Demo
+              Get a Demo
             </Link>
           </div>
         </div>

@@ -11,7 +11,7 @@ type StatCardProps = {
 
 const StatCard = ({ value, title, description, source }: StatCardProps) => {
   return (
-    <div className="bg-[#00C1D5] flex flex-col items-center text-center h-[380px] w-full max-w-[400px] px-3 py-4">
+    <div className="bg-[#00C1D5] flex flex-col items-center text-center h-[410px] w-full max-w-[400px] px-3 py-4">
       <h1 className="text-6xl sm:text-7xl md:text-8xl text-[#303030] mt-5">
         {value}
       </h1>

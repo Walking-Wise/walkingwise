@@ -6,33 +6,76 @@ import { hashPassword } from "@/lib/auth/session";
 async function createStripeProducts() {
   console.log("Creating Stripe products and prices...");
 
-  const baseProduct = await stripe.products.create({
-    name: "Base",
-    description: "Base subscription plan",
+  const individualProduct = await stripe.products.create({
+    name: "Individual",
+    description: "Individual subscription plan",
   });
 
   await stripe.prices.create({
-    product: baseProduct.id,
-    unit_amount: 800, // $8 in cents
+    product: individualProduct.id,
+    unit_amount: 300, // $3 in cents
     currency: "usd",
     recurring: {
       interval: "month",
-      trial_period_days: 7,
     },
   });
 
-  const plusProduct = await stripe.products.create({
-    name: "Plus",
-    description: "Plus subscription plan",
+  const professionalProduct = await stripe.products.create({
+    name: "Professional",
+    description: "Professional subscription plan",
   });
 
   await stripe.prices.create({
-    product: plusProduct.id,
-    unit_amount: 1200, // $12 in cents
+    product: professionalProduct.id,
+    unit_amount: 700, // $7 in cents
     currency: "usd",
     recurring: {
       interval: "month",
-      trial_period_days: 7,
+    },
+  });
+
+  const nonProfitProduct = await stripe.products.create({
+    name: "Non-Profit",
+    description: "Non-Profit subscription plan",
+  });
+
+  await stripe.prices.create({
+    product: nonProfitProduct.id,
+    unit_amount: 36000, // $360 in cents
+    currency: "usd",
+    recurring: {
+      interval: "year",
+      trial_period_days: 30
+    },
+  });
+
+  const educationProduct = await stripe.products.create({
+    name: "Education",
+    description: "Education subscription plan",
+  });
+
+  await stripe.prices.create({
+    product: educationProduct.id,
+    unit_amount: 120000, // $1200 in cents
+    currency: "usd",
+    recurring: {
+      interval: "year",
+      trial_period_days: 30
+    },
+  });
+
+  const enterpriseProduct = await stripe.products.create({
+    name: "Enterprise",
+    description: "Enterprise subscription plan",
+  });
+
+  await stripe.prices.create({
+    product: enterpriseProduct.id,
+    unit_amount: 120000, // $1200 in cents
+    currency: "usd",
+    recurring: {
+      interval: "year",
+      trial_period_days: 30
     },
   });
 

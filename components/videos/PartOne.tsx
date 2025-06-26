@@ -31,15 +31,15 @@ const PartOne = () => {
 
       {/* Title Overlay */}
       <div className="relative z-10">
-        <div className="absolute z-[-100] top-[-30px] 2xl:top-0 bg-[#303030] w-full h-[130px] sm:h-[180px] flex items-center ps-4 sm:ps-10">
-          <h1 className="text-4xl sm:text-6xl lg:text-8xl text-white">
+        <div className=" z-[-100] top-[-30px] 2xl:top-0 bg-[#303030] w-full py-4 flex items-center px-4">
+          <h1 className="sm:text-6xl lg:text-5xl text-white">
             Animated Video Series
           </h1>
         </div>
       </div>
 
       {/* Explanation Section */}
-      <div className="mt-40 lg:mt-70 mb-20 px-10 text-[#303030] !bg-white">
+      <div className="mt-8 mb-20 px-10 text-[#303030] !bg-white">
         <h1 className="text-4xl  max-w-screen-2xl mx-auto sm:text-6xl">Explanation Animation</h1>
         <p className={`${robotoopo.className} tracking-wide max-w-screen-2xl mx-auto leading-7 lg:leading-10  text-base sm:text-xl md:text-2xl lg:text-3xl mt-4 sm:mt-6`}>
         Storytelling creates a strong connection with audiences, while visual learning enhances

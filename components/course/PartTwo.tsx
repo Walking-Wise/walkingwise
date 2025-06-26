@@ -5,8 +5,8 @@ import { useRouter } from "next/navigation";
 
 const sessionData = [
   {
-    part: "part 2",
-    title: "the vulnerable",
+    part: "PART 2:",
+    title: "THE VULNERABLE",
     session: "2nd SESSION",
     color: "#303030",
     textColor: "text-white",
@@ -24,11 +24,11 @@ const sessionData = [
       "#7 Runaways as Targets",
       "#8 Rural Risks",
     ],
-    boxTitle: "THE VULNERABLE",
+    boxTitle: "PART 2: LESSONS",
   },
   {
-    part: "part 3",
-    title: "the predators",
+    part: "PART 3:",
+    title: "THE PREDATORS",
     session: "3rd SESSION",
     color: "#00c1d5",
     textColor: "text-[#303030]",
@@ -46,7 +46,7 @@ const sessionData = [
       "#11 Familial Traffickers",
       "#12 Hidden Buyers",
     ],
-    boxTitle: "THE PREDATORS",
+    boxTitle: "PART 3: LESSONS",
   },
 ];
 
@@ -56,32 +56,22 @@ const PartTwo = () => {
   return (
     <>
       {sessionData.map((session, index) => {
-        const [firstCol, secondCol] = [
-          session.lessons.slice(0, 2),
-          session.lessons.slice(2),
-        ];
-
         return (
           <div
             key={index}
             className={`py-16 px-4 sm:px-6 md:px-12 lg:px-20 ${session.textColor}`}
             style={{ backgroundColor: session.color }}
           >
-            <div className=" mx-auto">
-              <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
-                <h1 className="text-4xl sm:text-6xl text-white my-4">
-                  <span
-                    className={`me-3`}
-                    style={{ color: session.highlightColor }}
-                  >
-                    {session.part}
-                  </span>
-                  {session.title}
-                </h1>
-              </div>
+            <div className="max-w-5xl mx-auto">
+              <h1 className="text-3xl sm:text-5xl font-extrabold uppercase">
+                <span style={{ color: session.highlightColor }}>
+                  {session.part}
+                </span>{" "}
+                {session.title}
+              </h1>
 
               <p
-                className={`${robotoopo.className} tracking-wide leading-7 lg:leading-10  text-base sm:text-xl md:text-2xl lg:text-3xl mt-6`}
+                className={`mt-4 text-base sm:text-xl leading-7 ${robotoopo.className}`}
               >
                 The four lessons involve four contact hours. To complete this
                 session, participants will review the content, watch interviews
@@ -89,18 +79,15 @@ const PartTwo = () => {
                 questions.
               </p>
 
-              <h1 className="text-3xl sm:text-5xl text-white lg:text-6xl my-10">
-                <span
-                  className={`me-3`}
-                  style={{ color: session.highlightColor }}
-                >
+              <h2 className="text-2xl sm:text-4xl font-bold mt-10">
+                <span style={{ color: session.highlightColor }}>
                   {session.session}
-                </span>
-                Description
-              </h1>
+                </span>{" "}
+                DESCRIPTION
+              </h2>
 
               <p
-                className={`${robotoopo.className} tracking-wide leading-7 lg:leading-10  text-base sm:text-xl md:text-2xl lg:text-3xl mt-6`}
+                className={`mt-4 text-base sm:text-xl leading-7 ${robotoopo.className}`}
               >
                 {index === 0
                   ? `Children and adolescents are naturally vulnerable to sex offenders and human traffickers due to their cognitive immaturity and limited life experience, which affects their decision making abilities. A youth’s inherent obedience and financial dependence on adults can also make them easy targets when living with, or in proximity to, a sexual predator. Particularly vulnerable populations include individuals from marginalized communities, such as LGBTQ+ youth, undocumented immigrants, and those with a history of trauma or abuse. Providing education enables adults and adolescents to understand how human traffickers prey on at risk populations and empowers them to recognize and respond to manipulation, intimidation, and coercion.`
@@ -110,55 +97,50 @@ const PartTwo = () => {
               <div
                 className={`${session.boxColor} text-white w-full max-w-5xl py-5 min-h-[200px] px-4 sm:px-6 md:px-10 lg:px-16 mx-auto my-12`}
               >
-                <h1
-                  className={`${roboto.className} text-xl sm:text-2xl md:text-3xl lg:text-4xl mt-8 sm:mt-10 md:mt-0 text-center sm:text-left`}
-                >
+                <h3 className="text-2xl sm:text-3xl font-bold mb-4">
                   {session.boxTitle}
-                </h1>
-                <div className="flex flex-col sm:flex-row justify-between gap-6 mt-6">
-                  {[firstCol, secondCol].map((group, idx) => (
-                    <div key={idx} className="w-full sm:w-1/2">
-                      {group.map((lesson, i) => (
-                        <p
-                          key={i}
-                          className={`${roboto.className} text-base sm:text-lg md:text-xl lg:text-4xl mt-4`}
-                        >
-                          {lesson}
-                        </p>
-                      ))}
-                    </div>
+                </h3>
+                <ul className="space-y-2 list-disc list-inside">
+                  {session.lessons.map((lesson, i) => (
+                    <li
+                      key={i}
+                      className={`text-base sm:text-lg ${roboto.className}`}
+                    >
+                      {lesson}
+                    </li>
                   ))}
-                </div>
+                </ul>
               </div>
 
-              <div className="flex flex-col sm:flex-row justify-between items-center my-4 sm:items-center gap-4">
-                <h1 className="text-4xl text-white sm:text-6xl">
-                  <span
-                    className={`me-3`}
-                    style={{ color: session.highlightColor }}
-                  >
-                    {session.session}
-                  </span>
-                  objectives
-                </h1>
-                <button
-                  onClick={() => router.push("/course")}
-                  className={`bg-purple-600 hover:bg-purple-700 text-white sm:text-2xl px-6 py-3 sm:px-10 sm:py-4 rounded-3xl transition-colors ${robotoop.className}`}
-                >
-                  Start Course
-                </button>
-              </div>
+              <h3 className="text-xl font-bold uppercase mt-10 mb-4">
+                <span style={{ color: session.highlightColor }}>
+                  {session.session}
+                </span>{" "}
+                OBJECTIVES
+              </h3>
 
-              <ul className="list-disc pl-6 sm:pl-10 mt-6">
+              <ul className="list-disc pl-6 space-y-4">
                 {session.objectives.map((text, idx) => (
                   <li
                     key={idx}
-                    className={`${robotoopo.className} tracking-wide leading-7 lg:leading-10  text-base sm:text-lg md:text-xl lg:text-3xl mb-10`}
+                    className={`text-base sm:text-lg ${robotoopo.className}`}
                   >
                     {text}
                   </li>
                 ))}
               </ul>
+
+              <div className="flex flex-col sm:flex-row gap-4 justify-center mt-10">
+                <button className="bg-[#6B4EFF] text-white text-sm sm:text-base px-5 py-2 rounded-full">
+                  CME Accreditation
+                </button>
+                <button
+                  className="bg-[#6B4EFF] text-white text-sm sm:text-base px-5 py-2 rounded-full"
+                  onClick={() => window.location.href = "https://www.walkingwise.com/contact-us-v2/"}
+                >
+                  Start Course
+                </button>
+              </div>
             </div>
           </div>
         );
