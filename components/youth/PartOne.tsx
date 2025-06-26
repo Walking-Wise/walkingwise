@@ -101,7 +101,7 @@ const PartOne = () => {
             <div className="flex flex-col w-full sm:w-1/2">
               <button
               className={`bg-purple-600 hover:bg-purple-700 text-white  py-2 text-xl mt-6 sm:mt-10 rounded-4xl transition-colors ${robotoopo.className}`}
-              onClick={() => router.push("/demo")}
+              onClick={() => window.location.href = "https://www.walkingwise.com/contact-us-v2/"}
             >
               DEMO Curriculum
             </button>

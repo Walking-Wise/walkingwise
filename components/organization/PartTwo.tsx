@@ -47,13 +47,13 @@ const PartTwo = () => {
             <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 md:gap-8 lg:gap-10 w-full sm:w-auto">
               <button
                 className={`bg-purple-600 hover:bg-purple-700 text-white px-6 sm:px-8 md:px-10 py-2 rounded-4xl transition-colors ${robotoopo.className} text-sm sm:text-base md:text-xl`}
-                onClick={()=>router.push('/demo')}
+                onClick={() => window.location.href = "https://www.walkingwise.com/contact-us-v2/"}
               >
                   DEMO Curriculum
               </button>
               <button
                 className={`bg-purple-600 hover:bg-purple-700 text-white px-6 sm:px-8 md:px-10 py-2 rounded-4xl transition-colors ${robotoopo.className} text-sm sm:text-base md:text-xl`}
-                onClick={()=>router.push('/demo')}
+                onClick={() => window.location.href = "https://www.walkingwise.com/contact-us-v2/"}
               >
                 ENROLL Today! 
               </button>

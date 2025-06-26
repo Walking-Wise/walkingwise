@@ -20,7 +20,7 @@ const PartTwo = () => {
   const router = useRouter();
 
   const handleDemoRedirect = () => {
-    router.push("/demo");
+    () => (window.location.href = "https://www.walkingwise.com/contact-us-v2/");
   };
 
   return (
