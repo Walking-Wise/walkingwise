@@ -41,7 +41,7 @@ const Navbar = () => {
         </Link>
 
         {/* Desktop Menu */}
-        <div className="hidden lg:flex mt-20 space-x-10 text-[#303030] text-4xl font-bold">
+        <div className="hidden lg:flex mt-20 space-x-8 text-[#303030] text-3xl font-bold">
           <Link href="/">Home</Link>
           <div className="relative">
             <button
@@ -59,22 +59,22 @@ const Navbar = () => {
             {isEducationOpen && (
               <div className="absolute left-0 mt-2 w-48 bg-white rounded-lg shadow-lg py-2 z-50">
                 <Link
-                  href="/course"
-                  className={`block px-4 py-2 text-lg hover:bg-gray-100 ${roboto.className}`}
-                >
-                  Online Course for Adults
-                </Link>
-                <Link
                   href="/youth-curriculum"
                   className={`block px-4 py-2 text-lg hover:bg-gray-100 ${roboto.className}`}
                 >
-                  Curriculum for Youth
+                  Youth Curriculum
                 </Link>
                 <Link
                   href="/videos"
                   className={`block px-4 py-2 text-lg hover:bg-gray-100 ${roboto.className}`}
                 >
-                  Animated Video Series
+                  Animated Videos
+                </Link>
+                <Link
+                  href="/course"
+                  className={`block px-4 py-2 text-lg hover:bg-gray-100 ${roboto.className}`}
+                >
+                  Adult Education
                 </Link>
                 {/* <Link href="/pricing" className={`block px-4 py-2 text-lg hover:bg-gray-100 ${roboto.className}`}>Pricing</Link> */}
               </div>
