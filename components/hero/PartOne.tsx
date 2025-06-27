@@ -44,7 +44,7 @@ const PartOne = () => {
             Proactive Father
           </span>
         </div>
-        <div className="w-full max-w-4xl text-black text-xl md:text-3xl text-left px-4">
+        <div className="w-full max-w-4xl text-black text-xl md:text-4xl text-left px-4 mt-16">
           <p className={`${robotoopo.className} tracking-wide lg:mt-10`}>
             Sexual predators and child traffickers can deceive adults and entire
             communities.

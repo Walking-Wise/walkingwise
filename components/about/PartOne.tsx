@@ -28,7 +28,7 @@ const PartOne = () => {
         </div>
       </div>
       {/* Mission Statements Grid */}
-      <div className="flex justify-center items-center mt-[20px] md:mt-[60px] text-[#303030] gap-4 flex-wrap px-4 sm:px-0 md:px-28">
+      <div className="flex justify-center items-center mt-[20px] md:mt-[80px] text-[#303030] gap-4 flex-wrap px-4 sm:px-0 md:px-28">
         {/* First Statement */}
         <div className="bg-[#A4E4EB] h-auto min-h-[150px] w-full sm:w-[600px] lg:w-[48%] flex justify-center items-center py-6">
           <p
@@ -73,7 +73,7 @@ const PartOne = () => {
       </div>
 
       {/* Founder Story Section */}
-      <div className="text-[#303030] mt-20 flex flex-col lg:flex-row justify-between items-center lg:items-start px-4 sm:px-13 py-10 gap-8">
+      <div className="text-[#303030] mt-20 mb-30 flex flex-col lg:flex-row justify-between items-center lg:items-start px-4 sm:ps-13 sm:pe-26 py-10 gap-8">
         {/* Founder Story Text */}
         <div className="w-full md:ps-20">
           <h1 className="text-6xl sm:text-7xl text-[#303030] tracking-normal mb-6">
@@ -107,7 +107,7 @@ const PartOne = () => {
         </div>
 
         {/* Founder Image and Button */}
-        <div className="flex flex-col items-center w-full lg:w-auto">
+        <div className="flex flex-col items-center w-full lg:w-auto md:mt-[100px]">
           <div className="relative w-[250px] sm:w-[300px] h-[400px] sm:h-[300px]">
             <Image
               src="/assets/about-1.png"

@@ -33,7 +33,7 @@ const StatCard = ({
           {title}
         </p>
         <p
-          className={`${robotoopo.className} text-white text-xl sm:text-2xl px-4 sm:px-7 mt-2`}
+          className={`${robotoopo.className} text-white text-xl sm:text-2xl px-4 sm:px-7 mt-6`}
         >
           {description}
         </p>
@@ -95,7 +95,7 @@ const PartTwo = () => {
 
   return (
     <>
-      <div className="flex flex-col md:flex-row flex-wrap justify-center items-center gap-6 px-4 py-10">
+      <div className="flex flex-col md:flex-row flex-wrap justify-center items-center gap-6 px-4 py-10 pb-32">
         {statsData.map((stat, index) => (
           <StatCard
             key={index}

@@ -6,14 +6,29 @@ import { SiTiktok } from "react-icons/si"; // TikTok from Simple Icons
 
 const Footer = () => {
   const socialIcons = [
-    FaFacebook,
-    FaYoutube,
-    FaInstagram,
-    FaLinkedin,
-    SiTiktok,
+    {
+      Icon: FaFacebook,
+      link: "https://www.facebook.com/profile.php?id=100076611698755",
+    },
+    {
+      Icon: FaYoutube,
+      link: "youtube.com/@walkingwise",
+    },
+    {
+      Icon: FaInstagram,
+      link: "https://www.instagram.com/walking.wise/",
+    },
+    {
+      Icon: FaLinkedin,
+      link: "https://www.linkedin.com/company/walking-wise/about/?viewAsMember=true",
+    },
+    {
+      Icon: SiTiktok,
+      link: "https://www.tiktok.com/@walkingwise",
+    },
   ];
   return (
-    <div className="bg-[#BFEBF0] py-10 w-full">
+    <div className="bg-[#BFEBF0] py-16 w-full">
       {/* Main Footer Content */}
       <div className="flex flex-col max-w-screen-2xl mx-auto md:flex-row flex-wrap justify-evenly items-start px-4 sm:px-8 lg:px-10  gap-8">
         {/* Report Section */}
@@ -29,9 +44,7 @@ const Footer = () => {
           >
             Send a Text to 233733 (BEFREE); 1-888-373-7888
           </p>
-          <p
-            className={`${roboto.className} mt-3 text-[#303030] text-2xl`}
-          >
+          <p className={`${roboto.className} mt-3 text-[#303030] text-2xl`}>
             Rescue America
           </p>
           <p
@@ -75,7 +88,10 @@ const Footer = () => {
             { label: "Privacy Policy", href: "/" },
           ],
         ].map((column, index) => (
-          <div key={index} className="flex flex-col min-w-[150px] px-4">
+          <div
+            key={index}
+            className="flex flex-col min-w-[150px] px-4 mt-16 mb-16"
+          >
             {column.map((item, i) => (
               <Link
                 key={i}
@@ -93,12 +109,14 @@ const Footer = () => {
           ©2025 Walking Wise. All Rights Reserved.
         </p>
         <div className="flex gap-1 p-1 bg-[#006072] ">
-          {socialIcons.map((Icon, index) => (
+          {socialIcons.map(({ Icon, link }, index) => (
             <div
               key={index}
               className="w-10 h-10 bg-[#5FCEE9] flex items-center justify-center cursor-pointer hover:opacity-80"
             >
-              <Icon className="text-white w-5 h-5 " />
+              <a href={link} target="_blank">
+                <Icon className="text-white w-5 h-5 " />
+              </a>
             </div>
           ))}
         </div>

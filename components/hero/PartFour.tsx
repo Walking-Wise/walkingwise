@@ -37,7 +37,7 @@ const cardData: CardProps[] = [
     buttonText: "Public & Private Sectors",
     description:
       "Our 12 learning modules can be integrated into a training platform or accessed by associates online via a Walking Wise subscription.",
-    link: "/home-education",
+    link: "/adult-education/#private_sector",
   },
 ];
 
@@ -85,7 +85,7 @@ const Card: React.FC<CardProps> = ({
 const PartFour: React.FC = () => {
   return (
     <div style={{ backgroundColor: "#00c1d5" }}>
-      <div className="w-full flex flex-wrap text-white justify-center  items-center lg:items-stretch gap-8 px-4 sm:px-10 lg:px-20 py-16">
+      <div className="w-full flex flex-wrap text-white justify-center  items-center lg:items-stretch gap-8 px-4 sm:px-10 lg:px-20 py-24">
         {cardData.map((card) => (
           <Card
             key={card.altText}
