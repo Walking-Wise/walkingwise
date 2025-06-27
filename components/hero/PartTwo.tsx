@@ -11,23 +11,29 @@ type StatCardProps = {
 
 const StatCard = ({ value, title, description, source }: StatCardProps) => {
   return (
-    <div className="bg-[#00C1D5] flex flex-col items-center text-center h-[410px] w-full max-w-[400px] px-3 py-4">
-      <h1 className="text-6xl sm:text-7xl md:text-8xl text-[#303030] mt-5">
-        {value}
-      </h1>
-      <p className={`${roboto.className} text-[#303030] text-2xl sm:text-3xl`}>
-        {title}
-      </p>
-      <p
-        className={`${robotoopo.className} text-white text-xl sm:text-2xl px-4 sm:px-7 mt-5`}
-      >
-        {description}
-      </p>
-      <p
-        className={`${robotoopo.className} text-mg mt-8 sm:mt-12 px-6 underline text-black`}
-      >
-        {source}
-      </p>
+    <div className="bg-[#00C1D5] flex flex-col justify-between items-center text-center h-[410px] w-full max-w-[400px] px-3 py-4">
+      <div>
+        <h1 className="text-6xl sm:text-7xl md:text-8xl text-[#303030] mt-5">
+          {value}
+        </h1>
+        <p
+          className={`${roboto.className} text-[#303030] text-2xl sm:text-3xl`}
+        >
+          {title}
+        </p>
+        <p
+          className={`${robotoopo.className} text-white text-xl sm:text-2xl px-4 sm:px-7 mt-5`}
+        >
+          {description}
+        </p>
+      </div>
+      <div>
+        <p
+          className={`${robotoopo.className} text-mg mt-8 sm:mt-12 px-6 underline text-black`}
+        >
+          {source}
+        </p>
+      </div>
     </div>
   );
 };
@@ -79,9 +85,10 @@ const PartTwo = () => {
         <p
           className={`tracking-wider max-w-screen-2xl mx-auto md:leading-7 lg:leading-10  text-xl sm:text-2xl lg:text-3xl text-white max-w-8xl md:px-10 mt-4 ${robotoopo.className}`}
         >
-          Our Walking Wise<span className="text-sm relative -top-3">&reg;</span> mission is to equip adults with the knowledge and
-          tools to educate young people on 12 critical topics related to sexual
-          abuse and child sexual exploitation.
+          Our Walking Wise<span className="text-sm relative -top-3">&reg;</span>{" "}
+          mission is to equip adults with the knowledge and tools to educate
+          young people on 12 critical topics related to sexual abuse and child
+          sexual exploitation.
         </p>
       </div>
     </>

@@ -64,7 +64,7 @@ const imageData = [
     title: " Love Yourself More Coaching",
   },
   {
-    src: "/assets/about-14.png",
+    src: "/assets/about-17.png",
     name: " Jennifer",
     title: " Survivor & Advisor",
   },
@@ -89,8 +89,8 @@ const PartTwo = () => {
   return (
     <>
       {/* Contributors Section */}
-      <div className="bg-[#303030] w-full mt-10 py-20 px-5">
-        <div className="max-w-7xl mx-auto">
+      <div className="bg-[#303030] w-full mt-10 py-20 px-5 md:px-32">
+        <div className="mx-auto">
           <h1 className="text-4xl sm:text-6xl text-white mb-6 sm:mb-10">
             Our Contributors
           </h1>
@@ -109,7 +109,7 @@ const PartTwo = () => {
             </p>
 
             <button
-              className={`${robotoop.className} bg-purple-600 text-white text-lg sm:text-xl  px-6 sm:px-8 py-1 rounded-full hover:bg-purple-700 transition-colors w-full sm:w-[250px] text-center`}
+              className={`${roboto.className} bg-purple-600 text-white text-lg sm:text-xl  px-6 sm:px-8 py-1 rounded-full hover:bg-purple-700 transition-colors w-full sm:w-[250px] text-center`}
             >
               Introductions & Biographies
             </button>
@@ -154,7 +154,7 @@ const PartTwo = () => {
           We Invite You to Join our Walking Wise Community!
         </h1>
         <p className={`${robotoopo.className} mt-4 lg:text-center text-[#303030] text-lg sm:text-2xl lg:text-3xl px-4 sm:px-20 tracking-wide leading-relaxed`}>
-          As a self-funded organization, your subscription is vital in supporting our mission. A portion of Walking Wise profits go toward survivor-focused programs. We encourage our subscribers to support local advocacy groups dedicated to survivor recovery and care.
+          As a self-funded organization, your subscription is vital in supporting our mission. A portion of Walking Wise's profits goes toward survivor-focused programs. We encourage our subscribers to support local advocacy groups dedicated to survivor recovery and care.
         </p>
       </div>
     </>

@@ -14,9 +14,17 @@ const roboto = Roboto({
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isEducationOpen, setIsEducationOpen] = useState(false);
+  const [isProgramsOpen, setIsProgramsOpen] = useState(false);
 
   const toggleMenu = () => setIsOpen(!isOpen);
-  const toggleEducation = () => setIsEducationOpen(!isEducationOpen);
+  const toggleEducation = () => {
+    setIsEducationOpen(!isEducationOpen);
+    setIsProgramsOpen(false);
+  };
+  const togglePrograms = () => {
+    setIsEducationOpen(false);
+    setIsProgramsOpen(!isProgramsOpen);
+  };
 
   return (
     <nav className="w-full navb px-4 bg-white z-5000">
@@ -33,14 +41,14 @@ const Navbar = () => {
         </Link>
 
         {/* Desktop Menu */}
-        <div className="hidden lg:flex mt-20 space-x-14 text-black text-4xl font-bold">
+        <div className="hidden lg:flex mt-20 space-x-10 text-[#303030] text-4xl font-bold">
           <Link href="/">Home</Link>
           <div className="relative">
             <button
               onClick={toggleEducation}
-              className="flex items-center space-x-2 text-black cursor-pointer"
+              className="flex items-center space-x-2 text-[#303030] cursor-pointer"
             >
-              <span>Our Education</span>
+              <span>Education</span>
               <ChevronDown
                 size={24}
                 className={`transform transition-transform ${
@@ -72,6 +80,43 @@ const Navbar = () => {
               </div>
             )}
           </div>
+          <div className="relative">
+            <button
+              onClick={togglePrograms}
+              className="flex items-center space-x-2 text-[#303030] cursor-pointer"
+            >
+              <span>Programs</span>
+              <ChevronDown
+                size={24}
+                className={`transform transition-transform ${
+                  isProgramsOpen ? "rotate-180" : ""
+                }`}
+              />
+            </button>
+            {isProgramsOpen && (
+              <div className="absolute left-0 mt-2 w-48 bg-white rounded-lg shadow-lg py-2 z-50">
+                <Link
+                  href="/course"
+                  className={`block px-4 py-2 text-lg hover:bg-gray-100 ${roboto.className}`}
+                >
+                  Youth Organization
+                </Link>
+                <Link
+                  href="/youth-curriculum"
+                  className={`block px-4 py-2 text-lg hover:bg-gray-100 ${roboto.className}`}
+                >
+                  Implementation
+                </Link>
+                <Link
+                  href="/videos"
+                  className={`block px-4 py-2 text-lg hover:bg-gray-100 ${roboto.className}`}
+                >
+                  Home Education
+                </Link>
+                {/* <Link href="/pricing" className={`block px-4 py-2 text-lg hover:bg-gray-100 ${roboto.className}`}>Pricing</Link> */}
+              </div>
+            )}
+          </div>
           <Link href="/about">About</Link>
           <div className="flex relative flex-col space-y-2">
             <Link
@@ -80,7 +125,9 @@ const Navbar = () => {
             >
               Demo
             </Link>
-            <Link href="https://www.walkingwise.com/contact-us-v2/">Enroll</Link>
+            <Link href="https://www.walkingwise.com/contact-us-v2/">
+              Enroll
+            </Link>
           </div>
           <Link
             href="https://www.walkingwise.com/contact-us-v2/"
@@ -104,7 +151,7 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="lg:hidden flex flex-col text-2xl mt-2 space-y-4 text-black font-bold relative min-h-[60vh]">
+        <div className="lg:hidden flex flex-col text-2xl mt-2 space-y-4 text-[#303030] font-bold relative min-h-[60vh]">
           {/* ... your menu items ... */}
           <Link href="/" onClick={() => setIsOpen(false)}>
             Home

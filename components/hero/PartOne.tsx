@@ -1,60 +1,22 @@
 "use client";
-import Image from "next/image";
 import { robotoItalic, robotoopo, roboto } from "../../public/fonts/Fonts";
 
 const PartOne = () => {
   return (
     <section className="max-w-full  flex justify-center  flex-col ">
-      <div className="max-w-full relative bg-[#303030] ">
-        <div className="w-full relative max-h-[600px] mb-10">
-          {/* Background Image - Hidden on mobile */}
-          <div className="hidden lg:block">
-            <Image
-              src="/assets/HOME.jpg"
-              alt="Home Background"
-              width={1920}
-              height={600}
-              className="w-full h-auto object-contain"
-              priority
-            />
-          </div>
-
-          {/* Background Image for mobile - using CSS background */}
-          <div
-            className="lg:hidden w-full h-[500px] bg-cover bg-center bg-no-repeat relative"
-            style={{ backgroundImage: "url('/assets/HOME.jpg')" }}
-          >
-            <div className="absolute inset-0 flex justify-start items-end px-4 pb-6">
-              <div className="text-left leading-none">
-                <h1 className="inline-block bg-black/60 px-4 pt-2 text-5xl sm:text-7xl font-bold text-white">
-                  Walking Wise
-                </h1>
-                <p className={`${roboto.className} inline-block bg-black/60 px-4 py-0 pb-1 text-2xl sm:text-4xl font-bold text-[#00c1d5] tracking-wider`}>
-                  Empowering Youth
-                </p>
-                <h1 className={`${roboto.className} inline-block bg-black/60 px-4 pb-2 text-xl sm:text-xl font-small text-white`}>
-                  Educating Communities to Combat Child Exploitation
-                </h1>
-              </div>
-            </div>
-          </div>
-
-          {/* Original right-aligned text - shown only on larger screens */}
-          <div className="hidden lg:block my-auto absolute bottom-0 right-10">
-            <div className="bg-black/60 px-4 pt-4 flex flex-col w-[470px]">
-              <h1 className="text-8xl text-white">Walking Wise</h1>
-              <p className={`${roboto.className} text-5xl text-[#00c1d5]`}>
-                Empowering Youth
-              </p>
-            </div>
-            <h1 className={`${roboto.className} text-4xl text-white bg-black/60 px-4 py-4`}>
-              Educating Communities to Combat Child Exploitation
-            </h1>
-          </div>
+      {/* Hero Image Section */}
+      <div className="w-full relative bg-[#303030]">
+        <div className="relative w-full">
+          {/* Add padding-bottom to keep the image visible above the bar */}
+          <img
+            src="/assets/HOME1.jpg"
+            alt="About Us"
+            className="w-full object-contain pb-[50px] sm:pb-[40px]"
+          />
         </div>
       </div>
       <div className="flex relative flex-col xl:flex-row justify-center  items-center gap-8 px-4 py-5 bg-white">
-        <div className="absolute z-[-100px] top-[-40px] 2xl:top-0  bg-[#303030] w-full h-[75px]" />
+        <div className="absolute z-[-100px] top-[-40px] 2xl:top-0  bg-[#303030] w-full h-[75px] " />
         <div className="bg-[#303030] w-[300px] h-[300px] z-50 sm:min-w-[500px] sm:h-[500px] p-4 border-t-3 border-white rounded-full flex flex-col justify-evenly items-center text-center text-white ">
           <p
             className={`${robotoItalic.className} text-md  sm:text-4xl mt-10 px-9`}

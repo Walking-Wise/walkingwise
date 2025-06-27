@@ -40,8 +40,8 @@ const Footer = () => {
             { label: "Youth Curriculum", href: "/youth-curriculum" },
             { label: "Animated Videos", href: "/videos" },
             { label: "Adult Education", href: "/adult-education" },
-            { label: "Online Course", href: "/course" },
-            { label: "CME Accreditation", href: "/contact-us" },
+            { label: "Adult Course Description", href: "/course" },
+            { label: "CME/CE Accreditation", href: "https://www.walkingwise.com/contact-us-v2/" },
           ],
           [
             { label: "School Programs", href: "/school-programs" },
@@ -52,7 +52,7 @@ const Footer = () => {
           [
             { label: "Login", href: "/" },
             { label: "My Account", href: "/" },
-            { label: "Contact Us", href: "/contact" },
+            { label: "Contact Us", href: "https://www.walkingwise.com/contact-us-v2/" },
             { label: "Terms of Use", href: "/" },
             { label: "Privacy Policy", href: "/" },
           ]

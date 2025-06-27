@@ -9,23 +9,27 @@ const LogoItem = ({
   alt,
   text,
   textColor,
+  link,
 }: {
   src: string;
   alt: string;
   text: string;
   textColor: string;
+  link: string;
 }) => {
   return (
     <div className="flex flex-col items-center">
       <div className="relative h-[100px] sm:h-[200px] w-[100px] sm:w-[200px]">
         <Image src={src} alt={alt} fill className="object-cover" />
       </div>
-      <p
-        className={`${roboto.className} mt-2 text-center sm:text-2xl`}
+      <a
+        className={`${roboto.className} mt-2 text-center sm:text-2xl underline`}
         style={{ color: textColor }}
+        href={link}
+        target="_blank"
       >
         {text}
-      </p>
+      </a>
     </div>
   );
 };
@@ -42,7 +46,7 @@ const PartThree = () => {
         </h1>
 
         {[
-          "Walking Wise has developed evidence-based education for adults and adolescents in collaboration with survivor leaders and advocacy experts, helping to deliver content that is sensitive to the effect of trauma.",
+          "Walking Wise has developed evidence-based education for adults and adolescents in collaboration with survivor leaders and advocacy experts, helping to deliver content that is sensitive to the effects of trauma.",
           "Our online course is accredited for Continuing Education (MCE/CE) credits by the Postgraduate Institute for Medicine (PIM) and the Academy of Forensic Nursing (AFN).",
         ].map((paragraph, index) => (
           <p
@@ -56,19 +60,6 @@ const PartThree = () => {
             {paragraph}
           </p>
         ))}
-
-        <button
-          onClick={() => router.push("/course")}
-          className={`bg-[#303030] ${roboto.className} rounded-full text-sm sm:text-lg py-2 sm:py-3 px-6 text-white flex items-center whitespace-nowrap`}
-        >
-          Online Course for Adults
-          <i className="bg-white text-black  font-bold rounded-full p-1 ml-3 flex items-center justify-center">
-            <ChevronRight
-              strokeWidth={3}
-              className="w-4 h-4 sm:w-5  sm:h-5 lg:w-7 lg:h-7"
-            />
-          </i>
-        </button>
       </div>
 
       {/* Logo Images */}
@@ -78,12 +69,20 @@ const PartThree = () => {
           alt="Logo"
           text="PIM Accreditation"
           textColor="rgb(27, 68, 116)"
+          link="https://rise.articulate.com/share/PjLBozFjmbBpvN0hJJ_DaIy8iANEd9TB"
         />
+        <button
+          onClick={() => router.push("/course")}
+          className={`bg-[#9d1be3] ${roboto.className} rounded-full text-sm sm:text-lg py-2 sm:py-3 px-6 text-white flex items-center whitespace-nowrap`}
+        >
+          Online Course for Adults
+        </button>
         <LogoItem
           src="/assets/home-2.png"
           alt="Logo"
           text="AFN Partnership"
           textColor="rgb(86, 1, 119)"
+          link="https://www.goafn.org/news-1/afn-and-walking-wise-help-schools-build-an-anti-sex-trafficking-culture"
         />
       </div>
     </div>

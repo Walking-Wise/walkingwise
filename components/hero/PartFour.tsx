@@ -33,10 +33,10 @@ const cardData: CardProps[] = [
   },
   {
     imageSrc: "/assets/home-5.png",
-    altText: "Your Education Portal",
-    buttonText: "Your Education Portal",
+    altText: "Public & Private Sectors",
+    buttonText: "Public & Private Sectors",
     description:
-      "Medical and business leaders can integrate our 12 learning modules into their in-house associate education portal.",
+      "Our 12 learning modules can be integrated into a training platform or accessed by associates online via a Walking Wise subscription.",
     link: "/home-education",
   },
 ];
