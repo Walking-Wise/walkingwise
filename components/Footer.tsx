@@ -1,13 +1,34 @@
 import React from "react";
 import Link from "next/link";
-import { roboto ,robotoop ,robotoopo } from "../public/fonts/Fonts";
+import { roboto, robotoop, robotoopo } from "../public/fonts/Fonts";
 import { FaFacebook, FaInstagram, FaYoutube, FaLinkedin } from "react-icons/fa";
 import { SiTiktok } from "react-icons/si"; // TikTok from Simple Icons
 
 const Footer = () => {
-  const socialIcons = [FaFacebook, FaYoutube, FaInstagram, FaLinkedin, SiTiktok];
+  const socialIcons = [
+    {
+      Icon: FaFacebook,
+      link: "https://www.facebook.com/profile.php?id=100076611698755",
+    },
+    {
+      Icon: FaYoutube,
+      link: "youtube.com/@walkingwise",
+    },
+    {
+      Icon: FaInstagram,
+      link: "https://www.instagram.com/walking.wise/",
+    },
+    {
+      Icon: FaLinkedin,
+      link: "https://www.linkedin.com/company/walking-wise/about/?viewAsMember=true",
+    },
+    {
+      Icon: SiTiktok,
+      link: "https://www.tiktok.com/@walkingwise",
+    },
+  ];
   return (
-    <div className="bg-[#BFEBF0] py-10 w-full">
+    <div className="bg-[#BFEBF0] py-16 w-full">
       {/* Main Footer Content */}
       <div className="flex flex-col max-w-screen-2xl mx-auto md:flex-row flex-wrap justify-evenly items-start px-4 sm:px-8 lg:px-10  gap-8">
         {/* Report Section */}
@@ -18,13 +39,17 @@ const Footer = () => {
           <p className={`${roboto.className} mt-3 text-[#303030] text-2xl`}>
             National Human Trafficking Hotline
           </p>
-          <p className={`${robotoopo.className} mt-2 text-[#303030] text-lg sm:text-xl`}>
+          <p
+            className={`${robotoopo.className} mt-2 text-[#303030] text-lg sm:text-xl`}
+          >
             Send a Text to 233733 (BEFREE); 1-888-373-7888
           </p>
-          <p className={`${robotoop.className} mt-2 text-[#73c4cd] text-xl sm:text-2xl`}>
+          <p className={`${roboto.className} mt-3 text-[#303030] text-2xl`}>
             Rescue America
           </p>
-          <p className={`${robotoop.className} mt-2 text-[#73c4cd] text-xl sm:text-2xl`}>
+          <p
+            className={`${robotoopo.className} mt-2 text-[#303030] text-lg sm:text-xl`}
+          >
             833-599-FREE (3733)
           </p>
         </div>
@@ -40,8 +65,11 @@ const Footer = () => {
             { label: "Youth Curriculum", href: "/youth-curriculum" },
             { label: "Animated Videos", href: "/videos" },
             { label: "Adult Education", href: "/adult-education" },
-            { label: "Online Course", href: "/course" },
-            { label: "CME Accreditation", href: "/contact-us" },
+            { label: "Adult Course Description", href: "/course" },
+            {
+              label: "CME/CE Accreditation",
+              href: "https://www.walkingwise.com/contact-us-v2/",
+            },
           ],
           [
             { label: "School Programs", href: "/school-programs" },
@@ -52,12 +80,18 @@ const Footer = () => {
           [
             { label: "Login", href: "/" },
             { label: "My Account", href: "/" },
-            { label: "Contact Us", href: "/contact" },
+            {
+              label: "Contact Us",
+              href: "https://www.walkingwise.com/contact-us-v2/",
+            },
             { label: "Terms of Use", href: "/" },
             { label: "Privacy Policy", href: "/" },
-          ]
+          ],
         ].map((column, index) => (
-          <div key={index} className="flex flex-col min-w-[150px] px-4">
+          <div
+            key={index}
+            className="flex flex-col min-w-[150px] px-4 mt-16 mb-16"
+          >
             {column.map((item, i) => (
               <Link
                 key={i}
@@ -74,18 +108,18 @@ const Footer = () => {
         <p className={`${robotoop.className} text-[#303030] text-base `}>
           ©2025 Walking Wise. All Rights Reserved.
         </p>
-<div className="flex gap-1 p-1 bg-[#006072] ">
-  {socialIcons.map((Icon, index) => (
-    <div
-      key={index}
-      className="w-10 h-10 bg-[#5FCEE9] flex items-center justify-center cursor-pointer hover:opacity-80"
-    >
-      <Icon className="text-white w-5 h-5 " />
-    </div>
-  ))}
-</div>
-        
-
+        <div className="flex gap-1 p-1 bg-[#006072] ">
+          {socialIcons.map(({ Icon, link }, index) => (
+            <div
+              key={index}
+              className="w-10 h-10 bg-[#5FCEE9] flex items-center justify-center cursor-pointer hover:opacity-80"
+            >
+              <a href={link} target="_blank">
+                <Icon className="text-white w-5 h-5 " />
+              </a>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );

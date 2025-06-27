@@ -9,23 +9,27 @@ const LogoItem = ({
   alt,
   text,
   textColor,
+  link,
 }: {
   src: string;
   alt: string;
   text: string;
   textColor: string;
+  link: string;
 }) => {
   return (
     <div className="flex flex-col items-center">
-      <div className="relative h-[100px] sm:h-[200px] w-[100px] sm:w-[200px]">
+      <div className="relative h-[100px] sm:h-[100px] w-[100px] sm:w-[100px]">
         <Image src={src} alt={alt} fill className="object-cover" />
       </div>
-      <p
-        className={`${roboto.className} mt-2 text-center sm:text-2xl`}
+      <a
+        className={`${roboto.className} mt-2 text-center sm:text-xl underline`}
         style={{ color: textColor }}
+        href={link}
+        target="_blank"
       >
         {text}
-      </p>
+      </a>
     </div>
   );
 };
@@ -34,7 +38,7 @@ const PartThree = () => {
   const router = useRouter();
 
   return (
-    <div className="flex flex-col lg:flex-row max-w-screen-2xl mx-auto justify-evenly  px-4 sm:px-20 py-10 lg:py-20">
+    <div className="flex flex-col lg:flex-row max-w-screen-2xl mx-auto justify-evenly  px-4 sm:px-20 py-10 lg:py-32">
       {/* Text Content */}
       <div className="text-[#303030] flex flex-col justify-center items-center w-full lg:w-auto">
         <h1 className="text-4xl sm:text-6xl px-4 max-w-4xl sm:px-8 text-left lg:text-center">
@@ -42,7 +46,7 @@ const PartThree = () => {
         </h1>
 
         {[
-          "Walking Wise has developed evidence-based education for adults and adolescents in collaboration with survivor leaders and advocacy experts, helping to deliver content that is sensitive to the effect of trauma.",
+          "Walking Wise has developed evidence-based education for adults and adolescents in collaboration with survivor leaders and advocacy experts, helping to deliver content that is sensitive to the effects of trauma.",
           "Our online course is accredited for Continuing Education (MCE/CE) credits by the Postgraduate Institute for Medicine (PIM) and the Academy of Forensic Nursing (AFN).",
         ].map((paragraph, index) => (
           <p
@@ -56,34 +60,31 @@ const PartThree = () => {
             {paragraph}
           </p>
         ))}
-
-        <button
-          onClick={() => router.push("/course")}
-          className={`bg-[#303030] ${roboto.className} rounded-full text-sm sm:text-lg py-2 sm:py-3 px-6 text-white flex items-center whitespace-nowrap`}
-        >
-          Online Course for Adults
-          <i className="bg-white text-black  font-bold rounded-full p-1 ml-3 flex items-center justify-center">
-            <ChevronRight
-              strokeWidth={3}
-              className="w-4 h-4 sm:w-5  sm:h-5 lg:w-7 lg:h-7"
-            />
-          </i>
-        </button>
       </div>
 
       {/* Logo Images */}
       <div className="flex flex-row lg:flex-col justify-center items-center gap-6 lg:gap-10 mt-10 lg:mt-0">
-        <LogoItem
-          src="/assets/home-1.png"
-          alt="Logo"
-          text="PIM Accreditation"
-          textColor="rgb(27, 68, 116)"
-        />
+        <div>
+          <LogoItem
+            src="/assets/home-1.png"
+            alt="Logo"
+            text="PIM Accreditation"
+            textColor="rgb(27, 68, 116)"
+            link="https://walking-wise-12-part-course.s3.us-east-1.amazonaws.com/PIM+Accreditation+Info-Walking-Wise-eLearning/content/index.html"
+          />
+          <button
+            onClick={() => window.location.href = "https://walking-wise-12-part-course.s3.us-east-1.amazonaws.com/PIM+Accreditation+Info-Walking-Wise-eLearning/content/index.html"}
+            className={`bg-[#9d1be3] ${roboto.className} mt-4 rounded-full text-sm sm:text-[16px] py-2 sm:py-3 px-6 text-white flex items-center whitespace-nowrap`}
+          >
+            Online Course for Adults
+          </button>
+        </div>
         <LogoItem
           src="/assets/home-2.png"
           alt="Logo"
           text="AFN Partnership"
           textColor="rgb(86, 1, 119)"
+          link="https://www.goafn.org/news-1/afn-and-walking-wise-help-schools-build-an-anti-sex-trafficking-culture"
         />
       </div>
     </div>
