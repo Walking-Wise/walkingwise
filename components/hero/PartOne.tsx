@@ -19,10 +19,24 @@ const PartOne = () => {
         <div className="absolute z-[-100px] top-[-40px] 2xl:top-0  bg-[#303030] w-full h-[75px] " />
         <div className="bg-[#303030] w-[300px] h-[300px] z-50 sm:min-w-[500px] sm:h-[500px] p-4 border-t-3 border-white rounded-full flex flex-col justify-evenly items-center text-center text-white ">
           <p
-            className={`${robotoItalic.className} text-md  sm:text-4xl mt-10 px-9`}
+            className={`${robotoItalic.className} text-md leading-[0]  sm:text-4xl mt-10 px-9`}
           >
-            “JUST ONE YEAR AFTER WATCHING YOUR ANIMATED VIDEO, MY 11 YEAR OLD
-            DAUGHTER REPORTED AN ‘UNSAFE ADULT’ IN HER LIFE.”
+            “Just one year
+          </p>
+          <p className={`${robotoItalic.className} text-md leading-[0] sm:text-4xl px-9`}>
+            after watching your
+          </p>
+          <p className={`${robotoItalic.className} text-md leading-[0] sm:text-4xl px-9`}>
+            animiated video, my
+          </p>
+          <p className={`${robotoItalic.className} text-md leading-[0] sm:text-4xl px-9`}>
+            11 year old daughter
+          </p>
+          <p className={`${robotoItalic.className} text-md leading-[0] sm:text-4xl px-9`}>
+            reported an ‘unsafe adult’
+          </p>
+          <p className={`${robotoItalic.className} text-md leading-[0] sm:text-4xl px-9`}>
+            in her life.”
           </p>
           <span
             className={`${robotoItalic.className} text-[#00c1d5] block sm:text-2xl `}

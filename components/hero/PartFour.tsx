@@ -32,7 +32,7 @@ const cardData: CardProps[] = [
     link: "/youth-organization",
   },
   {
-    imageSrc: "/assets/home-5.png",
+    imageSrc: "/assets/home-5.jpg",
     altText: "Public & Private Sectors",
     buttonText: "Public & Private Sectors",
     description:
