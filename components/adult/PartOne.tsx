@@ -5,6 +5,7 @@ import {
   robotoItalicop,
   roboto,
   robotoopo,
+  robotoop,
 } from "../../public/fonts/Fonts";
 import PageBanner from "../ui/PageBanner/PageBanner";
 
@@ -23,12 +24,12 @@ const PartOne = () => {
         <div className="flex flex-col lg:flex-row justify-center items-center lg:items-start gap-8 lg:gap-16">
           {/* Text Content */}
           <div className="w-full">
-            <h1 className="text-4xl sm:text-6xl md:text-5xl text-[#303030] tracking-normal md:mb-6">
+            <h1 className="text-4xl sm:text-6xl md:text-5xl text-[#303030] tracking-normal md:mb-6 lg:mt-12">
               Walking Wise: Sexual Exploitation Education
             </h1>
             <div className="space-y-6">
               <p
-                className={`${robotoopo.className} text-lg text-[#303030] sm:text-xl mt-4 md:mt-10 lg:text-2xl leading-7 lg:leading-10 tracking-wide xl:text-3xl`}
+                className={`${robotoopo.className} text-lg text-[#303030] sm:text-xl mt-4 md:mt-10 lg:text-2xl tracking-wide xl:text-2xl`}
               >
                 Backed by thorough research and expert insights, this course
                 provides medical professionals, educators, youth leaders, and
@@ -36,7 +37,7 @@ const PartOne = () => {
                 commercial sex trade and its profound impact on children.
               </p>
               <p
-                className={`${robotoopo.className} text-lg sm:text-xl text-[#303030] mt-10 lg:text-2xl leading-7 lg:leading-10 tracking-wide xl:text-3xl`}
+                className={`${robotoopo.className} text-lg sm:text-xl text-[#303030] mt-8 lg:text-2xl tracking-wide xl:text-2xl`}
               >
                 Walking Wise
                 <span className="text-sm relative -top-3">&reg; </span>
@@ -50,36 +51,36 @@ const PartOne = () => {
           </div>
 
           {/* Right Side Content */}
-          <div className="w-full lg:w-auto flex flex-col justify-center items-center gap-6">
+          <div className="w-full lg:w-auto flex flex-col justify-center items-center gap-2">
             {/* Testimonial Circle */}
-            <div className="bg-[#303030] w-[300px] h-[300px] sm:w-[400px] sm:h-[400px] xl:w-[500px] xl:h-[500px] p-4 rounded-full flex flex-col justify-center items-center text-center text-white">
+            <div className="bg-[#303030] w-[300px] h-[300px] sm:w-[400px] sm:h-[400px] xl:w-[450px] xl:h-[450px] p-4 rounded-full flex flex-col justify-center items-center text-center text-white">
               <p
-                className={`${robotoItalicop.className} text-[#00c1d5] text-xl sm:text-2xl xl:text-6xl px-4 sm:px-8`}
+                className={`${robotoItalicop.className} text-[#00c1d5] text-xl sm:text-2xl xl:text-5xl px-4 sm:px-8`}
               >
                 CME Credits
               </p>
               <p
-                className={`${robotoItalicop.className} text-white text-xl sm:text-2xl xl:text-4xl px-4 sm:px-8`}
+                className={`${robotoItalicop.className} text-white text-xl sm:text-2xl xl:text-3xl px-4 sm:px-8`}
               >
                 EARN AS YOU LEARN!
               </p>
               <p
-                className={`${robotoItalic.className} text-purple-400 text-xl sm:text-2xl xl:text-3xl mb-5`}
+                className={`${robotoItalic.className} text-purple-400 text-xl sm:text-2xl xl:text-2xl mb-5`}
               >
                 Postgraduate Institute for Medicine
               </p>
               <p
-                className={`${roboto.className} text-white text-xl sm:text-2xl xl:text-3xl px-4 sm:px-8`}
+                className={`${robotoop.className} text-white text-xl sm:text-2xl xl:text-2xl px-4 sm:px-8`}
               >
                 12 Contact Hours
               </p>
               <p
-                className={`${roboto.className} text-white text-xl sm:text-2xl xl:text-3xl px-4 sm:px-8`}
+                className={`${robotoop.className} text-white text-xl sm:text-2xl xl:text-2xl px-4 sm:px-8`}
               >
                 Earn 1 CME per Lesson
               </p>
               <p
-                className={`${roboto.className} text-white text-xl sm:text-2xl xl:text-3xl px-4 sm:px-8`}
+                className={`${robotoop.className} text-white text-xl sm:text-2xl xl:text-2xl px-4 sm:px-8`}
               >
                 Earn up to 12 CMEs
               </p>
@@ -87,7 +88,7 @@ const PartOne = () => {
 
             {/* Logo and Button */}
             <div className="flex justify-center items-center gap-6">
-              <div className="relative h-[80px] w-[80px] sm:h-[120px] sm:w-[120px] lg:h-[150px] lg:w-[150px]">
+              <div className="relative h-[80px] w-[80px] sm:h-[120px] sm:w-[120px] lg:h-[100px] lg:w-[100px]">
                 <Image
                   src="/assets/home-1.png"
                   alt="PIM Accreditation"
@@ -105,7 +106,7 @@ const PartOne = () => {
         </div>
 
         {/* Course Lessons Section */}
-        <div className="mt-18 lg:mt-16">
+        <div className="mt-18 lg:mt-6">
           <h1 className="text-4xl sm:text-6xl md:text-5xl text-[#303030] text-start mb-4 md:mb-10">
             3 Part Course: 12 Lessons
           </h1>
@@ -140,7 +141,7 @@ const PartOne = () => {
                 ],
               },
             ].map((section, idx) => (
-              <div key={idx} className="bg-[#00C1D5] p-8">
+              <div key={idx} className="bg-[#00C1D5] py-12 ps-16">
                 <p
                   className={`${roboto.className} text-[#303030] text-2xl lg:text-3xl font-bold mb-4`}
                 >

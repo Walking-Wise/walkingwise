@@ -110,7 +110,7 @@ const CourseSection = () => {
             WALKING WISE: SEXUAL EXPLOITATION EDUCATION
           </h1>
           <p
-            className={`text-xl sm:text-3xl italic mt-4 text-[#303030] ${robotoopo.className}`}
+            className={`text-xl sm:text-3xl italic mt-4 text-[#303030] tracking-wide lg:leading-10 ${robotoopo.className}`}
           >
             Our 12-part course provides twelve contact hours, divided into three
             sections:
@@ -120,7 +120,7 @@ const CourseSection = () => {
             </span>
             —each containing four lessons. Participants will review course
             content, watch interviews with survivor leaders and advocacy
-            experts, and respond to 10 questions to earn CE/CME credit upon the
+            experts, and respond to 10 questions to earn CME/CE credit upon the
             completion of each lesson.
           </p>
         </div>
@@ -136,7 +136,7 @@ const CourseSection = () => {
           <div
             className={`w-full max-w-[1800px] mx-auto px-6 sm:px-12 md:px-20 lg:px-26 ${session.textColor}`}
           >
-            <h1 className="text-3xl sm:text-5xl font-bold mt-2 mb-2 md:mb-8">
+            <h1 className="text-3xl sm:text-5xl font-bold mt-2 mb-2 md:mb-16">
               <span style={{ color: session.highlightColor }}>
                 {session.part}
               </span>{" "}
@@ -155,14 +155,14 @@ const CourseSection = () => {
             <div className="relative flex flex-col lg:flex-row gap-8">
               <div>
                 <p
-                  className={`mt-2 text-xl sm:text-2xl ${robotoopo.className}`}
+                  className={`mt-2 text-xl sm:text-2xl ${robotoopo.className} tracking-wide lg:leading-10`}
                 >
                   {session.description.intro}
                 </p>
               </div>
 
               <div
-                className={`w-full lg:w-[500px] xl:w-[500px] shrink-0 ${session.boxColor} p-6 self-start md:mt-[-100px]`}
+                className={`w-full lg:w-[400px] xl:w-[400px] shrink-0 ${session.boxColor} p-12 self-start md:mt-[-130px]`}
                 style={{ color: session.boxTextColor }}
               >
                 <h1 className="text-2xl sm:text-4xl font-bold mb-2">
@@ -179,13 +179,13 @@ const CourseSection = () => {
             </div>
 
             <div className="mt-6">
-              <p className={`text-xl sm:text-2xl ${robotoopo.className}`}>
+              <p className={`text-xl sm:text-2xl ${robotoopo.className} tracking-wide lg:leading-10`}>
                 {session.description.additional}
               </p>
             </div>
 
             <h1
-              className={`text-2xl sm:text-4xl font-bold uppercase mt-10 mb-4`}
+              className={`text-2xl sm:text-4xl font-bold uppercase mt-18 mb-4`}
               style={{ color: session.headerColor }}
             >
               Learning Objectives
@@ -194,7 +194,7 @@ const CourseSection = () => {
               {session.objectives.map((obj, idx) => (
                 <li
                   key={idx}
-                  className={`text-base text-xl sm:text-2xl ${robotoopo.className}`}
+                  className={`text-base text-xl sm:text-2xl ${robotoopo.className} tracking-wide lg:leading-10`}
                 >
                   {obj}
                 </li>

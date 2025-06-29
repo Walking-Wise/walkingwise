@@ -60,15 +60,15 @@ const PartOne = () => {
       </div>
 
       {/* Founder Story Section */}
-      <div className="text-[#303030] mt-20 mb-30 flex flex-col lg:flex-row justify-between items-center lg:items-start px-4 sm:ps-13 sm:pe-26 py-10 gap-8">
+      <div className="text-[#303030] mt-20 mb-20 flex flex-col lg:flex-row justify-between items-center lg:items-start px-4 sm:ps-13 sm:pe-26 py-10 gap-8">
         {/* Founder Story Text */}
         <div className="w-full md:ps-20">
-          <h1 className="text-6xl sm:text-7xl text-[#303030] tracking-normal mb-6">
+          <h1 className="text-6xl sm:text-5xl text-[#303030] tracking-normal mb-6">
             How We Began
           </h1>
           <div className="space-y-4 text-base sm:text-lg">
             <p
-              className={`${robotoopo.className} text-xl sm:text-2xl lg:text-3xl md:pe-10 mb-10`}
+              className={`${robotoopo.className} text-xl sm:text-2xl lg:text-2xl md:pe-10 mb-6 tracking-wide lg:leading-10`}
             >
               Walking Wise
               <span className="text-sm relative -top-3">&reg; </span>
@@ -79,7 +79,7 @@ const PartOne = () => {
               tactics used in that region at the time.
             </p>
             <p
-              className={`${robotoopo.className} text-xl sm:text-2xl md:pe-10 lg:text-3xl`}
+              className={`${robotoopo.className} text-xl sm:text-2xl md:pe-10 lg:text-2xl tracking-wide lg:leading-10`}
             >
               Fortunately, this young female was traveling with two vigilant
               mothers whose instincts and quick action stopped the man's
@@ -94,7 +94,7 @@ const PartOne = () => {
         </div>
 
         {/* Founder Image and Button */}
-        <div className="flex flex-col items-center w-full lg:w-auto md:mt-[100px]">
+        <div className="flex flex-col items-center w-full lg:w-auto md:mt-[20px]">
           <div className="relative w-[250px] sm:w-[300px] h-[400px] sm:h-[300px]">
             <Image
               src="/assets/about-1.png"

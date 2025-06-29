@@ -35,7 +35,7 @@ const PartTwo = () => {
     <>
       {/* Section 1 */}
       <div className="bg-[#303030] py-16 lg:py-24">
-        <div className="w-full max-w-[1800px] mx-auto px-6 sm:px-12 md:px-20 lg:px-32 flex flex-col xl:flex-row items-center gap-8">
+        <div className="w-full max-w-[1800px] mx-auto px-6 sm:px-12 md:px-20 lg:px-32 flex flex-col xl:flex-row items-center gap-24">
           <div className="bg-[#00C1D5] text-[#303030] w-[380px] h-[380px] sm:w-[500px] sm:h-[500px] p-8 rounded-full border-2 border-white flex flex-col justify-center items-center text-center z-50">
             <p className="text-xl sm:text-2xl mt-5 font-bold mb-4 lg:mb-8 px-6">
               {testimonials[0].heading}
@@ -53,21 +53,21 @@ const PartTwo = () => {
           </div>
 
           <div className="w-full max-w-3xl text-[#303030] sm:text-lg md:text-3xl text-left">
-            <h1 className="text-3xl sm:text-6xl text-[#00C1D5]">
+            <h1 className="text-3xl sm:text-5xl text-[#00C1D5]">
               Accommodating Your Busy Schedule
             </h1>
             <p
-              className={`${robotoopo.className} tracking-wide leading-7 lg:leading-10 sm:text-3xl text-white`}
+              className={`${robotoopo.className} tracking-wide sm:text-2xl text-white lg:leading-10 `}
             >
               Our Walking Wise subscription gives you 6 months to complete our
               12-hour online course.
             </p>
 
-            <h1 className="text-3xl sm:text-6xl mt-10 text-[#00C1D5]">
+            <h1 className="text-3xl sm:text-5xl mt-10 text-[#00C1D5]">
               Set your own pace
             </h1>
             <p
-              className={`${robotoopo.className} tracking-wide leading-7 lg:leading-10 sm:text-3xl text-white`}
+              className={`${robotoopo.className} tracking-wide sm:text-2xl text-white lg:leading-10 `}
             >
               Dedicate about two hours per month to complete each lesson and
               reach the Walking Wise finish line in 6 months!
@@ -92,22 +92,22 @@ const PartTwo = () => {
       <div className="bg-white py-12 lg:py-24">
         <div className="w-full max-w-[1800px] mx-auto px-6 sm:px-12 md:px-20 lg:px-32 flex flex-col xl:flex-row justify-center items-center gap-8">
           <div className="w-full text-[#303030] text-left">
-            <h1 className="text-3xl sm:text-6xl">
+            <h1 className="text-3xl sm:text-5xl">
               Build an Anti-Trafficking Community
             </h1>
             <p
-              className={`${robotoopo.className} tracking-wide leading-7 lg:leading-10 sm:text-3xl mt-5`}
+              className={`${robotoopo.className} tracking-wide sm:text-2xl mt-5 lg:leading-10 `}
             >
               Together, we can make a real impact! While educating adults is
               crucial, children remain the primary targets of exploitation. So,
               youth education is just as essential.
             </p>
 
-            <h1 className="text-3xl sm:text-6xl mt-10">
+            <h1 className="text-3xl sm:text-5xl mt-10">
               Empower Adolescents with Knowledge
             </h1>
             <p
-              className={`${robotoopo.className} tracking-wide leading-7 lg:leading-10 sm:text-3xl mt-5`}
+              className={`${robotoopo.className} tracking-wide sm:text-2xl mt-5 lg:leading-10 `}
             >
               We encourage course participants to put their learning into action
               with our interactive Youth Curriculum, designed to educate
@@ -143,13 +143,13 @@ const PartTwo = () => {
       </div>
 
       {/* Section 3 */}
-      <div className="bg-[#00C1D5] pt-16 pb-32">
-        <div className="w-full max-w-[1800px] mx-auto px-6 sm:px-12 md:px-20 lg:px-32 text-[#303030]">
-          <h1 className="text-3xl sm:text-6xl my-8">
+      <div className="bg-[#00C1D5] pt-16 lg:pt-24 pb-32">
+        <div className="w-full max-w-[1800px] mx-auto px-6 sm:px-12 md:px-20 lg:px-32 text-[#303030]" id="p_p_sector">
+          <h1 className="text-3xl sm:text-6xl mt-8 mb-4">
             Public & private sector organizations
           </h1>
           <p
-            className={`${robotoopo.className} text-base tracking-wide leading-7 lg:leading-10 sm:text-xl md:text-2xl lg:text-3xl mb-10`}
+            className={`${robotoopo.className} text-base tracking-wide lg:leading-10 sm:text-xl md:text-2xl lg:text-2xl mb-10 lg:mb-18`}
           >
             Medical groups, hospitals, government agencies, universities, and
             businesses can provide their associates with exclusive access to
@@ -179,17 +179,17 @@ const PartTwo = () => {
                 end: "a platform tour today to discover how Walking Wise can support your organization’s education initiatives.",
               },
             ].map((box, index) => (
-              <div key={index} className="bg-white flex-1 pt-12 pb-8 px-8">
+              <div key={index} className="bg-white flex-1 pt-12 pb-8 px-14">
                 <h1 className="text-3xl sm:text-5xl mb-4 text-[#303030]">
                   {box.title}
                 </h1>
                 <p
-                  className={`${robotoopo.className} text-base tracking-loose leading-7 sm:text-xl md:text-2xl`}
+                  className={`${robotoopo.className} text-base tracking-loose sm:text-xl md:text-2xl lg:leading-10 `}
                 >
                   {box.description}
                 </p>
                 <p
-                  className={`${robotoopo.className} text-base tracking-loose leading-7 sm:text-xl md:text-2xl mt-4`}
+                  className={`${robotoopo.className} text-base tracking-loose sm:text-xl md:text-2xl mt-4 lg:leading-10 `}
                 >
                   <Link href={box.linkHref} className="underline">
                     {box.linkText}
