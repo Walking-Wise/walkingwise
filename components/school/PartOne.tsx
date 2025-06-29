@@ -2,39 +2,15 @@
 import React from "react";
 import { robotoopo } from "../../public/fonts/Fonts";
 import PartTwo from "./PartTwo";
+import PageBanner from "../ui/PageBanner/PageBanner";
 const PartOne = () => {
   return (
     <>
-      {/* Hero Image Section */}
-       <div className="w-full relative bg-[#303030]">
-        <div
-          className="w-full h-[400px] md:h-[500px] lg:h-[600px] mb-10 bg-cover bg-center bg-no-repeat"
-          style={{ backgroundImage: "url('/assets/SCHOOL.jpg')" }}
-        >
-          {/* Right-aligned version - shows on screens ≥ 1024px */}
-          <div className="hidden md:block absolute bottom-2 sm:bottom-5 right-4 sm:right-8 md:right-10 lg:right-16 xl:right-20 2xl:right-24">
-            <h1 className="text-3xl  text-white sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl p-1 bg-black/70">
-              school programs
-            </h1>
-          </div>
-
-          {/* Centered version - shows on screens < 1024px */}
-          <div className="md:hidden flex h-full justify-center items-end">
-            <h1 className=" text-5xl  text-white sm:text-6xl p-1 bg-black/70">
-              school programs
-            </h1>
-          </div>
-        </div>
-      </div>
-
-      {/* Title Overlay Section */}
-      <div className="relative z-10">
-        <div className="absolute z-[-100] top-[-40px]  bg-[#303030] w-full h-[130px] sm:h-[180px] flex items-center ps-10">
-          <h1 className="text-4xl sm:text-6xl lg:text-8xl text-white">
-            School & District Programs
-          </h1>
-        </div>
-      </div>
+      <PageBanner
+        title="SCHOOL & DISTRICT PROGRAMS"
+        image="/assets/SCHOOL.jpg"
+        altText="School and district programs"
+      />
 
       <div className="flex justify-center items-center mt-30 sm:mt-60 max-w-screen-2xl mx-auto text-[#303030]">
         <div className="px-10 mt-10">

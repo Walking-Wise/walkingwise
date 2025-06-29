@@ -3,31 +3,18 @@ import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { roboto, robotoop, robotoopo } from "../../public/fonts/Fonts";
+import PageBanner from "../ui/PageBanner/PageBanner";
 
 const PartOne = () => {
   const router = useRouter();
 
   return (
     <section className="w-full">
-      {/* Hero Image Section */}
-      <div className="w-full relative bg-[#303030]">
-        <div className="relative w-full">
-          {/* Add padding-bottom to keep the image visible above the bar */}
-          <img
-            src="/assets/ABOUT.jpg"
-            alt="About Us"
-            className="w-full object-contain pb-[80px] sm:pb-[120px]"
-          />
-
-          {/* Overlay bar at the bottom */}
-          <div className="absolute bottom-0 left-0 w-full bg-[#303030] flex items-center ps-4 sm:ps-34 h-[80px] sm:h-[120px]">
-            <h1 className="text-white text-4xl sm:text-6xl lg:text-6xl">
-              WALKING WISE MISSION
-            </h1>
-          </div>
-        </div>
-      </div>
-      {/* Mission Statements Grid */}
+      <PageBanner
+        title="WALKING WISE MISSION"
+        image="/assets/ABOUT.jpg"
+        altText="About Us"
+      />
       <div className="flex justify-center items-center mt-[20px] md:mt-[80px] text-[#303030] gap-4 flex-wrap px-4 sm:px-0 md:px-28">
         {/* First Statement */}
         <div className="bg-[#A4E4EB] h-auto min-h-[150px] w-full sm:w-[600px] lg:w-[48%] flex justify-center items-center py-6">
