@@ -99,7 +99,7 @@ const PartTwo = () => {
             {descriptionTexts.map((text, index) => (
               <p
                 key={index}
-                className={`${robotoopo.className} text-xl sm:text-3xl text-white`}
+                className={`${robotoopo.className} text-xl sm:text-3xl text-white tracking-wide lg:leading-10`}
               >
                 {text}
               </p>
@@ -131,8 +131,8 @@ const PartTwo = () => {
           Guided by Experience: Survivor Leaders and Advocacy Experts
         </h1>
 
-        <div className="w-full text-[#303030] px-4 sm:px-8 py-10">
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
+        <div className="w-full text-[#303030] px-4 sm:px-24 py-10 pb-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
             {imageData.map((person, index) => (
               <div key={index} className="flex flex-col items-center">
                 <div className="relative w-[200px] h-[250px] sm:w-[350px] sm:h-[350px]">

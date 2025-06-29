@@ -3,31 +3,18 @@ import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { roboto, robotoop, robotoopo } from "../../public/fonts/Fonts";
+import PageBanner from "../ui/PageBanner/PageBanner";
 
 const PartOne = () => {
   const router = useRouter();
 
   return (
     <section className="w-full">
-      {/* Hero Image Section */}
-      <div className="w-full relative bg-[#303030]">
-        <div className="relative w-full">
-          {/* Add padding-bottom to keep the image visible above the bar */}
-          <img
-            src="/assets/ABOUT.jpg"
-            alt="About Us"
-            className="w-full object-contain pb-[80px] sm:pb-[120px]"
-          />
-
-          {/* Overlay bar at the bottom */}
-          <div className="absolute bottom-0 left-0 w-full bg-[#303030] flex items-center ps-4 sm:ps-34 h-[80px] sm:h-[120px]">
-            <h1 className="text-white text-4xl sm:text-6xl lg:text-6xl">
-              WALKING WISE MISSION
-            </h1>
-          </div>
-        </div>
-      </div>
-      {/* Mission Statements Grid */}
+      <PageBanner
+        title="WALKING WISE MISSION"
+        image="/assets/ABOUT.jpg"
+        altText="About Us"
+      />
       <div className="flex justify-center items-center mt-[20px] md:mt-[80px] text-[#303030] gap-4 flex-wrap px-4 sm:px-0 md:px-28">
         {/* First Statement */}
         <div className="bg-[#A4E4EB] h-auto min-h-[150px] w-full sm:w-[600px] lg:w-[48%] flex justify-center items-center py-6">
@@ -73,15 +60,15 @@ const PartOne = () => {
       </div>
 
       {/* Founder Story Section */}
-      <div className="text-[#303030] mt-20 mb-30 flex flex-col lg:flex-row justify-between items-center lg:items-start px-4 sm:ps-13 sm:pe-26 py-10 gap-8">
+      <div className="text-[#303030] mt-20 mb-20 flex flex-col lg:flex-row justify-between items-center lg:items-start px-4 sm:ps-13 sm:pe-26 py-10 gap-8">
         {/* Founder Story Text */}
         <div className="w-full md:ps-20">
-          <h1 className="text-6xl sm:text-7xl text-[#303030] tracking-normal mb-6">
+          <h1 className="text-6xl sm:text-5xl text-[#303030] tracking-normal mb-6">
             How We Began
           </h1>
           <div className="space-y-4 text-base sm:text-lg">
             <p
-              className={`${robotoopo.className} text-xl sm:text-2xl lg:text-3xl md:pe-10 mb-10`}
+              className={`${robotoopo.className} text-xl sm:text-2xl lg:text-2xl md:pe-10 mb-6 tracking-wide lg:leading-10`}
             >
               Walking Wise
               <span className="text-sm relative -top-3">&reg; </span>
@@ -92,7 +79,7 @@ const PartOne = () => {
               tactics used in that region at the time.
             </p>
             <p
-              className={`${robotoopo.className} text-xl sm:text-2xl md:pe-10 lg:text-3xl`}
+              className={`${robotoopo.className} text-xl sm:text-2xl md:pe-10 lg:text-2xl tracking-wide lg:leading-10`}
             >
               Fortunately, this young female was traveling with two vigilant
               mothers whose instincts and quick action stopped the man's
@@ -107,7 +94,7 @@ const PartOne = () => {
         </div>
 
         {/* Founder Image and Button */}
-        <div className="flex flex-col items-center w-full lg:w-auto md:mt-[100px]">
+        <div className="flex flex-col items-center w-full lg:w-auto md:mt-[20px]">
           <div className="relative w-[250px] sm:w-[300px] h-[400px] sm:h-[300px]">
             <Image
               src="/assets/about-1.png"

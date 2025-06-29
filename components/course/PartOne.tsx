@@ -2,6 +2,7 @@
 
 import React from "react";
 import { roboto, robotoop, robotoopo } from "../../public/fonts/Fonts";
+import PageBanner from "../ui/PageBanner/PageBanner";
 
 const blueBoxContent = [
   { id: 1, text: "#1 Myths & Reality" },
@@ -18,95 +19,123 @@ const objectives = [
 ];
 
 const PartOne = () => {
-
   return (
     <>
-      {/* Hero Section */}
-      <div className="w-full relative bg-[#303030]">
-        <div
-          className="w-full h-[400px] md:h-[500px] lg:h-[600px] bg-cover bg-center bg-no-repeat"
-          style={{ backgroundImage: "url('/assets/ADULT.jpg')" }}
-        >
-          <div className="hidden md:block absolute bottom-20 right-4 sm:right-8 md:right-10 lg:right-16 xl:right-20 2xl:right-24">
-            <h1 className="text-3xl text-white sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl p-1 bg-black/50">
-              Online course
-            </h1>
-          </div>
-          <div className="md:hidden flex h-full justify-center items-center">
-            <h1 className="text-5xl text-white p-1 bg-black/50">Online course</h1>
-          </div>
-        </div>
-
-        {/* Course Header */}
-        <div className="w-full bg-[#303030] px-4 py-3 text-white mt-[-4px]">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold uppercase">
-            <span className="text-[#ff3131]">ADULT </span>COURSE DESCRIPTION
-          </h1>
-        </div>
-      </div>
-
+      <PageBanner
+        title="ADULT COURSE DESCRIPTION"
+        image="/assets/COURSE.jpg"
+        altText="Online Course for Adults"
+      />
       {/* Content Section */}
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 my-10 text-[#303030]">
-        <h1 className="text-3xl sm:text-5xl font-extrabold uppercase">
-          WALKING WISE: SEXUAL EXPLOITATION EDUCATION
-        </h1>
+      <div className="bg-white md:py-18">
+        <div className="w-full max-w-[1600px] mx-auto px-6 sm:px-12 md:px-20 lg:px-32">
+          <h1 className="text-3xl text-[#303030] sm:text-5xl font-extrabold uppercase">
+            WALKING WISE: SEXUAL EXPLOITATION EDUCATION
+          </h1>
 
-        <p className={`text-[#ff3131] text-lg sm:text-2xl italic mt-4 mb-6 ${robotoopo.className}`}>
-          Our 12-part course provides twelve contact hours, divided into three sections: <span className="italic font-medium">The Groomers, The Vulnerable, and The Predators</span>—each containing four lessons. Participants will review course content, watch interviews with survivor leaders and advocacy experts, and respond to 10 questions to earn CE/CME credit upon the completion of each lesson.
-        </p>
+          <p
+            className={`text-[#303030] text-xl sm:text-3xl italic mt-4 mb-6 ${robotoopo.className}`}
+          >
+            Our 12-part course provides twelve contact hours, divided into three
+            sections:{" "}
+            <span className="italic font-medium">
+              The Groomers, The Vulnerable, and The Predators
+            </span>
+            —each containing four lessons. Participants will review course
+            content, watch interviews with survivor leaders and advocacy
+            experts, and respond to 10 questions to earn CE/CME credit upon the
+            completion of each lesson.
+          </p>
+          <div className="w-full max-w-[1600px] py-2 pe-12">
+            {/* Headings */}
+            <h1 className="text-3xl sm:text-5xl font-bold mt-10 mb-8 text-[#303030]">
+              <span className="text-[#00c1d5]">PART 1:</span> THE GROOMERS
+            </h1>
+            <h1 className="text-2xl sm:text-4xl font-bold text-[#303030]">
+              Course Description
+            </h1>
 
-        <h2 className="text-2xl sm:text-4xl font-bold mt-10">
-          <span className="text-[#00c1d5]">PART 1:</span> THE GROOMERS
-        </h2>
+            {/* Description & Blue Box side-by-side */}
+            <div className="relative flex flex-col lg:flex-row gap-8">
+              {/* First paragraph */}
+              <div>
+                <p
+                  className={`mt-2 text-xl sm:text-2xl text-[#303030] ${robotoopo.className}`}
+                >
+                  Groomers possess the skills to deceive victims, their
+                  families, and entire communities. The process is subtle and
+                  involves forming a relationship with a vulnerable person with
+                  the intention of future sexual assault or inducing the victim
+                  to participate in a crime.
+                </p>
+              </div>
 
-        <p className={`mt-4 text-base sm:text-xl leading-7 ${robotoopo.className}`}>
-          The four lessons involve four contact hours. To complete this session, participants will review the content, watch interviews featuring survivor leaders and advocacy experts, and respond to questions.
-        </p>
+              {/* Blue box floated on the right */}
+              <div className="w-full lg:w-[500px] xl:w-[500px] shrink-0 bg-[#00c1d5] p-6 self-start">
+                <h1 className="text-2xl sm:text-4xl font-bold text-[#303030] mb-2">
+                  PART 1: LESSONS
+                </h1>
+                <ul className="space-y-2 text-[#303030]">
+                  {blueBoxContent.map((item) => (
+                    <li key={item.id} className="text-base sm:text-xl">
+                      {item.text}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
 
-        <h2 className="text-2xl sm:text-4xl font-bold mt-10">
-          <span className="text-[#00c1d5]">1st SESSION</span> DESCRIPTION
-        </h2>
+            {/* Second paragraph below both */}
+            <div className="mt-6">
+              <p
+                className={`text-xl sm:text-2xl text-[#303030] ${robotoopo.className}`}
+              >
+                Grooming is an illegal act, but prosecuting such cases is
+                challenging due to the difficulty of proving criminal intent
+                without a sexual assault occurring. Education for adults,
+                adolescents, and youth will empower communities to recognize
+                forms of manipulation and report grooming before offenders have
+                the chance to commit sexual crimes.
+              </p>
+            </div>
+          </div>
 
-        <p className={`mt-4 text-base sm:text-xl leading-7 ${robotoopo.className}`}>
-          Groomers possess the skills to deceive victims, their families, and entire communities. The process is subtle and involves forming a relationship with a vulnerable person with the intention of future sexual assault or inducing the victim to participate in a crime. Grooming is an illegal act, but prosecuting such cases is challenging due to the difficulty of proving criminal intent without a sexual assault occurring. Education for adults, adolescents, and youth will empower communities to recognize forms of manipulation and report grooming before offenders have the chance to commit sexual crimes.
-        </p>
-
-        {/* Blue Box */}
-        <div className="bg-[#00c1d5] p-6 sm:p-10 mt-10">
-          <h3 className="text-2xl sm:text-3xl font-bold mb-4">PART 1: LESSONS</h3>
-          <ul className="space-y-2 text-[#303030]">
-            {blueBoxContent.map((item) => (
-              <li key={item.id} className="text-base sm:text-lg">
-                {item.text}
+          {/* Learning Objectives */}
+          <h1 className="text-2xl text-[#303030] sm:text-4xl font-bold uppercase mt-10 mb-4">
+            Learning Objectives
+          </h1>
+          <ul className="list-disc pl-6 space-y-4 text-[#303030]">
+            {objectives.map((item, idx) => (
+              <li
+                key={idx}
+                className={`text-base text-xl sm:text-2xl ${robotoopo.className}`}
+              >
+                {item}
               </li>
             ))}
           </ul>
-        </div>
 
-        {/* Learning Objectives */}
-        <h3 className="text-xl font-bold uppercase mt-10 mb-4">Learning Objectives</h3>
-        <ul className="list-disc pl-6 space-y-4">
-          {objectives.map((item, idx) => (
-            <li
-              key={idx}
-              className={`text-base sm:text-lg ${robotoopo.className}`}
+          {/* Buttons */}
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mt-10">
+            <button
+              onClick={() =>
+                (window.location.href =
+                  "https://walking-wise-12-part-course.s3.us-east-1.amazonaws.com/PIM+Accreditation+Info-Walking-Wise-eLearning/content/index.html")
+              }
+              className={`bg-[#9d1be3] ${roboto.className} mt-4 rounded-full text-sm sm:text-[16px] py-2 sm:py-3 px-6 text-white flex items-center whitespace-nowrap underline`}
             >
-              {item}
-            </li>
-          ))}
-        </ul>
-
-        {/* Buttons */}
-        <div className="flex flex-col sm:flex-row gap-4 justify-center mt-10">
-          <button className="bg-[#6B4EFF] text-white text-sm sm:text-base px-5 py-2 rounded-full">
-            CME Accreditation
-          </button>
-          <button
-            className="bg-[#6B4EFF] text-white text-sm sm:text-base px-5 py-2 rounded-full"
-            onClick={() => window.location.href = "https://www.walkingwise.com/contact-us-v2/"}
-          >
-            Start Course
-          </button>
+              CME Accreditation
+            </button>
+            <button
+              className={`bg-[#9d1be3] ${roboto.className} mt-4 rounded-full text-sm sm:text-[16px] py-2 sm:py-3 px-6 text-white flex items-center whitespace-nowrap`}
+              onClick={() =>
+                (window.location.href =
+                  "https://www.walkingwise.com/contact-us-v2/")
+              }
+            >
+              Start Course
+            </button>
+          </div>
         </div>
       </div>
     </>

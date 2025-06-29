@@ -1,7 +1,6 @@
 "use client";
 import React from "react";
-import { roboto, robotoop, robotoopo } from "../../public/fonts/Fonts";
-import { useRouter } from "next/navigation";
+import { roboto, robotoopo } from "../../public/fonts/Fonts";
 
 const sessionData = [
   {
@@ -51,7 +50,6 @@ const sessionData = [
 ];
 
 const PartTwo = () => {
-  const router = useRouter();
 
   return (
     <>
