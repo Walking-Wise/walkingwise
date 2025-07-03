@@ -35,21 +35,25 @@ const PartTwo = () => {
     <>
       {/* Section 1 */}
       <div className="bg-[#303030] py-16 lg:py-24">
-        <div className="w-full max-w-[1800px] mx-auto px-6 sm:px-12 md:px-20 lg:px-32 flex flex-col xl:flex-row items-center gap-24">
-          <div className="bg-[#00C1D5] text-[#303030] w-[380px] h-[380px] sm:w-[500px] sm:h-[500px] p-8 rounded-full border-2 border-white flex flex-col justify-center items-center text-center z-50">
-            <p className="text-xl sm:text-2xl mt-5 font-bold mb-4 lg:mb-8 px-6">
-              {testimonials[0].heading}
-            </p>
-            <p
-              className={`${robotoopo.className} text-sm sm:text-2xl px-5 sm:px-10 mb-4 lg:mb-8`}
-            >
-              {`“${testimonials[0].quote}”`}
-            </p>
-            <span
-              className={`${robotoopo.className} text-[#303030] px-6 sm:px-10 block sm:text-2xl`}
-            >
-              {testimonials[0].author}
-            </span>
+          <div className="w-full max-w-[1800px] mx-auto px-6 sm:px-12 md:px-20 lg:px-32 flex flex-col xl:flex-row items-center gap-24">
+        <div className="flex flex-col justify-center items-center">
+            <div className="bg-[#00C1D5] text-[#303030] border-2 border-white w-[380px] h-[380px] sm:w-[500px] sm:h-[500px] p-4 rounded-full flex flex-col justify-center items-center text-center z-50">
+              <p className="mt-2 mb-3 px-4 sm:px-6 font-bold leading-snug text-2xl">
+                {testimonials[0].heading}
+              </p>
+
+              <p
+                className={`${robotoopo.className} mb-3 px-4 sm:px-8 leading-snug text-xl`}
+              >
+                {`“${testimonials[0].quote}”`}
+              </p>
+
+              <span
+                className={`${robotoopo.className} text-white block px-4 sm:px-6 text-[#303030] text-lg`}
+              >
+                {testimonials[0].author}
+              </span>
+            </div>
           </div>
 
           <div className="w-full max-w-3xl text-[#303030] sm:text-lg md:text-3xl text-left">
@@ -144,7 +148,10 @@ const PartTwo = () => {
 
       {/* Section 3 */}
       <div className="bg-[#00C1D5] pt-16 lg:pt-24 pb-32">
-        <div className="w-full max-w-[1800px] mx-auto px-6 sm:px-12 md:px-20 lg:px-32 text-[#303030]" id="p_p_sector">
+        <div
+          className="w-full max-w-[1800px] mx-auto px-6 sm:px-12 md:px-20 lg:px-32 text-[#303030]"
+          id="p_p_sector"
+        >
           <h1 className="text-3xl sm:text-6xl mt-8 mb-4">
             Public & private sector organizations
           </h1>

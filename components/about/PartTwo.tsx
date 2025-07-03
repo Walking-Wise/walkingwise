@@ -89,8 +89,8 @@ const PartTwo = () => {
   return (
     <>
       {/* Contributors Section */}
-      <div className="bg-[#303030] w-full mt-10 py-32 px-5 md:px-32">
-        <div className="mx-auto">
+      <div className="bg-[#303030] w-full mt-10 py-32 px-5">
+        <div className="mx-auto max-w-[1800px] md:px-26">
           <h1 className="text-4xl sm:text-6xl text-white mb-6 sm:mb-10">
             Our Contributors
           </h1>
@@ -126,8 +126,8 @@ const PartTwo = () => {
       </div>
 
       {/* Survivor Leaders Section */}
-      <div className="mt-32 mb-20">
-        <h1 className="text-[#303030] text-2xl sm:text-6xl text-center md:px-20">
+      <div className="mt-32 mb-20 mx-auto max-w-[1800px]">
+        <h1 className="text-[#303030] text-2xl sm:text-6xl text-center">
           Guided by Experience: Survivor Leaders and Advocacy Experts
         </h1>
 
@@ -159,18 +159,21 @@ const PartTwo = () => {
       </div>
 
       {/* Community CTA Section */}
-      <div className="flex flex-col justify-center items-center gap-5 sm:gap-8 lg:text-center px-6 sm:px-14 bg-[#00c1d5] py-32">
-        <h1 className="text-[#303030] text-5xl sm:text-7xl px-4 sm:px-10">
-          We Invite You to Join our Walking Wise Community!
-        </h1>
-        <p
-          className={`${robotoopo.className} mt-2 lg:text-center text-[#303030] text-lg sm:text-2xl lg:text-4xl px-4 sm:px-6 tracking-wide leading-relaxed`}
-        >
-          As a self-funded organization, your subscription is vital in
-          supporting our mission. A portion of Walking Wise's profits goes
-          toward survivor-focused programs. We encourage our subscribers to
-          support local advocacy groups dedicated to survivor recovery and care.
-        </p>
+      <div className="bg-[#00c1d5]">
+        <div className="flex flex-col justify-center items-center gap-5 sm:gap-8 lg:text-center px-6 sm:px-14 py-32 mx-auto max-w-[1800px]">
+          <h1 className="text-[#303030] text-5xl sm:text-7xl px-4 sm:px-10">
+            We Invite You to Join our Walking Wise Community!
+          </h1>
+          <p
+            className={`${robotoopo.className} mt-2 lg:text-center text-[#303030] text-lg sm:text-2xl lg:text-4xl px-4 sm:px-6 tracking-wide leading-relaxed`}
+          >
+            As a self-funded organization, your subscription is vital in
+            supporting our mission. A portion of Walking Wise's profits goes
+            toward survivor-focused programs. We encourage our subscribers to
+            support local advocacy groups dedicated to survivor recovery and
+            care.
+          </p>
+        </div>
       </div>
     </>
   );

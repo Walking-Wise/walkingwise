@@ -15,11 +15,11 @@ const PartOne = () => {
         image="/assets/ABOUT.jpg"
         altText="About Us"
       />
-      <div className="flex justify-center items-center mt-[20px] md:mt-[80px] text-[#303030] gap-4 flex-wrap px-4 sm:px-0 md:px-28">
+      <div className="max-w-[1800px] grid grid-cols-1 md:grid-cols-2 gap-4 mt-[20px] md:mt-[80px] text-[#303030] mx-auto px-4 md:px-26">
         {/* First Statement */}
-        <div className="bg-[#A4E4EB] h-auto min-h-[150px] w-full sm:w-[600px] lg:w-[48%] flex justify-center items-center py-6">
+        <div className="bg-[#A4E4EB] min-h-[150px] flex justify-center items-center py-6">
           <p
-            className={`${robotoopo.className} text-xl sm:text-2xl lg:text-3xl px-5 `}
+            className={`${robotoopo.className} text-xl sm:text-2xl lg:text-3xl px-5`}
           >
             Our <strong className="font-extrabold">VISION</strong> is to
             interrupt the criminal intentions of sexual predators and sex
@@ -28,9 +28,9 @@ const PartOne = () => {
         </div>
 
         {/* Second Statement */}
-        <div className="bg-[#A4E4EB] h-auto min-h-[150px] w-full sm:w-[600px] lg:w-[48%] flex justify-center items-center py-6">
+        <div className="bg-[#A4E4EB] min-h-[150px] flex justify-center items-center py-6">
           <p
-            className={`${robotoopo.className} text-xl sm:text-2xl lg:text-3xl px-5 `}
+            className={`${robotoopo.className} text-xl sm:text-2xl lg:text-3xl px-5`}
           >
             Our <strong className="font-extrabold">MISSION</strong> is to equip
             adults to educate young people about the commercial sex industry.
@@ -38,9 +38,9 @@ const PartOne = () => {
         </div>
 
         {/* Third Statement */}
-        <div className="bg-[#A4E4EB] h-auto min-h-[150px] w-full sm:w-[600px] lg:w-[48%] flex justify-center items-center py-6">
+        <div className="bg-[#A4E4EB] min-h-[150px] flex justify-center items-center py-6">
           <p
-            className={`${robotoopo.className} text-xl sm:text-2xl lg:text-3xl px-5 `}
+            className={`${robotoopo.className} text-xl sm:text-2xl lg:text-3xl px-5`}
           >
             We believe <strong className="font-extrabold">KNOWLEDGE</strong>{" "}
             serves as a powerful defense against manipulation and intimidation.
@@ -48,9 +48,9 @@ const PartOne = () => {
         </div>
 
         {/* Fourth Statement */}
-        <div className="bg-[#A4E4EB] h-auto min-h-[150px] w-full sm:w-[600px] lg:w-[48%] flex justify-center items-center py-6">
+        <div className="bg-[#A4E4EB] min-h-[150px] flex justify-center items-center py-6">
           <p
-            className={`${robotoopo.className} text-xl sm:text-2xl lg:text-3xl px-5 `}
+            className={`${robotoopo.className} text-xl sm:text-2xl lg:text-3xl px-5`}
           >
             Our <strong className="font-extrabold">GOAL</strong> is to empower
             adolescents to recognize the signs of sexual exploitation and report
@@ -60,10 +60,10 @@ const PartOne = () => {
       </div>
 
       {/* Founder Story Section */}
-      <div className="text-[#303030] mt-20 mb-20 flex flex-col lg:flex-row justify-between items-center lg:items-start px-4 sm:ps-13 sm:pe-26 py-10 gap-8">
+      <div className="text-[#303030] max-w-[1800px] mx-auto mt-4 md:mt-20 mb-20 flex flex-col lg:flex-row justify-between items-center lg:items-start px-4 sm:ps-26 sm:pe-26 py-10 md:gap-8">
         {/* Founder Story Text */}
-        <div className="w-full md:ps-20">
-          <h1 className="text-6xl sm:text-5xl text-[#303030] tracking-normal mb-6">
+        <div className="w-full">
+          <h1 className="text-5xl sm:text-5xl text-[#303030] tracking-normal mb-6">
             How We Began
           </h1>
           <div className="space-y-4 text-base sm:text-lg">
