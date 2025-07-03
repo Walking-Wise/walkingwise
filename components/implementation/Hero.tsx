@@ -9,7 +9,7 @@ const Hero = () => {
     <div className=' mx-auto'>
     <Navbar/>
     <PartOne/>
-    <PartTwo/>
+
     <Footer/>
     </div>
   )
