@@ -1,10 +1,14 @@
 "use client";
 import React from "react";
-import { roboto, robotoItalic, robotoopo } from "../../public/fonts/Fonts";
+import {
+  roboto,
+  robotoItalic,
+  robotoop,
+  robotoopo,
+} from "../../public/fonts/Fonts";
 import PageBanner from "../ui/PageBanner/PageBanner";
 
 const mentorRoles = [
-  "YOUTH MENTORS",
   "Social Workers",
   "Case Managers",
   "Scout Leaders",
@@ -31,18 +35,18 @@ const YouthOrganization = () => {
       />
 
       {/* Youth Leaders Section */}
-      <div className="w-full max-w-[1800px] mx-auto px-6 sm:px-12 md:px-20 lg:px-26 flex flex-col xl:flex-row items-center gap-24 py-16 md:py-26">
+      <div className="w-full max-w-[1800px] mx-auto px-6 sm:px-12 md:px-20 lg:px-26 flex flex-col xl:flex-row items-center gap-24 py-16 md:py-6 md:pb-24">
         <div className="w-full md:max-w-4xl text-[#303030]">
-          <h1 className="text-4xl sm:text-6xl mb-4">Youth Leaders</h1>
+          <h1 className="text-4xl sm:text-5xl mb-6">Youth Leaders</h1>
           <p
-            className={`${robotoopo.className} tracking-wide leading-7 lg:leading-10 text-lg sm:text-xl`}
+            className={`${robotoopo.className} tracking-wide leading-7 lg:leading-10 text-lg sm:text-2xl`}
           >
             Mentors play a crucial role in shaping young people’s lives,
             offering guidance, encouragement, and support as they navigate
             social, emotional, and family challenges.
           </p>
           <p
-            className={`${robotoopo.className} tracking-wide leading-7 lg:leading-10 mt-6 text-lg sm:text-xl`}
+            className={`${robotoopo.className} tracking-wide leading-7 lg:leading-10 mt-6 text-lg sm:text-2xl`}
           >
             Many survivor leaders who shared their experiences with Walking Wise
             <span className="text-sm relative -top-3">&reg;</span> spoke about
@@ -52,15 +56,18 @@ const YouthOrganization = () => {
           </p>
         </div>
 
-        <div className="bg-[#36c5d8] w-[300px] h-[300px] sm:min-w-[400px] sm:h-[400px] xl:min-w-[550px] xl:h-[550px] p-4 border-t-3 border-white rounded-full flex flex-col justify-center items-center text-center text-[#303030]">
+        <div className="bg-[#36c5d8] w-[300px] h-[300px] sm:min-w-[400px] sm:h-[400px] xl:min-w-[550px] xl:h-[550px] p-4 pt-8 border-t-3 border-white rounded-full flex flex-col justify-center items-center text-center text-[#303030]">
+          <p>
+            <p
+              className={`${roboto.className} text-white sm:text-2xl xl:text-4xl mb-4 px-4 sm:px-8`}
+            >
+              YOUTH MENTORS
+            </p>
+          </p>
           {mentorRoles.map((role, idx) => (
             <p
               key={idx}
-              className={`${roboto.className} ${
-                idx === 0
-                  ? "text-white sm:text-2xl xl:text-4xl mb-4"
-                  : "text-sm sm:text-xl xl:text-xl"
-              } px-4 sm:px-8`}
+              className={`${robotoItalic.className} text-sm sm:text-xl xl:text-2xl px-4 sm:px-8 mb-1`}
             >
               {role}
             </p>
@@ -71,24 +78,46 @@ const YouthOrganization = () => {
       {/* Safer Environments Section */}
       <div className="w-full bg-[#303030]">
         <div className="max-w-[1800px] mx-auto px-6 sm:px-12 md:px-20 lg:px-26 flex flex-col xl:flex-row items-center gap-16 py-16 md:py-26">
-          <div className="bg-white w-[350px] h-[350px] sm:min-w-[400px] sm:h-[400px] xl:min-w-[550px] xl:h-[550px] p-10 rounded-full flex flex-col justify-center items-center text-center text-[#303030]">
-            <p className={`${robotoItalic.className} text-sm md:text-2xl`}>
-              “Educating our children about the dangers they face in today’s
-              world is crucial to protecting their innocence.”
+          <div className="bg-white w-[350px] h-[350px] sm:min-w-[400px] sm:h-[400px] xl:min-w-[550px] xl:h-[550px] p-10 rounded-full flex flex-col justify-center items-center text-center pt-16 text-[#303030]">
+            <p className={`${robotoItalic.className} text-sm md:text-3xl`}>
+              “Educating our children
+            </p>
+            <p className={`${robotoItalic.className} text-sm md:text-3xl`}>
+              about the dangers they face
+            </p>
+            <p className={`${robotoItalic.className} text-sm md:text-3xl`}>
+              in today’s world is crucial to
+            </p>
+            <p className={`${robotoItalic.className} text-sm md:text-3xl`}>
+              protecting their innocence.
             </p>
             <p
-              className={`${robotoItalic.className} text-sm md:text-2xl mt-2 md:mt-8`}
+              className={`${robotoItalic.className} text-sm md:text-3xl mt-2 md:mt-8`}
             >
-              Walking Wise is the most engaging tool I’ve seen for empowering
-              youth with the knowledge they need to stay safe.”
+              Walking Wise is the most engaging
             </p>
             <p
-              className={`${robotoItalic.className} text-xs md:text-lg mt-2 md:mt-8`}
+              className={`${robotoItalic.className} text-sm md:text-3xl`}
+            >
+              tool I’ve seen for empowering
+            </p>
+            <p
+              className={`${robotoItalic.className} text-sm md:text-3xl`}
+            >
+              youth with the knowledge they
+            </p>
+            <p
+              className={`${robotoItalic.className} text-sm md:text-3xl`}
+            >
+              need to stay safe.”
+            </p>
+            <p
+              className={`${robotoItalic.className} text-xs md:text-xl mt-8`}
             >
               Nate Lewis, Founder & CEO
             </p>
             <a
-              className={`${robotoItalic.className} text-xs md:text-lg underline`}
+              className={`${robotoItalic.className} text-xs md:text-xl underline`}
               href="https://theinnocent.org"
               target="_blank"
               rel="noopener noreferrer"
@@ -97,7 +126,7 @@ const YouthOrganization = () => {
             </a>
           </div>
           <div className="sm:p-8 md:p-10 text-white">
-            <h1 className="text-4xl sm:text-6xl text-[#36c5d8]">
+            <h1 className="text-4xl sm:text-5xl text-[#36c5d8]">
               creating safer environments
             </h1>
             {saferEnvParagraphs.map((text, idx) => (
@@ -147,7 +176,7 @@ const YouthOrganization = () => {
           <div className="w-full flex justify-start">
             <div className="max-w-[900px] w-full p-6 sm:p-8 md:p-24 text-left">
               <h1 className="text-4xl sm:text-6xl">
-                anti-exploitation advocates
+                anti-trafficking groups
               </h1>
               <p
                 className={`${robotoopo.className} tracking-wide leading-7 lg:leading-10 text-lg sm:text-2xl mt-6`}
@@ -172,8 +201,8 @@ const YouthOrganization = () => {
 
       {/* Call-to-Action Buttons */}
       <div className="mx-auto px-6 text-center w-full py-32 bg-[#303030]">
-        <div className="max-w-[1800px] mx-auto">
-          <h1 className="text-7xl">
+        <div className="max-w-[1800px] mx-auto px-26 ">
+          <h1 className="text-6xl tracking-wide leading-7 lg:leading-16">
             Together, we can form a powerful partnership that strengthens both
             education & outreach in the fight against child exploitation.
           </h1>

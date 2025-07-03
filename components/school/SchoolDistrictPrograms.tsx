@@ -3,6 +3,7 @@
 import React from "react";
 import { roboto, robotoItalic, robotoopo } from "../../public/fonts/Fonts";
 import PageBanner from "../ui/PageBanner/PageBanner";
+import Image from "next/image";
 
 const cardData = [
   {
@@ -50,20 +51,34 @@ const SchoolDistrictPrograms = () => {
       />
 
       {/* Testimonial + Intro Section */}
-      <div className="w-full max-w-[1800px] mx-auto px-6 sm:px-12 md:px-20 lg:px-32 flex flex-col xl:flex-row items-center gap-24 py-16 md:py-32">
+      <div className="w-full max-w-[1800px] mx-auto px-6 sm:px-12 md:px-20 lg:px-32 flex flex-col xl:flex-row items-center gap-24 py-16 md:py-26">
         <div className="flex flex-col justify-center items-center">
           <div className="bg-[#303030] text-[#303030] border-2 border-white w-[380px] h-[380px] sm:w-[550px] sm:h-[550px] p-4 rounded-full flex flex-col justify-center items-center text-center z-50">
             <p
-              className={`${robotoItalic.className} mb-3 px-4 sm:px-8 leading-snug text-3xl text-white`}
+              className={`${robotoItalic.className} px-4 sm:px-8 leading-snug text-3xl text-white`}
             >
-              “Walking Wise offers the best tools I’ve seen for teaching
-              students about about sexual exploitation and sextortion—without
-              being scary or lewd.”
+              “Walking Wise
+            </p>
+            <p
+              className={`${robotoItalic.className} px-4 sm:px-8 leading-snug text-3xl text-white`}
+            >
+              offers the best tools I’ve
+            </p>
+            <p
+              className={`${robotoItalic.className} mb-8 px-4 sm:px-8 leading-snug text-3xl text-white`}
+            >
+              seen for teaching students about sexual exploitation and
+              sextortion—without being scary or lewd.”
             </p>
             <span
               className={`${robotoopo.className} text-white block px-4 sm:px-6 text-[#303030] text-lg`}
             >
-              Nigel Hunter, Deputy School Resource Officer
+              Nigel Hunter, Deputy
+            </span>
+            <span
+              className={`${robotoopo.className} text-white block px-4 sm:px-6 text-[#303030] text-lg`}
+            >
+              School Resource Officer
             </span>
           </div>
         </div>
@@ -95,9 +110,12 @@ const SchoolDistrictPrograms = () => {
       <div className="w-full max-w-[1800px] mx-auto px-6 sm:px-12 md:px-20 lg:px-32 py-16 lg:py-32 bg-[#00C1D5] text-[#303030]">
         <div className="flex justify-between items-center">
           <h1 className="text-4xl sm:text-6xl">School Program Rollout</h1>
-          <div className="h-[50px] w-[50px] pt-[5px] border-[#303030] text-white hidden sm:block text-[#115a64] rounded-full text-xl ps-2 border-5 border-r-transparent">
-            11y+
-          </div>
+          <Image
+            src="/assets/11+.png"
+            alt="Ages 11 plus"
+            width={100}
+            height={100}
+          />
         </div>
         <p
           className={`${robotoopo.className} tracking-wide leading-7 lg:leading-10 text-base sm:text-xl md:text-2xl lg:text-3xl mt-4 sm:mt-6`}
@@ -251,8 +269,8 @@ const SchoolDistrictPrograms = () => {
         <p
           className={`${robotoopo.className} tracking-wide leading-7 lg:leading-10 text-base sm:text-xl md:text-2xl lg:text-3xl mt-4 sm:mt-6`}
         >
-          It is recommended that safety teams include school social workers,
-          nurses, resource officers, psychologists, counselors, principals,
+          Safety teams are recommended to include school social workers, nurses,
+          resource officers, psychologists, counselors, principals,
           wellness-focused educators, and members of their local anti-human
           trafficking coalition. With this diverse expertise, these teams are
           well-equipped to provide staff training and educate parents and
@@ -261,11 +279,16 @@ const SchoolDistrictPrograms = () => {
         <p
           className={`${robotoopo.className} tracking-wide leading-7 lg:leading-10 text-base sm:text-xl md:text-2xl lg:text-3xl mt-4 sm:mt-6`}
         >
-          For more information, please review guidelines written for the U.S.
-          Department of Education, Office of Safe and Supportive Schools, called{" "}
-          <span className="underline">
+          For more information, please review the guidelines written for the
+          U.S. Department of Education, Office of Safe and Supportive Schools,
+          called{" "}
+          <a
+            href="https://safesupportivelearning.ed.gov/sites/default/files/NCSSLE-2021HumanTraffickingGuide-508.pdf"
+            target="_blank"
+            className="underline"
+          >
             Human Trafficking in AMERICA’S SCHOOLS
-          </span>
+          </a>
           .
         </p>
       </div>
