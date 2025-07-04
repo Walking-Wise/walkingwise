@@ -38,18 +38,32 @@ const PartTwo = () => {
           <div className="w-full max-w-[1800px] mx-auto px-6 sm:px-12 md:px-20 lg:px-32 flex flex-col xl:flex-row items-center gap-24">
         <div className="flex flex-col justify-center items-center">
             <div className="bg-[#00C1D5] text-[#303030] border-2 border-white w-[380px] h-[380px] sm:w-[500px] sm:h-[500px] p-4 rounded-full flex flex-col justify-center items-center text-center z-50">
-              <p className="mt-2 mb-3 px-4 sm:px-6 font-bold leading-snug text-2xl">
+              <h1 className={`text-lg mb-4 sm:text-3xl px-6 sm:mb-4`}>
                 {testimonials[0].heading}
-              </p>
+              </h1>
 
               <p
-                className={`${robotoopo.className} mb-3 px-4 sm:px-8 leading-snug text-xl`}
+                className={`${robotoItalic.className} text-lg  sm:text-2xl px-6`}
               >
-                {`“${testimonials[0].quote}”`}
+                 "This will surely save lives. It will
               </p>
-
+              <p
+                className={`${robotoItalic.className} text-lg  sm:text-2xl px-6`}
+              >
+                train, inspire, and initiate others
+              </p>
+              <p
+                className={`${robotoItalic.className} text-lg  sm:text-2xl px-6`}
+              >
+                 to know how to recognize
+              </p>
+              <p
+                className={`${robotoItalic.className} text-lg mb-4 sm:text-2xl px-6 sm:mb-4`}
+              >
+                exploitation and take action."
+              </p>
               <span
-                className={`${robotoopo.className} text-white block px-4 sm:px-6 text-[#303030] text-lg`}
+                className={`${robotoopo.className} text-white block px-4 sm:px-6 text-[#303030] text-2xl`}
               >
                 {testimonials[0].author}
               </span>

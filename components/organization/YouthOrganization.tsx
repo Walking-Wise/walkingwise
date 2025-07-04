@@ -3,6 +3,7 @@ import React from "react";
 import {
   roboto,
   robotoItalic,
+  robotoItalicop,
   robotoop,
   robotoopo,
 } from "../../public/fonts/Fonts";
@@ -37,16 +38,16 @@ const YouthOrganization = () => {
       {/* Youth Leaders Section */}
       <div className="w-full max-w-[1800px] mx-auto px-6 sm:px-12 md:px-20 lg:px-26 flex flex-col xl:flex-row items-center gap-24 py-16 md:py-6 md:pb-24">
         <div className="w-full md:max-w-4xl text-[#303030]">
-          <h1 className="text-4xl sm:text-5xl mb-6">Youth Leaders</h1>
+          <h1 className="text-4xl sm:text-6xl mb-6">Youth Leaders</h1>
           <p
-            className={`${robotoopo.className} tracking-wide leading-7 lg:leading-10 text-lg sm:text-2xl`}
+            className={`${robotoopo.className} tracking-wide leading-7 lg:leading-10 text-lg sm:text-3xl`}
           >
             Mentors play a crucial role in shaping young people’s lives,
             offering guidance, encouragement, and support as they navigate
             social, emotional, and family challenges.
           </p>
           <p
-            className={`${robotoopo.className} tracking-wide leading-7 lg:leading-10 mt-6 text-lg sm:text-2xl`}
+            className={`${robotoopo.className} tracking-wide leading-7 lg:leading-10 mt-6 text-lg sm:text-3xl`}
           >
             Many survivor leaders who shared their experiences with Walking Wise
             <span className="text-sm relative -top-3">&reg;</span> spoke about
@@ -57,17 +58,16 @@ const YouthOrganization = () => {
         </div>
 
         <div className="bg-[#36c5d8] w-[300px] h-[300px] sm:min-w-[400px] sm:h-[400px] xl:min-w-[550px] xl:h-[550px] p-4 pt-8 border-t-3 border-white rounded-full flex flex-col justify-center items-center text-center text-[#303030]">
-          <p>
-            <p
-              className={`${roboto.className} text-white sm:text-2xl xl:text-4xl mb-4 px-4 sm:px-8`}
-            >
-              YOUTH MENTORS
-            </p>
-          </p>
+          <h1
+            className={`text-white sm:text-2xl xl:text-6xl mb-4 px-4 sm:px-8`}
+          >
+            YOUTH MENTORS
+          </h1>
+
           {mentorRoles.map((role, idx) => (
             <p
               key={idx}
-              className={`${robotoItalic.className} text-sm sm:text-xl xl:text-2xl px-4 sm:px-8 mb-1`}
+              className={`${robotoItalicop.className} text-sm sm:text-xl xl:text-2xl px-4 sm:px-8 mb-1`}
             >
               {role}
             </p>
@@ -96,24 +96,16 @@ const YouthOrganization = () => {
             >
               Walking Wise is the most engaging
             </p>
-            <p
-              className={`${robotoItalic.className} text-sm md:text-3xl`}
-            >
+            <p className={`${robotoItalic.className} text-sm md:text-3xl`}>
               tool I’ve seen for empowering
             </p>
-            <p
-              className={`${robotoItalic.className} text-sm md:text-3xl`}
-            >
+            <p className={`${robotoItalic.className} text-sm md:text-3xl`}>
               youth with the knowledge they
             </p>
-            <p
-              className={`${robotoItalic.className} text-sm md:text-3xl`}
-            >
+            <p className={`${robotoItalic.className} text-sm md:text-3xl`}>
               need to stay safe.”
             </p>
-            <p
-              className={`${robotoItalic.className} text-xs md:text-xl mt-8`}
-            >
+            <p className={`${robotoItalic.className} text-xs md:text-xl mt-8`}>
               Nate Lewis, Founder & CEO
             </p>
             <a
@@ -132,7 +124,7 @@ const YouthOrganization = () => {
             {saferEnvParagraphs.map((text, idx) => (
               <p
                 key={idx}
-                className={`${robotoopo.className} tracking-wide leading-7 lg:leading-10 text-lg sm:text-2xl mt-6 sm:mt-8 md:mt-10`}
+                className={`${robotoopo.className} tracking-wide leading-7 sm:leading-8 lg:leading-10 text-xl sm:text-2xl md:text-3xl mt-6 sm:mt-8 md:mt-10`}
               >
                 {text}
               </p>
@@ -175,9 +167,7 @@ const YouthOrganization = () => {
         <div className="w-full lg:w-1/2 bg-white text-[#303030]">
           <div className="w-full flex justify-start">
             <div className="max-w-[900px] w-full p-6 sm:p-8 md:p-24 text-left">
-              <h1 className="text-4xl sm:text-6xl">
-                anti-trafficking groups
-              </h1>
+              <h1 className="text-4xl sm:text-6xl">anti-trafficking groups</h1>
               <p
                 className={`${robotoopo.className} tracking-wide leading-7 lg:leading-10 text-lg sm:text-2xl mt-6`}
               >

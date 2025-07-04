@@ -3,14 +3,14 @@ import Navbar from '../Navbar'
 import PartOne from './PartOne'
 import PartTwo from './PartTwo'
 import Footer from '../Footer'
+import YouthCurriculum from './YouthCurriculum'
 
 const Hero = () => {
   return (
     
    <div className=' mx-auto'>
     <Navbar/>
-    <PartOne/>
-    <PartTwo/>
+    <YouthCurriculum />
     <Footer/>
    </div>
   )
