@@ -1,14 +1,13 @@
 import React from 'react'
 import Navbar from '../Navbar'
-import PartOne from './PartOne'
-import PartTwo from './PartTwo'
+import ImplementationSection from './ImplementationSection'
 import Footer from '../Footer'
 
 const Hero = () => {
   return (
     <div className=' mx-auto'>
     <Navbar/>
-    <PartOne/>
+    <ImplementationSection/>
 
     <Footer/>
     </div>
