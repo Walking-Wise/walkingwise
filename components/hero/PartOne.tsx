@@ -1,5 +1,7 @@
 "use client";
 import { robotoItalic, robotoopo, roboto } from "../../public/fonts/Fonts";
+import BodyText from "../ui/BodyText/BodyText";
+import SectionHeaderText from "../ui/SectionHeaderText/SectionHeaderText";
 
 const PartOne = () => {
   return (
@@ -15,27 +17,49 @@ const PartOne = () => {
           />
         </div>
       </div>
-      <div className="flex relative flex-col xl:flex-row justify-center  items-center gap-8 px-4 py-5 bg-white">
-        <div className="absolute z-[-100px] top-[-40px] 2xl:top-0  bg-[#303030] w-full h-[75px] " />
-        <div className="bg-[#303030] w-[300px] h-[300px] z-50 sm:min-w-[500px] sm:h-[500px] p-4 border-t-3 border-white rounded-full flex flex-col justify-evenly items-center text-center text-white ">
+      <div className="flex relative flex-col lg:flex-row justify-center  items-center gap-8 px-4 py-5 bg-white">
+        <div className="absolute z-[-100px] top-[-40px] 2xl:top-0  bg-[#303030] w-full h-[25px] md:h-[75px] " />
+        <div
+          className="
+  bg-[#303030] 
+  w-[300px] h-[300px] 
+  z-50 
+  sm:min-w-[500px] sm:h-[500px] 
+  p-4 
+  border-t-3 border-white 
+  rounded-full 
+  flex-col justify-evenly items-center text-center text-white 
+  hidden lg:flex
+"
+        >
           <p
-            className={`${robotoItalic.className} text-md leading-[0]  sm:text-4xl mt-10 px-9`}
+            className={`${robotoItalic.className} text-md leading-[0] sm:text-4xl md:mt-10 px-9`}
           >
             “Just one year
           </p>
-          <p className={`${robotoItalic.className} text-md leading-[0] sm:text-4xl px-9`}>
+          <p
+            className={`${robotoItalic.className} text-md leading-[0] sm:text-4xl px-9`}
+          >
             after watching your
           </p>
-          <p className={`${robotoItalic.className} text-md leading-[0] sm:text-4xl px-9`}>
+          <p
+            className={`${robotoItalic.className} text-md leading-[0] sm:text-4xl px-9`}
+          >
             animiated video, my
           </p>
-          <p className={`${robotoItalic.className} text-md leading-[0] sm:text-4xl px-9`}>
+          <p
+            className={`${robotoItalic.className} text-md leading-[0] sm:text-4xl px-9`}
+          >
             11 year old daughter
           </p>
-          <p className={`${robotoItalic.className} text-md leading-[0] sm:text-4xl px-9`}>
+          <p
+            className={`${robotoItalic.className} text-md leading-[0] sm:text-4xl px-9`}
+          >
             reported an ‘unsafe adult’
           </p>
-          <p className={`${robotoItalic.className} text-md leading-[0] sm:text-4xl px-9`}>
+          <p
+            className={`${robotoItalic.className} text-md leading-[0] sm:text-4xl px-9`}
+          >
             in her life.”
           </p>
           <span
@@ -44,8 +68,11 @@ const PartOne = () => {
             Proactive Father
           </span>
         </div>
-        <div className="w-full max-w-4xl text-black text-xl md:text-4xl text-left px-4 mt-16">
-          <p className={`${robotoopo.className} tracking-wide lg:mt-10`}>
+        <div className="w-full max-w-4xl text-black text-xl md:text-4xl text-left px-4 mt-8 md:mt-16">
+          <SectionHeaderText className="lg:hidden mb-4">
+            Sexual Exploitation Education
+          </SectionHeaderText>
+          <BodyText>
             Sexual predators and child traffickers can deceive adults and entire
             communities.
             <br /> <br />
@@ -54,7 +81,7 @@ const PartOne = () => {
             <br /> <br />
             Teaching young people to recognize unsafe adult behaviors can
             empower them to seek help.
-          </p>
+          </BodyText>
         </div>
       </div>
     </section>

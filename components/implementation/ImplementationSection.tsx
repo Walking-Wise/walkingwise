@@ -27,7 +27,7 @@ const ImplementationSection = () => {
       />
 
       <Section bgColor="white" className="xl:flex-row items-center md:gap-24 pb-12 md:pb-16 lg:pb-16 py-0 md:py-0 lg:py-0">
-        <div className="mt-12">
+        <div className="md:mt-12">
           <SectionHeaderText>getting started</SectionHeaderText>
           <BodyText className={`mb-6 mt-4 sm:mt-6 lg:leading-12`}>
             The Walking Wise Implementation Guide breaks down barriers to

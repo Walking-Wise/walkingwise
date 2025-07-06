@@ -338,7 +338,7 @@
 
 body {
   background: white;
-  color: var(--foreground);
+  color: var(--ww-gray);
   /* font-family: Arial, Helvetica, sans-serif ; */
 }
 

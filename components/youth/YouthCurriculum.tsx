@@ -123,7 +123,7 @@ const YouthCurriculum = () => {
             </BodyText>
           </div>
 
-          <div className="flex-1 bg-[#00c1d5] text-black p-6 sm:p-8 md:pt-10 md:ps-10 md:pb-10 md:pe-0 space-y-4 flex flex-col">
+          <div className="flex-1 bg-[#00c1d5] text-base p-6 sm:p-8 md:pt-10 md:ps-10 md:pb-10 md:pe-0 space-y-4 flex flex-col">
             <h1 className="font-bold text-lg sm:text-xl md:text-3xl">
               RESOURCES
             </h1>
@@ -164,7 +164,7 @@ const YouthCurriculum = () => {
             {executionSteps.map((step, index) => (
               <li
                 key={index}
-                className={`${robotoopo.className} sm:text-xl tracking-wide leading-7 lg:leading-10  md:text-2xl lg:text-3xl mt-4`}
+                className={`${robotoopo.className} text-white sm:text-xl tracking-wide leading-7 lg:leading-10  md:text-2xl lg:text-3xl mt-4`}
               >
                 <strong className="text-[#00c1d5]">{step.label}</strong>{" "}
                 {step.description}
