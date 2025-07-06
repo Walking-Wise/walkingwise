@@ -13,8 +13,8 @@ const BodyText: React.FC<BodyTextProps> = ({ children, className }) => {
       className={`
         ${robotoopo.className} 
         tracking-wide 
-        leading-8 sm:leading-8 lg:leading-10 
-        text-lg sm:text-2xl md:text-3xl 
+        leading-7 sm:leading-8 lg:leading-10 
+        text-xl sm:text-2xl md:text-3xl 
         text-[#303030]
         ${className ?? ""}
       `}

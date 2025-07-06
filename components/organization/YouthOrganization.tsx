@@ -1,10 +1,8 @@
 "use client";
 import React from "react";
 import {
-  roboto,
   robotoItalic,
   robotoItalicop,
-  robotoop,
   robotoopo,
 } from "../../public/fonts/Fonts";
 import PageBanner from "../ui/PageBanner/PageBanner";
@@ -28,14 +26,11 @@ const saferEnvParagraphs = [
 const YouthOrganization = () => {
   return (
     <>
-      {/* Hero Section */}
       <PageBanner
         title="COMBATTING EXPLOITATION"
         image="/assets/YTH.jpg"
         altText="Youth organizations"
       />
-
-      {/* Youth Leaders Section */}
       <div className="w-full max-w-[1800px] mx-auto px-6 sm:px-12 md:px-20 lg:px-26 flex flex-col xl:flex-row items-center gap-24 py-16 md:py-6 md:pb-24">
         <div className="w-full md:max-w-4xl text-[#303030]">
           <h1 className="text-4xl sm:text-6xl mb-6">Youth Leaders</h1>
@@ -192,7 +187,7 @@ const YouthOrganization = () => {
       {/* Call-to-Action Buttons */}
       <div className="mx-auto px-6 text-center w-full py-32 bg-[#303030]">
         <div className="max-w-[1800px] mx-auto px-26 ">
-          <h1 className="text-6xl tracking-wide leading-7 lg:leading-16">
+          <h1 className="text-6xl tracking-wide leading-7 lg:leading-16 text-white">
             Together, we can form a powerful partnership that strengthens both
             education & outreach in the fight against child exploitation.
           </h1>

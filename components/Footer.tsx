@@ -28,7 +28,7 @@ const Footer = () => {
     },
   ];
   return (
-    <div className="bg-[#BFEBF0] py-16 w-full">
+    <div className="bg-[#BFEBF0] py-8 md:py-16 w-full">
       {/* Main Footer Content */}
       <div className="flex flex-col max-w-screen-2xl mx-auto md:flex-row flex-wrap justify-evenly items-start px-4 sm:px-8 lg:px-10  gap-8">
         {/* Report Section */}
@@ -90,7 +90,7 @@ const Footer = () => {
         ].map((column, index) => (
           <div
             key={index}
-            className="flex flex-col min-w-[150px] px-4 mt-16 mb-16"
+            className="flex flex-col min-w-[150px] px-4 md:my-16"
           >
             {column.map((item, i) => (
               <Link

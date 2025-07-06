@@ -4,7 +4,7 @@ export interface ServiceAgreementProps {}
 
 export const ServiceAgreement: FC<ServiceAgreementProps> = () => {
   return (
-    <div className="text-black">
+    <div className="text-base">
       <h4 className="font-bold">Walking Wise® Learning Platform Agreement</h4>
       <br />
 

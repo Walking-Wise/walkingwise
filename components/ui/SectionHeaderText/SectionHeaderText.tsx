@@ -14,7 +14,6 @@ const SectionHeaderText: React.FC<SectionHeaderTextProps> = ({
     <h1
       className={`
         text-3xl sm:text-4xl md:text-6xl
-        text-[#303030]
         ${className ?? ""}
       `}
     >

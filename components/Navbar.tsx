@@ -71,7 +71,7 @@ const Navbar = () => {
                   Animated Videos
                 </Link>
                 <Link
-                  href="/course"
+                  href="/adult-education"
                   className={`block px-4 py-2 text-lg hover:bg-gray-100 ${roboto.className}`}
                 >
                   Adult Education
@@ -96,19 +96,19 @@ const Navbar = () => {
             {isProgramsOpen && (
               <div className="absolute left-0 mt-2 w-48 bg-white rounded-lg shadow-lg py-2 z-50">
                 <Link
-                  href="/course"
+                  href="/youth-organization"
                   className={`block px-4 py-2 text-lg hover:bg-gray-100 ${roboto.className}`}
                 >
                   Youth Organization
                 </Link>
                 <Link
-                  href="/youth-curriculum"
+                  href="/implementation"
                   className={`block px-4 py-2 text-lg hover:bg-gray-100 ${roboto.className}`}
                 >
                   Implementation
                 </Link>
                 <Link
-                  href="/videos"
+                  href="/home-education"
                   className={`block px-4 py-2 text-lg hover:bg-gray-100 ${roboto.className}`}
                 >
                   Home Education
@@ -140,7 +140,7 @@ const Navbar = () => {
         {/* Mobile Menu Button */}
         <div className="lg:hidden sm:mt-20">
           <button
-            className="text-black"
+            className="text-base"
             onClick={toggleMenu}
             aria-label="Toggle Menu"
           >
@@ -161,9 +161,9 @@ const Navbar = () => {
           <div className="flex flex-col">
             <button
               onClick={toggleEducation}
-              className="flex items-center space-x-2 text-black"
+              className="flex items-center space-x-2 text-[#303030]"
             >
-              <span>Our Education</span>
+              <span>Education</span>
               <ChevronDown
                 size={24}
                 className={`transform transition-transform ${
@@ -174,22 +174,58 @@ const Navbar = () => {
             {isEducationOpen && (
               <div className="pl-4 mt-2 space-y-2">
                 <Link
-                  href="/course"
-                  className={`block px-4 py-2 text-lg hover:bg-gray-100 ${roboto.className}`}
-                >
-                  Online Course for Adults
-                </Link>
-                <Link
                   href="/youth-curriculum"
                   className={`block px-4 py-2 text-lg hover:bg-gray-100 ${roboto.className}`}
                 >
-                  Curriculum for Youth
+                  Youth Curriculum
                 </Link>
                 <Link
                   href="/videos"
                   className={`block px-4 py-2 text-lg hover:bg-gray-100 ${roboto.className}`}
                 >
-                  Animated Video Series
+                  Animated Videos
+                </Link>
+                <Link
+                  href="/adult-education"
+                  className={`block px-4 py-2 text-lg hover:bg-gray-100 ${roboto.className}`}
+                >
+                  Adult Education
+                </Link>
+              </div>
+            )}
+          </div>
+          <div className="flex flex-col">
+            <button
+              onClick={togglePrograms}
+              className="flex items-center space-x-2 text-[#303030]"
+            >
+              <span>Programs</span>
+              <ChevronDown
+                size={24}
+                className={`transform transition-transform ${
+                  isProgramsOpen ? "rotate-180" : ""
+                }`}
+              />
+            </button>
+            {isProgramsOpen && (
+              <div className="pl-4 mt-2 space-y-2">
+                <Link
+                  href="/youth-organization"
+                  className={`block px-4 py-2 text-lg hover:bg-gray-100 ${roboto.className}`}
+                >
+                  Youth Organization
+                </Link>
+                <Link
+                  href="/implementation"
+                  className={`block px-4 py-2 text-lg hover:bg-gray-100 ${roboto.className}`}
+                >
+                  Implementation
+                </Link>
+                <Link
+                  href="/home-education"
+                  className={`block px-4 py-2 text-lg hover:bg-gray-100 ${roboto.className}`}
+                >
+                  Home Education
                 </Link>
               </div>
             )}
