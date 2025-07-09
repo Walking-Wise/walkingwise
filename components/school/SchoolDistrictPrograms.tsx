@@ -4,6 +4,9 @@ import React from "react";
 import { roboto, robotoItalic, robotoopo } from "../../public/fonts/Fonts";
 import PageBanner from "../ui/PageBanner/PageBanner";
 import Image from "next/image";
+import SectionHeaderText from "../ui/SectionHeaderText/SectionHeaderText";
+import BodyText from "../ui/BodyText/BodyText";
+import Button from "../ui/Button/Button";
 
 const cardData = [
   {
@@ -71,12 +74,12 @@ const SchoolDistrictPrograms = () => {
               sextortion—without being scary or lewd.”
             </p>
             <span
-              className={`${robotoopo.className} text-white block px-4 sm:px-6 text-[#303030] text-lg`}
+              className={`${robotoopo.className} text-white block px-4 sm:px-6 text-[#303030] text-2xl`}
             >
               Nigel Hunter, Deputy
             </span>
             <span
-              className={`${robotoopo.className} text-white block px-4 sm:px-6 text-[#303030] text-lg`}
+              className={`${robotoopo.className} text-white block px-4 sm:px-6 text-[#303030] text-2xl`}
             >
               School Resource Officer
             </span>
@@ -84,32 +87,100 @@ const SchoolDistrictPrograms = () => {
         </div>
 
         <div className="max-w-[800px] text-[#303030]">
-          <h1 className="text-4xl sm:text-6xl">Sustainable Education</h1>
-          <p
-            className={`${robotoopo.className} tracking-wide leading-7 lg:leading-10 text-base sm:text-xl md:text-2xl mt-4 sm:mt-6`}
-          >
+          <SectionHeaderText className="text-4xl sm:text-6xl">
+            Sustainable Education
+          </SectionHeaderText>
+          <BodyText className={`mt-4 sm:mt-6`}>
             Many schools invite guest speakers to address sex trafficking with
             staff, parents, and students. While a presentation can raise
             important awareness, its impact is often short-lived. Walking Wise
             offers a sustainable, school-led solution—empowering school safety
             teams to integrate prevention education into their middle and high
             school curriculum over time.
-          </p>
-          <p
-            className={`${robotoopo.className} tracking-wide leading-7 lg:leading-10 text-base sm:text-xl md:text-2xl mt-4 sm:mt-6`}
-          >
+          </BodyText>
+          <BodyText className={`mt-4 sm:mt-6`}>
             This ongoing approach helps students build lasting awareness,
             strengthen critical thinking, and develop the skills to recognize
             and resist the manipulative tactics commonly used by sexual
             predators.
-          </p>
+          </BodyText>
+        </div>
+      </div>
+
+      {/* District Rollout Section */}
+      <div className="w-full max-w-[1800px] mx-auto px-6 sm:px-12 md:px-20 lg:px-32 lg:py-32 py-16 bg-[#00C1D5] text-[#303030] flex flex-col lg:flex-row gap-10">
+        {/* Left Content */}
+        <div className="flex-1">
+          <SectionHeaderText>District Rollout</SectionHeaderText>
+          <BodyText className={`mt-4 `}>
+            Introducing essential topics gradually throughout students’ academic
+            journey fosters consistent and impactful learning.
+          </BodyText>
+          <BodyText className={`mt-4`}>
+            The Walking Wise curriculum is designed for flexibility, enabling
+            educators to tailor materials to align with school policies and
+            protocols, age appropriateness, teaching styles, and available class
+            time.
+          </BodyText>
+          <div className="flex gap-4 mt-12">
+            <Button
+              onClick={() => (window.location.href = "/demo")}
+            >
+              DEMO Curriculum
+            </Button>
+            <Button
+              onClick={() =>
+                (window.location.href =
+                  "https://www.walkingwise.com/contact-us-v2/")
+              }
+            >
+              ENROLL Today!
+            </Button>
+          </div>
+        </div>
+
+        {/* Right Box */}
+        <div className="bg-[#303030] max-h-[400px] text-white p-6 sm:p-8 relative">
+          <h3 className="text-xl sm:text-3xl font-semibold mb-4">
+            DISTRICT WIDE PROGRAM
+          </h3>
+          <ul
+            className={`${robotoopo.className} text-base sm:text-2xl space-y-2`}
+          >
+            <li>
+              <strong>Parent Awareness:</strong> #1 Myths & Reality
+            </li>
+            <li>
+              <strong>5th Grade:</strong> #2 Trustworthy vs. Unsafe Adult
+            </li>
+            <li>
+              <strong>6th Grade:</strong> #3 Grooming Process & #4 Pornography
+              Link
+            </li>
+            <li>
+              <strong>7th Grade:</strong> #5 Sextortion Scheme & #6 Male Victims
+            </li>
+            <li>
+              <strong>8th Grade:</strong> #7 Runaways as Targets & #8 Rural
+              Risks
+            </li>
+            <li>
+              <strong>9th Grade:</strong> #9 Human Traffickers & #10 Female
+              Recruiters
+            </li>
+            <li>
+              <strong>10th Grade:</strong> #11 Family Secret & #12 Hidden Buyers
+            </li>
+          </ul>
         </div>
       </div>
 
       {/* School Program Rollout */}
-      <div className="w-full max-w-[1800px] mx-auto px-6 sm:px-12 md:px-20 lg:px-32 py-16 lg:py-32 bg-[#00C1D5] text-[#303030]">
+      <div className="w-full max-w-[1800px] mx-auto px-6 sm:px-12 md:px-20 lg:px-32 py-16 lg:py-24 bg-white text-[#303030]">
         <div className="flex justify-between items-center">
-          <h1 className="text-4xl sm:text-6xl">School Program Rollout</h1>
+          <SectionHeaderText className="text-4xl sm:text-6xl">
+            School Program Rollout
+          </SectionHeaderText>
           <Image
             src="/assets/11+.png"
             alt="Ages 11 plus"
@@ -117,15 +188,13 @@ const SchoolDistrictPrograms = () => {
             height={100}
           />
         </div>
-        <p
-          className={`${robotoopo.className} tracking-wide leading-7 lg:leading-10 text-base sm:text-xl md:text-2xl lg:text-3xl mt-4 sm:mt-6`}
-        >
+        <BodyText className={`mt-4 sm:mt-6`}>
           While most adults successfully use our training and tools to educate
           about child exploitation, Walking Wise strongly encourages school
           social workers, resource officers, nurses, and wellness-focused
           teachers to leverage their expertise in leading this safety initiative
           on 12 critical issues
-        </p>
+        </BodyText>
 
         <div className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-3 xl:grid-cols-3 my-10 gap-6 md:gap-10 items-center">
           {cardData.map((card, index) => (
@@ -179,106 +248,26 @@ const SchoolDistrictPrograms = () => {
           ))}
         </div>
       </div>
-      {/* District Rollout Section */}
-      <div className="w-full max-w-[1800px] mx-auto px-6 sm:px-12 md:px-20 lg:px-32 lg:py-32 py-16 bg-white text-[#303030] flex flex-col lg:flex-row gap-10">
-        {/* Left Content */}
-        <div className="flex-1">
-          <h1 className="text-4xl sm:text-6xl">District Rollout</h1>
-          <p
-            className={`${robotoopo.className} mt-4 leading-7 lg:leading-10 text-base sm:text-xl md:text-2xl`}
-          >
-            Introducing essential topics gradually throughout students’ academic
-            journey fosters consistent and impactful learning.
-          </p>
-          <p
-            className={`${robotoopo.className} mt-4 leading-7 lg:leading-10 text-base sm:text-xl md:text-2xl`}
-          >
-            The Walking Wise curriculum is designed for flexibility, enabling
-            educators to tailor materials to align with school policies and
-            protocols, age appropriateness, teaching styles, and available class
-            time.
-          </p>
-        </div>
-
-        {/* Right Box */}
-        <div className="flex-1 bg-[#303030] text-white p-6 sm:p-8 relative">
-          <h3 className="text-xl sm:text-3xl font-semibold mb-4">
-            DISTRICT WIDE PROGRAM
-          </h3>
-          <ul
-            className={`${robotoopo.className} text-base sm:text-2xl space-y-2`}
-          >
-            <li>
-              <strong>Parent Awareness:</strong> #1 Myths & Reality
-            </li>
-            <li>
-              <strong>5th Grade:</strong> #2 Trustworthy vs. Unsafe Adult
-            </li>
-            <li>
-              <strong>6th Grade:</strong> #3 Grooming Process & #4 Pornography
-              Link
-            </li>
-            <li>
-              <strong>7th Grade:</strong> #5 Sextortion Scheme & #6 Male Victims
-            </li>
-            <li>
-              <strong>8th Grade:</strong> #7 Runaways as Targets & #8 Rural
-              Risks
-            </li>
-            <li>
-              <strong>9th Grade:</strong> #9 Human Traffickers & #10 Female
-              Recruiters
-            </li>
-            <li>
-              <strong>10th Grade:</strong> #11 Family Secret & #12 Hidden Buyers
-            </li>
-          </ul>
-          {/* Buttons */}
-          <div className="flex gap-4 mt-6">
-            <button
-              className="bg-[#B833E1] text-white px-6 py-2 rounded-full text-sm sm:text-base"
-              onClick={() => (window.location.href = "/demo")}
-            >
-              DEMO Curriculum
-            </button>
-            <button
-              className="bg-[#B833E1] text-white px-6 py-2 rounded-full text-sm sm:text-base"
-              onClick={() =>
-                (window.location.href =
-                  "https://www.walkingwise.com/contact-us-v2/")
-              }
-            >
-              ENROLL Today!
-            </button>
-          </div>
-        </div>
-      </div>
 
       {/* Safety Teams Section */}
       <div className="w-full max-w-[1800px] mx-auto px-6 sm:px-12 md:px-20 lg:px-32 py-16 lg:py-32 bg-[#303030] text-white">
-        <h1 className="text-4xl sm:text-7xl">School Safety Teams</h1>
-        <p
-          className={`${robotoopo.className} tracking-wide leading-7 lg:leading-10 text-base sm:text-xl md:text-2xl lg:text-3xl mt-4 sm:mt-6`}
-        >
+        <SectionHeaderText>School Safety Teams</SectionHeaderText>
+        <BodyText className={`mt-4 sm:mt-6 text-white lg:text-white`}>
           In 2021, the U.S. Department of Education provided guidelines for
           implementing human trafficking education and suggested empowering a
           ‘safety team’ to develop and oversee school education as well as
           policies and response protocols for reporting suspected child
           trafficking.
-        </p>
-        <p
-          className={`${robotoopo.className} tracking-wide leading-7 lg:leading-10 text-base sm:text-xl md:text-2xl lg:text-3xl mt-4 sm:mt-6`}
-        >
+        </BodyText>
+        <BodyText className={`mt-4 sm:mt-6 text-white lg:text-white`}>
           Safety teams are recommended to include school social workers, nurses,
           resource officers, psychologists, counselors, principals,
           wellness-focused educators, and members of their local anti-human
           trafficking coalition. With this diverse expertise, these teams are
           well-equipped to provide staff training and educate parents and
           students.
-        </p>
-        <p
-          className={`${robotoopo.className} tracking-wide leading-7 lg:leading-10 text-base sm:text-xl md:text-2xl lg:text-3xl mt-4 sm:mt-6`}
-        >
+        </BodyText>
+        <BodyText className={`mt-4 sm:mt-6 text-white lg:text-white`}>
           For more information, please review the guidelines written for the
           U.S. Department of Education, Office of Safe and Supportive Schools,
           called{" "}
@@ -290,7 +279,7 @@ const SchoolDistrictPrograms = () => {
             Human Trafficking in AMERICA’S SCHOOLS
           </a>
           .
-        </p>
+        </BodyText>
       </div>
     </>
   );

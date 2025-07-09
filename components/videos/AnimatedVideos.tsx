@@ -7,33 +7,105 @@ import Section from "../ui/Section/Section";
 import SectionHeaderText from "../ui/SectionHeaderText/SectionHeaderText";
 import BodyText from "../ui/BodyText/BodyText";
 import PageBanner from "../ui/PageBanner/PageBanner";
-import { robotoopo, robotoItalic, robotoBold } from "../../public/fonts/Fonts";
+import {
+  robotoopo,
+  robotoItalic,
+  robotoBold,
+  robotoItalicop,
+} from "../../public/fonts/Fonts";
 
 const AnimatedVideos = () => {
-  const buttons = ["DEMO Curriculum", "ENROLL Today!"];
+  const buttons = ["DEMO Curriculum"];
   const [activeVideo, setActiveVideo] = useState<number | null>(null);
 
   const handleRedirect = () => {
     window.location.href = "https://www.walkingwise.com/contact-us-v2/";
   };
 
-  const videoTitles: Record<number, string> = {
-    1: "Myths & Reality",
-    2: "Trustworthy vs. Unsafe Adult",
-    3: "Grooming Process",
-    4: "Pornography Link",
-    5: "Sextortion Scheme",
-    6: "Male Victims",
-    7: "Runaways as Targets",
-    8: "Rural Risks",
-    9: "Human Traffickers",
-    10: "Female Recruiters",
-    11: "Family Secret",
-    12: "Hidden Buyers",
+  const videoTitles: Record<
+    number,
+    { name: string; link: string; thumbnail: string }
+  > = {
+    1: {
+      name: "Myths & Reality",
+      thumbnail:
+        "https://walking-wise-animated-video-assets.s3.us-east-1.amazonaws.com/Videos+-+Animation/Thumbnails+-+Website+Animation/Myths+-+Thumbnail.png",
+      link: "https://walking-wise-animated-video-assets.s3.us-east-1.amazonaws.com/Videos+-+Animation/Videos+-+Website+Animation/Video-Myths_and_Reality-4-1-2025.mp4",
+    },
+    2: {
+      name: "Trustworthy vs. Unsafe Adult",
+      thumbnail:
+        "https://walking-wise-animated-video-assets.s3.us-east-1.amazonaws.com/Videos+-+Animation/Thumbnails+-+Website+Animation/Trustworthy+vs+Unsafe+-+Thumbnail.png",
+      link: "https://walking-wise-animated-video-assets.s3.us-east-1.amazonaws.com/Videos+-+Animation/Trailers+-+Website+Animation/Trailer-Trustworthy_Vs_Unsafe_Adult-1080p-250125.mp4",
+    },
+    3: {
+      name: "Grooming Process",
+      thumbnail:
+        "https://walking-wise-animated-video-assets.s3.us-east-1.amazonaws.com/Videos+-+Animation/Thumbnails+-+Website+Animation/Grooming+Process+-+Thumbnail.png",
+      link: "https://walking-wise-animated-video-assets.s3.us-east-1.amazonaws.com/Videos+-+Animation/Trailers+-+Website+Animation/Trailer-Grooming_Process_of_Child_Sex_Trafficking-1080p-230618.mp4",
+    },
+    4: {
+      name: "Pornography Link",
+      thumbnail:
+        "https://walking-wise-animated-video-assets.s3.us-east-1.amazonaws.com/Videos+-+Animation/Thumbnails+-+Website+Animation/Pornography+Link+-+Thumbnail.png",
+      link: "https://walking-wise-animated-video-assets.s3.us-east-1.amazonaws.com/Videos+-+Animation/Trailers+-+Website+Animation/Trailer-Pornography_Link_of_Child_Sex_Trafficking-1080p-230618.mp4",
+    },
+    5: {
+      name: "Sextortion Scheme",
+      thumbnail:
+        "https://walking-wise-animated-video-assets.s3.us-east-1.amazonaws.com/Videos+-+Animation/Thumbnails+-+Website+Animation/Sextortion+Scheme+-+Thumbnail.png",
+      link: "https://walking-wise-animated-video-assets.s3.us-east-1.amazonaws.com/Videos+-+Animation/Trailers+-+Website+Animation/Trailer-Sextortion_Scheme_of_Child_Sex_Trafficking-1080p-230618.mp4",
+    },
+    6: {
+      name: "Male Victims",
+      thumbnail:
+        "https://walking-wise-animated-video-assets.s3.us-east-1.amazonaws.com/Videos+-+Animation/Thumbnails+-+Website+Animation/Male+Victims+-+Thumbnail.png",
+      link: "https://walking-wise-animated-video-assets.s3.us-east-1.amazonaws.com/Videos+-+Animation/Trailers+-+Website+Animation/Trailer-Male_Victims_of_Child_Sex_Trafficking-1080p-230618.mp4",
+    },
+    7: {
+      name: "Runaways as Targets",
+      thumbnail:
+        "https://walking-wise-animated-video-assets.s3.us-east-1.amazonaws.com/Videos+-+Animation/Thumbnails+-+Website+Animation/Runaways+As+Targets+-+Thumbnail.png",
+      link: "https://walking-wise-animated-video-assets.s3.us-east-1.amazonaws.com/Videos+-+Animation/Trailers+-+Website+Animation/Trailer-Runaways_are_Targets_of_Child_Sex_Traffick-1080p-230618.mp4",
+    },
+    8: {
+      name: "Rural Risks",
+      thumbnail:
+        "https://walking-wise-animated-video-assets.s3.us-east-1.amazonaws.com/Videos+-+Animation/Thumbnails+-+Website+Animation/Rural+Risks+-+Thumbnail.png",
+      link: "https://walking-wise-animated-video-assets.s3.us-east-1.amazonaws.com/Videos+-+Animation/Trailers+-+Website+Animation/Trailer-Rural_Risks_of_Child_Sex_Trafficking-1080p-230618.mp4",
+    },
+    9: {
+      name: "Human Traffickers",
+      thumbnail:
+        "https://walking-wise-animated-video-assets.s3.us-east-1.amazonaws.com/Videos+-+Animation/Thumbnails+-+Website+Animation/Human+Traffickers+-+Thumbnail.png",
+      link: "https://walking-wise-animated-video-assets.s3.us-east-1.amazonaws.com/Videos+-+Animation/Trailers+-+Website+Animation/Trailer-Human+Traffickers_of_Child_Sex_Trafficking-1080p-230618.mp4",
+    },
+    10: {
+      name: "Female Recruiters",
+      thumbnail:
+        "https://walking-wise-animated-video-assets.s3.us-east-1.amazonaws.com/Videos+-+Animation/Thumbnails+-+Website+Animation/Female+Recruiter+-+Thumbnail.png",
+      link: "https://walking-wise-animated-video-assets.s3.us-east-1.amazonaws.com/Videos+-+Animation/Trailers+-+Website+Animation/Trailer-Female_Recruiters_of_Child_Sex_Trafficking-1080p-230618.mp4",
+    },
+    11: {
+      name: "Family Secret",
+      thumbnail:
+        "https://walking-wise-animated-video-assets.s3.us-east-1.amazonaws.com/Videos+-+Animation/Thumbnails+-+Website+Animation/Family+Secrect+-+Thumbnail.png",
+      link: "https://walking-wise-animated-video-assets.s3.us-east-1.amazonaws.com/Videos+-+Animation/Trailers+-+Website+Animation/Trailer-Family_Secret_of_Child_Sex_Trafficking-1080p-230618.mp4",
+    },
+    12: {
+      name: "Hidden Buyers",
+      thumbnail:
+        "https://walking-wise-animated-video-assets.s3.us-east-1.amazonaws.com/Videos+-+Animation/Thumbnails+-+Website+Animation/Hidden+Buyers+Coming+Soon+-+Thumbnail.png",
+      link: "/assets/videos/hidden-buyers.mp4",
+    },
   };
 
   const handleVideoClick = (num: number) => {
-    setActiveVideo(num);
+    if (videoTitles[num]?.link) {
+      setActiveVideo(num);
+    } else {
+      alert("Video not available yet.");
+    }
   };
 
   const closeModal = () => {
@@ -48,7 +120,6 @@ const AnimatedVideos = () => {
         altText="Animated Video Series"
       />
 
-      {/* Explanation Section */}
       <Section bgColor="white">
         <SectionHeaderText>Explanation Animation</SectionHeaderText>
         <BodyText className="mt-4 sm:mt-6">
@@ -61,12 +132,11 @@ const AnimatedVideos = () => {
         </BodyText>
       </Section>
 
-      {/* Empowerment Section */}
       <Section
         bgColor="[#303030]"
-        className="mt-20 gap-10 xl:flex-row justify-between items-center xl:items-start"
+        className="gap-10 xl:flex-row justify-between items-center xl:items-start"
       >
-        <div className="lg:w-4xl py-10 text-white">
+        <div className="lg:w-4xl py-10 text-white md:mt-8">
           <SectionHeaderText className="text-[#36c5d8] lg:text-[#36c5d8]">
             Empowerment through Animation
           </SectionHeaderText>
@@ -89,45 +159,46 @@ const AnimatedVideos = () => {
           </BodyText>
         </div>
 
-        {/* Quote Box and Buttons */}
         <div>
           <div className="bg-[#36c5d8] w-[250px] sm:w-[400px] lg:w-[500px] h-[250px] sm:h-[400px] lg:h-[500px] border-4 border-white rounded-full flex flex-col justify-center items-center text-center text-white p-4 xl:mt-10">
             <p
-              className={`${robotoItalic.className} text-sm sm:text-xl lg:text-3xl`}
+              className={`${robotoItalic.className} text-sm sm:text-xl lg:text-3xl text-[#303030]`}
             >
-              "The animated videos
+              "I believe the animated
             </p>
             <p
-              className={`${robotoItalic.className} text-sm sm:text-xl lg:text-3xl`}
+              className={`${robotoItalic.className} text-sm sm:text-xl lg:text-3xl text-[#303030]`}
             >
-              are valuable lessons &
+              videos are valuable lessons &
             </p>
             <p
-              className={`${robotoItalic.className} text-sm sm:text-xl lg:text-3xl `}
+              className={`${robotoItalic.className} text-sm sm:text-xl lg:text-3xl text-[#303030]`}
             >
               non-triggering for at-risk youth.
             </p>
             <h1 className="text-lg sm:text-3xl px-6 my-2 md:my-10 text-[#303030]">
-              It's a great concept and easy to teach
+              It's a great concept and easy to teach"
             </h1>
             <p
               className={`${robotoopo.className} text-[#303030] text-sm sm:text-xl lg:text-2xl`}
             >
               Abby, Advocate
             </p>
-            <p
-              className={`${robotoopo.className} text-[#303030] text-sm sm:text-xl lg:text-2xl`}
+            <a
+              href="https://gozoe.org/"
+              target="_blank"
+              className={`${robotoopo.className} text-[#303030] text-sm sm:text-xl lg:text-2xl underline`}
             >
               ZOE International
-            </p>
+            </a>
           </div>
 
-          <div className="flex flex-col justify-center items-center mb-10 gap-4">
+          <div className="flex flex-col justify-center items-center mb-10 gap-4 md:mt-8">
             {buttons.map((label, idx) => (
               <button
                 key={idx}
                 onClick={handleRedirect}
-                className={`bg-purple-600 hover:bg-purple-700 text-white text-sm sm:px-10 py-2 w-1/2 sm:text-xl mt-4 rounded-4xl transition-colors ${robotoopo.className}`}
+                className={`bg-purple-600 hover:bg-purple-700 text-white text-sm sm:px-6 py-2 w-1/2 sm:text-2xl mt-13 rounded-4xl transition-colors ${robotoopo.className}`}
               >
                 {label}
               </button>
@@ -136,33 +207,50 @@ const AnimatedVideos = () => {
         </div>
       </Section>
 
-      {/* Final Section */}
       <Section bgColor="[#36c5d8]">
-        <div className="flex justify-between items-center">
-          <SectionHeaderText>
+        <div className="flex justify-center items-center flex-col">
+          <SectionHeaderText className="lg:text-7xl">
             Walking Wise Animated Video Series
           </SectionHeaderText>
-          <div className="h-[50px] w-[50px] pt-[5px] border-[#303030] hidden sm:block text-[#115a64] rounded-full text-xl ps-2 border-5 border-r-transparent">
-            11y+
-          </div>
+          {/* <Image
+            src="/assets/11+.png"
+            alt="Ages 11 plus"
+            width={100}
+            height={100}
+          /> */}
+          <BodyText className="mt-4 sm:mt-8 text-center md:px-32">
+            Watch our video trailers and DEMO video:{" "}
+            <span className={`font-bold ${robotoItalicop.className}`}>
+              Myths and Reality
+            </span>
+            .
+          </BodyText>
+          <BodyText className="text-center md:px-32">
+            Adults are encouraged to accompany young children throughout the
+            learning process.
+          </BodyText>
+          <BodyText className="text-center md:px-32 mt-4">
+            Enroll today to unlock our complete animated video series.
+          </BodyText>
+          <button
+            onClick={handleRedirect}
+            className={`bg-purple-600 hover:bg-purple-700 text-white text-sm sm:px-10 py-2 sm:text-2xl mt-8 rounded-4xl transition-colors ${robotoopo.className}`}
+          >
+            {"Enroll Today"}
+          </button>
+          {/* <p className="mt-4 sm:mt-12 text-xl md:text-md text-center">
+            NOTE: Adults are encouraged to accompany young children throughout
+            the learning process.
+          </p> */}
         </div>
-        <BodyText className="mt-4 sm:mt-6">
-          Watch our 12 video trailers or view our sample video: The Myths of
-          Child Sex Trafficking.
-        </BodyText>
-        <BodyText className="text-white mt-4 sm:mt-6">
-          NOTE: Adults are encouraged to accompany young children throughout the
-          learning process.
-        </BodyText>
       </Section>
 
-      {/* Trailers Section */}
       <Section bgColor="white">
-        <SectionHeaderText className="text-purple-500 text-center">
+        {/* <SectionHeaderText className="text-purple-500 text-center">
           Watch trailers & enroll for the entire video
-        </SectionHeaderText>
+        </SectionHeaderText> */}
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6 mt-10 max-w-[1800px] mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-10 max-w-[1800px] mx-auto">
           {Array.from({ length: 12 }, (_, i) => i + 1).map((num) => (
             <div
               key={num}
@@ -171,12 +259,11 @@ const AnimatedVideos = () => {
             >
               <div className="relative max-w-[500px]">
                 <Image
-                  src={`/assets/vid-${num}.png`}
-                  alt={`${videoTitles[num]} thumbnail`}
+                  src={videoTitles[num].thumbnail}
+                  alt={`${videoTitles[num].name} thumbnail`}
                   width={400}
                   height={250}
                   className="object-contain w-full h-full"
-                  quality={85}
                 />
                 <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
                   <div className="bg-black bg-opacity-50 rounded-full p-4">
@@ -197,7 +284,7 @@ const AnimatedVideos = () => {
                 <p
                   className={`text-center md:text-2xl sm:text-2xl ${robotoBold.className}`}
                 >
-                  {videoTitles[num]}
+                  {videoTitles[num].name}
                 </p>
               </div>
             </div>
@@ -205,13 +292,12 @@ const AnimatedVideos = () => {
         </div>
       </Section>
 
-      {/* Video Modal */}
       <Dialog
         open={activeVideo !== null}
         onClose={closeModal}
         className="fixed z-50 inset-0 flex items-center justify-center bg-black bg-opacity-50"
       >
-        {activeVideo && (
+        {activeVideo !== null && (
           <div className="bg-white rounded-lg overflow-hidden w-full max-w-2xl p-4 relative">
             <button
               onClick={closeModal}
@@ -220,10 +306,10 @@ const AnimatedVideos = () => {
               ×
             </button>
             <h2 className="text-lg font-semibold mb-4">
-              {videoTitles[activeVideo]}
+              {videoTitles[activeVideo]?.name}
             </h2>
             <video
-              src={`/assets/videos/vid-${activeVideo}.mp4`}
+              src={videoTitles[activeVideo]?.link}
               controls
               className="w-full rounded"
             />

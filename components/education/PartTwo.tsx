@@ -28,8 +28,8 @@ const cardData = [
     title: "THE PREDATORS",
     topics: [
       "Human Traffickers",
-      "Recruiters",
-      "Familial Traffickers",
+      "Female Recruiters",
+      "Family Secret",
       "Hidden Buyers",
     ],
   },
@@ -49,24 +49,29 @@ const PartTwo = () => {
   return (
     <>
       <Section bgColor="white">
-        <BodyText className="text-center lg:text-5xl lg:leading-14">
-          Walking Wise education is recommended for adolescents 11 and up, with
-          parental guidance for younger children.
-        </BodyText>
+        <SectionHeaderText className="text-center lg:text-7xl md:mt-8">
+          Walking Wise is recommended for adolescents,
+        </SectionHeaderText>
+        <SectionHeaderText className="text-center lg:text-7xl mt-1 mb-8">
+          11 and up, with parental guidance for younger children.
+        </SectionHeaderText>
 
         {/* Education Cards */}
-        <div className="grid  max-w-screen-2xl mx-auto grid-cols-1 text-[#303030] justify-center md:grid-cols-2 lg:grid-cols-3 my-6 sm:my-8 md:my-10 gap-4 sm:gap-6 md:gap-8 lg:gap-10 px-4 sm:px-6 md:px-8 lg:px-10">
+        <div className="grid max-w-screen-2xl mx-auto grid-cols-1 text-[#303030] justify-center md:grid-cols-2 lg:grid-cols-3 my-6 sm:my-8 md:my-10 gap-4 sm:gap-6 md:gap-8 lg:gap-2 px-4 sm:px-6 md:px-8 lg:px-10">
           {cardData.map((card, index) => (
             <div
               key={index}
-              className="bg-white w-full max-w-[400px] mx-auto flex justify-evenly p-4 items-center flex-col"
+              className={`
+        bg-white w-full max-w-[400px] mx-auto flex justify-evenly py-6 px-6 items-center flex-col
+        ${index === 1 ? "border-l-2 border-r-2 border-[#00c1d5] px-12" : ""}
+      `}
             >
               <div className="text-center flex flex-col gap-1 sm:gap-2">
-                <h2
-                  className={`${robotoItalicop.className} text-[#00c1d5] text-xl sm:text-2xl md:text-3xl lg:text-4xl`}
+                <h1
+                  className={`text-[#00c1d5] text-xl sm:text-2xl md:text-3xl lg:text-5xl mb-2`}
                 >
                   {card.title}
-                </h2>
+                </h1>
                 {card.topics.map((topic, i) => (
                   <p
                     key={i}

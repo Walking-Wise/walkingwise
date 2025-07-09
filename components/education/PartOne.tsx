@@ -43,12 +43,12 @@ const PartOne = () => {
         {/* Quote Box */}
         <div className="bg-[#00c1d5] w-[350px] sm:min-w-[400px] lg:min-w-[500px] h-[350px] sm:h-[400px] lg:h-[500px] me-0 sm:me-10 p-4 border-4 xl:mt-[-30] border-white rounded-full text-[#303030] flex flex-col justify-center items-center text-center z-50">
           <p
-            className={`${robotoItalic.className} text-lg  sm:text-3xl text-[#303030] px-15 mb-2`}
+            className={`${robotoItalic.className} text-lg  sm:text-3xl text-[#303030] px-15 mt-6 mb-6`}
           >
             “Upon completing the Unsafe Adult, Grooming, and Sextortion lessons,
             my granddaughter said,
           </p>
-          <h1 className={`capitalize text-md mt-3 sm:text-3xl px-15 mb-2`}>
+          <h1 className={`capitalize text-md mt-3 sm:text-3xl px-15 mb-4`}>
             ‘I bet I’m the only kid who knows this stuff in my entire school!’”
           </h1>
           <span
