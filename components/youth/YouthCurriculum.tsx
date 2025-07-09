@@ -49,18 +49,10 @@ const YouthCurriculum = () => {
       />
 
       <Section bgColor="white">
-        <div className="flex justify-between items-center md:pe-12">
-          <SectionHeaderText> Youth Education </SectionHeaderText>
-          <Image
-            src="/assets/11+.png"
-            alt="Ages 11 plus"
-            width={75}
-            height={75}
-          />
-        </div>
+        <SectionHeaderText> Youth Education </SectionHeaderText>
         <BodyText className="mt-3 sm:mt-6">
           The Walking Wise Learning Platform offers engaging, easy-to-teach
-          lessons designed for lasting impact on middle and high school youth
+          lessons designed for lasting impact for middle and high school youth
           ages 11+. Our curriculum uses multisensory teaching to enhance
           learning, combining technology and storytelling through interactive
           classroom presentations and animated explainer videos.
@@ -87,9 +79,17 @@ const YouthCurriculum = () => {
           </Button>
         </div>
         <div className="mt-8 md:mt-0">
-          <SectionHeaderText className="text-white">
-            Classroom Presentations
-          </SectionHeaderText>
+          <div className="flex justify-between items-center md:pe-12">
+            <SectionHeaderText className="text-white">
+              Classroom Presentations
+            </SectionHeaderText>
+            <Image
+              src="/assets/11+.png"
+              alt="Ages 11 plus"
+              width={75}
+              height={75}
+            />
+          </div>
           <BodyText className="mt-4 sm:mt-8">
             Our classroom presentations are designed for student education,
             school staff meetings, and parent events.
@@ -131,7 +131,7 @@ const YouthCurriculum = () => {
               {guideResources.map((item, index) => (
                 <li
                   key={index}
-                  className="list-disc list-inside space-y-1 text-lg"
+                  className="list-disc list-inside space-y-1 text-2xl"
                 >
                   {item}
                 </li>
@@ -154,7 +154,7 @@ const YouthCurriculum = () => {
 
       <Section
         bgColor="[#303030]"
-        className="justify-center items-center xl:flex-row gap-10 lg:pb-36"
+        className="justify-center items-center xl:flex-row gap-10 lg:py-36"
       >
         <div>
           <SectionHeaderText className="text-white">
@@ -164,7 +164,7 @@ const YouthCurriculum = () => {
             {executionSteps.map((step, index) => (
               <li
                 key={index}
-                className={`${robotoopo.className} text-white sm:text-xl tracking-wide leading-7 lg:leading-10  md:text-2xl lg:text-3xl mt-4`}
+                className={`${robotoopo.className} text-white sm:text-xl tracking-wide leading-7 lg:leading-10  md:text-2xl lg:text-3xl mt-8`}
               >
                 <strong className="text-[#00c1d5]">{step.label}</strong>{" "}
                 {step.description}
@@ -182,13 +182,14 @@ const YouthCurriculum = () => {
               className="object-cover"
             />
           </div>
-          <p
+          <a
+            href="/adult-education"
             className={`${robotoopo.className} text-xl text-center text-[#00c1d5] mt-4`}
           >
             Earn Continuing Education Credits
-          </p>
+          </a>
           <Button
-            className="mt-4"
+            className="mt-8"
             onClick={() =>
               (window.location.href =
                 "https://www.walkingwise.com/contact-us-v2/")

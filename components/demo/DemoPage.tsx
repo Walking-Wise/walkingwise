@@ -5,23 +5,19 @@ import PageBanner from "../ui/PageBanner/PageBanner";
 import SectionHeaderText from "../ui/SectionHeaderText/SectionHeaderText";
 import BodyText from "../ui/BodyText/BodyText";
 import Section from "../ui/Section/Section";
-import { robotoItalic, roboto, robotoopo, robotoBold } from "../../public/fonts/Fonts";
+import {
+  robotoItalic,
+  roboto,
+  robotoopo,
+  robotoBold,
+  robotoItalicop,
+} from "../../public/fonts/Fonts";
 
 const resourceItems = [
   {
-    title: "Implementation",
+    title: "Animated Video",
     description:
-      "Download the five simple steps to integrate Walking Wise into youth education.",
-  },
-  {
-    title: "Online Course",
-    description:
-      "Meet the survivor leaders and advocacy experts who shaped our online course.",
-  },
-  {
-    title: "Handout",
-    description:
-      "Access a quick reference on risk factors and warning signs of exploitation.",
+      "Watch a 3-minute animation that brings key ideas from Myths & Reality to life.",
   },
   {
     title: "Lesson Plan",
@@ -34,28 +30,33 @@ const resourceItems = [
       "Preview the Myths & Reality slides to see how we engage parents and students.",
   },
   {
-    title: "Animated Video",
+    title: "Implementation",
     description:
-      "Watch a 3-minute animation that brings key ideas from Myths & Reality to life.",
+      "Download the five simple steps to integrate Walking Wise into youth education.",
   },
 ];
 
 const demoContent = [
   {
+    title: "Animated Video",
+    subtitle: "",
+    image: "demo-6.png",
+  },
+  {
     title: "Lesson Plan",
-    subtitle: "#1 Myths & Reality",
+    subtitle: "",
     image: "Education_guide.png",
     objectClass: "!object-scale-down",
   },
   {
-    title: "Presentation",
-    subtitle: "#1 Myths & Reality",
+    title: "Class Presentation",
+    subtitle: "",
     image: "demo-5.png",
   },
   {
-    title: "Animated Video",
-    subtitle: "#1 Myths & Reality",
-    image: "demo-6.png",
+    title: "Implementation",
+    subtitle: "",
+    image: "5-step.png",
   },
 ];
 
@@ -70,30 +71,46 @@ const DemoPage = () => {
 
       <Section bgColor="white">
         <div className="w-full flex justify-end hidden md:block">
-          <div className="bg-[#36c5d8] md:w-[500px] md:h-[500px] p-4 border-t-3 border-white rounded-full flex flex-col justify-center items-center text-center text-[#303030] mx-auto md:absolute md:right-[7%] z-50 md:mt-[-450px]">
-            <p className={`${robotoItalic.className} text-sm sm:text-2xl md:text-4xl px-4 sm:px-8`}>
+          <div className="bg-[#36c5d8] md:w-[510px] md:h-[510px] p-4 border-t-3 border-white rounded-full flex flex-col justify-center items-center text-center text-[#303030] mx-auto md:absolute md:right-[7%] z-50 md:mt-[-450px]">
+            <p
+              className={`${robotoItalic.className} text-sm sm:text-2xl md:text-4xl px-4 sm:px-8 md:mt-12`}
+            >
               “The sheep pretend the
             </p>
-            <p className={`${robotoItalic.className} text-sm sm:text-2xl md:text-4xl px-4 sm:px-8`}>
+            <p
+              className={`${robotoItalic.className} text-sm sm:text-2xl md:text-4xl px-4 sm:px-8`}
+            >
               wolf will never come,
             </p>
-            <p className={`${robotoItalic.className} text-sm sm:text-2xl md:text-4xl px-4 sm:px-8`}>
+            <p
+              className={`${robotoItalic.className} text-sm sm:text-2xl md:text-4xl px-4 sm:px-8`}
+            >
               but the sheepdog is
             </p>
-            <p className={`${robotoItalic.className} text-sm sm:text-2xl md:text-4xl px-4 sm:px-8`}>
+            <p
+              className={`${robotoItalic.className} text-sm sm:text-2xl md:text-4xl px-4 sm:px-8`}
+            >
               prepared and waiting
             </p>
-            <p className={`${robotoItalic.className} text-sm sm:text-2xl md:text-4xl px-4 sm:px-8`}>
+            <p
+              className={`${robotoItalic.className} text-sm sm:text-2xl md:text-4xl px-4 sm:px-8`}
+            >
               for that day.”
             </p>
             <div>
-              <p className={`${robotoItalic.className} text-white px-9 text-sm sm:text-xl md:text-2xl mt-4`}>
+              <p
+                className={`${robotoItalicop.className} text-white px-9 text-sm sm:text-xl md:text-2xl mt-8`}
+              >
                 Retired Lieutenant Colonel
               </p>
-              <p className={`${robotoItalic.className} text-white px-9 text-sm sm:text-xl md:text-2xl`}>
+              <p
+                className={`${robotoItalicop.className} text-white px-9 text-sm sm:text-xl md:text-2xl`}
+              >
                 Dave Grossman,
               </p>
-              <p className={`${robotoItalic.className} text-white px-9 text-sm sm:text-xl md:text-2xl`}>
+              <p
+                className={`${robotoItalicop.className} text-white px-9 text-sm sm:text-xl md:text-2xl`}
+              >
                 U.S. Army
               </p>
             </div>
@@ -104,7 +121,7 @@ const DemoPage = () => {
           <SectionHeaderText className="mb-4">
             on-demand education
           </SectionHeaderText>
-          <BodyText>
+          <BodyText className="md:mt-8">
             Walking Wise equips adults to talk about sexual exploitation with
             clarity and confidence. To begin the learning journey, we offer a
             comprehensive 12-topic online course specifically designed for
@@ -117,14 +134,16 @@ const DemoPage = () => {
         </div>
       </Section>
 
-      <Section bgColor="[#00c1d5]">
+      <Section bgColor="[#00c1d5]" className="md:pb-32">
         <div className="flex justify-between flex-wrap">
           <h1 className="text-4xl sm:text-6xl text-[#303030]">
             explore our materials
           </h1>
         </div>
 
-        <p className={`${robotoopo.className} text-base text-base sm:text-xl md:text-2xl lg:text-3xl mt-4 sm:mt-6`}>
+        <p
+          className={`${robotoopo.className} text-base text-base sm:text-xl md:text-2xl lg:text-4xl mt-4 sm:mt-8 sm:mb-10`}
+        >
           Become familiar with the program by checking out our educational
           materials:
         </p>
@@ -133,9 +152,9 @@ const DemoPage = () => {
           {resourceItems.map(({ title, description }, index) => (
             <li
               key={index}
-              className={`${robotoopo.className} text-white text-base sm:text-xl md:text-2xl lg:text-3xl mt-4 sm:mt-6`}
+              className={`${robotoopo.className} text-[#303030] text-base sm:text-xl md:text-2xl lg:text-3xl mt-4 sm:mt-6`}
             >
-              <span className={`text-[#303030] ${roboto.className}`}>
+              <span className={`text-white md:text-4xl ${roboto.className}`}>
                 {title}:
               </span>{" "}
               {description}
@@ -144,15 +163,17 @@ const DemoPage = () => {
         </ul>
       </Section>
 
+      <div className="bg-[#303030] flex justify-center py-14">
+        <SectionHeaderText className={`text-white lg:text-7xl`}>
+          Lesson #1: Myths & Reality
+        </SectionHeaderText>
+      </div>
       <Section bgColor="white" className="lg:py-18 lg:pb-32">
         <div className="relative">
           {/* Demo Badge */}
-          <div className="absolute top-0 left-0 sm:top-0 sm:left-6 md:top-0 md:left-8 bg-purple-500 w-[100px] sm:w-[120px] md:w-[150px] h-[100px] sm:h-[120px] md:h-[150px] flex items-center justify-center text-center text-xl sm:text-2xl md:text-3xl z-50 rounded-full shadow-lg">
-            <BodyText className={`text-white ${robotoBold.className}`}>DEMO</BodyText>
-          </div>
 
           {/* Demo Image Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-6 md:gap-8 px-4 sm:px-6 md:px-8 mt-16 md:mt-32">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-6 md:gap-8 px-4 sm:px-6 md:px-8 mt-10">
             {demoContent.map(
               ({ title, subtitle, image, objectClass = "" }, i) => (
                 <div key={i} className="flex flex-col items-center gap-4">
@@ -165,13 +186,13 @@ const DemoPage = () => {
                       sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 30vw"
                     />
                   </div>
-                  <div className="bg-[#303033] rounded-4xl px-4 py-3 sm:px-6 sm:py-2 w-[250px] md:w-full max-w-[300px] text-center cursor-pointer">
+                  <div className=" md:mt-4 bg-[#303033] flex flex-col justify-center items-center rounded-4xl px-4 py-3 sm:px-6 sm:py-2 w-[250px] md:w-full max-w-[250px] min-h-[70px] text-center cursor-pointer">
                     <p
-                      className={`${robotoBold.className} text-md sm:text-white md:text-lg`}
+                      className={`${robotoBold.className} text-md sm:text-white md:text-xl`}
                     >
                       {title}
                     </p>
-                    <p className={`${robotoBold.className} text-md text-white`}>
+                    <p className={`${robotoBold.className} text-lg text-white`}>
                       {subtitle}
                     </p>
                   </div>
@@ -181,6 +202,8 @@ const DemoPage = () => {
           </div>
         </div>
       </Section>
+        <div className="bg-[#303030] flex justify-center h-[50px]">
+      </div>
     </>
   );
 };
