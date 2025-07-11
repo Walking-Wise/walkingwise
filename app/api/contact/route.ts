@@ -10,8 +10,8 @@ export async function POST(req: Request) {
 
   try {
     await sgMail.send({
-      to: "hello@walkingwise.com",
-      from: "hello@walkingwise.com",
+      to: "support@walkingwise.com",
+      from: "support@walkingwise.com",
       subject: `New Contact Form Submission from ${firstName} ${lastName}`,
       text: `
         Name: ${firstName} ${lastName}
