@@ -6,17 +6,23 @@ sgMail.setApiKey(process.env.SENDGRID_API_KEY!);
 export async function POST(req: Request) {
   const body = await req.json();
 
-  const { firstName, lastName, email, message } = body;
+  const { name, jobTitle, company, phone, industry, email, message, city, state } = body;
 
   try {
     await sgMail.send({
       to: "support@walkingwise.com",
       from: "support@walkingwise.com",
-      subject: `New Contact Form Submission from ${firstName} ${lastName}`,
+      subject: `Quote Request from ${name}`,
       text: `
-        Name: ${firstName} ${lastName}
+        Name: ${name}
+        Job Title: ${jobTitle}
+        Company: ${company}
+        Phone: ${phone}
+        Industry: ${industry}
         Email: ${email}
         Message: ${message}
+        City: ${city}
+        State: ${state}
       `,
     });
 

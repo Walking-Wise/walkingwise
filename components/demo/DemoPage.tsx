@@ -152,7 +152,7 @@ const DemoPage = () => {
           {resourceItems.map(({ title, description }, index) => (
             <li
               key={index}
-              className={`${robotoopo.className} text-[#303030] text-base sm:text-xl md:text-2xl lg:text-3xl mt-4 sm:mt-6`}
+              className={`${robotoopo.className} text-[#303030] text-base sm:text-xl md:text-2xl lg:text-3xl mt-4 sm:mt-6 ms-6 md:ms-2`}
             >
               <span className={`text-white md:text-4xl ${roboto.className}`}>
                 {title}:
@@ -163,7 +163,7 @@ const DemoPage = () => {
         </ul>
       </Section>
 
-      <div className="bg-[#303030] flex justify-center py-14">
+      <div className="bg-[#303030] flex justify-center py-4 lg:py-14">
         <SectionHeaderText className={`text-white lg:text-7xl`}>
           Lesson #1: Myths & Reality
         </SectionHeaderText>
@@ -188,7 +188,7 @@ const DemoPage = () => {
                   </div>
                   <div className=" md:mt-4 bg-[#303033] flex flex-col justify-center items-center rounded-4xl px-4 py-3 sm:px-6 sm:py-2 w-[250px] md:w-full max-w-[250px] min-h-[70px] text-center cursor-pointer">
                     <p
-                      className={`${robotoBold.className} text-md sm:text-white md:text-xl`}
+                      className={`${robotoBold.className} text-md text-white md:text-xl`}
                     >
                       {title}
                     </p>

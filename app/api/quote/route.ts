@@ -6,7 +6,7 @@ sgMail.setApiKey(process.env.SENDGRID_API_KEY!);
 export async function POST(req: Request) {
   const body = await req.json();
 
-  const { name, jobTitle, company, phone, companySize, email, message } = body;
+  const { name, jobTitle, company, phone, industry, email, message, city, state } = body;
 
   try {
     await sgMail.send({
@@ -18,9 +18,11 @@ export async function POST(req: Request) {
         Job Title: ${jobTitle}
         Company: ${company}
         Phone: ${phone}
-        Company Size: ${companySize}
+        Industry: ${industry}
         Email: ${email}
         Message: ${message}
+        City: ${city}
+        State: ${state}
       `,
     });
 
