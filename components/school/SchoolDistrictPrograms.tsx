@@ -123,17 +123,10 @@ const SchoolDistrictPrograms = () => {
             time.
           </BodyText>
           <div className="flex gap-4 mt-12">
-            <Button
-              onClick={() => (window.location.href = "/demo")}
-            >
+            <Button onClick={() => (window.location.href = "/demo")}>
               DEMO Curriculum
             </Button>
-            <Button
-              onClick={() =>
-                (window.location.href =
-                  "https://www.walkingwise.com/contact-us-v2/")
-              }
-            >
+            <Button onClick={() => (window.location.href = "/request-a-quote")}>
               ENROLL Today!
             </Button>
           </div>

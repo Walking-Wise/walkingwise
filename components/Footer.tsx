@@ -59,7 +59,7 @@ const Footer = () => {
             { label: "About us", href: "/about" },
             { label: "Pricing", href: "/" },
             { label: "Demo", href: "/demo" },
-            { label: "Enroll", href: "/" },
+            { label: "Enroll", href: "/request-a-quote" },
           ],
           [
             { label: "Youth Curriculum", href: "/youth-curriculum" },
@@ -68,7 +68,7 @@ const Footer = () => {
             { label: "Adult Course Description", href: "/course" },
             {
               label: "CME/CE Accreditation",
-              href: "https://www.walkingwise.com/contact-us-v2/",
+              href: "https://walking-wise-12-part-course.s3.us-east-1.amazonaws.com/PIM+Accreditation+Info-Walking-Wise-eLearning/content/index.html#/",
             },
           ],
           [
@@ -82,7 +82,7 @@ const Footer = () => {
             { label: "My Account", href: "/" },
             {
               label: "Contact Us",
-              href: "https://www.walkingwise.com/contact-us-v2/",
+              href: "/contact",
             },
             { label: "Terms of Use", href: "/" },
             { label: "Privacy Policy", href: "/" },

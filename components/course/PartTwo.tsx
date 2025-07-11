@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import { roboto, robotoopo } from "../../public/fonts/Fonts";
+import Button from "../ui/Button/Button";
 
 const sessionData = [
   {
@@ -129,15 +130,15 @@ const PartTwo = () => {
               </ul>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center mt-10">
-                <button className="bg-[#6B4EFF] text-white text-sm sm:text-base px-5 py-2 rounded-full">
+                <Button className="bg-[#6B4EFF] text-white text-sm sm:text-base px-5 py-2 rounded-full">
                   CME Accreditation
-                </button>
-                <button
+                </Button>
+                <Button
                   className="bg-[#6B4EFF] text-white text-sm sm:text-base px-5 py-2 rounded-full"
-                  onClick={() => window.location.href = "https://www.walkingwise.com/contact-us-v2/"}
+                  onClick={() => window.location.href = "/request-a-quote"}
                 >
                   Start Course
-                </button>
+                </Button>
               </div>
             </div>
           </div>

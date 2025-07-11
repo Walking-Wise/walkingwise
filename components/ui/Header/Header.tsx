@@ -53,7 +53,7 @@ export default function Header() {
                 <NavLink href="/about">About</NavLink>
                 <NavLink href="/blog">Blog</NavLink>
                 <NavLink href="/pricing">Pricing</NavLink>
-                <NavLink href="https://www.walkingwise.com/contact-us-v2/">Contact</NavLink>
+                <NavLink href="/contact">Contact</NavLink>
               </nav>
             )}
           </div>
@@ -100,7 +100,7 @@ export default function Header() {
           <NavLink href="/blog" className={styles.mobileLink}>
             Blog
           </NavLink>
-          <NavLink href="https://www.walkingwise.com/contact-us-v2/" className={styles.mobileLink}>
+          <NavLink href="/contact" className={styles.mobileLink}>
             Contact
           </NavLink>
           <NavLink href="/book-demo" className={styles.mobileLink}>

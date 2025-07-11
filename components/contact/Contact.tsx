@@ -54,11 +54,11 @@ const Contact = () => {
     <>
       <PageBanner
         title="How can we help you?"
-        image="/assets/CONT.jpg"
+        image="/assets/contact-bg.png"
         altText="Contact Us"
       />
 
-      <Section bgColor="[#00c1d5]" className="mb-20">
+      <Section bgColor="white" className="mb-20">
         <form
           onSubmit={handleSubmit}
           className="w-full max-w-6xl mx-auto p-6 sm:p-10 bg-[#00c1d5] rounded-md"

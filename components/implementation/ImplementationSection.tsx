@@ -1,9 +1,6 @@
 import Image from "next/image";
 import React from "react";
-import {
-  robotoopo,
-  robotoItalic,
-} from "../../public/fonts/Fonts";
+import { robotoopo, robotoItalic } from "../../public/fonts/Fonts";
 import PageBanner from "../ui/PageBanner/PageBanner";
 import SectionHeaderText from "../ui/SectionHeaderText/SectionHeaderText";
 import BodyText from "../ui/BodyText/BodyText";
@@ -26,7 +23,10 @@ const ImplementationSection = () => {
         altText="Implementation"
       />
 
-      <Section bgColor="white" className="xl:flex-row items-center md:gap-24 pb-12 md:pb-16 lg:pb-16 py-0 md:py-0 lg:py-0">
+      <Section
+        bgColor="white"
+        className="xl:flex-row items-center md:gap-24 pb-12 md:pb-16 lg:pb-16 py-0 md:py-0 lg:py-0"
+      >
         <div className="md:mt-12">
           <SectionHeaderText>getting started</SectionHeaderText>
           <BodyText className={`mb-6 mt-4 sm:mt-6 lg:leading-12`}>
@@ -236,7 +236,10 @@ const ImplementationSection = () => {
                   className="object-contain"
                 />
               </div>
-              <button className="md:mt-6 bg-[#9d1be3] text-white px-6 py-2 rounded-full text-lg md:text-lg font-semibold">
+              <button
+                onClick={() => (window.location.href = "/request-a-quote")}
+                className="md:mt-6 bg-[#9d1be3] text-white px-6 py-2 rounded-full text-lg md:text-lg font-semibold"
+              >
                 ENROLL Today!
               </button>
             </div>
