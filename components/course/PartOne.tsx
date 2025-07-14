@@ -3,6 +3,7 @@
 import React from "react";
 import { roboto, robotoop, robotoopo } from "../../public/fonts/Fonts";
 import PageBanner from "../ui/PageBanner/PageBanner";
+import Button from "../ui/Button/Button";
 
 const blueBoxContent = [
   { id: 1, text: "#1 Myths & Reality" },
@@ -115,9 +116,8 @@ const PartOne = () => {
             ))}
           </ul>
 
-          {/* Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center mt-10">
-            <button
+            <Button
               onClick={() =>
                 (window.location.href =
                   "https://walking-wise-12-part-course.s3.us-east-1.amazonaws.com/PIM+Accreditation+Info-Walking-Wise-eLearning/content/index.html")
@@ -125,16 +125,13 @@ const PartOne = () => {
               className={`bg-[#9d1be3] ${roboto.className} mt-4 rounded-full text-sm sm:text-[16px] py-2 sm:py-3 px-6 text-white flex items-center whitespace-nowrap underline`}
             >
               CME Accreditation
-            </button>
-            <button
+            </Button>
+            <Button
               className={`bg-[#9d1be3] ${roboto.className} mt-4 rounded-full text-sm sm:text-[16px] py-2 sm:py-3 px-6 text-white flex items-center whitespace-nowrap`}
-              onClick={() =>
-                (window.location.href =
-                  "https://www.walkingwise.com/contact-us-v2/")
-              }
+              onClick={() => (window.location.href = "/request-a-quote")}
             >
               Start Course
-            </button>
+            </Button>
           </div>
         </div>
       </div>

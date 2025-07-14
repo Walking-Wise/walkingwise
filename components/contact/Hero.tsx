@@ -1,13 +1,13 @@
 import React from 'react'
 import Navbar from '../Navbar'
 import Footer from '../Footer'
-import PartOne from './PartOne'
+import Contact from './Contact'
 
 const Hero = () => {
   return (
     <div className='mx-auto'>
     <Navbar/>
-    <PartOne/>
+    <Contact/>
     <Footer/>
      
     </div>

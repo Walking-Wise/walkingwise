@@ -120,17 +120,17 @@ const Navbar = () => {
           <Link href="/about">About</Link>
           <div className="flex relative flex-col space-y-2">
             <Link
-              href="https://www.walkingwise.com/contact-us-v2/"
+              href="/demo"
               className="bg-[#303030] absolute lg:top-[-70px] lg:left-[-10px] text-white px-4 py-2 rounded-2xl text-center"
             >
               Demo
             </Link>
-            <Link href="https://www.walkingwise.com/contact-us-v2/">
+            <Link href="/request-a-quote">
               Enroll
             </Link>
           </div>
           <Link
-            href="https://www.walkingwise.com/contact-us-v2/"
+            href="/contact"
             target="_blank"
           >
             Login
@@ -234,11 +234,11 @@ const Navbar = () => {
           <Link href="/about" onClick={() => setIsOpen(false)}>
             About
           </Link>
-          <Link href="/demo" onClick={() => setIsOpen(false)}>
+          <Link href="/request-a-quote" onClick={() => setIsOpen(false)}>
             Enroll
           </Link>
           <Link
-            href="https://www.walkingwise.com/contact-us-v2/"
+            href="/contact"
             onClick={() => setIsOpen(false)}
           >
             Login
@@ -247,7 +247,7 @@ const Navbar = () => {
           {/* Button at bottom */}
           <div className="absolute bottom-0 left-0 right-0 p-4">
             <Link
-              href="https://www.walkingwise.com/contact-us-v2/"
+              href="/demo"
               className="bg-[#303030] text-white w-full text-center py-3 rounded-lg block"
               onClick={() => setIsOpen(false)}
             >

@@ -69,12 +69,7 @@ const YouthCurriculum = () => {
               className="object-cover"
             />
           </div>
-          <Button
-            onClick={() =>
-              (window.location.href =
-                "https://www.walkingwise.com/contact-us-v2/")
-            }
-          >
+          <Button onClick={() => (window.location.href = "/contact")}>
             DEMO Curriculum
           </Button>
         </div>
@@ -190,10 +185,7 @@ const YouthCurriculum = () => {
           </a>
           <Button
             className="mt-8"
-            onClick={() =>
-              (window.location.href =
-                "https://www.walkingwise.com/contact-us-v2/")
-            }
+            onClick={() => (window.location.href = "/request-a-quote")}
           >
             ENROLL Today!
           </Button>

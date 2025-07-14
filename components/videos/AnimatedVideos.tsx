@@ -15,12 +15,7 @@ import {
 } from "../../public/fonts/Fonts";
 
 const AnimatedVideos = () => {
-  const buttons = ["DEMO Curriculum"];
   const [activeVideo, setActiveVideo] = useState<number | null>(null);
-
-  const handleRedirect = () => {
-    window.location.href = "https://www.walkingwise.com/contact-us-v2/";
-  };
 
   const videoTitles: Record<
     number,
@@ -194,15 +189,12 @@ const AnimatedVideos = () => {
           </div>
 
           <div className="flex flex-col justify-center items-center mb-10 gap-4 md:mt-8">
-            {buttons.map((label, idx) => (
-              <button
-                key={idx}
-                onClick={handleRedirect}
-                className={`bg-purple-600 hover:bg-purple-700 text-white text-sm sm:px-6 py-2 w-1/2 sm:text-2xl mt-13 rounded-4xl transition-colors ${robotoopo.className}`}
-              >
-                {label}
-              </button>
-            ))}
+            <button
+              onClick={() => (window.location.href = "/demo")}
+              className={`bg-purple-600 hover:bg-purple-700 text-white text-sm sm:px-6 py-2 w-1/2 sm:text-2xl mt-13 rounded-4xl transition-colors ${robotoopo.className}`}
+            >
+              Demo Curriculum
+            </button>
           </div>
         </div>
       </Section>
@@ -212,12 +204,6 @@ const AnimatedVideos = () => {
           <SectionHeaderText className="lg:text-7xl">
             Walking Wise Animated Video Series
           </SectionHeaderText>
-          {/* <Image
-            src="/assets/11+.png"
-            alt="Ages 11 plus"
-            width={100}
-            height={100}
-          /> */}
           <BodyText className="mt-4 sm:mt-8 text-center md:px-32">
             Watch our video trailers and DEMO video:{" "}
             <span className={`font-bold ${robotoItalicop.className}`}>
@@ -233,23 +219,15 @@ const AnimatedVideos = () => {
             Enroll today to unlock our complete animated video series.
           </BodyText>
           <button
-            onClick={handleRedirect}
+            onClick={() => (window.location.href = "/request-a-quote")}
             className={`bg-purple-600 hover:bg-purple-700 text-white text-sm sm:px-10 py-2 sm:text-2xl mt-8 rounded-4xl transition-colors ${robotoopo.className}`}
           >
             {"Enroll Today"}
           </button>
-          {/* <p className="mt-4 sm:mt-12 text-xl md:text-md text-center">
-            NOTE: Adults are encouraged to accompany young children throughout
-            the learning process.
-          </p> */}
         </div>
       </Section>
 
       <Section bgColor="white">
-        {/* <SectionHeaderText className="text-purple-500 text-center">
-          Watch trailers & enroll for the entire video
-        </SectionHeaderText> */}
-
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-10 max-w-[1800px] mx-auto">
           {Array.from({ length: 12 }, (_, i) => i + 1).map((num) => (
             <div

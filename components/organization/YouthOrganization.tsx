@@ -194,28 +194,19 @@ const YouthOrganization = () => {
           <div className="max-w-[1800px] mx-auto px-6 flex flex-col sm:flex-row gap-4 sm:gap-6 md:gap-8 lg:gap-10 w-full justify-center mt-16 bg-[#303030]">
             <button
               className={`bg-purple-600 hover:bg-purple-700 text-white px-6 sm:px-8 md:px-10 py-3 rounded-4xl transition-colors ${robotoopo.className} text-sm sm:text-base md:text-xl`}
-              onClick={() =>
-                (window.location.href =
-                  "https://www.walkingwise.com/contact-us-v2/")
-              }
+              onClick={() => (window.location.href = "/contact")}
             >
               Animated Videos
             </button>
             <button
               className={`bg-purple-600 hover:bg-purple-700 text-white px-6 sm:px-8 md:px-10 py-3 rounded-4xl transition-colors ${robotoopo.className} text-sm sm:text-base md:text-xl`}
-              onClick={() =>
-                (window.location.href =
-                  "https://www.walkingwise.com/contact-us-v2/")
-              }
+              onClick={() => (window.location.href = "/contact")}
             >
               DEMO Curriculum
             </button>
             <button
               className={`bg-purple-600 hover:bg-purple-700 text-white px-6 sm:px-8 md:px-10 py-3 rounded-4xl transition-colors ${robotoopo.className} text-sm sm:text-base md:text-xl`}
-              onClick={() =>
-                (window.location.href =
-                  "https://www.walkingwise.com/contact-us-v2/")
-              }
+              onClick={() => (window.location.href = "/request-a-quote")}
             >
               ENROLL Today!
             </button>
