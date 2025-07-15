@@ -141,7 +141,7 @@ const PartOne = () => {
                 ],
               },
             ].map((section, idx) => (
-              <div key={idx} className="bg-[#00C1D5] py-12 ps-16">
+              <div key={idx} className="bg-[#00C1D5] py-12 ps-10 md:ps-16">
                 <p
                   className={`${roboto.className} text-[#303030] text-2xl lg:text-3xl font-bold mb-4`}
                 >

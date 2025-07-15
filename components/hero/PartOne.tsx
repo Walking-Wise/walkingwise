@@ -6,31 +6,29 @@ import SectionHeaderText from "../ui/SectionHeaderText/SectionHeaderText";
 const PartOne = () => {
   return (
     <section className="max-w-full  flex justify-center  flex-col ">
-      {/* Hero Image Section */}
       <div className="w-full relative bg-[#303030]">
         <div className="relative w-full">
-          {/* Add padding-bottom to keep the image visible above the bar */}
           <img
             src="/assets/HOME1.jpg"
             alt="About Us"
-            className="w-full object-contain pb-[50px] sm:pb-[40px]"
+            className="w-full object-contain pb-[20px] sm:pb-[40px]"
           />
         </div>
       </div>
-      <div className="flex relative flex-col lg:flex-row justify-center  items-center gap-8 px-4 py-5 bg-white">
-        <div className="absolute z-[-100px] top-[-40px] 2xl:top-0  bg-[#303030] w-full h-[25px] md:h-[75px] " />
+      <div className="flex relative flex-col lg:flex-row justify-center items-center gap-8 px-4 py-5 bg-white">
+        <div className="hidden sm:block absolute z-[-100px] top-[-40px] 2xl:top-0 bg-[#303030] w-full h-[25px] md:h-[75px]" />
         <div
           className="
-  bg-[#303030] 
-  w-[300px] h-[300px] 
-  z-50 
-  sm:min-w-[500px] sm:h-[500px] 
-  p-4 
-  border-t-3 border-white 
-  rounded-full 
-  flex-col justify-evenly items-center text-center text-white 
-  hidden lg:flex
-"
+            bg-[#303030] 
+            w-[300px] h-[300px] 
+            z-50 
+            sm:min-w-[500px] sm:h-[500px] 
+            p-4 
+            border-t-3 border-white 
+            rounded-full 
+            flex-col justify-evenly items-center text-center text-white 
+            hidden lg:flex
+          "
         >
           <p
             className={`${robotoItalic.className} text-md leading-[0] sm:text-4xl md:mt-10 px-9`}
@@ -68,9 +66,9 @@ const PartOne = () => {
             Proactive Father
           </span>
         </div>
-        <div className="w-full max-w-4xl text-black text-xl md:text-4xl text-left px-4 mt-8 md:mt-16">
+        <div className="w-full max-w-4xl text-black text-xl md:text-4xl text-left px-4 mt-4 md:mt-16">
           <SectionHeaderText className="lg:hidden mb-4">
-            Sexual Exploitation Education
+            Education That Saves Lives
           </SectionHeaderText>
           <BodyText>
             Sexual predators and child traffickers can deceive adults and entire

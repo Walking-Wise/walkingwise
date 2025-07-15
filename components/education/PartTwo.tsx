@@ -87,49 +87,47 @@ const PartTwo = () => {
       </Section>
 
       {/* Disclosure Section */}
-      <div className="bg-[#00c1d5] py-10 w-full">
-        <div className="w-full max-w-[1800px] mx-auto px-6 sm:px-12 md:px-20 lg:px-26 flex flex-col py-12 md:py-24 md:pb-30">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-[#303030] font-bold">
-            {disclosureContent.title}
-          </h1>
-          <p
-            className={`${robotoopo.className} text-[#303030] tracking-wide leading-7 lg:leading-10  text-base sm:text-xl md:text-2xl lg:text-3xl mt-4 sm:mt-6`}
+      <Section bgColor="[#00c1d5]">
+        <SectionHeaderText className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-[#303030] font-bold">
+          {disclosureContent.title}
+        </SectionHeaderText>
+        <BodyText
+          className={`${robotoopo.className} text-[#303030] tracking-wide leading-7 lg:leading-10  text-base sm:text-xl md:text-2xl lg:text-3xl mt-4 sm:mt-6`}
+        >
+          {disclosureContent.paragraphs[0]}
+        </BodyText>
+        <BodyText
+          className={`${robotoopo.className} text-[#303030] tracking-wide leading-7 lg:leading-10  text-base sm:text-xl md:text-2xl lg:text-3xl mt-4 sm:mt-6`}
+        >
+          {disclosureContent.paragraphs[1]}
+          <a
+            href="https://www.healthychildren.org"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline hover:text-blue-800"
           >
-            {disclosureContent.paragraphs[0]}
-          </p>
-          <p
-            className={`${robotoopo.className} text-[#303030] tracking-wide leading-7 lg:leading-10  text-base sm:text-xl md:text-2xl lg:text-3xl mt-4 sm:mt-6`}
+            HealthyChildren.org
+          </a>
+        </BodyText>
+        <BodyText
+          className={`${robotoopo.className} text-[#303030] tracking-wide leading-7 lg:leading-10 text-base sm:text-xl md:text-2xl lg:text-3xl mt-4 sm:mt-6`}
+        >
+          {disclosureContent.paragraphs[2]}
+          <Link
+            href="https://www.humantraffickinghotline.org"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline hover:text-blue-800"
           >
-            {disclosureContent.paragraphs[1]}
-            <a
-              href="https://www.healthychildren.org"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="underline hover:text-blue-800"
-            >
-              HealthyChildren.org
-            </a>
-          </p>
-          <p
-            className={`${robotoopo.className} text-[#303030] tracking-wide leading-7 lg:leading-10 text-base sm:text-xl md:text-2xl lg:text-3xl mt-4 sm:mt-6`}
-          >
-            {disclosureContent.paragraphs[2]}
-            <Link
-              href="https://www.humantraffickinghotline.org"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="underline hover:text-blue-800"
-            >
-              HumanTraffickingHotline.org
-            </Link>
-          </p>
-          <p
-            className={`${robotoopo.className} text-[#303030] tracking-wide leading-7 lg:leading-10  text-base sm:text-xl md:text-2xl lg:text-3xl mt-4 sm:mt-6`}
-          >
-            {disclosureContent.paragraphs[3]}
-          </p>
-        </div>
-      </div>
+            HumanTraffickingHotline.org
+          </Link>
+        </BodyText>
+        <BodyText
+          className={`${robotoopo.className} text-[#303030] tracking-wide leading-7 lg:leading-10  text-base sm:text-xl md:text-2xl lg:text-3xl mt-4 sm:mt-6`}
+        >
+          {disclosureContent.paragraphs[3]}
+        </BodyText>
+      </Section>
     </>
   );
 };

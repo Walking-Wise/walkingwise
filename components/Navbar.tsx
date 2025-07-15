@@ -34,14 +34,14 @@ const Navbar = () => {
           <Image
             src="/assets/logo.png"
             alt="Logo"
-            width={300}
-            height={300}
-            className="cursor-pointer w-[150px] md:w-[300px] h-auto"
+            width={150}
+            height={150}
+            className="cursor-pointer w-[100x] md:w-[250px] h-auto"
           />
         </Link>
 
         {/* Desktop Menu */}
-        <div className="hidden lg:flex mt-20 space-x-8 text-[#303030] text-3xl font-bold">
+        <div className="hidden lg:flex mt-20 space-x-8 text-[#303030] text-2xl font-bold">
           <Link href="/">Home</Link>
           <div className="relative">
             <button
@@ -76,7 +76,6 @@ const Navbar = () => {
                 >
                   Adult Education
                 </Link>
-                {/* <Link href="/pricing" className={`block px-4 py-2 text-lg hover:bg-gray-100 ${roboto.className}`}>Pricing</Link> */}
               </div>
             )}
           </div>
@@ -117,6 +116,7 @@ const Navbar = () => {
               </div>
             )}
           </div>
+          <Link href="/pricing">Pricing</Link>
           <Link href="/about">About</Link>
           <div className="flex relative flex-col space-y-2">
             <Link
@@ -130,8 +130,7 @@ const Navbar = () => {
             </Link>
           </div>
           <Link
-            href="/contact"
-            target="_blank"
+            href="https://www.walkingwise.com/enrollment/members-login/"
           >
             Login
           </Link>
@@ -151,8 +150,7 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="lg:hidden flex flex-col text-2xl mt-2 space-y-4 text-[#303030] font-bold relative min-h-[60vh]">
-          {/* ... your menu items ... */}
+        <div className="lg:hidden flex flex-col text-2xl mt-2 space-y-4 text-[#303030] font-bold relative min-h-[80vh]">
           <Link href="/" onClick={() => setIsOpen(false)}>
             Home
           </Link>
@@ -231,6 +229,9 @@ const Navbar = () => {
             )}
           </div>
 
+          <Link href="/pricing" onClick={() => setIsOpen(false)}>
+            Pricing
+          </Link>
           <Link href="/about" onClick={() => setIsOpen(false)}>
             About
           </Link>
@@ -238,7 +239,7 @@ const Navbar = () => {
             Enroll
           </Link>
           <Link
-            href="/contact"
+            href="https://www.walkingwise.com/enrollment/members-login/"
             onClick={() => setIsOpen(false)}
           >
             Login

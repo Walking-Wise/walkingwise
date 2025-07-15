@@ -82,6 +82,25 @@ const plans = [
     popular: false,
     discount: null,
   },
+  {
+    name: "Enterprise",
+    subtext:
+      "For large organizations needing over 25 users or custom training solutions.",
+    price: "Custom Pricing",
+    annual: "Contact us for a quote",
+    footer: "Tailored to your needs",
+    features: [
+      "Unlimited users",
+      "Custom onboarding & support",
+      "On-Demand 12 Lesson Course for Adults",
+      "All Pro & Education features",
+      "Dedicated account manager",
+    ],
+    buttonText: "Contact Us",
+    popular: false,
+    discount: null,
+    enterprise: true, // custom flag for conditional rendering
+  },
 ];
 
 const PricingPage = () => {
@@ -95,15 +114,16 @@ const PricingPage = () => {
         {plans.map((plan, idx) => (
           <div
             key={idx}
-            className="flex flex-col bg-white rounded-xl shadow-lg border border-gray-200 p-6 relative"
+            className={`flex flex-col bg-white rounded-xl shadow-lg border border-gray-200 p-6 relative ${
+              plan.enterprise ? "lg:col-span-2" : ""
+            }`}
           >
-            {/* Popular tag */}
+            {/* Popular or Enterprise tag */}
             {plan.popular && (
               <span className="absolute top-4 right-4 bg-purple-100 text-purple-700 text-xs font-semibold px-2 py-1 rounded">
                 Popular
               </span>
             )}
-
             {/* Title & subtitle */}
             <div className="mb-4">
               <h2 className="text-lg font-semibold text-gray-800">
@@ -113,34 +133,24 @@ const PricingPage = () => {
             </div>
 
             {/* Price block */}
-            <div>
-              {plan.discount && (
-                <span className="text-xs bg-blue-100 text-blue-700 font-medium px-2 py-1 rounded">
-                  {plan.discount.text}
-                </span>
-              )}
-              <div className="text-3xl font-bold text-gray-900 mt-2">
-                {plan.price}
-              </div>
-              {plan.discount && (
-                <div className="text-sm text-gray-400 line-through">
-                  {plan.discount.original}
-                </div>
-              )}
-              <div className="text-xs text-gray-500">{plan.annual}</div>
+            <div className="text-2xl font-bold text-gray-900 mt-2">
+              {plan.price}
             </div>
+            <div className="text-xs text-gray-500">{plan.annual}</div>
 
-            {/* Features + spacer */}
+            {/* Features */}
             <div className="flex-1 mt-4 mb-4">
               <ul className="space-y-2 text-sm text-gray-700">
-                {plan.name === "Organization" || plan.name === "Education" ? (
+                {plan.name === "Organization" ||
+                plan.name === "Education" ||
+                plan.enterprise ? (
                   <li className="font-semibold text-blue-700">
                     ✔ On-Demand 12 Lesson Course for Adults
                   </li>
                 ) : null}
                 {plan.features.map((feature, i) => {
                   if (feature.includes("On-Demand 12 Lesson Course"))
-                    return null; // skip the duplicate
+                    return null;
                   return <li key={i}>✔ {feature}</li>;
                 })}
               </ul>
@@ -150,14 +160,18 @@ const PricingPage = () => {
             <div>
               <button
                 className={`w-full py-2 px-4 rounded-md text-white ${
-                  plan.popular
-                    ? "bg-purple-600 hover:bg-purple-600"
+                  plan.enterprise
+                    ? "bg-[#303030] hover:bg-[#303030]"
+                    : plan.popular
+                    ? "bg-purple-600 hover:bg-purple-700"
                     : "bg-[#303030] hover:bg-[#303030]"
                 }`}
+                onClick={() => {
+                  window.location.href = "/request-a-quote";
+                }}
               >
                 {plan.buttonText}
               </button>
-
               <p className="text-xs text-center text-gray-400 mt-2">
                 {plan.footer}
               </p>
@@ -170,7 +184,7 @@ const PricingPage = () => {
         <div className="flex-1 p-8 flex flex-col justify-center">
           <div className="flex items-center gap-2">
             <svg
-              className="w-6 h-6 text-yellow-400"
+              className="w-6 h-6 text-yellow-400 hidden md:flex"
               fill="currentColor"
               viewBox="0 0 20 20"
             >

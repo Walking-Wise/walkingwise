@@ -12,6 +12,7 @@ import {
   robotoBold,
   robotoItalicop,
 } from "../../public/fonts/Fonts";
+import Button from "../ui/Button/Button";
 
 const resourceItems = [
   {
@@ -173,7 +174,7 @@ const DemoPage = () => {
           {/* Demo Badge */}
 
           {/* Demo Image Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-6 md:gap-8 px-4 sm:px-6 md:px-8 mt-10">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-6 md:gap-8 px-4 sm:px-6 md:px-8 md:mt-10">
             {demoContent.map(
               ({ title, subtitle, image, objectClass = "" }, i) => (
                 <div key={i} className="flex flex-col items-center gap-4">
@@ -186,24 +187,19 @@ const DemoPage = () => {
                       sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 30vw"
                     />
                   </div>
-                  <div className=" md:mt-4 bg-[#303033] flex flex-col justify-center items-center rounded-4xl px-4 py-3 sm:px-6 sm:py-2 w-[250px] md:w-full max-w-[250px] min-h-[70px] text-center cursor-pointer">
-                    <p
-                      className={`${robotoBold.className} text-md text-white md:text-xl`}
-                    >
-                      {title}
-                    </p>
-                    <p className={`${robotoBold.className} text-lg text-white`}>
-                      {subtitle}
-                    </p>
-                  </div>
+                  <Button
+                    bgColor="[#303030]"
+                    className="md:mt-4 w-[250px] md:w-full max-w-[250px] md:min-h-[70px]"
+                  >
+                    {title}
+                  </Button>
                 </div>
               )
             )}
           </div>
         </div>
       </Section>
-        <div className="bg-[#303030] flex justify-center h-[50px]">
-      </div>
+      <div className="bg-[#303030] flex justify-center h-[50px]"></div>
     </>
   );
 };

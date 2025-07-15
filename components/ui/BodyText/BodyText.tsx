@@ -5,9 +5,14 @@ import React from "react";
 type BodyTextProps = {
   children: React.ReactNode;
   className?: string;
+  color?: string;
 };
 
-const BodyText: React.FC<BodyTextProps> = ({ children, className }) => {
+const BodyText: React.FC<BodyTextProps> = ({
+  children,
+  className,
+  color = "[#303030]",
+}) => {
   return (
     <p
       className={`
@@ -15,7 +20,7 @@ const BodyText: React.FC<BodyTextProps> = ({ children, className }) => {
         tracking-wide 
         leading-7 sm:leading-8 lg:leading-10 
         text-xl sm:text-2xl md:text-3xl 
-        text-[#303030]
+        text-${color}
         ${className ?? ""}
       `}
     >

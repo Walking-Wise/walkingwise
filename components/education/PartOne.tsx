@@ -48,7 +48,7 @@ const PartOne = () => {
             “Upon completing the Unsafe Adult, Grooming, and Sextortion lessons,
             my granddaughter said,
           </p>
-          <h1 className={`capitalize text-md mt-3 sm:text-3xl px-15 mb-4`}>
+          <h1 className={`capitalize text-md md:mt-3 sm:text-3xl px-15 md:mb-4`}>
             ‘I bet I’m the only kid who knows this stuff in my entire school!’”
           </h1>
           <span

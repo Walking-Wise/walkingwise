@@ -1,8 +1,6 @@
 "use client";
 import { roboto, robotoopo } from "../../public/fonts/Fonts";
 import Image from "next/image";
-import { ChevronRight } from "lucide-react";
-import { useRouter } from "next/navigation";
 
 const LogoItem = ({
   src,
@@ -35,8 +33,6 @@ const LogoItem = ({
 };
 
 const PartThree = () => {
-  const router = useRouter();
-
   return (
     <div className="flex flex-col lg:flex-row max-w-screen-2xl mx-auto justify-evenly  px-4 sm:px-20 py-10 lg:py-32">
       {/* Text Content */}
@@ -64,7 +60,7 @@ const PartThree = () => {
 
       {/* Logo Images */}
       <div className="flex flex-row lg:flex-col justify-center md:items-center gap-6 lg:gap-10 mt-10 lg:mt-0">
-        <div>
+        <div className="flex flex-col items-center w-1/2">
           <LogoItem
             src="/assets/home-1.png"
             alt="Logo"
@@ -73,19 +69,24 @@ const PartThree = () => {
             link="https://walking-wise-12-part-course.s3.us-east-1.amazonaws.com/PIM+Accreditation+Info-Walking-Wise-eLearning/content/index.html"
           />
           <button
-            onClick={() => window.location.href = "https://walking-wise-12-part-course.s3.us-east-1.amazonaws.com/PIM+Accreditation+Info-Walking-Wise-eLearning/content/index.html"}
-            className={`bg-[#9d1be3] ${roboto.className} mt-4 rounded-full text-sm sm:text-[16px] py-2 sm:py-3 px-6 text-white flex items-center whitespace-nowrap`}
+            onClick={() =>
+              (window.location.href =
+                "https://walking-wise-12-part-course.s3.us-east-1.amazonaws.com/PIM+Accreditation+Info-Walking-Wise-eLearning/content/index.html")
+            }
+            className={`bg-[#9d1be3] ${roboto.className} mt-4 rounded-full text-sm sm:text-[16px] py-2 sm:py-3 px-4 text-white flex items-center whitespace-nowrap`}
           >
             Online Course for Adults
           </button>
         </div>
-        <LogoItem
-          src="/assets/home-2.png"
-          alt="Logo"
-          text="AFN Partnership"
-          textColor="rgb(86, 1, 119)"
-          link="https://www.goafn.org/news-1/afn-and-walking-wise-help-schools-build-an-anti-sex-trafficking-culture"
-        />
+        <div className="flex flex-col items-center w-1/2">
+          <LogoItem
+            src="/assets/home-2.png"
+            alt="Logo"
+            text="AFN Partnership"
+            textColor="rgb(86, 1, 119)"
+            link="https://www.goafn.org/news-1/afn-and-walking-wise-help-schools-build-an-anti-sex-trafficking-culture"
+          />
+        </div>
       </div>
     </div>
   );
