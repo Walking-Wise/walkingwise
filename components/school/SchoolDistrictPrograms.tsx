@@ -54,32 +54,32 @@ const SchoolDistrictPrograms = () => {
       />
 
       {/* Testimonial + Intro Section */}
-      <div className="w-full max-w-[1800px] mx-auto px-6 sm:px-12 md:px-20 lg:px-32 flex flex-col xl:flex-row items-center gap-24 py-16 md:py-26">
+      <div className="w-full max-w-[1800px] mx-auto px-6 sm:px-12 md:px-20 lg:px-32 flex flex-col xl:flex-row items-center gap-10 md:gap-24 py-16 md:py-26">
         <div className="flex flex-col justify-center items-center">
           <div className="bg-[#303030] text-[#303030] border-2 border-white w-[380px] h-[380px] sm:w-[550px] sm:h-[550px] p-4 rounded-full flex flex-col justify-center items-center text-center z-50">
             <p
-              className={`${robotoItalic.className} px-4 sm:px-8 leading-snug text-3xl text-white`}
+              className={`${robotoItalic.className} px-4 sm:px-8 leading-snug text-xl md:text-3xl text-white`}
             >
               “Walking Wise
             </p>
             <p
-              className={`${robotoItalic.className} px-4 sm:px-8 leading-snug text-3xl text-white`}
+              className={`${robotoItalic.className} px-4 sm:px-8 leading-snug text-xl md:text-3xl text-white`}
             >
               offers the best tools I’ve
             </p>
             <p
-              className={`${robotoItalic.className} mb-8 px-4 sm:px-8 leading-snug text-3xl text-white`}
+              className={`${robotoItalic.className} mb-8 px-4 sm:px-8 leading-snug text-xl md:text-3xl text-white`}
             >
               seen for teaching students about sexual exploitation and
               sextortion—without being scary or lewd.”
             </p>
             <span
-              className={`${robotoopo.className} text-white block px-4 sm:px-6 text-[#303030] text-2xl`}
+              className={`${robotoopo.className} text-white block px-4 sm:px-6 text-[#303030] text-md md:text-2xl`}
             >
               Nigel Hunter, Deputy
             </span>
             <span
-              className={`${robotoopo.className} text-white block px-4 sm:px-6 text-[#303030] text-2xl`}
+              className={`${robotoopo.className} text-white block px-4 sm:px-6 text-[#303030] text-md md:text-2xl`}
             >
               School Resource Officer
             </span>
@@ -133,12 +133,12 @@ const SchoolDistrictPrograms = () => {
         </div>
 
         {/* Right Box */}
-        <div className="bg-[#303030] max-h-[400px] text-white p-6 sm:p-8 relative">
+        <div className="bg-[#303030] md:max-h-[400px] text-white p-6 sm:p-8 relative">
           <h3 className="text-xl sm:text-3xl font-semibold mb-4">
             DISTRICT WIDE PROGRAM
           </h3>
           <ul
-            className={`${robotoopo.className} text-base sm:text-2xl space-y-2`}
+            className={`${robotoopo.className} text-md md:text-2xl space-y-2`}
           >
             <li>
               <strong>Parent Awareness:</strong> #1 Myths & Reality
@@ -244,7 +244,7 @@ const SchoolDistrictPrograms = () => {
 
       {/* Safety Teams Section */}
       <div className="w-full max-w-[1800px] mx-auto px-6 sm:px-12 md:px-20 lg:px-32 py-16 lg:py-32 bg-[#303030] text-white">
-        <SectionHeaderText>School Safety Teams</SectionHeaderText>
+        <SectionHeaderText color="white">School Safety Teams</SectionHeaderText>
         <BodyText className={`mt-4 sm:mt-6 text-white lg:text-white`}>
           In 2021, the U.S. Department of Education provided guidelines for
           implementing human trafficking education and suggested empowering a

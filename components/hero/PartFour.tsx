@@ -74,7 +74,7 @@ const Card: React.FC<CardProps> = ({
         </i>
       </button>
       <p
-        className={`${robotoopo.className} mt-4 text-[#303030] text-sm sm:text-xl lg:text-2xl mt-6 text-start`}
+        className={`${robotoopo.className} mt-4 text-[#303030] text-md sm:text-xl lg:text-2xl mt-6 text-center md:text-start`}
       >
         {description}
       </p>

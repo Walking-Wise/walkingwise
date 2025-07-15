@@ -6,6 +6,7 @@ import PageBanner from "../ui/PageBanner/PageBanner";
 import SectionHeaderText from "../ui/SectionHeaderText/SectionHeaderText";
 import BodyText from "../ui/BodyText/BodyText";
 import Section from "../ui/Section/Section";
+import Button from "../ui/Button/Button";
 
 const steps = [
   "Gain program approval among leadership.",
@@ -95,11 +96,11 @@ const ImplementationSection = () => {
               Implementation
             </SectionHeaderText>
 
-            <button
-              className={`bg-[#9d1be3] ${robotoopo.className} md:me-24 rounded-full text-sm md:text-lg uppercase h-[50px] px-4 md:px-8 text-white text-center flex items-center justify-center whitespace-nowrap`}
+            <Button
+              className={`md:me-24 h-[50px] px-4 md:px-8`}
             >
               5 Step Process
-            </button>
+            </Button>
           </div>
           <ol className="list-decimal pl-6">
             {steps.map((step, idx) => (
@@ -237,12 +238,12 @@ const ImplementationSection = () => {
                   className="object-contain"
                 />
               </div>
-              <button
+              <Button
                 onClick={() => (window.location.href = "/request-a-quote")}
-                className="md:mt-6 bg-[#9d1be3] text-white px-6 py-2 rounded-full text-lg md:text-lg font-semibold"
+                className="md:mt-6"
               >
                 ENROLL Today!
-              </button>
+              </Button>
             </div>
           </div>
         </div>

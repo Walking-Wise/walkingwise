@@ -5,7 +5,7 @@ import PageBanner from "../ui/PageBanner/PageBanner";
 import Section from "../ui/Section/Section";
 import SectionHeaderText from "../ui/SectionHeaderText/SectionHeaderText";
 import BodyText from "../ui/BodyText/BodyText";
-import { robotoBold, robotoopo } from "../../public/fonts/Fonts";
+import { roboto, robotoBold, robotoopo } from "../../public/fonts/Fonts";
 
 const QuoteRequest = () => {
   const [form, setForm] = useState({
@@ -73,19 +73,25 @@ const QuoteRequest = () => {
         altText="Connect with us"
       />
       <Section bgColor="white">
-        <SectionHeaderText className="text-red lg:text-[#ff3131]">Enrollment is Launching Soon!</SectionHeaderText>
-        <BodyText className="mt-8 md:pe-24">
+        <SectionHeaderText className="text-red lg:text-[#ff3131]">
+          Enrollment is Launching Soon!
+        </SectionHeaderText>
+        <BodyText className="mt-4 md:mt-8 md:pe-24">
           Our new learning platform is on track and launching just in time for
           the start of the school year! While we put the final touches in place,
           we’d love to connect with you.
         </BodyText>
-        <BodyText className={`mt-8 ${robotoBold.className} mb-2 md:ms-4`}>
+        <BodyText
+          className={`mt-4 md:mt-8 ${robotoBold.className} mb-2 md:ms-4`}
+        >
           Be the first to know when subscriptions go live:
         </BodyText>
         <BodyText className="md:ms-4">
           📩 Submit your contact info to get notified.
         </BodyText>
-        <BodyText className={`mt-8 ${robotoBold.className} mb-2 md:ms-4`}>
+        <BodyText
+          className={`mt-4 md:mt-8 ${robotoBold.className} mb-2 md:ms-4`}
+        >
           If you’d like to learn more in the meantime:
         </BodyText>
         <BodyText className="md:ms-4">
@@ -222,7 +228,7 @@ const QuoteRequest = () => {
             <button
               type="submit"
               disabled={loading}
-              className={`bg-[#303030] py-3 text-white text-3xl ${robotoopo.className}`}
+              className={`bg-[#303030] py-3 text-white text-xl md:text-3xl rounded-4xl  ${roboto.className}`}
             >
               {loading ? "Sending..." : "Send"}
             </button>

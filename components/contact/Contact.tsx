@@ -5,7 +5,7 @@ import PageBanner from "../ui/PageBanner/PageBanner";
 import Section from "../ui/Section/Section";
 import SectionHeaderText from "../ui/SectionHeaderText/SectionHeaderText";
 import BodyText from "../ui/BodyText/BodyText";
-import { robotoopo } from "../../public/fonts/Fonts";
+import { roboto, robotoopo } from "../../public/fonts/Fonts";
 
 const Contact = () => {
   const [form, setForm] = useState({
@@ -194,7 +194,7 @@ const Contact = () => {
             <button
               type="submit"
               disabled={loading}
-              className={`bg-[#303030] py-3 text-white text-3xl ${robotoopo.className}`}
+              className={`bg-[#303030] py-3 rounded-4xl text-white text-xl md:text-3xl ${roboto.className}`}
             >
               {loading ? "Sending..." : "Send"}
             </button>

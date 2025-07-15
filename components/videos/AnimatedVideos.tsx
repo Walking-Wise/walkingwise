@@ -13,6 +13,7 @@ import {
   robotoBold,
   robotoItalicop,
 } from "../../public/fonts/Fonts";
+import Button from "../ui/Button/Button";
 
 const AnimatedVideos = () => {
   const [activeVideo, setActiveVideo] = useState<number | null>(null);
@@ -24,73 +25,73 @@ const AnimatedVideos = () => {
     1: {
       name: "Myths & Reality",
       thumbnail:
-        "https://walking-wise-animated-video-assets.s3.us-east-1.amazonaws.com/Videos+-+Animation/Thumbnails+-+Website+Animation/Myths+-+Thumbnail.png",
-      link: "https://walking-wise-animated-video-assets.s3.us-east-1.amazonaws.com/Videos+-+Animation/Videos+-+Website+Animation/Video-Myths_and_Reality-4-1-2025.mp4",
+        "https://walking-wise-2025-website-assets.s3.us-east-1.amazonaws.com/Videos-Animation/Thumbnails+-+Website+Animation/Myths+-+Thumbnail.png",
+      link: "https://walking-wise-2025-website-assets.s3.us-east-1.amazonaws.com/Videos-Animation/Videos+-+Website+Animation/Video-Myths_and_Reality-4-1-2025.mp4",
     },
     2: {
       name: "Trustworthy vs. Unsafe Adult",
       thumbnail:
-        "https://walking-wise-animated-video-assets.s3.us-east-1.amazonaws.com/Videos+-+Animation/Thumbnails+-+Website+Animation/Trustworthy+vs+Unsafe+-+Thumbnail.png",
-      link: "https://walking-wise-animated-video-assets.s3.us-east-1.amazonaws.com/Videos+-+Animation/Trailers+-+Website+Animation/Trailer-Trustworthy_Vs_Unsafe_Adult-1080p-250125.mp4",
+        "https://walking-wise-2025-website-assets.s3.us-east-1.amazonaws.com/Videos-Animation/Thumbnails+-+Website+Animation/Trustworthy+vs+Unsafe+-+Thumbnail.png",
+      link: "https://walking-wise-2025-website-assets.s3.us-east-1.amazonaws.com/Videos-Animation/Trailers+-+Website+Animation/Trailer-Trustworthy_Vs_Unsafe_Adult-1080p-250125.mp4",
     },
     3: {
       name: "Grooming Process",
       thumbnail:
-        "https://walking-wise-animated-video-assets.s3.us-east-1.amazonaws.com/Videos+-+Animation/Thumbnails+-+Website+Animation/Grooming+Process+-+Thumbnail.png",
-      link: "https://walking-wise-animated-video-assets.s3.us-east-1.amazonaws.com/Videos+-+Animation/Trailers+-+Website+Animation/Trailer-Grooming_Process_of_Child_Sex_Trafficking-1080p-230618.mp4",
+        "https://walking-wise-2025-website-assets.s3.us-east-1.amazonaws.com/Videos-Animation/Thumbnails+-+Website+Animation/Grooming+Process+-+Thumbnail.png",
+      link: "https://walking-wise-2025-website-assets.s3.us-east-1.amazonaws.com/Videos-Animation/Trailers+-+Website+Animation/Trailer-Grooming_Process_of_Child_Sex_Trafficking-1080p-230618.mp4",
     },
     4: {
       name: "Pornography Link",
       thumbnail:
-        "https://walking-wise-animated-video-assets.s3.us-east-1.amazonaws.com/Videos+-+Animation/Thumbnails+-+Website+Animation/Pornography+Link+-+Thumbnail.png",
-      link: "https://walking-wise-animated-video-assets.s3.us-east-1.amazonaws.com/Videos+-+Animation/Trailers+-+Website+Animation/Trailer-Pornography_Link_of_Child_Sex_Trafficking-1080p-230618.mp4",
+        "https://walking-wise-2025-website-assets.s3.us-east-1.amazonaws.com/Videos-Animation/Thumbnails+-+Website+Animation/Pornography+Link+-+Thumbnail.png",
+      link: "https://walking-wise-2025-website-assets.s3.us-east-1.amazonaws.com/Videos-Animation/Trailers+-+Website+Animation/Trailer-Pornography_Link_of_Child_Sex_Trafficking-1080p-230618.mp4",
     },
     5: {
       name: "Sextortion Scheme",
       thumbnail:
-        "https://walking-wise-animated-video-assets.s3.us-east-1.amazonaws.com/Videos+-+Animation/Thumbnails+-+Website+Animation/Sextortion+Scheme+-+Thumbnail.png",
-      link: "https://walking-wise-animated-video-assets.s3.us-east-1.amazonaws.com/Videos+-+Animation/Trailers+-+Website+Animation/Trailer-Sextortion_Scheme_of_Child_Sex_Trafficking-1080p-230618.mp4",
+        "https://walking-wise-2025-website-assets.s3.us-east-1.amazonaws.com/Videos-Animation/Thumbnails+-+Website+Animation/Sextortion+Scheme+-+Thumbnail.png",
+      link: "https://walking-wise-2025-website-assets.s3.us-east-1.amazonaws.com/Videos-Animation/Trailers+-+Website+Animation/Trailer-Sextortion_Scheme_of_Child_Sex_Trafficking-1080p-230618.mp4",
     },
     6: {
       name: "Male Victims",
       thumbnail:
-        "https://walking-wise-animated-video-assets.s3.us-east-1.amazonaws.com/Videos+-+Animation/Thumbnails+-+Website+Animation/Male+Victims+-+Thumbnail.png",
-      link: "https://walking-wise-animated-video-assets.s3.us-east-1.amazonaws.com/Videos+-+Animation/Trailers+-+Website+Animation/Trailer-Male_Victims_of_Child_Sex_Trafficking-1080p-230618.mp4",
+        "https://walking-wise-2025-website-assets.s3.us-east-1.amazonaws.com/Videos-Animation/Thumbnails+-+Website+Animation/Male+Victims+-+Thumbnail.png",
+      link: "https://walking-wise-2025-website-assets.s3.us-east-1.amazonaws.com/Videos-Animation/Trailers+-+Website+Animation/Trailer-Male_Victims_of_Child_Sex_Trafficking-1080p-230618.mp4",
     },
     7: {
       name: "Runaways as Targets",
       thumbnail:
-        "https://walking-wise-animated-video-assets.s3.us-east-1.amazonaws.com/Videos+-+Animation/Thumbnails+-+Website+Animation/Runaways+As+Targets+-+Thumbnail.png",
-      link: "https://walking-wise-animated-video-assets.s3.us-east-1.amazonaws.com/Videos+-+Animation/Trailers+-+Website+Animation/Trailer-Runaways_are_Targets_of_Child_Sex_Traffick-1080p-230618.mp4",
+        "https://walking-wise-2025-website-assets.s3.us-east-1.amazonaws.com/Videos-Animation/Thumbnails+-+Website+Animation/Runaways+As+Targets+-+Thumbnail.png",
+      link: "https://walking-wise-2025-website-assets.s3.us-east-1.amazonaws.com/Videos-Animation/Trailers+-+Website+Animation/Trailer-Runaways_are_Targets_of_Child_Sex_Traffick-1080p-230618.mp4",
     },
     8: {
       name: "Rural Risks",
       thumbnail:
-        "https://walking-wise-animated-video-assets.s3.us-east-1.amazonaws.com/Videos+-+Animation/Thumbnails+-+Website+Animation/Rural+Risks+-+Thumbnail.png",
-      link: "https://walking-wise-animated-video-assets.s3.us-east-1.amazonaws.com/Videos+-+Animation/Trailers+-+Website+Animation/Trailer-Rural_Risks_of_Child_Sex_Trafficking-1080p-230618.mp4",
+        "https://walking-wise-2025-website-assets.s3.us-east-1.amazonaws.com/Videos-Animation/Thumbnails+-+Website+Animation/Rural+Risks+-+Thumbnail.png",
+      link: "https://walking-wise-2025-website-assets.s3.us-east-1.amazonaws.com/Videos-Animation/Trailers+-+Website+Animation/Trailer-Rural_Risks_of_Child_Sex_Trafficking-1080p-230618.mp4",
     },
     9: {
       name: "Human Traffickers",
       thumbnail:
-        "https://walking-wise-animated-video-assets.s3.us-east-1.amazonaws.com/Videos+-+Animation/Thumbnails+-+Website+Animation/Human+Traffickers+-+Thumbnail.png",
-      link: "https://walking-wise-animated-video-assets.s3.us-east-1.amazonaws.com/Videos+-+Animation/Trailers+-+Website+Animation/Trailer-Human+Traffickers_of_Child_Sex_Trafficking-1080p-230618.mp4",
+        "https://walking-wise-2025-website-assets.s3.us-east-1.amazonaws.com/Videos-Animation/Thumbnails+-+Website+Animation/Human+Traffickers+-+Thumbnail.png",
+      link: "https://walking-wise-2025-website-assets.s3.us-east-1.amazonaws.com/Videos-Animation/Trailers+-+Website+Animation/Trailer-Human+Traffickers_of_Child_Sex_Trafficking-1080p-230618.mp4",
     },
     10: {
       name: "Female Recruiters",
       thumbnail:
-        "https://walking-wise-animated-video-assets.s3.us-east-1.amazonaws.com/Videos+-+Animation/Thumbnails+-+Website+Animation/Female+Recruiter+-+Thumbnail.png",
-      link: "https://walking-wise-animated-video-assets.s3.us-east-1.amazonaws.com/Videos+-+Animation/Trailers+-+Website+Animation/Trailer-Female_Recruiters_of_Child_Sex_Trafficking-1080p-230618.mp4",
+        "https://walking-wise-2025-website-assets.s3.us-east-1.amazonaws.com/Videos-Animation/Thumbnails+-+Website+Animation/Female+Recruiter+-+Thumbnail.png",
+      link: "https://walking-wise-2025-website-assets.s3.us-east-1.amazonaws.com/Videos-Animation/Trailers+-+Website+Animation/Trailer-Female_Recruiters_of_Child_Sex_Trafficking-1080p-230618.mp4",
     },
     11: {
       name: "Family Secret",
       thumbnail:
-        "https://walking-wise-animated-video-assets.s3.us-east-1.amazonaws.com/Videos+-+Animation/Thumbnails+-+Website+Animation/Family+Secrect+-+Thumbnail.png",
-      link: "https://walking-wise-animated-video-assets.s3.us-east-1.amazonaws.com/Videos+-+Animation/Trailers+-+Website+Animation/Trailer-Family_Secret_of_Child_Sex_Trafficking-1080p-230618.mp4",
+        "https://walking-wise-2025-website-assets.s3.us-east-1.amazonaws.com/Videos-Animation/Thumbnails+-+Website+Animation/Family+Secrect+-+Thumbnail.png",
+      link: "https://walking-wise-2025-website-assets.s3.us-east-1.amazonaws.com/Videos-Animation/Trailers+-+Website+Animation/Trailer-Family_Secret_of_Child_Sex_Trafficking-1080p-230618.mp4",
     },
     12: {
       name: "Hidden Buyers",
       thumbnail:
-        "https://walking-wise-animated-video-assets.s3.us-east-1.amazonaws.com/Videos+-+Animation/Thumbnails+-+Website+Animation/Hidden+Buyers+Coming+Soon+-+Thumbnail.png",
+        "https://walking-wise-2025-website-assets.s3.us-east-1.amazonaws.com/Videos-Animation/Thumbnails+-+Website+Animation/Hidden+Buyers+Coming+Soon+-+Thumbnail.png",
       link: "/assets/videos/hidden-buyers.mp4",
     },
   };
@@ -131,8 +132,8 @@ const AnimatedVideos = () => {
         bgColor="[#303030]"
         className="gap-10 xl:flex-row justify-between items-center xl:items-start"
       >
-        <div className="lg:w-4xl py-10 text-white md:mt-8">
-          <SectionHeaderText className="text-[#36c5d8] lg:text-[#36c5d8]">
+        <div className="lg:w-4xl md:py-10 text-white md:mt-8">
+          <SectionHeaderText color="[#36c5d8]">
             Empowerment through Animation
           </SectionHeaderText>
           <BodyText className="mt-4 sm:mt-6 text-white">
@@ -142,7 +143,7 @@ const AnimatedVideos = () => {
             powerful as a relationship.
           </BodyText>
 
-          <SectionHeaderText className="text-[#36c5d8] lg:text-[#36c5d8] mt-16">
+          <SectionHeaderText color="[#36c5d8]" className="mt-16">
             Strategic Tactics of Sexual Predators
           </SectionHeaderText>
           <BodyText className="mt-4 sm:mt-6 text-white">
@@ -189,12 +190,12 @@ const AnimatedVideos = () => {
           </div>
 
           <div className="flex flex-col justify-center items-center mb-10 gap-4 md:mt-8">
-            <button
+            <Button
               onClick={() => (window.location.href = "/demo")}
-              className={`bg-purple-600 hover:bg-purple-700 text-white text-sm sm:px-6 py-2 w-1/2 sm:text-2xl mt-13 rounded-4xl transition-colors ${robotoopo.className}`}
+              className={`mt-13`}
             >
               Demo Curriculum
-            </button>
+            </Button>
           </div>
         </div>
       </Section>
@@ -204,26 +205,26 @@ const AnimatedVideos = () => {
           <SectionHeaderText className="lg:text-7xl">
             Walking Wise Animated Video Series
           </SectionHeaderText>
-          <BodyText className="mt-4 sm:mt-8 text-center md:px-32">
+          <BodyText className="mt-4 sm:mt-8 md:text-center md:px-32">
             Watch our video trailers and DEMO video:{" "}
             <span className={`font-bold ${robotoItalicop.className}`}>
               Myths and Reality
             </span>
             .
           </BodyText>
-          <BodyText className="text-center md:px-32">
+          <BodyText className="md:text-center md:px-32">
             Adults are encouraged to accompany young children throughout the
             learning process.
           </BodyText>
-          <BodyText className="text-center md:px-32 mt-4">
+          <BodyText className="md:text-center md:px-32 mt-4">
             Enroll today to unlock our complete animated video series.
           </BodyText>
-          <button
+          <Button
             onClick={() => (window.location.href = "/request-a-quote")}
-            className={`bg-purple-600 hover:bg-purple-700 text-white text-sm sm:px-10 py-2 sm:text-2xl mt-8 rounded-4xl transition-colors ${robotoopo.className}`}
+            className={`mt-8`}
           >
             {"Enroll Today"}
-          </button>
+          </Button>
         </div>
       </Section>
 

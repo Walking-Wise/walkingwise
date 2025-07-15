@@ -95,7 +95,7 @@ const PartTwo = () => {
 
   return (
     <>
-      <div className="flex flex-col md:flex-row flex-wrap justify-center items-center gap-6 px-4 py-10 pb-32">
+      <div className="flex flex-col md:flex-row flex-wrap justify-center items-center gap-6 px-4 py-10 pb-16 md:pb-32">
         {statsData.map((stat, index) => (
           <StatCard
             key={index}
