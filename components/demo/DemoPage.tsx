@@ -41,7 +41,7 @@ const demoContent = [
   {
     title: "Animated Video",
     subtitle: "",
-    image: "https://walking-wise-2025-website-assets.s3.us-east-1.amazonaws.com/Website_Dashboard-Education_PDFs_and_Icons/Icons+for+Website/Icon-Classroom_Presentations.png",
+    image: "https://walking-wise-2025-website-assets.s3.us-east-1.amazonaws.com/Website_Dashboard-Education_PDFs_and_Icons/Icons+for+Website/Icon-Animated_Videos.png",
     link: "https://walking-wise-2025-website-assets.s3.us-east-1.amazonaws.com/Videos-Animation/Videos+-+Website+Animation/Video-Myths_and_Reality-4-1-2025.mp4",
   },
   {
