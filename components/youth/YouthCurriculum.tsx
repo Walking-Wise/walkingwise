@@ -63,7 +63,7 @@ const YouthCurriculum = () => {
         <div className="w-full flex flex-col items-center">
           <div className="relative h-[400px] sm:h-[400px] md:h-[425px] w-[310px] sm:w-[310px] md:w-[325px] mb-6">
             <Image
-              src="/assets/youth-1.png"
+              src="https://walking-wise-2025-website-assets.s3.us-east-1.amazonaws.com/Website_Dashboard-Education_PDFs_and_Icons/Icons+for+Website/Icon-Classroom_Presentations.png"
               alt="Logo"
               fill
               className="object-cover"
@@ -137,7 +137,7 @@ const YouthCurriculum = () => {
           <div className="flex-1 flex justify-center bg-white">
             <div className="relative w-[350px] sm:w-[220px] md:w-full h-[450px]">
               <Image
-                src="/assets/youth-2.png"
+                src="https://walking-wise-2025-website-assets.s3.us-east-1.amazonaws.com/Website_Dashboard-Education_PDFs_and_Icons/Icons+for+Website/Icon-Education_Guide.png"
                 alt="Guide Resources"
                 fill
                 className="object-cover"
@@ -171,7 +171,7 @@ const YouthCurriculum = () => {
         <div className="w-full flex flex-col items-center">
           <div className="relative h-[400px] sm:h-[400px] md:h-[425px] w-[310px] sm:w-[310px] md:w-[325px]">
             <Image
-              src="/assets/youth-3.png"
+              src="https://walking-wise-2025-website-assets.s3.us-east-1.amazonaws.com/Website_Dashboard-Education_PDFs_and_Icons/Icons+for+Website/Icon-Adult_Online_Learning.png"
               alt="Logo"
               fill
               className="object-cover"
@@ -185,7 +185,7 @@ const YouthCurriculum = () => {
           </a>
           <Button
             className="mt-8"
-            onClick={() => (window.location.href = "/request-a-quote")}
+            onClick={() => (window.location.href = "/pricing")}
           >
             ENROLL Today!
           </Button>

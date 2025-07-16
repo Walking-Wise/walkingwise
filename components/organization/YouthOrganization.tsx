@@ -191,7 +191,7 @@ const YouthOrganization = () => {
             <Button onClick={() => (window.location.href = "/contact")}>
               DEMO Curriculum
             </Button>
-            <Button onClick={() => (window.location.href = "/request-a-quote")}>
+            <Button onClick={() => (window.location.href = "/pricing")}>
               ENROLL Today!
             </Button>
           </div>

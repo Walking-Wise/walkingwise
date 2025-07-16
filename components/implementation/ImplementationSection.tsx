@@ -150,7 +150,7 @@ const ImplementationSection = () => {
           <div className="flex-1 flex justify-center bg-white">
             <div className="relative w-[350px] sm:w-[220px] md:w-full h-[450px]">
               <Image
-                src="/assets/imp-1.png"
+                src="https://walking-wise-2025-website-assets.s3.us-east-1.amazonaws.com/Website_Dashboard-Education_PDFs_and_Icons/Icons+for+Website/Icon-Implementation_Guide.png"
                 alt="Implementation Toolkit"
                 fill
                 className="object-cover"
@@ -193,7 +193,7 @@ const ImplementationSection = () => {
           <div className="flex-1 flex justify-center lg:justify-end">
             <div className="relative w-[350px] sm:w-[220px] md:w-full h-[450px]">
               <Image
-                src="/assets/imp-3.png"
+                src="https://walking-wise-2025-website-assets.s3.us-east-1.amazonaws.com/Website_Dashboard-Education_PDFs_and_Icons/Icons+for+Website/Icon-Protocol_Tool-Implement_Guide.png"
                 alt="Protocol Tools"
                 fill
                 className="object-contain"
@@ -232,14 +232,14 @@ const ImplementationSection = () => {
             <div className="w-full flex flex-col items-center">
               <div className="relative w-[350px] sm:w-[220px] md:w-full h-[450px]">
                 <Image
-                  src="/assets/imp-4.png"
+                  src="https://walking-wise-2025-website-assets.s3.us-east-1.amazonaws.com/Website_Dashboard-Education_PDFs_and_Icons/Icons+for+Website/Icon-Anonymous_Assessment-Implement_Guide.png"
                   alt="Anonymous Assessments"
                   fill
                   className="object-contain"
                 />
               </div>
               <Button
-                onClick={() => (window.location.href = "/request-a-quote")}
+                onClick={() => (window.location.href = "/pricing")}
                 className="md:mt-6"
               >
                 ENROLL Today!
