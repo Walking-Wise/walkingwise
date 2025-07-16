@@ -126,7 +126,7 @@ const SchoolDistrictPrograms = () => {
             <Button onClick={() => (window.location.href = "/demo")}>
               DEMO Curriculum
             </Button>
-            <Button onClick={() => (window.location.href = "/request-a-quote")}>
+            <Button onClick={() => (window.location.href = "/pricing")}>
               ENROLL Today!
             </Button>
           </div>

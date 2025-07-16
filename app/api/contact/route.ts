@@ -12,6 +12,7 @@ export async function POST(req: Request) {
     await sgMail.send({
       to: "support@walkingwise.com",
       from: "support@walkingwise.com",
+      cc: "karla.highman@walkingwise.com",
       subject: `Quote Request from ${name}`,
       text: `
         Name: ${name}

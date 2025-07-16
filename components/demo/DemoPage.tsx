@@ -41,26 +41,26 @@ const demoContent = [
   {
     title: "Animated Video",
     subtitle: "",
-    image: "demo-6.png",
+    image: "https://walking-wise-2025-website-assets.s3.us-east-1.amazonaws.com/Website_Dashboard-Education_PDFs_and_Icons/Icons+for+Website/Icon-Classroom_Presentations.png",
     link: "https://walking-wise-2025-website-assets.s3.us-east-1.amazonaws.com/Videos-Animation/Videos+-+Website+Animation/Video-Myths_and_Reality-4-1-2025.mp4",
   },
   {
     title: "Lesson Plan",
     subtitle: "",
-    image: "Education_guide.png",
+    image: "https://walking-wise-2025-website-assets.s3.us-east-1.amazonaws.com/Website_Dashboard-Education_PDFs_and_Icons/Icons+for+Website/Icon-Education_Guide.png",
     objectClass: "!object-scale-down",
     link: "https://walking-wise-2025-website-assets.s3.us-east-1.amazonaws.com/Website_Dashboard-Education_PDFs_and_Icons/PDFs_Guildes_OtherDocs/DEMO_L~1.PDF",
   },
   {
     title: "Class Presentation",
     subtitle: "",
-    image: "demo-5.png",
+    image: "https://walking-wise-2025-website-assets.s3.us-east-1.amazonaws.com/Website_Dashboard-Education_PDFs_and_Icons/Icons+for+Website/Icon-Classroom_Presentations.png",
     link: "https://walking-wise-2025-website-assets.s3.us-east-1.amazonaws.com/Classroom+Presentation+Assets/Classroom+PowerPoint+Presentations/DEMO+PowerPoint-Myths%2BReality_WalkingWise-7-1-2025.pptx",
   },
   {
     title: "Implementation",
     subtitle: "",
-    image: "5-step.png",
+    image: "https://walking-wise-2025-website-assets.s3.us-east-1.amazonaws.com/Website_Dashboard-Education_PDFs_and_Icons/Icons+for+Website/Icon-5_Step_Process-Implementation_Guide.png",
     link: "https://walking-wise-2025-website-assets.s3.us-east-1.amazonaws.com/Website_Dashboard-Education_PDFs_and_Icons/PDFs_Guildes_OtherDocs/FIVE_S~1.PDF",
   },
 ];
@@ -184,7 +184,7 @@ const DemoPage = () => {
                 <div key={i} className="flex flex-col items-center gap-4">
                   <div className="relative aspect-square w-full h-auto max-w-[400px]">
                     <Image
-                      src={`/assets/${image}`}
+                      src={image}
                       alt={title}
                       fill
                       className={`object-contain rounded-lg ${objectClass}`}

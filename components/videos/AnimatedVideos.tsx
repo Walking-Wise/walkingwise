@@ -220,7 +220,7 @@ const AnimatedVideos = () => {
             Enroll today to unlock our complete animated video series.
           </BodyText>
           <Button
-            onClick={() => (window.location.href = "/request-a-quote")}
+            onClick={() => (window.location.href = "/pricing")}
             className={`mt-8`}
           >
             {"Enroll Today"}

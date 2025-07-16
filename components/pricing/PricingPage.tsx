@@ -207,9 +207,9 @@ const PricingPage = () => {
             Walking Wise: Sexual Exploitation Education
           </h3>
           <p>
-            A self-paced course that offers a clear,
-            comprehensive understanding of the U.S. commercial sex trade—and how
-            it affects children and teens.
+            A self-paced course that offers a clear, comprehensive understanding
+            of the U.S. commercial sex trade—and how it affects children and
+            teens.
           </p>
 
           <ul className="mt-6 space-y-2 text-sm lg:text-base">
@@ -242,7 +242,12 @@ const PricingPage = () => {
             <p>✔ 12 month access.</p>
           </div>
 
-          <button className="bg-purple-600 hover:bg-purple-700 text-white py-2 mt-6 rounded-md text-center">
+          <button
+            onClick={() => {
+              window.location.href = "/request-a-quote";
+            }}
+            className="bg-purple-600 hover:bg-purple-700 text-white py-2 mt-6 rounded-md text-center"
+          >
             Get The Online Course
           </button>
         </div>
