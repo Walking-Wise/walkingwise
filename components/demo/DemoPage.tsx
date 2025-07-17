@@ -55,7 +55,7 @@ const demoContent = [
     title: "Class Presentation",
     subtitle: "",
     image: "https://walking-wise-2025-website-assets.s3.us-east-1.amazonaws.com/Website_Dashboard-Education_PDFs_and_Icons/Icons+for+Website/Icon-Classroom_Presentations.png",
-    link: "https://walking-wise-2025-website-assets.s3.us-east-1.amazonaws.com/Classroom+Presentation+Assets/Classroom+PowerPoint+Presentations/DEMO+PowerPoint-Myths%2BReality_WalkingWise-7-1-2025.pptx",
+    link: "https://view.officeapps.live.com/op/embed.aspx?src=https%3A%2F%2Fwalking-wise-2025-website-assets.s3.us-east-1.amazonaws.com%2FClassroom%2BPresentation%2BAssets%2FClassroom%2BPowerPoint%2BPresentations%2FDEMO%2BPowerPoint-Myths%252BReality_WalkingWise-7-1-2025.pptx",
   },
   {
     title: "Implementation",

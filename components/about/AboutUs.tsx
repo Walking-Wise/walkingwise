@@ -12,21 +12,21 @@ import BodyText from "../ui/BodyText/BodyText";
 import Button from "../ui/Button/Button";
 
 const imageData = [
-  { src: "/assets/about-2.png", name: " Bekah Charleston, MA", title: " Survivor: Bekah Speaks Out" },
-  { src: "/assets/about-3.png", name: " Jon Ferry", title: " Survivor Advocate" },
-  { src: "/assets/about-4.png", name: " Jasmine Myers, MS", title: " Survivor & Advisor" },
-  { src: "/assets/about-5.png", name: " Carissa Phelps, JD/MBA, Esq.", title: " Survivor: RunawayGirl" },
-  { src: "/assets/about-6.png", name: " Kathy Chen, MS", title: " Trafficking Advocacy Expert" },
-  { src: "/assets/about-7.png", name: "Rachel Fischer, BSN, RN,SANE-A, SANE-P", title: " Survivor: Legal RN Consult" },
-  { src: "/assets/about-8.png", name: " Catie Reay, Survivor", title: " TikTok Infl., A Voice for Her" },
-  { src: "/assets/about-9.png", name: " Forrest Lang, Survivor ", title: "Author: Angel Blue" },
-  { src: "/assets/about-10.png", name: " Myra Strand, MA, CA", title: " Strand2 Squared Solutions" },
-  { src: "/assets/about-11.png", name: " Dr. Christi Scott Bartman", title: " Eyes Up Appalachia" },
-  { src: "/assets/about-12.png", name: " Melina Highman", title: " Survivor Advocate" },
-  { src: "/assets/about-13.png", name: " Angela Rae Clark, Survivor", title: " Love Yourself More Coaching" },
-  { src: "/assets/about-17.png", name: " Jennifer", title: " Survivor & Advisor" },
-  { src: "/assets/about-15.png", name: " Russell Strand, SSA (Ret)", title: " Strand2 Squared Solutions" },
-  { src: "/assets/about-16.png", name: " Leah Helmbrecht, BSN, RN", title: " Host: NurseConverse" },
+  { src: "/assets/about-2.png", name: " Bekah Charleston, MA", title: " Survivor: Bekah Speaks Out", link:"https://www.bekahspeaksout.com/" },
+  { src: "/assets/about-3.png", name: " Jon Ferry", title: " Survivor Advocate", link:"" },
+  { src: "/assets/about-4.png", name: " Jasmine Myers, MS", title: " Survivor & Advisor", link:"" },
+  { src: "/assets/about-5.png", name: " Carissa Phelps, JD/MBA, Esq.", title: " Survivor: RunawayGirl", link:"https://runawaygirl.com/" },
+  { src: "/assets/about-6.png", name: " Kathy Chen, MS", title: " Trafficking Advocacy Expert", link:"" },
+  { src: "/assets/about-7.png", name: "Rachel Fischer, BSN, RN,SANE-A, SANE-P", title: " Survivor: Legal RN Consult", link:"https://legalrnconsult.org/" },
+  { src: "/assets/about-8.png", name: " Catie Reay, Survivor", title: " TikTok Infl., A Voice for Her", link:"https://yellowstonevalleywoman.com/a-voice-for-her" },
+  { src: "/assets/about-9.png", name: " Forrest Lang, Survivor ", title: "Author: Angel Blue", link:"https://angelbluebook.com/" },
+  { src: "/assets/about-10.png", name: " Myra Strand, MA, CA", title: " Strand2 Squared Solutions", link:"https://strandsquared.com/" },
+  { src: "/assets/about-11.png", name: " Dr. Christi Scott Bartman", title: " Eyes Up Appalachia", link:"https://www.eyesupappalachia.org/" },
+  { src: "/assets/about-12.png", name: " Melina Highman", title: " Survivor Advocate", link:"" },
+  { src: "/assets/about-13.png", name: " Angela Rae Clark, Survivor", title: " Love Yourself More Coaching", link:"https://angelaraeclark.com/" },
+  { src: "/assets/about-17.png", name: " Jennifer", title: " Survivor & Advisor", link:"" },
+  { src: "/assets/about-15.png", name: " Russell Strand, SSA (Ret)", title: " Strand2 Squared Solutions", link:"https://strandsquared.com/" },
+  { src: "/assets/about-16.png", name: " Leah Helmbrecht, BSN, RN", title: " Host: NurseConverse", link:"https://podcasts.apple.com/us/podcast/nurse-converse-presented-by-nurse-org/id1724443873" },
 ];
 
 const descriptionTexts = [
@@ -159,7 +159,7 @@ const AboutUs = () => {
                 </div>
                 <p className={`${roboto.className} mt-4 text-center text-base sm:text-lg`}>
                   {person.name} <br />
-                  <span className={`${roboto.className} underline`}>{person.title}</span>
+                  <a href={person.link} target="_blank" className={`${roboto.className} underline`}>{person.title}</a>
                 </p>
               </div>
             ))}
