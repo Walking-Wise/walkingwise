@@ -184,7 +184,7 @@ const DemoPage = () => {
           {/* Demo Image Grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-16 sm:gap-6 md:gap-8 px-4 sm:px-6 md:px-8 md:mt-10">
             {demoContent.map(
-              ({ title, subtitle, image, objectClass = "", link }, i) => (
+              ({ title, image, objectClass = "", link }, i) => (
                 <div key={i} className="flex flex-col items-center gap-4">
                   <a
                     href={link}

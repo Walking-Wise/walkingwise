@@ -12,21 +12,96 @@ import BodyText from "../ui/BodyText/BodyText";
 import Button from "../ui/Button/Button";
 
 const imageData = [
-  { src: "/assets/about-2.png", name: " Bekah Charleston, MA", title: " Survivor: Bekah Speaks Out", link:"https://www.bekahspeaksout.com/" },
-  { src: "/assets/about-3.png", name: " Jon Ferry", title: " Survivor Advocate", link:"" },
-  { src: "/assets/about-4.png", name: " Jasmine Myers, MS", title: " Survivor & Advisor", link:"" },
-  { src: "/assets/about-5.png", name: " Carissa Phelps, JD/MBA, Esq.", title: " Survivor: RunawayGirl", link:"https://runawaygirl.com/" },
-  { src: "/assets/about-6.png", name: " Kathy Chen, MS", title: " Trafficking Advocacy Expert", link:"" },
-  { src: "/assets/about-7.png", name: "Rachel Fischer, BSN, RN,SANE-A, SANE-P", title: " Survivor: Legal RN Consult", link:"https://legalrnconsult.org/" },
-  { src: "/assets/about-8.png", name: " Catie Reay, Survivor", title: " TikTok Infl., A Voice for Her", link:"https://yellowstonevalleywoman.com/a-voice-for-her" },
-  { src: "/assets/about-9.png", name: " Forrest Lang, Survivor ", title: "Author: Angel Blue", link:"https://angelbluebook.com/" },
-  { src: "/assets/about-10.png", name: " Myra Strand, MA, CA", title: " Strand2 Squared Solutions", link:"https://strandsquared.com/" },
-  { src: "/assets/about-11.png", name: " Dr. Christi Scott Bartman", title: " Eyes Up Appalachia", link:"https://www.eyesupappalachia.org/" },
-  { src: "/assets/about-12.png", name: " Melina Highman", title: " Survivor Advocate", link:"" },
-  { src: "/assets/about-13.png", name: " Angela Rae Clark, Survivor", title: " Love Yourself More Coaching", link:"https://angelaraeclark.com/" },
-  { src: "/assets/about-17.png", name: " Jennifer", title: " Survivor & Advisor", link:"" },
-  { src: "/assets/about-15.png", name: " Russell Strand, SSA (Ret)", title: " Strand2 Squared Solutions", link:"https://strandsquared.com/" },
-  { src: "/assets/about-16.png", name: " Leah Helmbrecht, BSN, RN", title: " Host: NurseConverse", link:"https://podcasts.apple.com/us/podcast/nurse-converse-presented-by-nurse-org/id1724443873" },
+  {
+    src: "/assets/about-2.png",
+    name: " Bekah Charleston, MA",
+    title: " Survivor: Bekah Speaks Out",
+    link: "https://www.bekahspeaksout.com/",
+  },
+  {
+    src: "/assets/about-3.png",
+    name: " Jon Ferry",
+    title: " Survivor Advocate",
+    link: null,
+  },
+  {
+    src: "/assets/about-4.png",
+    name: " Jasmine Myers, MS",
+    title: " Survivor & Advisor",
+    link: null,
+  },
+  {
+    src: "/assets/about-5.png",
+    name: " Carissa Phelps, JD/MBA, Esq.",
+    title: " Survivor: RunawayGirl",
+    link: "https://runawaygirl.com/",
+  },
+  {
+    src: "/assets/about-6.png",
+    name: " Kathy Chen, MS",
+    title: " Trafficking Advocacy Expert",
+    link: null,
+  },
+  {
+    src: "/assets/about-7.png",
+    name: "Rachel Fischer, BSN, RN,SANE-A, SANE-P",
+    title: " Survivor: Legal RN Consult",
+    link: "https://legalrnconsult.org/",
+  },
+  {
+    src: "/assets/about-8.png",
+    name: " Catie Reay, Survivor",
+    title: " TikTok Infl., A Voice for Her",
+    link: "https://yellowstonevalleywoman.com/a-voice-for-her",
+  },
+  {
+    src: "/assets/about-9.png",
+    name: " Forrest Lang, Survivor ",
+    title: "Author: Angel Blue",
+    link: "https://angelbluebook.com/",
+  },
+  {
+    src: "/assets/about-10.png",
+    name: " Myra Strand, MA, CA",
+    title: " Strand2 Squared Solutions",
+    link: "https://strandsquared.com/",
+  },
+  {
+    src: "/assets/about-11.png",
+    name: " Dr. Christi Scott Bartman",
+    title: " Eyes Up Appalachia",
+    link: "https://www.eyesupappalachia.org/",
+  },
+  {
+    src: "/assets/about-12.png",
+    name: " Melina Highman",
+    title: " Survivor Advocate",
+    link: null,
+  },
+  {
+    src: "/assets/about-13.png",
+    name: " Angela Rae Clark, Survivor",
+    title: " Love Yourself More Coaching",
+    link: "https://angelaraeclark.com/",
+  },
+  {
+    src: "/assets/about-17.png",
+    name: " Jennifer",
+    title: " Survivor & Advisor",
+    link: null,
+  },
+  {
+    src: "/assets/about-15.png",
+    name: " Russell Strand, SSA (Ret)",
+    title: " Strand2 Squared Solutions",
+    link: "https://strandsquared.com/",
+  },
+  {
+    src: "/assets/about-16.png",
+    name: " Leah Helmbrecht, BSN, RN",
+    title: " Host: NurseConverse",
+    link: "https://podcasts.apple.com/us/podcast/nurse-converse-presented-by-nurse-org/id1724443873",
+  },
 ];
 
 const descriptionTexts = [
@@ -45,28 +120,47 @@ const AboutUs = () => {
           image="/assets/ABOUT.jpg"
           altText="About Us"
         />
-        <Section bgColor="white" className="grid grid-cols-1 md:grid-cols-2 gap-4 pb-0 md:pb-0">
+        <Section
+          bgColor="white"
+          className="grid grid-cols-1 md:grid-cols-2 gap-4 pb-0 md:pb-0"
+        >
           <div className="bg-[#A4E4EB] min-h-[150px] flex justify-center items-center py-6">
-            <p className={`${robotoopo.className} text-[#303030] text-xl sm:text-2xl lg:text-3xl px-5`}>
-              Our <strong className="font-extrabold">VISION</strong> is to interrupt the criminal intentions of sexual predators and sex traffickers.
+            <p
+              className={`${robotoopo.className} text-[#303030] text-xl sm:text-2xl lg:text-3xl px-5`}
+            >
+              Our <strong className="font-extrabold">VISION</strong> is to
+              interrupt the criminal intentions of sexual predators and sex
+              traffickers.
             </p>
           </div>
 
           <div className="bg-[#A4E4EB] min-h-[150px] flex justify-center items-center py-6">
-            <p className={`${robotoopo.className} text-[#303030] text-xl sm:text-2xl lg:text-3xl px-5`}>
-              Our <strong className="font-extrabold">MISSION</strong> is to equip adults to educate young people about the commercial sex industry.
+            <p
+              className={`${robotoopo.className} text-[#303030] text-xl sm:text-2xl lg:text-3xl px-5`}
+            >
+              Our <strong className="font-extrabold">MISSION</strong> is to
+              equip adults to educate young people about the commercial sex
+              industry.
             </p>
           </div>
 
           <div className="bg-[#A4E4EB] min-h-[150px] flex justify-center items-center py-6">
-            <p className={`${robotoopo.className} text-[#303030] text-xl sm:text-2xl lg:text-3xl px-5`}>
-              We believe <strong className="font-extrabold">KNOWLEDGE</strong> serves as a powerful defense against manipulation and intimidation.
+            <p
+              className={`${robotoopo.className} text-[#303030] text-xl sm:text-2xl lg:text-3xl px-5`}
+            >
+              We believe <strong className="font-extrabold">KNOWLEDGE</strong>{" "}
+              serves as a powerful defense against manipulation and
+              intimidation.
             </p>
           </div>
 
           <div className="bg-[#A4E4EB] min-h-[150px] flex justify-center items-center py-6">
-            <p className={`${robotoopo.className} text-[#303030] text-xl sm:text-2xl lg:text-3xl px-5`}>
-              Our <strong className="font-extrabold">GOAL</strong> is to empower adolescents to recognize the signs of sexual exploitation and report it.
+            <p
+              className={`${robotoopo.className} text-[#303030] text-xl sm:text-2xl lg:text-3xl px-5`}
+            >
+              Our <strong className="font-extrabold">GOAL</strong> is to empower
+              adolescents to recognize the signs of sexual exploitation and
+              report it.
             </p>
           </div>
         </Section>
@@ -79,11 +173,23 @@ const AboutUs = () => {
             <SectionHeaderText className="mb-6">How We Began</SectionHeaderText>
             <div className="space-y-4">
               <BodyText className={`md:pe-10 mb-6`}>
-                Walking Wise<span className="text-sm relative -top-3">&reg; </span>
-                was born from a deeply personal experience that compelled Founder Karla Highman to take action. While traveling, Karla and friends were followed by a suspicious man who seemed fixated on her young companion. His behavior eerily resembled known human trafficking tactics used in that region at the time.
+                Walking Wise
+                <span className="text-sm relative -top-3">&reg; </span>
+                was born from a deeply personal experience that compelled
+                Founder Karla Highman to take action. While traveling, Karla and
+                friends were followed by a suspicious man who seemed fixated on
+                her young companion. His behavior eerily resembled known human
+                trafficking tactics used in that region at the time.
               </BodyText>
               <BodyText className={`md:pe-10`}>
-                Fortunately, this young female was traveling with two vigilant mothers whose instincts and quick action stopped the man's pursuit. However, Karla was left haunted by the thought of how different the outcome might have been if this vulnerable girl had been alone or with young friends. The chilling experience fueled Karla passion to create a program that equips adults to educate children about sexual predators and human traffickers, fostering awareness and self-protection.
+                Fortunately, this young female was traveling with two vigilant
+                mothers whose instincts and quick action stopped the man's
+                pursuit. However, Karla was left haunted by the thought of how
+                different the outcome might have been if this vulnerable girl
+                had been alone or with young friends. The chilling experience
+                fueled Karla passion to create a program that equips adults to
+                educate children about sexual predators and human traffickers,
+                fostering awareness and self-protection.
               </BodyText>
             </div>
           </div>
@@ -98,13 +204,21 @@ const AboutUs = () => {
                 priority
               />
             </div>
-            <p className={`${robotoop.className} mt-4 text-center text-[#303030] sm:text-lg`}>
+            <p
+              className={`${robotoop.className} mt-4 text-center text-[#303030] sm:text-lg`}
+            >
               Karla Highman, Founder <br />
-              <Link href="https://walking-wise-2025-website-assets.s3.us-east-1.amazonaws.com/Website_Dashboard-Education_PDFs_and_Icons/PDFs_Guildes_OtherDocs/About_Walking_Wise-and-Founder_Karla_Highman.pdf" className={`${robotoop.className} underline`}>
+              <Link
+                href="https://walking-wise-2025-website-assets.s3.us-east-1.amazonaws.com/Website_Dashboard-Education_PDFs_and_Icons/PDFs_Guildes_OtherDocs/About_Walking_Wise-and-Founder_Karla_Highman.pdf"
+                className={`${robotoop.className} underline`}
+              >
                 Walking Wise
               </Link>
             </p>
-            <Button className={`mt-10`} onClick={() => router.push("/youth-curriculum")}>
+            <Button
+              className={`mt-10`}
+              onClick={() => router.push("/youth-curriculum")}
+            >
               Youth Curriculum
             </Button>
           </div>
@@ -126,7 +240,8 @@ const AboutUs = () => {
 
         <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between mt-10 gap-6 sm:gap-10">
           <BodyText className={`text-white flex-1`}>
-            Explore their journies through their interview introductions and biographies.
+            Explore their journies through their interview introductions and
+            biographies.
           </BodyText>
 
           <a
@@ -157,9 +272,23 @@ const AboutUs = () => {
                     priority={index < 5}
                   />
                 </div>
-                <p className={`${roboto.className} mt-4 text-center text-base sm:text-lg`}>
+                <p
+                  className={`${roboto.className} mt-4 text-center text-base sm:text-lg`}
+                >
                   {person.name} <br />
-                  <a href={person.link} target="_blank" className={`${roboto.className} underline`}>{person.title}</a>
+                  {person.link ? (
+                    <a
+                      href={person.link}
+                      target="_blank"
+                      className={`${roboto.className} underline`}
+                    >
+                      {person.title}
+                    </a>
+                  ) : (
+                    <span className={`${roboto.className}`}>
+                      {person.title}
+                    </span>
+                  )}
                 </p>
               </div>
             ))}
@@ -167,12 +296,18 @@ const AboutUs = () => {
         </div>
       </div>
 
-      <Section bgColor="[#00c1d5]" className="justify-center items-center gap-5 sm:gap-8 text-center">
+      <Section
+        bgColor="[#00c1d5]"
+        className="justify-center items-center gap-5 sm:gap-8 text-center"
+      >
         <h1 className="text-[#303030] text-5xl sm:text-7xl px-4 sm:px-10">
           We Invite You to Join our Walking Wise Community!
         </h1>
         <BodyText className="mt-2">
-          As a self-funded organization, your subscription is vital in supporting our mission. A portion of Walking Wise's profits goes toward survivor-focused programs. We encourage our subscribers to support local advocacy groups dedicated to survivor recovery and care.
+          As a self-funded organization, your subscription is vital in
+          supporting our mission. A portion of Walking Wise's profits goes
+          toward survivor-focused programs. We encourage our subscribers to
+          support local advocacy groups dedicated to survivor recovery and care.
         </BodyText>
       </Section>
     </>
