@@ -124,7 +124,7 @@ const Navbar = () => {
         </div>
         <div className="flex items-center hidden lg:flex mt-16 space-x-8 text-[#303030] text-2xl font-bold">
           <Link href="/pricing">Enroll</Link>
-          <Link href="https://www.walkingwise.com/enrollment/members-login/">
+          <Link href="https://www.walkingwise.org/enrollment/members-login/">
             Login
           </Link>
         </div>
@@ -235,7 +235,7 @@ const Navbar = () => {
             Enroll
           </Link>
           <Link
-            href="https://www.walkingwise.com/enrollment/members-login/"
+            href="https://www.walkingwise.org/enrollment/members-login/"
             onClick={() => setIsOpen(false)}
           >
             Login
