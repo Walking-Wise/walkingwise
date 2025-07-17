@@ -71,7 +71,7 @@ const PartThree = () => {
           <button
             onClick={() =>
               (window.location.href =
-                "https://walking-wise-12-part-course.s3.us-east-1.amazonaws.com/PIM+Accreditation+Info-Walking-Wise-eLearning/content/index.html")
+                "/course")
             }
             className={`bg-[#9d1be3] ${roboto.className} mt-4 rounded-full text-sm sm:text-[16px] py-2 sm:py-3 px-4 text-white flex items-center whitespace-nowrap`}
           >
