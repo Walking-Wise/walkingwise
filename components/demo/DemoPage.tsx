@@ -41,26 +41,30 @@ const demoContent = [
   {
     title: "Animated Video",
     subtitle: "",
-    image: "https://walking-wise-2025-website-assets.s3.us-east-1.amazonaws.com/Website_Dashboard-Education_PDFs_and_Icons/Icons+for+Website/Icon-Animated_Videos.png",
+    image:
+      "https://walking-wise-2025-website-assets.s3.us-east-1.amazonaws.com/Website_Dashboard-Education_PDFs_and_Icons/Icons+for+Website/Icon-Animated_Videos.png",
     link: "https://walking-wise-2025-website-assets.s3.us-east-1.amazonaws.com/Videos-Animation/Videos+-+Website+Animation/Video-Myths_and_Reality-4-1-2025.mp4",
   },
   {
     title: "Lesson Plan",
     subtitle: "",
-    image: "https://walking-wise-2025-website-assets.s3.us-east-1.amazonaws.com/Website_Dashboard-Education_PDFs_and_Icons/Icons+for+Website/Icon-Education_Guide.png",
+    image:
+      "https://walking-wise-2025-website-assets.s3.us-east-1.amazonaws.com/Website_Dashboard-Education_PDFs_and_Icons/Icons+for+Website/Icon-Education_Guide.png",
     objectClass: "!object-scale-down",
     link: "https://walking-wise-2025-website-assets.s3.us-east-1.amazonaws.com/Website_Dashboard-Education_PDFs_and_Icons/PDFs_Guildes_OtherDocs/DEMO_L~1.PDF",
   },
   {
     title: "Class Presentation",
     subtitle: "",
-    image: "https://walking-wise-2025-website-assets.s3.us-east-1.amazonaws.com/Website_Dashboard-Education_PDFs_and_Icons/Icons+for+Website/Icon-Classroom_Presentations.png",
+    image:
+      "https://walking-wise-2025-website-assets.s3.us-east-1.amazonaws.com/Website_Dashboard-Education_PDFs_and_Icons/Icons+for+Website/Icon-Classroom_Presentations.png",
     link: "https://view.officeapps.live.com/op/embed.aspx?src=https%3A%2F%2Fwalking-wise-2025-website-assets.s3.us-east-1.amazonaws.com%2FClassroom%2BPresentation%2BAssets%2FClassroom%2BPowerPoint%2BPresentations%2FDEMO%2BPowerPoint-Myths%252BReality_WalkingWise-7-1-2025.pptx",
   },
   {
     title: "Implementation",
     subtitle: "",
-    image: "https://walking-wise-2025-website-assets.s3.us-east-1.amazonaws.com/Website_Dashboard-Education_PDFs_and_Icons/Icons+for+Website/Icon-5_Step_Process-Implementation_Guide.png",
+    image:
+      "https://walking-wise-2025-website-assets.s3.us-east-1.amazonaws.com/Website_Dashboard-Education_PDFs_and_Icons/Icons+for+Website/Icon-5_Step_Process-Implementation_Guide.png",
     link: "https://walking-wise-2025-website-assets.s3.us-east-1.amazonaws.com/Website_Dashboard-Education_PDFs_and_Icons/PDFs_Guildes_OtherDocs/FIVE_S~1.PDF",
   },
 ];
@@ -70,7 +74,7 @@ const DemoPage = () => {
     <>
       <PageBanner
         title="Curriculum Demo"
-        image="/assets/DEMO.jpg"
+        image="https://walking-wise-2025-website-assets.s3.us-east-1.amazonaws.com/Website+Hero+Banners+300dpi/DEMO_300dpi_1200x511_TEXT.jpg"
         altText="Walking Wise Education Demo"
       />
 
@@ -182,7 +186,12 @@ const DemoPage = () => {
             {demoContent.map(
               ({ title, subtitle, image, objectClass = "", link }, i) => (
                 <div key={i} className="flex flex-col items-center gap-4">
-                  <div className="relative aspect-square w-full h-auto max-w-[400px]">
+                  <a
+                    href={link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="relative aspect-square w-full h-auto max-w-[400px]"
+                  >
                     <Image
                       src={image}
                       alt={title}
@@ -190,9 +199,10 @@ const DemoPage = () => {
                       className={`object-contain rounded-lg ${objectClass}`}
                       sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 30vw"
                     />
-                  </div>
+                  </a>
+
                   <Button
-                    onClick={() => (window.location.href = link)}
+                    onClick={() => window.open(link, "_blank")}
                     bgColor="[#303030]"
                     className="md:mt-4 w-[170px] md:w-[250px] md:w-full max-w-[250px] md:min-h-[70px]"
                   >
