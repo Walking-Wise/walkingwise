@@ -82,7 +82,7 @@ const imageData = [
     src: "/assets/about-13.png",
     name: " Angela Rae Clark, Survivor",
     title: " Love Yourself More Coaching",
-    link: "https://angelaraeclark.com/",
+    link: null,
   },
   {
     src: "/assets/about-17.png",
