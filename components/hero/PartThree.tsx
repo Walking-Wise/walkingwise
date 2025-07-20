@@ -66,7 +66,7 @@ const PartThree = () => {
             alt="Logo"
             text="PIM Accreditation"
             textColor="rgb(27, 68, 116)"
-            link="https://walking-wise-12-part-course.s3.us-east-1.amazonaws.com/PIM+Accreditation+Info-Walking-Wise-eLearning/content/index.html"
+            link="https://walking-wise-2025-website-assets.s3.us-east-1.amazonaws.com/Website_Dashboard-Education_PDFs_and_Icons/PIM_Accreditation_Info_Walking-Wise-Website/content/index.html#/"
           />
           <button
             onClick={() =>

@@ -97,16 +97,22 @@ const Navbar = () => {
               {isProgramsOpen && (
                 <div className="absolute left-0 mt-2 w-48 bg-white rounded-lg shadow-lg py-2 z-50">
                   <Link
-                    href="/youth-organization"
+                    href="/school-programs"
                     className={`block px-4 py-2 text-lg hover:bg-gray-100 ${roboto.className}`}
                   >
-                    Youth Organization
+                    School Program
                   </Link>
                   <Link
                     href="/implementation"
                     className={`block px-4 py-2 text-lg hover:bg-gray-100 ${roboto.className}`}
                   >
-                    Implementation
+                    School Implementation
+                  </Link>
+                  <Link
+                    href="/youth-organization"
+                    className={`block px-4 py-2 text-lg hover:bg-gray-100 ${roboto.className}`}
+                  >
+                    Youth Organization
                   </Link>
                   <Link
                     href="/home-education"
@@ -204,16 +210,22 @@ const Navbar = () => {
             {isProgramsOpen && (
               <div className="pl-4 mt-2 space-y-2">
                 <Link
-                  href="/youth-organization"
+                  href="/school-programs"
                   className={`block px-4 py-2 text-lg hover:bg-gray-100 ${roboto.className}`}
                 >
-                  Youth Organization
+                  School Program
                 </Link>
                 <Link
                   href="/implementation"
                   className={`block px-4 py-2 text-lg hover:bg-gray-100 ${roboto.className}`}
                 >
-                  Implementation
+                  School Implementation
+                </Link>
+                <Link
+                  href="/youth-organization"
+                  className={`block px-4 py-2 text-lg hover:bg-gray-100 ${roboto.className}`}
+                >
+                  Youth Organization
                 </Link>
                 <Link
                   href="/home-education"

@@ -7,6 +7,7 @@ import Image from "next/image";
 import SectionHeaderText from "../ui/SectionHeaderText/SectionHeaderText";
 import BodyText from "../ui/BodyText/BodyText";
 import Button from "../ui/Button/Button";
+import Section from "../ui/Section/Section";
 
 const cardData = [
   {
@@ -35,8 +36,8 @@ const cardData = [
     title: "THE PREDATORS",
     topics: [
       "Human Traffickers",
-      "Recruiters",
-      "Familial Traffickers",
+      "Female Recruiters",
+      "Family Secret",
       "Hidden Buyers",
     ],
     middle: "8th Grade",
@@ -54,7 +55,10 @@ const SchoolDistrictPrograms = () => {
       />
 
       {/* Testimonial + Intro Section */}
-      <div className="w-full max-w-[1800px] mx-auto px-6 sm:px-12 md:px-20 lg:px-32 flex flex-col xl:flex-row items-center gap-10 md:gap-24 py-16 md:py-26">
+      <Section
+        bgColor="white"
+        className="=flex flex-col xl:flex-row items-center gap-10 md:gap-24"
+      >
         <div className="flex flex-col justify-center items-center">
           <div className="bg-[#303030] text-[#303030] border-2 border-white w-[380px] h-[380px] sm:w-[550px] sm:h-[550px] p-4 rounded-full flex flex-col justify-center items-center text-center z-50">
             <p
@@ -96,7 +100,7 @@ const SchoolDistrictPrograms = () => {
             important awareness, its impact is often short-lived. Walking Wise
             offers a sustainable, school-led solution—empowering school safety
             teams to integrate prevention education into their middle and high
-            school curriculum over time.
+            school curricula over time.
           </BodyText>
           <BodyText className={`mt-4 sm:mt-6`}>
             This ongoing approach helps students build lasting awareness,
@@ -105,10 +109,13 @@ const SchoolDistrictPrograms = () => {
             predators.
           </BodyText>
         </div>
-      </div>
+      </Section>
 
       {/* District Rollout Section */}
-      <div className="w-full max-w-[1800px] mx-auto px-6 sm:px-12 md:px-20 lg:px-32 lg:py-32 py-16 bg-[#00C1D5] text-[#303030] flex flex-col lg:flex-row gap-10">
+      <Section
+        bgColor="[#00C1D5]"
+        className="text-[#303030] flex flex-col lg:flex-row gap-10"
+      >
         {/* Left Content */}
         <div className="flex-1">
           <SectionHeaderText>District Rollout</SectionHeaderText>
@@ -166,10 +173,10 @@ const SchoolDistrictPrograms = () => {
             </li>
           </ul>
         </div>
-      </div>
+      </Section>
 
       {/* School Program Rollout */}
-      <div className="w-full max-w-[1800px] mx-auto px-6 sm:px-12 md:px-20 lg:px-32 py-16 lg:py-24 bg-white text-[#303030]">
+      <Section bgColor="white">
         <div className="flex justify-between items-center">
           <SectionHeaderText className="text-4xl sm:text-6xl">
             School Program Rollout
@@ -182,22 +189,48 @@ const SchoolDistrictPrograms = () => {
           />
         </div>
         <BodyText className={`mt-4 sm:mt-6`}>
-          While most adults successfully use our training and tools to educate
-          about child exploitation, Walking Wise strongly encourages school
-          social workers, resource officers, nurses, and wellness-focused
-          teachers to leverage their expertise in leading this safety initiative
-          on 12 critical issues
+          For a smooth and sustainable rollout, we recommend teaching one
+          segment per grade level over three consecutive years. This flexible
+          approach works well for both middle schools (6th–8th grades) and high
+          schools (9th–11th grades), allowing educators to build knowledge
+          gradually without overwhelming students or staff.
         </BodyText>
 
         <div className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-3 xl:grid-cols-3 my-10 gap-6 md:gap-10 items-center">
           {cardData.map((card, index) => (
             <div
               key={index}
-              className="bg-white h-[300px] mx-auto sm:h-[350px] md:h-[400px] w-full max-w-[400px] flex justify-evenly p-4 items-center flex-col"
+              className="bg-[#00c1d5] mx-auto w-full max-w-[400px] flex px-0 pb-8 pt-0 items-center flex-col"
             >
+              <div className="flex justify-between px-4 sm:px-6 py-4 mb-6 md:px-2 xl:px-8 w-full bg-[#303030]">
+                <div className="flex flex-col items-center">
+                  <p
+                    className={`${roboto.className} text-sm sm:text-base md:text-md xl:text-xl text-white`}
+                  >
+                    Middle Schools
+                  </p>
+                  <p
+                    className={`${roboto.className} text-white text-lg xl:text-2xl`}
+                  >
+                    {card.middle}
+                  </p>
+                </div>
+                <div className="flex flex-col items-center">
+                  <p
+                    className={`${roboto.className} text-sm sm:text-base md:text-md xl:text-xl text-white`}
+                  >
+                    High Schools
+                  </p>
+                  <p
+                    className={`${roboto.className} text-white text-lg xl:text-2xl`}
+                  >
+                    {card.high}
+                  </p>
+                </div>
+              </div>
               <div className="text-center flex flex-col gap-2">
                 <h1
-                  className={`${roboto.className} text-[#00778B] text-2xl sm:text-3xl md:text-2xl xl:text-3xl`}
+                  className={`${roboto.className} text-white text-2xl sm:text-3xl md:text-2xl xl:text-3xl`}
                 >
                   {card.title}
                 </h1>
@@ -210,40 +243,13 @@ const SchoolDistrictPrograms = () => {
                   </p>
                 ))}
               </div>
-
-              <div className="flex justify-between px-4 sm:px-6 md:px-2 xl:px-6 w-full">
-                <div>
-                  <p
-                    className={`${roboto.className} text-sm sm:text-base md:text-md xl:text-xl`}
-                  >
-                    Middle Schools
-                  </p>
-                  <p
-                    className={`${roboto.className} text-[#00778B] text-lg xl:text-xl`}
-                  >
-                    {card.middle}
-                  </p>
-                </div>
-                <div>
-                  <p
-                    className={`${roboto.className} text-sm sm:text-base md:text-md xl:text-xl`}
-                  >
-                    High Schools
-                  </p>
-                  <p
-                    className={`${roboto.className} text-[#00778B] text-lg xl:text-xl`}
-                  >
-                    {card.high}
-                  </p>
-                </div>
-              </div>
             </div>
           ))}
         </div>
-      </div>
+      </Section>
 
       {/* Safety Teams Section */}
-      <div className="w-full max-w-[1800px] mx-auto px-6 sm:px-12 md:px-20 lg:px-32 py-16 lg:py-32 bg-[#303030] text-white">
+      <Section bgColor="[#303030]" className="text-white">
         <SectionHeaderText color="white">School Safety Teams</SectionHeaderText>
         <BodyText className={`mt-4 sm:mt-6 text-white lg:text-white`}>
           In 2021, the U.S. Department of Education provided guidelines for
@@ -273,7 +279,7 @@ const SchoolDistrictPrograms = () => {
           </a>
           .
         </BodyText>
-      </div>
+      </Section>
     </>
   );
 };

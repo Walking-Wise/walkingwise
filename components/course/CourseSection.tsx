@@ -26,11 +26,11 @@ const sessionData = [
         "#4 Pornography Link",
       ],
       additional:
-        "Grooming is an illegal act, but prosecuting such cases is challenging due to the difficulty of proving criminal intent without a sexual assault occurring. Education for adults, adolescents, and youth will empower communities to recognize forms of manipulation and report grooming before offenders have the chance to commit sexual crimes.",
+        "Grooming is an illegal act, but prosecuting such cases is challenging due to the difficulty of proving criminal intent without a sexual assault occurring. Education for adults and adolescents will empower communities to recognize forms of manipulation and report grooming before offenders have the chance to commit sexual crimes.",
     },
     objectives: [
       "Examine common sex trafficking myths and understand how these misconceptions enable society to overlook the tactics of force, fraud, and coercion that predators use to exploit victims in the commercial sex trade.",
-      "Discuss how young people can recognize inappropriate behaviors of unsafe adults to identify the key traits of trustworthy adults.",
+      "Discuss how young people can recognize inappropriate behaviors of unsafe adults and identify the key traits of trustworthy adults.",
       "Describe the grooming techniques used by sexual predators and traffickers to manipulate their targets.",
       "Examine how viewing pornography can harm young brains, normalize sexual exploitation, and contribute to the expansion of the commercial sex trade.",
     ],
@@ -180,7 +180,9 @@ const CourseSection = () => {
             </div>
 
             <div className="mt-6">
-              <p className={`text-xl sm:text-2xl ${robotoopo.className} tracking-wide lg:leading-10`}>
+              <p
+                className={`text-xl sm:text-2xl ${robotoopo.className} tracking-wide lg:leading-10`}
+              >
                 {session.description.additional}
               </p>
             </div>
@@ -205,19 +207,18 @@ const CourseSection = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center mt-4 md:mt-10">
               <Button
                 onClick={() =>
-                  (window.location.href =
-                    "https://walking-wise-12-part-course.s3.us-east-1.amazonaws.com/PIM+Accreditation+Info-Walking-Wise-eLearning/content/index.html")
+                  window.open(
+                    "https://walking-wise-2025-website-assets.s3.us-east-1.amazonaws.com/Website_Dashboard-Education_PDFs_and_Icons/PIM_Accreditation_Info_Walking-Wise-Website/content/index.html#/",
+                    "_blank"
+                  )
                 }
                 className={`bg-[#9d1be3] ${roboto.className} mt-4 rounded-full text-sm sm:text-[16px] px-6 py-3 sm:py-3 text-white text-center flex items-center justify-center whitespace-nowrap underline`}
               >
-                CME Accreditation
+                CME/CE Accreditation
               </Button>
               <Button
                 className={`bg-[#9d1be3] ${roboto.className} mt-0 md:mt-4 rounded-full text-sm sm:text-[16px] px-6 py-3 sm:py-3 text-white text-center flex items-center justify-center whitespace-nowrap`}
-                onClick={() =>
-                  (window.location.href =
-                    "/request-a-quote")
-                }
+                onClick={() => (window.location.href = "/pricing#courseCard")}
               >
                 Start Course
               </Button>
