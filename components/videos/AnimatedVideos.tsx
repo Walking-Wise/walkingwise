@@ -194,7 +194,7 @@ const AnimatedVideos = () => {
               onClick={() => (window.location.href = "/demo")}
               className={`mt-13`}
             >
-              Demo Curriculum
+              DEMO Curriculum
             </Button>
           </div>
         </div>
@@ -274,24 +274,36 @@ const AnimatedVideos = () => {
       <Dialog
         open={activeVideo !== null}
         onClose={closeModal}
-        className="fixed z-50 inset-0 flex items-center justify-center bg-black bg-opacity-50"
+        className="fixed z-50 inset-0 flex items-center justify-center"
       >
+        {/* Overlay */}
+        <div
+          className="fixed inset-0 bg-black/70"
+          onClick={closeModal} // explicitly closes when overlay is clicked
+        />
+
         {activeVideo !== null && (
-          <div className="bg-white rounded-lg overflow-hidden w-full max-w-2xl p-4 relative">
+          <div className="relative bg-white bg-opacity-95 rounded-lg overflow-hidden w-full max-w-2xl p-4 z-10 shadow-2xl">
+            {/* Close Button *inside* modal */}
             <button
               onClick={closeModal}
-              className="absolute top-2 right-2 text-gray-600 hover:text-gray-900 text-xl"
+              className="absolute top-4 right-4 bg-white border border-gray-300 rounded-full w-10 h-10 flex items-center justify-center text-gray-800 hover:bg-gray-100 hover:text-black text-2xl shadow"
+              aria-label="Close"
             >
               ×
             </button>
+
             <h2 className="text-lg font-semibold mb-4">
               {videoTitles[activeVideo]?.name}
             </h2>
-            <video
-              src={videoTitles[activeVideo]?.link}
-              controls
-              className="w-full rounded"
-            />
+
+            <div className="relative">
+              <video
+                src={videoTitles[activeVideo]?.link}
+                controls
+                className="w-full rounded bg-black/80"
+              />
+            </div>
           </div>
         )}
       </Dialog>

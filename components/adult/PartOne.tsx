@@ -8,10 +8,13 @@ import {
   robotoop,
 } from "../../public/fonts/Fonts";
 import PageBanner from "../ui/PageBanner/PageBanner";
+import Section from "../ui/Section/Section";
+import SectionHeaderText from "../ui/SectionHeaderText/SectionHeaderText";
+import BodyText from "../ui/BodyText/BodyText";
 
 const PartOne = () => {
   return (
-    <section className="w-full">
+    <>
       <PageBanner
         title="ONLINE COURSE FOR ADULTS"
         image="/assets/ADULT.jpg"
@@ -19,35 +22,30 @@ const PartOne = () => {
       />
 
       {/* Section Content Wrapper */}
-      <div className="w-full max-w-[1800px] mx-auto px-6 sm:px-12 md:px-20 lg:px-26 pt-8 md:pt-16 pb-16 lg:pb-24">
+      <Section bgColor="white" className="pt-8 md:pt-16 pb-16 lg:pb-24">
         {/* Top Section */}
         <div className="flex flex-col lg:flex-row justify-center items-center lg:items-start gap-8 lg:gap-16">
           {/* Text Content */}
           <div className="w-full">
-            <h1 className="text-4xl sm:text-6xl md:text-5xl text-[#303030] tracking-normal md:mb-6 lg:mt-12">
+            <SectionHeaderText>
               Walking Wise: Sexual Exploitation Education
-            </h1>
-            <div className="space-y-6">
-              <p
-                className={`${robotoopo.className} text-lg text-[#303030] sm:text-xl mt-4 md:mt-10 lg:text-2xl tracking-wide xl:text-2xl`}
-              >
-                Backed by thorough research and expert insights, this course
-                provides medical professionals, educators, youth leaders, and
-                parents with a comprehensive understanding of the U.S.
-                commercial sex trade and its profound impact on children.
-              </p>
-              <p
-                className={`${robotoopo.className} text-lg sm:text-xl text-[#303030] mt-8 lg:text-2xl tracking-wide xl:text-2xl`}
-              >
-                Walking Wise
-                <span className="text-sm relative -top-3">&reg; </span>
-                blends a trauma-informed approach with evidence-based education.
-                Survivor and attorney Carissa Phelps conducted a legal review to
-                uphold the integrity and credibility of the content. The course
-                delivers complex topics in digestible segments, featuring
-                interviews with a dozen survivor leaders and advocacy experts.
-              </p>
-            </div>
+            </SectionHeaderText>
+
+            <BodyText className={`mb-6 mt-4 sm:mt-6`}>
+              Backed by thorough research and expert insights, this course
+              provides medical professionals, educators, youth leaders, and
+              parents with a comprehensive understanding of the U.S. commercial
+              sex trade and its profound impact on children.
+            </BodyText>
+            <BodyText className="mt-8">
+              Walking Wise
+              <span className="text-sm relative -top-3">&reg; </span>
+              blends a trauma-informed approach with evidence-based education.
+              Survivor and attorney Carissa Phelps conducted a legal review to
+              uphold the integrity and credibility of the content. The course
+              delivers complex topics in digestible segments, featuring
+              interviews with a dozen survivor leaders and advocacy experts.
+            </BodyText>
           </div>
 
           {/* Right Side Content */}
@@ -87,15 +85,15 @@ const PartOne = () => {
             </div>
 
             {/* Logo and Button */}
-            <div className="flex justify-center items-center gap-6">
-              <div className="relative h-[80px] w-[80px] sm:h-[120px] sm:w-[120px] lg:h-[100px] lg:w-[100px]">
+            <div className="flex justify-center items-center gap-6 mt-4">
+              {/* <div className="relative h-[80px] w-[80px] sm:h-[120px] sm:w-[120px] lg:h-[100px] lg:w-[100px]">
                 <Image
                   src="/assets/home-1.png"
                   alt="PIM Accreditation"
                   fill
                   className="object-cover"
                 />
-              </div>
+              </div> */}
               <button
                 className={`bg-[#1C4675] hover:bg-[#2e3e4f] text-white px-6 sm:px-10 py-4 text-base sm:text-xl rounded-3xl transition-colors ${robotoopo.className}`}
               >
@@ -161,8 +159,8 @@ const PartOne = () => {
             ))}
           </div>
         </div>
-      </div>
-    </section>
+      </Section>
+    </>
   );
 };
 

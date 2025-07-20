@@ -16,6 +16,11 @@ import Button from "../ui/Button/Button";
 
 const resourceItems = [
   {
+    title: "Online Course",
+    description:
+      "Take the first module of the Walking Wise online course for adults",
+  },
+  {
     title: "Animated Video",
     description:
       "Watch a 3-minute animation that brings key ideas from Myths & Reality to life.",
@@ -30,14 +35,16 @@ const resourceItems = [
     description:
       "Preview the Myths & Reality slides to see how we engage parents and students.",
   },
-  {
-    title: "Implementation",
-    description:
-      "Download the five simple steps to integrate Walking Wise into youth education.",
-  },
 ];
 
 const demoContent = [
+  {
+    title: "Online Course",
+    subtitle: "",
+    image:
+      "https://walking-wise-2025-website-assets.s3.us-east-1.amazonaws.com/Website_Dashboard-Education_PDFs_and_Icons/Icons+for+Website/Icon-Adult_Online_Learning.png",
+    link: "https://walking-wise-2025-website-assets.s3.us-east-1.amazonaws.com/Website_Dashboard-Education_PDFs_and_Icons/DEMO-Myths_Reality_Walking-Wise_Online_Lesson/content/index.html",
+  },
   {
     title: "Animated Video",
     subtitle: "",
@@ -59,13 +66,6 @@ const demoContent = [
     image:
       "https://walking-wise-2025-website-assets.s3.us-east-1.amazonaws.com/Website_Dashboard-Education_PDFs_and_Icons/Icons+for+Website/Icon-Classroom_Presentations.png",
     link: "https://view.officeapps.live.com/op/embed.aspx?src=https%3A%2F%2Fwalking-wise-2025-website-assets.s3.us-east-1.amazonaws.com%2FClassroom%2BPresentation%2BAssets%2FClassroom%2BPowerPoint%2BPresentations%2FDEMO%2BPowerPoint-Myths%252BReality_WalkingWise-7-1-2025.pptx",
-  },
-  {
-    title: "Implementation",
-    subtitle: "",
-    image:
-      "https://walking-wise-2025-website-assets.s3.us-east-1.amazonaws.com/Website_Dashboard-Education_PDFs_and_Icons/Icons+for+Website/Icon-5_Step_Process-Implementation_Guide.png",
-    link: "https://walking-wise-2025-website-assets.s3.us-east-1.amazonaws.com/Website_Dashboard-Education_PDFs_and_Icons/PDFs_Guildes_OtherDocs/FIVE_S~1.PDF",
   },
 ];
 
@@ -183,38 +183,48 @@ const DemoPage = () => {
 
           {/* Demo Image Grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-16 sm:gap-6 md:gap-8 px-4 sm:px-6 md:px-8 md:mt-10">
-            {demoContent.map(
-              ({ title, image, objectClass = "", link }, i) => (
-                <div key={i} className="flex flex-col items-center gap-4">
-                  <a
-                    href={link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="relative aspect-square w-full h-auto max-w-[400px]"
-                  >
-                    <Image
-                      src={image}
-                      alt={title}
-                      fill
-                      className={`object-contain rounded-lg ${objectClass}`}
-                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 30vw"
-                    />
-                  </a>
+            {demoContent.map(({ title, image, objectClass = "", link }, i) => (
+              <div key={i} className="flex flex-col items-center gap-4">
+                <a
+                  href={link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="relative aspect-square w-full h-auto max-w-[400px]"
+                >
+                  <Image
+                    src={image}
+                    alt={title}
+                    fill
+                    className={`object-contain rounded-lg ${objectClass}`}
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 30vw"
+                  />
+                </a>
 
-                  <Button
-                    onClick={() => window.open(link, "_blank")}
-                    bgColor="[#303030]"
-                    className="md:mt-4 w-[170px] md:w-[250px] md:w-full max-w-[250px] md:min-h-[70px]"
-                  >
-                    {title}
-                  </Button>
-                </div>
-              )
-            )}
+                <Button
+                  onClick={() => window.open(link, "_blank")}
+                  bgColor="[#303030]"
+                  className="md:mt-4 w-[170px] md:w-[250px] md:w-full max-w-[250px] md:min-h-[70px]"
+                >
+                  {title}
+                </Button>
+              </div>
+            ))}
           </div>
         </div>
       </Section>
-      <div className="bg-[#303030] flex justify-center h-[50px]"></div>
+      <Section bgColor="[#303030]" className="flex items-center justify-center md:py-4 lg:py-10">
+        <BodyText className="text-white md:max-w-[1200px]">
+          <a
+            href="https://calendly.com/karla-highman-walkingwise/30min?back=1&amp;month=2025-07"
+            target="_blank"
+            className="underline"
+          >
+            Schedule
+          </a>{" "}
+          a platform tour today to discover how Walking Wise can support your
+          organization's education initiatives
+        </BodyText>
+      </Section>
     </>
   );
 };

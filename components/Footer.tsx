@@ -68,17 +68,17 @@ const Footer = () => {
             { label: "Adult Course Description", href: "/course" },
             {
               label: "CME/CE Accreditation",
-              href: "https://walking-wise-12-part-course.s3.us-east-1.amazonaws.com/PIM+Accreditation+Info-Walking-Wise-eLearning/content/index.html#/",
+              href: "https://walking-wise-2025-website-assets.s3.us-east-1.amazonaws.com/Website_Dashboard-Education_PDFs_and_Icons/PIM_Accreditation_Info_Walking-Wise-Website/content/index.html#/#/",
             },
           ],
           [
             { label: "School Programs", href: "/school-programs" },
             { label: "Youth Organization", href: "/youth-organization" },
-            { label: "Implementation", href: "/implementation" },
+            { label: "School Implementation", href: "/implementation " },
             { label: "Home Education", href: "/home-education" },
           ],
           [
-            { label: "Login", href: "/" },
+            { label: "Login", href: "https://www.walkingwise.org/enrollment/members-login/" },
             { label: "My Account", href: "/" },
             {
               label: "Contact Us",

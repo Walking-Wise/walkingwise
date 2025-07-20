@@ -89,32 +89,51 @@ const ImplementationSection = () => {
 
       {/* 5-Step Framework */}
       <Section bgColor="[#303030]">
-        <div className="w-full md:px-32">
-          <div className="flex flex-row justify-between mb-12">
-            <SectionHeaderText className="text-white">
-              <span className="text-[#00c1d5]">The 5-step path</span> To
-              Implementation
-            </SectionHeaderText>
-
+        <div className="flex flex-col md:flex-row justify-evenly ">
+          <div className="flex flex-col items-center gap-4">
+            <a
+              href="https://walking-wise-2025-website-assets.s3.us-east-1.amazonaws.com/Website_Dashboard-Education_PDFs_and_Icons/PDFs_Guildes_OtherDocs/FIVE_S~1.PDF"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="relative aspect-square w-[300px] md:w-[450px]"
+            >
+              <Image
+                src="https://walking-wise-2025-website-assets.s3.us-east-1.amazonaws.com/Website_Dashboard-Education_PDFs_and_Icons/Icons+for+Website/Icon-5_Step_Process-Implementation_Guide.png"
+                alt="5 Step Path to implementation"
+                fill
+                className={`object-cover`}
+              />
+            </a>
             <Button
-              className={`md:me-24 h-[50px] px-4 md:px-8`}
+              onClick={() =>
+                window.open(
+                  "https://walking-wise-2025-website-assets.s3.us-east-1.amazonaws.com/Website_Dashboard-Education_PDFs_and_Icons/PDFs_Guildes_OtherDocs/FIVE_S~1.PDF",
+                  "_blank"
+                )
+              }
+              className={`mt-2`}
             >
               5 Step Process
             </Button>
           </div>
-          <ol className="list-decimal pl-6">
-            {steps.map((step, idx) => (
-              <li
-                key={idx}
-                className={`${robotoopo.className} text-white text-lg sm:text-xl md:text-3xl mt-2 md:mt-4`}
-              >
-                {step}
-              </li>
-            ))}
-          </ol>
+          <div className="mt-8 md: mt-0">
+            <SectionHeaderText className="text-white">
+              <span className="text-[#00c1d5]">The 5-step path</span> To
+              Implementation
+            </SectionHeaderText>
+            <ol className="list-decimal pl-6">
+              {steps.map((step, idx) => (
+                <li
+                  key={idx}
+                  className={`${robotoopo.className} text-white text-lg sm:text-xl md:text-3xl mt-2 md:mt-4`}
+                >
+                  {step}
+                </li>
+              ))}
+            </ol>
+          </div>
         </div>
       </Section>
-
       <Section bgColor="white">
         <div className="flex flex-col lg:flex-row gap-8 lg:gap-14 items-stretch">
           <div>
@@ -131,7 +150,7 @@ const ImplementationSection = () => {
           </div>
 
           <div className="flex-1 bg-[#00c1d5] text-black p-6 sm:p-8 md:pt-10 md:ps-10 md:pb-10 md:pe-0 space-y-4 flex flex-col">
-            <h1 className="font-bold text-lg sm:text-xl md:text-3xl">
+            <h1 className="font-bold text-lg sm:text-xl md:text-4xl">
               RESOURCES
             </h1>
             <ul className="list-disc list-inside space-y-1 text-lg">
@@ -148,14 +167,19 @@ const ImplementationSection = () => {
           </div>
 
           <div className="flex-1 flex justify-center bg-white">
-            <div className="relative w-[350px] sm:w-[220px] md:w-full h-[450px]">
+            <a
+              href="https://walking-wise-2025-website-assets.s3.us-east-1.amazonaws.com/Website_Dashboard-Education_PDFs_and_Icons/PDFs_Guildes_OtherDocs/Walking_Wise_Implementation_Guide.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="relative w-[350px] sm:w-[220px] md:w-full h-[450px]"
+            >
               <Image
                 src="https://walking-wise-2025-website-assets.s3.us-east-1.amazonaws.com/Website_Dashboard-Education_PDFs_and_Icons/Icons+for+Website/Icon-Implementation_Guide.png"
                 alt="Implementation Toolkit"
                 fill
                 className="object-cover"
               />
-            </div>
+            </a>
           </div>
         </div>
       </Section>
@@ -169,7 +193,7 @@ const ImplementationSection = () => {
             <BodyText>
               In 2021, the{" "}
               <a
-                href="https://www.justice.gov/archives/opa/pr/justice-department-observes-national-missing-children-s-day-4"
+                href="https://safesupportivelearning.ed.gov/sites/default/files/NCSSLE-2021HumanTraffickingGuide-508.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="underline"
@@ -180,12 +204,24 @@ const ImplementationSection = () => {
               protocols for identifying and supporting trafficked victims.”
             </BodyText>
             <BodyText className={`mt-4 md:mt-6`}>
-              In alignment with this guidance, Walking Wise collaborated with
-              law enforcement and survivor leaders to provide safety teams with
-              essential tools to support the development of school policies and
-              protocols, assess students' risk of being targeted, and recognize
-              warning signs of exploitation by sexual predators, online
-              groomers, and child traffickers.
+              Staff within a school system offer different viewpoints into a
+              student’s life that can help reveal exploitation. For instance,
+              bus drivers may have a neighborhood or front-door view of
+              suspicious activity, while school secretaries may notice patterns
+              of unusual early dismissals. Resource officers also may spot an
+              inappropriately older boyfriend/girlfriend/partner providing daily
+              transportation.
+            </BodyText>
+            <BodyText className={`mt-4 md:mt-6`}>
+              School nurses may take note of increased visits and vague health
+              complaints. Attendance officers may notice chronic absenteeism,
+              and assistant principals may recognize new or persistent
+              disciplinary matters. Coaches may notice deteriorating performance
+              or lack of participation. Teachers may observe distress signals
+              and declining grades, while parents may see their child’s sudden
+              withdrawal from family life. Any one of these indicators may be
+              inconspicuous, but together, they raise a red flag that sexual
+              abuse or exploitation may be occurring.
             </BodyText>
           </div>
 
@@ -213,17 +249,17 @@ const ImplementationSection = () => {
             <BodyText className={`mt-4 sm:mt-6`}>
               An anonymous Needs Assessment Youth Survey is an optional
               schoolwide screening tool designed to identify the need for
-              education on sexual exploitation based on various risk factors
-              within the student population. It helps uncover hidden risks that
-              may otherwise go unnoticed, providing a clearer understanding of
-              the challenges within the school community.
+              exploitation education based on various risk factors within the
+              student population. It helps uncover hidden risks that may
+              otherwise go unnoticed, providing a clearer understanding of the
+              challenges within the school community.
             </BodyText>
             <BodyText className={`mt-4 sm:mt-6`}>
               Administering an anonymous Self-Reported Youth Survey at the start
               of a program helps educators tailor content to students'
-              knowledge, attitudes, and behaviors, assisting them in meeting
-              students’ educational needs. When used as a post-survey, this tool
-              can provide valuable insight into the program’s effectiveness.
+              knowledge, attitudes, and behaviors. When used as a post-survey,
+              this tool can provide valuable insight into the program’s
+              effectiveness.
             </BodyText>
           </div>
 

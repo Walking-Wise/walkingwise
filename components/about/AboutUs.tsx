@@ -21,7 +21,7 @@ const imageData = [
   {
     src: "/assets/about-3.png",
     name: " Jon Ferry",
-    title: " Survivor Advocate",
+    title: " Survivor & Advocate",
     link: null,
   },
   {
@@ -75,7 +75,7 @@ const imageData = [
   {
     src: "/assets/about-12.png",
     name: " Melina Highman",
-    title: " Survivor Advocate",
+    title: " Survivor & Advocate",
     link: null,
   },
   {
@@ -187,7 +187,7 @@ const AboutUs = () => {
                 pursuit. However, Karla was left haunted by the thought of how
                 different the outcome might have been if this vulnerable girl
                 had been alone or with young friends. The chilling experience
-                fueled Karla passion to create a program that equips adults to
+                fueled Karla's passion to create a program that equips adults to
                 educate children about sexual predators and human traffickers,
                 fostering awareness and self-protection.
               </BodyText>

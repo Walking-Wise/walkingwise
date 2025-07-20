@@ -10,7 +10,7 @@ const cardData = [
     title: "THE GROOMERS",
     topics: [
       "Myths & Reality",
-      "Trustworthy vs. Adult",
+      "Trustworthy vs. Unsafe Adult",
       "Grooming Process",
       "Pornography Link",
     ],
@@ -48,7 +48,7 @@ const disclosureContent = {
 const PartTwo = () => {
   return (
     <>
-      <Section bgColor="white">
+      <Section bgColor="white" className="md:pb-14">
         <SectionHeaderText className="text-center lg:text-7xl md:mt-8">
           Walking Wise is recommended for adolescents,
         </SectionHeaderText>
@@ -101,7 +101,7 @@ const PartTwo = () => {
         >
           {disclosureContent.paragraphs[1]}
           <a
-            href="https://www.healthychildren.org"
+            href="https://www.healthychildren.org/English/safety-prevention/at-home/Pages/Sexual-Abuse.aspx"
             target="_blank"
             rel="noopener noreferrer"
             className="underline hover:text-blue-800"

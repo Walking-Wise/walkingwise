@@ -57,33 +57,32 @@ const PartTwo = () => {
             <SectionHeaderText color="[#00C1D5]">
               Accommodating Your Busy Schedule
             </SectionHeaderText>
-            <BodyText
-              color="white"
-            >
-              Our Walking Wise subscription gives you 6 months to complete our
+            <BodyText color="white">
+              Our Walking Wise subscription gives you one year to complete our
               12-hour online course.
             </BodyText>
 
-            <SectionHeaderText color="[#00C1D5]" className="mt-10">
+            <SectionHeaderText color="[#00C1D5]" className="mt-16">
               Set your own pace
             </SectionHeaderText>
-            <BodyText
-              color="white"
-            >
-              Dedicate about two hours per month to complete each lesson and
-              reach the Walking Wise finish line in 6 months!
+            <BodyText color="white">
+              Dedicate just one hour per month to complete each lesson and reach
+              the Walking Wise finish line!
             </BodyText>
 
             <div className="flex flex-wrap justify-center lg:justify-start items-center mt-10 gap-4">
-              {["Course Description", "Start Course"].map((label, i) => (
-                <Button
-                  key={i}
-                  className={`px-6 py-3 sm:py-3`}
-                  onClick={() => handleRedirect("/course")}
-                >
-                  {label}
-                </Button>
-              ))}
+              <Button
+                className={`px-6 py-3 sm:py-3`}
+                onClick={() => handleRedirect("/course")}
+              >
+                Course Description
+              </Button>
+              <Button
+                className={`px-6 py-3 sm:py-3`}
+                onClick={() => handleRedirect("/pricing#courseCard")}
+              >
+                Start Course
+              </Button>
             </div>
           </div>
         </div>
@@ -102,7 +101,7 @@ const PartTwo = () => {
               youth education is just as essential.
             </BodyText>
 
-            <SectionHeaderText className="mt-10">
+            <SectionHeaderText className="mt-16">
               Empower Adolescents with Knowledge
             </SectionHeaderText>
             <BodyText className={`mt-5`}>
@@ -164,7 +163,7 @@ const PartTwo = () => {
                 description:
                   "Walking Wise modules seamlessly integrate into corporate Learning Management Systems (LMS), allowing organizations to deliver education efficiently within their existing training platforms. Our SCORM-compliant modules can be uploaded directly into your LMS, ensuring associates have on-demand access to the 12 lesson series.",
                 linkText: "Contact us",
-                linkHref: "/contact",
+                linkHref: "/request-a-quote",
                 end: "today for implementation options.",
               },
               {
@@ -172,7 +171,8 @@ const PartTwo = () => {
                 description:
                   "For organizations without an LMS, our Enterprise Subscription provides associates with individual login access to the Walking Wise Learning Platform. This flexible, on-demand model allows professionals to complete the lessons at their own pace while meeting compliance and development requirements.",
                 linkText: "Schedule",
-                linkHref: "/contact",
+                linkHref:
+                  "https://calendly.com/karla-highman-walkingwise/30min?back=1&amp;month=2025-07",
                 end: "a platform tour today to discover how Walking Wise can support your organization’s education initiatives.",
               },
             ].map((box, index) => (

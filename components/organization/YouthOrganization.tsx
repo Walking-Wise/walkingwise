@@ -37,9 +37,9 @@ const YouthOrganization = () => {
       />
       <Section
         bgColor="white"
-        className="flex flex-col xl:flex-row items-center gap-10 md:gap-24 md:pb-24"
+        className="xl:flex-row items-center md:gap-24 pb-12 md:pb-16 lg:pb-16 py-0 md:py-0 lg:py-0"
       >
-        <div className="w-full md:max-w-4xl text-[#303030]">
+        <div className="md:mt-12">
           <SectionHeaderText className="mb-6">Youth Leaders</SectionHeaderText>
           <BodyText>
             Mentors play a crucial role in shaping young people’s lives,
@@ -55,7 +55,7 @@ const YouthOrganization = () => {
           </BodyText>
         </div>
 
-        <div className="bg-[#36c5d8] w-[300px] h-[300px] sm:min-w-[400px] sm:h-[400px] xl:min-w-[550px] xl:h-[550px] p-4 pt-8 border-t-3 border-white rounded-full flex flex-col justify-center items-center text-center text-[#303030]">
+        <div className="bg-[#00c1d5] w-[300px] h-[300px] sm:min-w-[400px] sm:h-[400px] xl:min-w-[550px] xl:h-[550px] p-4 pt-8 me-0 sm:me-10 border-4 xl:mt-[-30] border-white rounded-full flex flex-col justify-center items-center text-center text-white z-50">
           <h1
             className={`text-white text-2xl xl:text-6xl mb-2 md:mb-4 px-4 sm:px-8`}
           >
@@ -65,7 +65,7 @@ const YouthOrganization = () => {
           {mentorRoles.map((role, idx) => (
             <p
               key={idx}
-              className={`${robotoItalicop.className} text-sm sm:text-xl xl:text-2xl px-4 sm:px-8 mb-1`}
+              className={`${robotoItalicop.className} text-sm sm:text-xl xl:text-3xl px-4 sm:px-8 mb-1 text-[#303030]`}
             >
               {role}
             </p>
@@ -162,7 +162,7 @@ const YouthOrganization = () => {
             <div className="max-w-[900px] w-full p-6 sm:p-8 md:p-24 text-left">
               <SectionHeaderText>anti-trafficking groups</SectionHeaderText>
               <BodyText className={`mt-6`}>
-                Our education is designed to complement the vital work of
+                Our education is designed to compliment the vital work of
                 anti-trafficking organizations by streamlining the delivery of
                 impactful prevention education.
               </BodyText>
