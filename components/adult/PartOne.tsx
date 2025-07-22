@@ -95,9 +95,15 @@ const PartOne = () => {
                 />
               </div> */}
               <button
+                onClick={() =>
+                  window.open(
+                    "https://walking-wise-2025-website-assets.s3.us-east-1.amazonaws.com/Website_Dashboard-Education_PDFs_and_Icons/PIM_Accreditation_Info_Walking-Wise-Website/content/index.html#/",
+                    "_blank"
+                  )
+                }
                 className={`bg-[#1C4675] hover:bg-[#2e3e4f] text-white px-6 sm:px-10 py-4 text-base sm:text-xl rounded-3xl transition-colors ${robotoopo.className}`}
               >
-                PIM Issued CMEs
+                PIM Issued CMEs/CEs
               </button>
             </div>
           </div>

@@ -185,10 +185,10 @@ const YouthOrganization = () => {
             education & outreach in the fight against child exploitation.
           </h1>
           <div className="max-w-[1800px] mx-auto px-6 flex flex-col sm:flex-row gap-4 sm:gap-6 md:gap-8 lg:gap-10 w-full justify-center mt-8 md:mt-16 bg-[#303030]">
-            <Button onClick={() => (window.location.href = "/contact")}>
+            <Button onClick={() => (window.location.href = "/videos")}>
               Animated Videos
             </Button>
-            <Button onClick={() => (window.location.href = "/contact")}>
+            <Button onClick={() => (window.location.href = "/demo")}>
               DEMO Curriculum
             </Button>
             <Button onClick={() => (window.location.href = "/pricing")}>

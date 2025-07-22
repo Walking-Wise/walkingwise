@@ -130,7 +130,7 @@ const PricingPage = () => {
               )}
 
               <div className="mb-4">
-                <h2 className="text-xl font-semibold text-gray-800">
+                <h2 className="text-2xl font-semibold text-gray-800">
                   {plan.name}
                 </h2>
                 <p className="text-sm text-gray-500">{plan.subtext}</p>

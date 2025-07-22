@@ -43,7 +43,7 @@ const demoContent = [
     subtitle: "",
     image:
       "https://walking-wise-2025-website-assets.s3.us-east-1.amazonaws.com/Website_Dashboard-Education_PDFs_and_Icons/Icons+for+Website/Icon-Adult_Online_Learning.png",
-    link: "https://walking-wise-2025-website-assets.s3.us-east-1.amazonaws.com/Website_Dashboard-Education_PDFs_and_Icons/DEMO-Myths_Reality_Walking-Wise_Online_Lesson/content/index.html",
+    link: "https://walking-wise-2025-website-assets.s3.us-east-1.amazonaws.com/Website_Dashboard-Education_PDFs_and_Icons/DEMO-Myths_Reality_Walking_Wise_Online_Lesson/content/index.html",
   },
   {
     title: "Animated Video",
@@ -222,7 +222,7 @@ const DemoPage = () => {
             Schedule
           </a>{" "}
           a platform tour today to discover how Walking Wise can support your
-          organization's education initiatives
+          organization's education initiatives.
         </BodyText>
       </Section>
     </>

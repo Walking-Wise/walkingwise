@@ -185,7 +185,7 @@ const YouthCurriculum = () => {
           </a>
           <Button
             className="mt-8"
-            onClick={() => (window.location.href = "/pricing")}
+            onClick={() => (window.location.href = "/pricing#courseCard")}
           >
             ENROLL Today!
           </Button>
