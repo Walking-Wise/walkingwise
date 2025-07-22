@@ -184,12 +184,15 @@ const ImplementationSection = () => {
         </div>
       </Section>
       <Section bgColor="[#00c1d5]">
-        <div className="flex flex-col lg:flex-row gap-6 lg:gap-10 items-start">
-          {/* Left Section: Text */}
+        {/* flex-col on mobile / flex-row with wrapping on lg+ */}
+        <div className="flex flex-col lg:flex-row lg:flex-wrap gap-6 lg:gap-10 items-start">
+          {/* ───────── Left column ───────── */}
           <div className="flex-[2]">
             <SectionHeaderText className="text-white mb-6">
-              School Policies & Protocols
+              School Policies &amp; Protocols
             </SectionHeaderText>
+
+            {/* 1st and 2nd paragraphs stay in the left column */}
             <BodyText>
               In 2021, the{" "}
               <a
@@ -203,30 +206,20 @@ const ImplementationSection = () => {
               advised schools to “develop district or schoolwide policies and
               protocols for identifying and supporting trafficked victims.”
             </BodyText>
-            <BodyText className={`mt-4 md:mt-6`}>
+
+            <BodyText className="mt-4 md:mt-6">
               Staff within a school system offer different viewpoints into a
               student’s life that can help reveal exploitation. For instance,
-              bus drivers may have a neighborhood or front-door view of
+              bus drivers may have a neighborhood or front‑door view of
               suspicious activity, while school secretaries may notice patterns
               of unusual early dismissals. Resource officers also may spot an
               inappropriately older boyfriend/girlfriend/partner providing daily
               transportation.
             </BodyText>
-            <BodyText className={`mt-4 md:mt-6`}>
-              School nurses may take note of increased visits and vague health
-              complaints. Attendance officers may notice chronic absenteeism,
-              and assistant principals may recognize new or persistent
-              disciplinary matters. Coaches may notice deteriorating performance
-              or lack of participation. Teachers may observe distress signals
-              and declining grades, while parents may see their child’s sudden
-              withdrawal from family life. Any one of these indicators may be
-              inconspicuous, but together, they raise a red flag that sexual
-              abuse or exploitation may be occurring.
-            </BodyText>
           </div>
 
-          {/* Right Section: Image */}
-          <div className="flex-1 flex justify-center lg:justify-end">
+          {/* ───────── Image ───────── */}
+          <div className="order-3 lg:order-2 flex-1 flex justify-center lg:justify-end">
             <div className="relative w-[350px] sm:w-[220px] md:w-full h-[450px]">
               <Image
                 src="https://walking-wise-2025-website-assets.s3.us-east-1.amazonaws.com/Website_Dashboard-Education_PDFs_and_Icons/Icons+for+Website/Icon-Protocol_Tool-Implement_Guide.png"
@@ -236,6 +229,19 @@ const ImplementationSection = () => {
               />
             </div>
           </div>
+
+          {/* ───────── 3rd paragraph – full‑width on desktop, above img on mobile ───────── */}
+          <BodyText className="order-2 lg:order-3 w-full mt-4 md:mt-6">
+            School nurses may take note of increased visits and vague health
+            complaints. Attendance officers may notice chronic absenteeism, and
+            assistant principals may recognize new or persistent disciplinary
+            matters. Coaches may notice deteriorating performance or lack of
+            participation. Teachers may observe distress signals and declining
+            grades, while parents may see their child’s sudden withdrawal from
+            family life. Any one of these indicators may be inconspicuous, but
+            together, they raise a red flag that sexual abuse or exploitation
+            may be occurring.
+          </BodyText>
         </div>
       </Section>
 

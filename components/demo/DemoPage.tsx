@@ -222,7 +222,7 @@ const DemoPage = () => {
             Schedule
           </a>{" "}
           a platform tour today to discover how Walking Wise can support your
-          organization's education initiatives
+          organization's education initiatives.
         </BodyText>
       </Section>
     </>

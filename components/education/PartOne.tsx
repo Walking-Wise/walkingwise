@@ -33,7 +33,7 @@ const PartOne = () => {
           <BodyText className="mt-4">
             Walking Wise<span className="text-sm relative -top-3">&reg;</span>{" "}
             encourages parents, grandparents, and other caregivers to take
-            charge of their child’s education. It’s Walking Wise’s mission to
+            charge of their child’s education. Our Walking Wise’s mission is to
             help you hold candid conversations about sexual exploitation and
             abuse. The goal is for your child to recognize unsafe adult
             behaviors and come to you for guidance and protection.
@@ -45,7 +45,7 @@ const PartOne = () => {
           <p
             className={`${robotoItalic.className} text-lg  sm:text-3xl text-[#303030] px-15 mt-6 mb-6`}
           >
-            “Upon completing the Unsafe Adult, Grooming, and Sextortion lessons,
+            Upon completing the Unsafe Adult, Grooming, and Sextortion lessons,
             my granddaughter said,
           </p>
           <h1 className={`capitalize text-md md:mt-3 sm:text-3xl px-15 md:mb-4`}>

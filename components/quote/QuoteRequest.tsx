@@ -68,7 +68,7 @@ const QuoteRequest = () => {
   return (
     <>
       <PageBanner
-        title="Connect with us"
+        title="Request a Quote"
         image="/assets/contact-bg.png"
         altText="Connect with us"
       />
