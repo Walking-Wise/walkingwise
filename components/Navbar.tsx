@@ -237,11 +237,11 @@ const Navbar = () => {
             )}
           </div>
 
-          <Link href="/pricing" onClick={() => setIsOpen(false)}>
-            Pricing
-          </Link>
           <Link href="/demo" onClick={() => setIsOpen(false)}>
             Demo
+          </Link>
+          <Link href="/pricing" onClick={() => setIsOpen(false)}>
+            Pricing
           </Link>
           <Link href="/pricing" onClick={() => setIsOpen(false)}>
             Enroll
