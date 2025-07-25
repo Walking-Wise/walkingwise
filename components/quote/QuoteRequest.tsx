@@ -69,7 +69,7 @@ const QuoteRequest = () => {
     <>
       <PageBanner
         title="Request a Quote"
-        image="/assets/contact-bg.png"
+        image="https://walking-wise-2025-website-assets.s3.us-east-1.amazonaws.com/Website+Hero+Banners+300dpi/CONTACT_300dpi_1200x511_TEXT.jpg"
         altText="Connect with us"
       />
       <Section bgColor="white">

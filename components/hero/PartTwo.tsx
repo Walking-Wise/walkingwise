@@ -84,10 +84,10 @@ const PartTwo = () => {
         "https://www.unh.edu/ccrc/sites/default/files/media/2022-03/characteristics-of-crimes-against-juveniles_0.pdf",
     },
     {
-      value: "36.2mm",
+      value: "36.2m",
       title: "Child Sexual Exploitation",
       description:
-        "36,210,368 reports were received of suspected child sexual exploitation in 2023.",
+        "~36 million reports were received of suspected child sexual exploitation in 2023.",
       source1: "NCMEC CyberTipline Report, 2023",
       link1: "https://www.missingkids.org/cybertiplinedata",
     },

@@ -44,7 +44,7 @@ const imageData = [
   },
   {
     src: "/assets/about-7.png",
-    name: "Rachel Fischer, BSN, RN,SANE-A, SANE-P",
+    name: "Rachel Fischer, BSN, RN, SANE-A, SANE-P",
     title: " Survivor: Legal RN Consult",
     link: "https://legalrnconsult.org/",
   },
@@ -117,7 +117,7 @@ const AboutUs = () => {
       <section className="w-full">
         <PageBanner
           title="WALKING WISE MISSION"
-          image="/assets/ABOUT.jpg"
+          image="https://walking-wise-2025-website-assets.s3.us-east-1.amazonaws.com/Website+Hero+Banners+300dpi/ABOUT_300dpi_1200x511_TEXT.jpg"
           altText="About Us"
         />
         <Section
@@ -240,7 +240,7 @@ const AboutUs = () => {
 
         <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between mt-10 gap-6 sm:gap-10">
           <BodyText className={`text-white flex-1`}>
-            Explore their journies through their interview introductions and
+            Explore their journeys through their interview introductions and
             biographies.
           </BodyText>
 
