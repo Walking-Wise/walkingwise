@@ -117,7 +117,7 @@ const AnimatedVideos = () => {
       />
 
       <Section bgColor="white">
-        <SectionHeaderText>Explanation Animation</SectionHeaderText>
+        <SectionHeaderText>Animated Explanation</SectionHeaderText>
         <BodyText className="mt-4 sm:mt-6">
           Storytelling creates a strong connection with audiences, while visual
           learning enhances comprehension and retention. By combining these

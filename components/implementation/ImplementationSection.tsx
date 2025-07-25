@@ -49,7 +49,7 @@ const ImplementationSection = () => {
             <p
               className={`${robotoItalic.className} text-lg  sm:text-3xl text-[#303030] px-6`}
             >
-              curricula often gets
+              curricula often get
             </p>
             <p
               className={`${robotoItalic.className} text-lg  sm:text-3xl text-[#303030] px-6`}

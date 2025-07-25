@@ -43,7 +43,7 @@ const PartOne = () => {
           <p
             className={`${robotoItalic.className} text-md leading-[0] sm:text-4xl px-9`}
           >
-            animiated video, my
+            animated video, my
           </p>
           <p
             className={`${robotoItalic.className} text-md leading-[0] sm:text-4xl px-9`}

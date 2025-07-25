@@ -44,7 +44,7 @@ const imageData = [
   },
   {
     src: "/assets/about-7.png",
-    name: "Rachel Fischer, BSN, RN,SANE-A, SANE-P",
+    name: "Rachel Fischer, BSN, RN, SANE-A, SANE-P",
     title: " Survivor: Legal RN Consult",
     link: "https://legalrnconsult.org/",
   },
@@ -240,7 +240,7 @@ const AboutUs = () => {
 
         <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between mt-10 gap-6 sm:gap-10">
           <BodyText className={`text-white flex-1`}>
-            Explore their journies through their interview introductions and
+            Explore their journeys through their interview introductions and
             biographies.
           </BodyText>
 
