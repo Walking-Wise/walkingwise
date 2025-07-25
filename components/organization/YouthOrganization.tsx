@@ -32,7 +32,7 @@ const YouthOrganization = () => {
     <>
       <PageBanner
         title="COMBATTING EXPLOITATION"
-        image="/assets/YTH.jpg"
+        image="https://walking-wise-2025-website-assets.s3.us-east-1.amazonaws.com/Website+Hero+Banners+300dpi/YOUTHORGANIZATIONS_300dpi_1200x511_TEXT.jpg"
         altText="Youth organizations"
       />
       <Section

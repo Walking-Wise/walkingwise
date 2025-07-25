@@ -44,7 +44,7 @@ const YouthCurriculum = () => {
     <>
       <PageBanner
         title="Curriculum for Youth"
-        image="/assets/YOUTH.jpg"
+        image="https://walking-wise-2025-website-assets.s3.us-east-1.amazonaws.com/Website+Hero+Banners+300dpi/YOUTHCURRICULUM_300dpi_1200x511_TEXT.jpg"
         altText="Youth Curriculum"
       />
 

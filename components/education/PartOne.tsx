@@ -22,7 +22,7 @@ const PartOne = () => {
     <section className="w-full">
       <PageBanner
         title="PARENT GUIDED"
-        image="/assets/EDUCATION.jpg"
+        image="https://walking-wise-2025-website-assets.s3.us-east-1.amazonaws.com/Website+Hero+Banners+300dpi/HOMEEDUCATION_300dpi_1200x511_TEXT.jpg"
         altText="Parent guide"
       />
 

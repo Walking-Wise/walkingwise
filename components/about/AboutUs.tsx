@@ -117,7 +117,7 @@ const AboutUs = () => {
       <section className="w-full">
         <PageBanner
           title="WALKING WISE MISSION"
-          image="/assets/ABOUT.jpg"
+          image="https://walking-wise-2025-website-assets.s3.us-east-1.amazonaws.com/Website+Hero+Banners+300dpi/ABOUT_300dpi_1200x511_TEXT.jpg"
           altText="About Us"
         />
         <Section

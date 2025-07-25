@@ -112,7 +112,7 @@ const AnimatedVideos = () => {
     <>
       <PageBanner
         title="Animated Video Series"
-        image="/assets/video.png"
+        image="https://walking-wise-2025-website-assets.s3.us-east-1.amazonaws.com/Website+Hero+Banners+300dpi/ANIMATED_VIDEOS_300dpi_1200x511_TEXT.jpg"
         altText="Animated Video Series"
       />
 
