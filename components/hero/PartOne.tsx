@@ -68,7 +68,7 @@ const PartOne = () => {
         </div>
         <div className="w-full max-w-4xl text-black text-xl md:text-4xl text-left px-4 mt-4 md:mt-16">
           <SectionHeaderText className="lg:hidden mb-4">
-            Education That Saves Lives
+            COMBATING CHILD EXPLOITATION
           </SectionHeaderText>
           <BodyText>
             Sexual predators and child traffickers can deceive adults and entire

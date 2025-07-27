@@ -78,7 +78,7 @@ const Footer = () => {
             { label: "Home Education", href: "/home-education" },
           ],
           [
-            { label: "Login", href: "https://www.walkingwise.org/enrollment/members-login/" },
+            { label: "Login", href: "/" },
             { label: "My Account", href: "/" },
             {
               label: "Contact Us",
