@@ -117,7 +117,7 @@ const ImplementationSection = () => {
             </Button>
           </div>
           <div className="mt-8 md: mt-0">
-            <SectionHeaderText className="text-white">
+            <SectionHeaderText className="text-white mb-2 lg:mb-8">
               <span className="text-[#00c1d5]">The 5-step path</span> To
               Implementation
             </SectionHeaderText>
@@ -153,11 +153,11 @@ const ImplementationSection = () => {
             <h1 className="font-bold text-lg sm:text-xl md:text-4xl">
               RESOURCES
             </h1>
-            <ul className="list-disc list-inside space-y-1 text-lg">
+            <ul className="list-disc list-inside space-y-1 text-xl">
               <li>Student Benefits</li>
               <li>Protective Factors</li>
-              <li>Obstacles to Youth Disclosure</li>
-              <li>Five-Step Implementation Model</li>
+              <li>Obstacles to Disclosure</li>
+              <li>Five-Step Implementation</li>
               <li>Response Protocol</li>
               <li>Indicator Tool</li>
               <li>Risk Factor Tool</li>

@@ -263,8 +263,7 @@ const SchoolDistrictPrograms = () => {
           resource officers, psychologists, counselors, principals,
           wellness-focused educators, and members of their local anti-human
           trafficking coalition. With this diverse expertise, these teams are
-          well-equipped to provide staff training and educate parents and
-          students.
+          well-equipped to provide staff training, raise awareness among parents, and educate students.
         </BodyText>
         <BodyText className={`mt-4 sm:mt-6 text-white lg:text-white`}>
           For more information, please review the guidelines written for the

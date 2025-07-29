@@ -64,12 +64,12 @@ const Navbar = () => {
                   />
                 </button>
                 {isEducationOpen && (
-                  <div className="absolute left-0 mt-2 w-48 bg-white rounded-lg shadow-lg py-2 z-50">
+                  <div className="absolute left-0 mt-2 w-65 bg-white rounded-lg shadow-lg py-2 z-50">
                     <Link
-                      href="/youth-curriculum"
+                      href="/adult-education"
                       className={`block px-4 py-2 text-lg hover:bg-gray-100 ${roboto.className}`}
                     >
-                      Youth Curriculum
+                      Adult Education
                     </Link>
                     <Link
                       href="/videos"
@@ -78,10 +78,16 @@ const Navbar = () => {
                       Animated Videos
                     </Link>
                     <Link
-                      href="/adult-education"
+                      href="/youth-curriculum"
                       className={`block px-4 py-2 text-lg hover:bg-gray-100 ${roboto.className}`}
                     >
-                      Adult Education
+                      Youth Curriculum
+                    </Link>
+                    <Link
+                      href="/implementation"
+                      className={`block px-4 py-2 text-lg hover:bg-gray-100 ${roboto.className}`}
+                    >
+                      Implementation
                     </Link>
                   </div>
                 )}
@@ -100,18 +106,12 @@ const Navbar = () => {
                   />
                 </button>
                 {isProgramsOpen && (
-                  <div className="absolute left-0 mt-2 w-48 bg-white rounded-lg shadow-lg py-2 z-50">
+                  <div className="absolute left-0 mt-2 w-65 bg-white rounded-lg shadow-lg py-2 z-50">
                     <Link
                       href="/school-programs"
                       className={`block px-4 py-2 text-lg hover:bg-gray-100 ${roboto.className}`}
                     >
                       School Program
-                    </Link>
-                    <Link
-                      href="/implementation"
-                      className={`block px-4 py-2 text-lg hover:bg-gray-100 ${roboto.className}`}
-                    >
-                      School Implementation
                     </Link>
                     <Link
                       href="/youth-organization"
@@ -125,6 +125,12 @@ const Navbar = () => {
                     >
                       Home Education
                     </Link>
+                    <Link
+                      href="/public-private-sector"
+                      className={`block px-4 py-2 text-lg hover:bg-gray-100 ${roboto.className}`}
+                    >
+                      Public & Private Sector
+                    </Link>
                     {/* <Link href="/pricing" className={`block px-4 py-2 text-lg hover:bg-gray-100 ${roboto.className}`}>Pricing</Link> */}
                   </div>
                 )}
@@ -134,7 +140,6 @@ const Navbar = () => {
             </div>
           </div>
           <div className="flex items-center hidden lg:flex mt-16 space-x-8 text-[#303030] text-2xl font-bold">
-            <Link href="/pricing">Enroll</Link>
             <button onClick={openModal}>Login</button>
           </div>
 
@@ -177,10 +182,10 @@ const Navbar = () => {
               {isEducationOpen && (
                 <div className="pl-4 mt-2 space-y-2">
                   <Link
-                    href="/youth-curriculum"
+                    href="/adult-education"
                     className={`block px-4 py-2 text-lg hover:bg-gray-100 ${roboto.className}`}
                   >
-                    Youth Curriculum
+                    Adult Education
                   </Link>
                   <Link
                     href="/videos"
@@ -189,10 +194,16 @@ const Navbar = () => {
                     Animated Videos
                   </Link>
                   <Link
-                    href="/adult-education"
+                    href="/youth-curriculum"
                     className={`block px-4 py-2 text-lg hover:bg-gray-100 ${roboto.className}`}
                   >
-                    Adult Education
+                    Youth Curriculum
+                  </Link>
+                  <Link
+                    href="/implementation"
+                    className={`block px-4 py-2 text-lg hover:bg-gray-100 ${roboto.className}`}
+                  >
+                    Implementation
                   </Link>
                 </div>
               )}
@@ -219,12 +230,6 @@ const Navbar = () => {
                     School Program
                   </Link>
                   <Link
-                    href="/implementation"
-                    className={`block px-4 py-2 text-lg hover:bg-gray-100 ${roboto.className}`}
-                  >
-                    School Implementation
-                  </Link>
-                  <Link
                     href="/youth-organization"
                     className={`block px-4 py-2 text-lg hover:bg-gray-100 ${roboto.className}`}
                   >
@@ -236,6 +241,12 @@ const Navbar = () => {
                   >
                     Home Education
                   </Link>
+                  <Link
+                    href="/public-private-sector"
+                    className={`block px-4 py-2 text-lg hover:bg-gray-100 ${roboto.className}`}
+                  >
+                    Public & Private Sector
+                  </Link>
                 </div>
               )}
             </div>
@@ -245,9 +256,6 @@ const Navbar = () => {
             </Link>
             <Link href="/pricing" onClick={() => setIsOpen(false)}>
               Pricing
-            </Link>
-            <Link href="/pricing" onClick={() => setIsOpen(false)}>
-              Enroll
             </Link>
             <button
               className="w-fit"

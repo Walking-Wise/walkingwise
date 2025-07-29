@@ -72,7 +72,7 @@ const QuoteRequest = () => {
         image="https://walking-wise-2025-website-assets.s3.us-east-1.amazonaws.com/Website+Hero+Banners+300dpi/CONTACT_300dpi_1200x511_TEXT.jpg"
         altText="Connect with us"
       />
-      <Section bgColor="white">
+      {/* <Section bgColor="white">
         <SectionHeaderText className="text-red lg:text-[#ff3131]">
           Enrollment is Launching Soon!
         </SectionHeaderText>
@@ -105,8 +105,8 @@ const QuoteRequest = () => {
           </a>{" "}
           to explore school programs or adult education
         </BodyText>
-      </Section>
-      <Section bgColor="white" className="mb-20 lg:py-0">
+      </Section> */}
+      <Section bgColor="white" className="mb-20 mt-0 lg:mt-20 lg:py-0">
         <form
           onSubmit={handleSubmit}
           className="w-full mx-auto p-6 sm:p-10 bg-[#00c1d5] rounded-md"

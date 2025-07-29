@@ -18,7 +18,7 @@ const resourceItems = [
   {
     title: "Online Course",
     description:
-      "Take the first module of the Walking Wise online course for adults",
+      "Take the first module of the Walking Wise online course for adults.",
   },
   {
     title: "Animated Video",
