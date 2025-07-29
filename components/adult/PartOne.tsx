@@ -108,63 +108,6 @@ const PartOne = () => {
             </div>
           </div>
         </div>
-
-        {/* Course Lessons Section */}
-        <div className="mt-18 lg:mt-6">
-          <h1 className="text-4xl sm:text-6xl md:text-5xl text-[#303030] text-start mb-4 md:mb-10">
-            3 Part Course: 12 Lessons
-          </h1>
-
-          <div className="grid grid-cols-1 xl:grid-cols-3 gap-6 lg:gap-10">
-            {[
-              {
-                title: "THE GROOMERS",
-                lessons: [
-                  "Myths & Reality",
-                  "Trustworthy vs. Unsafe Adult",
-                  "Grooming Process",
-                  "Pornography Link",
-                ],
-              },
-              {
-                title: "THE VULNERABLE",
-                lessons: [
-                  "Sextortion Scheme",
-                  "Male Victims",
-                  "Runaways as Targets",
-                  "Rural Risks",
-                ],
-              },
-              {
-                title: "THE PREDATORS",
-                lessons: [
-                  "Traffickers",
-                  "Recruiters",
-                  "Familial Traffickers",
-                  "Hidden Buyers",
-                ],
-              },
-            ].map((section, idx) => (
-              <div key={idx} className="bg-[#00C1D5] py-12 ps-10 md:ps-16">
-                <p
-                  className={`${roboto.className} text-[#303030] text-2xl lg:text-3xl font-bold mb-4`}
-                >
-                  {section.title}
-                </p>
-                <ul className="space-y-3">
-                  {section.lessons.map((lesson, i) => (
-                    <li
-                      key={i}
-                      className={`${robotoopo.className} text-[#303030] text-xl lg:text-2xl`}
-                    >
-                      {lesson}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
-        </div>
       </Section>
     </>
   );

@@ -62,10 +62,11 @@ const Footer = () => {
             { label: "Enroll", href: "/request-a-quote" },
           ],
           [
-            { label: "Youth Curriculum", href: "/youth-curriculum" },
-            { label: "Animated Videos", href: "/videos" },
             { label: "Adult Education", href: "/adult-education" },
-            { label: "Adult Course Description", href: "/course" },
+            { label: "Animated Videos", href: "/videos" },
+            { label: "Youth Curriculum", href: "/youth-curriculum" },
+            { label: "Implementation", href: "/implementation " },
+            // { label: "Adult Course Description", href: "/course" },
             {
               label: "CME/CE Accreditation",
               href: "https://walking-wise-2025-website-assets.s3.us-east-1.amazonaws.com/Website_Dashboard-Education_PDFs_and_Icons/PIM_Accreditation_Info_Walking-Wise-Website/content/index.html#/#/",
@@ -74,8 +75,8 @@ const Footer = () => {
           [
             { label: "School Programs", href: "/school-programs" },
             { label: "Youth Organization", href: "/youth-organization" },
-            { label: "School Implementation", href: "/implementation " },
             { label: "Home Education", href: "/home-education" },
+            { label: "Public & Private Sector", href: "/public-private-sector" },
           ],
           [
             { label: "Login", href: "/" },
