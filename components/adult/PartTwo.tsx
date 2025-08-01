@@ -19,12 +19,12 @@ const PartTwo = () => {
     {
       part: "PART 1:",
       title: "THE GROOMERS",
-      color: "#ffffff",
+      color: "#00c1d5",
       headerColor: "#303030",
       textColor: "text-[#303030]",
-      boxColor: "bg-[#00c1d5]",
-      boxTextColor: "#303030",
-      highlightColor: "#00c1d5",
+      boxColor: "bg-[#303030]",
+      boxTextColor: "#ffffff",
+      highlightColor: "#ffffff",
       description: {
         intro:
           "Groomers possess the skills to deceive victims, their families, and entire communities. The process is subtle and involves forming a relationship with a vulnerable person with the intention of future sexual assault or inducing the victim to participate in a crime. ",
@@ -48,12 +48,12 @@ const PartTwo = () => {
     {
       part: "PART 2:",
       title: "THE VULNERABLE",
-      color: "#303030",
-      headerColor: "#00c1d5",
-      textColor: "text-[#ffffff]",
+      color: "#ffffff",
+      headerColor: "#303030",
+      textColor: "text-[#303030]",
       boxColor: "bg-[#00c1d5]",
       boxTextColor: "#303030",
-      highlightColor: "#ffffff",
+      highlightColor: "#00c1d5",
       description: {
         intro:
           "Children and adolescents are naturally vulnerable to sex offenders and human traffickers due to their cognitive immaturity and limited life experience, which affects their decision-making abilities. ",
@@ -77,11 +77,11 @@ const PartTwo = () => {
     {
       part: "PART 3:",
       title: "THE PREDATORS",
-      color: "#00c1d5",
-      headerColor: "#303030",
-      textColor: "text-[#303030]",
-      boxColor: "bg-[#303030]",
-      boxTextColor: "#ffffff",
+      color: "#303030",
+      headerColor: "#00c1d5",
+      textColor: "text-[#ffffff]",
+      boxColor: "bg-[#00c1d5]",
+      boxTextColor: "#303030",
       highlightColor: "#ffffff",
       description: {
         intro:
@@ -160,75 +160,104 @@ const PartTwo = () => {
               Dedicate just one hour per month to complete each lesson and reach
               the Walking Wise finish line!
             </BodyText>
-
-            <div className="flex flex-wrap justify-center lg:justify-start items-center mt-10 gap-4">
-              <Button
-                className={`px-6 py-3 sm:py-3`}
-                onClick={() => handleRedirect("/course")}
-              >
-                Course Description
-              </Button>
-              <Button
-                className={`px-6 py-3 sm:py-3`}
-                onClick={() => handleRedirect("/pricing#courseCard")}
-              >
-                Start Course
-              </Button>
-            </div>
           </div>
         </div>
       </div>
 
       {/* Section 2 */}
-      <div className="bg-white pt-12 lg:pt-24">
-        <div className="w-full max-w-[1800px] mx-auto px-6 sm:px-12 md:px-20 lg:px-32 flex flex-col xl:flex-row justify-center items-center gap-8">
-          <div className="w-full text-[#303030] text-left">
-            <SectionHeaderText>
-              Build an Anti-Trafficking Community
-            </SectionHeaderText>
-            <BodyText className={`mt-5 `}>
-              Together, we can make a real impact! While educating adults is
-              crucial, children remain the primary targets of exploitation. So,
-              youth education is just as essential.
-            </BodyText>
+      {/* <Section className="lex flex-col xl:flex-row justify-center items-center gap-8" bgColor="white">
+        <div className="w-full text-[#303030] text-left">
+          <SectionHeaderText>
+            Build an Anti-Trafficking Community
+          </SectionHeaderText>
+          <BodyText className={`mt-5 `}>
+            Together, we can make a real impact! While educating adults is
+            crucial, children remain the primary targets of exploitation. So,
+            youth education is just as essential.
+          </BodyText>
 
-            <SectionHeaderText className="mt-16">
-              Empower Adolescents with Knowledge
-            </SectionHeaderText>
-            <BodyText className={`mt-5`}>
-              We encourage course participants to put their learning into action
-              with our interactive Youth Curriculum, designed to educate
-              adolescents (ages 10 to 19) about recognizing and reporting signs
-              of sexual exploitation.
-            </BodyText>
-          </div>
-
-          <div className="flex flex-col justify-center items-center">
-            <div className="bg-[#303030] text-white w-[380px] h-[380px] sm:w-[500px] sm:h-[500px] p-4 rounded-full flex flex-col justify-center items-center text-center z-50">
-              <h1 className="text-5xl sm:text-6xl mb-4">“I LOVE IT!</h1>
-              <p
-                className={`${robotoItalic.className} text-lg mb-4 sm:text-3xl px-6 sm:mb-4`}
-              >
-                I especially love the built-in activities that keep the
-                participants engaged."
-              </p>
-              <span
-                className={`${robotoopo.className} text-[#3ab6c7] block sm:px-20 sm:text-2xl max-w-48 sm:max-w-120`}
-              >
-                Jennifer Livingston, MNSC, APRN, CPNP-PC, SANE-P
-              </span>
-            </div>
-            <Button
-              className={`mt-6`}
-              onClick={() => handleRedirect("/youth-curriculum")}
-            >
-              Youth Curriculum
-            </Button>
-          </div>
+          <SectionHeaderText className="mt-16">
+            Empower Adolescents with Knowledge
+          </SectionHeaderText>
+          <BodyText className={`mt-5`}>
+            We encourage course participants to put their learning into action
+            with our interactive Youth Curriculum, designed to educate
+            adolescents (ages 10 to 19) about recognizing and reporting signs of
+            sexual exploitation.
+          </BodyText>
         </div>
-      </div>
-      <Section bgColor="white">
-        {/* Course Lessons Section */}
+
+        <div className="flex flex-col justify-center items-center">
+          <div className="bg-[#303030] text-white w-[380px] h-[380px] sm:w-[500px] sm:h-[500px] p-4 rounded-full flex flex-col justify-center items-center text-center z-50">
+            <h1 className="text-5xl sm:text-6xl mb-4">“I LOVE IT!</h1>
+            <p
+              className={`${robotoItalic.className} text-lg mb-4 sm:text-3xl px-6 sm:mb-4`}
+            >
+              I especially love the built-in activities that keep the
+              participants engaged."
+            </p>
+            <span
+              className={`${robotoopo.className} text-[#3ab6c7] block sm:px-20 sm:text-2xl max-w-48 sm:max-w-120`}
+            >
+              Jennifer Livingston, MNSC, APRN, CPNP-PC, SANE-P
+            </span>
+          </div>
+          <Button
+            className={`mt-6`}
+            onClick={() => handleRedirect("/youth-curriculum")}
+          >
+            Youth Curriculum
+          </Button>
+        </div>
+      </Section> */}
+      <Section
+        className="lex flex-col xl:flex-row justify-center items-center gap-8"
+        bgColor="white"
+      >
+        <div className="w-full text-[#303030] text-left">
+          <SectionHeaderText>
+            3 Part Course: 12 Lessons
+          </SectionHeaderText>
+          <BodyText className="mt-4 md:pe-8">
+            Our 12-part course provides twelve contact hours, divided into three
+            sections:
+            <span className="italic font-medium">
+              {" "}
+              The Groomers, The Vulnerable, and The Predators
+            </span>
+            —each containing four lessons. Participants will review course
+            content, watch interviews with survivor leaders and advocacy
+            experts, and respond to 10 questions to earn CME/CE credit upon the
+            completion of each lesson.
+          </BodyText>
+        </div>
+
+        <div className="flex flex-col justify-center items-center">
+          <div className="bg-[#303030] text-white w-[380px] h-[380px] sm:w-[500px] sm:h-[500px] p-4 rounded-full flex flex-col justify-center items-center text-center z-50">
+            <h1 className="text-5xl sm:text-6xl mb-4">“I LOVE IT!</h1>
+            <p
+              className={`${robotoItalic.className} text-lg mb-4 sm:text-3xl px-6 sm:mb-4`}
+            >
+              I especially love the built-in activities that keep the
+              participants engaged."
+            </p>
+            <span
+              className={`${robotoopo.className} text-[#3ab6c7] block sm:px-20 sm:text-2xl max-w-48 sm:max-w-120`}
+            >
+              Jennifer Livingston, MNSC, APRN, CPNP-PC, SANE-P
+            </span>
+          </div>
+          <Button
+            className={`mt-6`}
+            onClick={() => handleRedirect("/youth-curriculum")}
+          >
+            Youth Curriculum
+          </Button>
+        </div>
+      </Section>
+
+      {/* <Section bgColor="white">
+        
         <div className="mt-18 lg:mt-6">
           <h1 className="text-4xl sm:text-6xl md:text-5xl text-[#303030] text-start mb-4 md:mb-10">
             3 Part Course: 12 Lessons
@@ -284,18 +313,13 @@ const PartTwo = () => {
             ))}
           </div>
         </div>
-      </Section>
+      </Section> */}
 
       <Section bgColor="[#303030]">
-        {/* INTRO SECTION */}
-
         <SectionHeaderText color="white">
-          WALKING WISE: SEXUAL EXPLOITATION EDUCATION
+          3 Part Course: 12 Lessons
         </SectionHeaderText>
-        <BodyText
-          color="white"
-          className="mt-4"
-        >
+        <BodyText color="white" className="mt-4">
           Our 12-part course provides twelve contact hours, divided into three
           sections:
           <span className="italic font-medium">
