@@ -51,7 +51,7 @@ const PartOne = () => {
           {/* Right Side Content */}
           <div className="w-full lg:w-auto flex flex-col justify-center items-center gap-2">
             {/* Testimonial Circle */}
-            <div className="bg-[#303030] w-[300px] h-[300px] sm:w-[400px] sm:h-[400px] xl:w-[450px] xl:h-[450px] p-4 rounded-full flex flex-col justify-center items-center text-center text-white">
+            <div className="bg-[#303030] w-[300px] h-[300px] sm:w-[400px] sm:h-[400px] xl:w-[450px] xl:h-[450px] p-4 flex flex-col justify-center items-center text-center text-white">
               <p
                 className={`${robotoItalicop.className} text-[#00c1d5] text-xl sm:text-2xl xl:text-5xl px-4 sm:px-8`}
               >

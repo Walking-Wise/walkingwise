@@ -36,7 +36,7 @@ const cardData: CardProps[] = [
     altText: "Public & Private Sectors",
     buttonText: "Public & Private Sectors",
     description:
-      "Our 12 learning modules can be integrated into your organization’s training platform or access by your associates online via a Walking Wise subscription.",
+      "Our 12 learning modules can be integrated into your organization’s training platform or accessed by your associates online via a Walking Wise enterprise subscription.",
     link: "/public-private-sector",
   },
 ];
