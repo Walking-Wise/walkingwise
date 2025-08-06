@@ -59,7 +59,6 @@ const Footer = () => {
             { label: "About Us", href: "/about" },
             { label: "Pricing", href: "/pricing" },
             { label: "Demo", href: "/demo" },
-            { label: "Enroll", href: "/request-a-quote" },
           ],
           [
             { label: "Adult Education", href: "/adult-education" },
@@ -76,7 +75,10 @@ const Footer = () => {
             { label: "School Programs", href: "/school-programs" },
             { label: "Youth Organization", href: "/youth-organization" },
             { label: "Home Education", href: "/home-education" },
-            { label: "Public & Private Sector", href: "/public-private-sector" },
+            {
+              label: "Public & Private Sector",
+              href: "/public-private-sector",
+            },
           ],
           [
             { label: "Login", href: "/" },
@@ -85,8 +87,16 @@ const Footer = () => {
               label: "Contact Us",
               href: "/contact",
             },
-            { label: "Terms of Use", href: "/" },
-            { label: "Privacy Policy", href: "/" },
+            {
+              label: "Terms of Use",
+              href: "https://walking-wise-2025-website-assets.s3.us-east-1.amazonaws.com/Walking+Wise+Terms+of+Use+2025.pdf",
+              newPage: true,
+            },
+            {
+              label: "Privacy Policy",
+              href: "https://walking-wise-2025-website-assets.s3.us-east-1.amazonaws.com/Walking+Wise+-+Privacy+Policy+2025.pdf",
+              newPage: true,
+            },
           ],
         ].map((column, index) => (
           <div
@@ -97,6 +107,7 @@ const Footer = () => {
               <Link
                 key={i}
                 href={item.href}
+                target={item.newPage ? "_blank" : "_self"}
                 className={`${robotoopo.className} text-lg sm:text-xl text-[#303030]  hover:text-[#05AFDB] cursor-pointer`}
               >
                 {item.label}
