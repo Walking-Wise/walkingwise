@@ -247,12 +247,6 @@ const PartTwo = () => {
               Jennifer Livingston, MNSC, APRN, CPNP-PC, SANE-P
             </span>
           </div>
-          <Button
-            className={`mt-6`}
-            onClick={() => handleRedirect("/youth-curriculum")}
-          >
-            Youth Curriculum
-          </Button>
         </div>
       </Section>
 
@@ -315,7 +309,7 @@ const PartTwo = () => {
         </div>
       </Section> */}
 
-      <Section bgColor="[#303030]">
+      {/* <Section bgColor="[#303030]">
         <SectionHeaderText color="white">
           3 Part Course: 12 Lessons
         </SectionHeaderText>
@@ -331,7 +325,7 @@ const PartTwo = () => {
           and respond to 10 questions to earn CME/CE credit upon the completion
           of each lesson.
         </BodyText>
-      </Section>
+      </Section> */}
 
       {/* SESSIONS */}
       {sessionData.map((session, index) => (
