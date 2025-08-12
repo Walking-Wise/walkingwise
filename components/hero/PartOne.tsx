@@ -9,7 +9,7 @@ const PartOne = () => {
       <div className="w-full relative bg-[#303030]">
         <div className="relative w-full">
           <img
-            src="/assets/HOME1.jpg"
+            src="https://walking-wise-2025-website-assets.s3.us-east-1.amazonaws.com/Website+Hero+Banners+300dpi/HOME_300dpi_1200x511_TEXT.jpg"
             alt="About Us"
             className="w-full object-contain pb-[20px] sm:pb-[40px]"
           />
