@@ -22,7 +22,7 @@ const StatCard = ({
   link2,
 }: StatCardProps) => {
   return (
-    <div className="bg-[#00C1D5] flex flex-col justify-between items-center text-center h-[370px] w-full max-w-[400px] px-3 py-4">
+    <div className="bg-[#00C1D5] flex flex-col justify-between items-center text-center h-[450px] w-full max-w-[400px] px-3 py-4">
       <div>
         <h1 className="text-6xl sm:text-7xl md:text-8xl text-[#303030] mt-5">
           {value}
@@ -95,7 +95,7 @@ const PartTwo = () => {
 
   return (
     <>
-      <div className="flex flex-col md:flex-row flex-wrap justify-center items-center gap-6 px-4 py-10 pb-16 md:pb-32">
+      <div className="flex flex-col lg:flex-row justify-center items-center gap-6 px-4 py-10 pb-16 md:pb-32">
         {statsData.map((stat, index) => (
           <StatCard
             key={index}

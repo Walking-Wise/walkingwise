@@ -12,7 +12,7 @@ const Section: React.FC<SectionProps> = ({ bgColor, children, className }) => {
       <div
         className={`
       w-full 
-      max-w-[1800px] 
+      max-w-[2000px] 
       mx-auto 
       px-6 sm:px-12 md:px-20 lg:px-26 
       flex flex-col 

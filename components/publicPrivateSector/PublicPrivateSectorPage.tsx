@@ -26,7 +26,7 @@ const PublicPrivateSectorPage = () => {
 
       <div className="bg-[#00C1D5] pt-8 md:pt-16 lg:pt-24 pb-32">
         <div
-          className="w-full max-w-[1800px] mx-auto px-6 sm:px-12 md:px-20 lg:px-32 text-[#303030]"
+          className="w-full max-w-[2000px] mx-auto px-6 sm:px-12 md:px-20 lg:px-32 text-[#303030]"
           id="p_p_sector"
         >
           <SectionHeaderText className="mt-8 mb-4">

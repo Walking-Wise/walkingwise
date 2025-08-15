@@ -106,7 +106,7 @@ const CourseSection = () => {
 
       {/* INTRO SECTION */}
       <div className="bg-white pt-8 md:pt-16 md:pb-4">
-        <div className="w-full max-w-[1800px] mx-auto px-6 sm:px-12 md:px-20 lg:px-26">
+        <div className="w-full max-w-[2000px] mx-auto px-6 sm:px-12 md:px-20 lg:px-26">
           <h1 className="text-3xl sm:text-5xl font-extrabold uppercase text-[#303030]">
             WALKING WISE: SEXUAL EXPLOITATION EDUCATION
           </h1>
@@ -135,7 +135,7 @@ const CourseSection = () => {
           className="py-8 md:py-16 pb-16 md:pb-32 w-full"
         >
           <div
-            className={`w-full max-w-[1800px] mx-auto px-6 sm:px-12 md:px-20 lg:px-26 ${session.textColor}`}
+            className={`w-full max-w-[2000px] mx-auto px-6 sm:px-12 md:px-20 lg:px-26 ${session.textColor}`}
           >
             <h1 className="text-3xl sm:text-5xl font-bold mt-2 mb-2 md:mb-16">
               <span style={{ color: session.highlightColor }}>

@@ -229,7 +229,7 @@ const AnimatedVideos = () => {
       </Section>
 
       <Section bgColor="white">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-10 max-w-[1800px] mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-10 max-w-[2000px] mx-auto">
           {Array.from({ length: 12 }, (_, i) => i + 1).map((num) => (
             <div
               key={num}
