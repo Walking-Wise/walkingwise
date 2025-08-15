@@ -135,7 +135,7 @@ const ImplementationSection = () => {
         </div>
       </Section>
       <Section bgColor="white">
-        <div className="flex flex-col lg:flex-row gap-8 lg:gap-14 items-stretch">
+        <div className="flex flex-col sm:flex-row gap-8 lg:gap-14 items-stretch">
           <div>
             <SectionHeaderText className="mb-6">
               Implementation Guide & Toolkit
@@ -149,7 +149,7 @@ const ImplementationSection = () => {
             </BodyText>
           </div>
 
-          <div className="flex-1 bg-[#00c1d5] text-black p-6 sm:p-8 md:pt-10 md:ps-10 md:pb-10 md:pe-0 space-y-4 flex flex-col">
+          <div className="flex-1 bg-[#00c1d5] min-w-[400px] max-h-[450px] text-black p-6 sm:p-8 md:pt-10 md:ps-10 md:pb-10 md:pe-0 space-y-4 flex flex-col">
             <h1 className="font-bold text-lg sm:text-xl md:text-4xl">
               RESOURCES
             </h1>
@@ -167,19 +167,14 @@ const ImplementationSection = () => {
           </div>
 
           <div className="flex-1 flex justify-center bg-white">
-            <a
-              href="https://walking-wise-2025-website-assets.s3.us-east-1.amazonaws.com/Website_Dashboard-Education_PDFs_and_Icons/PDFs_Guildes_OtherDocs/Walking_Wise_Implementation_Guide.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="relative w-[350px] sm:w-[220px] md:w-full h-[450px]"
-            >
+            <div className="relative flex-shrink-0 w-[300px] sm:w-[350px] md:w-[400px] h-[450px]">
               <Image
                 src="https://walking-wise-2025-website-assets.s3.us-east-1.amazonaws.com/Website_Dashboard-Education_PDFs_and_Icons/Icons+for+Website/Icon-Implementation_Guide.png"
-                alt="Implementation Toolkit"
+                alt="Guide Resources"
                 fill
                 className="object-cover"
               />
-            </a>
+            </div>
           </div>
         </div>
       </Section>

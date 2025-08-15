@@ -254,16 +254,16 @@ const AboutUs = () => {
         </div>
       </Section>
 
-      <div className="mt-10 md:mt-32 mb-20 mx-auto max-w-[1800px]">
+      <div className="mt-10 md:mt-32 mb-20 mx-auto max-w-[2000px]">
         <SectionHeaderText className="text-[#303030] text-2xl sm:text-6xl text-center">
           Guided by Experience: Survivor Leaders and Advocacy Experts
         </SectionHeaderText>
 
         <div className="w-full text-[#303030] px-4 sm:px-24 py-10 pb-4">
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-5 gap-6">
             {imageData.map((person, index) => (
               <div key={index} className="flex flex-col items-center">
-                <div className="relative w-[300px] h-[350px] sm:w-[350px] sm:h-[350px]">
+                <div className="relative w-[100%] h-[350px] sm:w-[100%] sm:h-[350px]">
                   <Image
                     src={person.src}
                     alt={`${person.name}, ${person.title}`}

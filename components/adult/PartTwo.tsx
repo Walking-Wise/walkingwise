@@ -109,7 +109,7 @@ const PartTwo = () => {
     <>
       {/* Section 1 */}
       <div className="bg-[#303030] py-16 lg:py-24">
-        <div className="w-full max-w-[1800px] mx-auto px-6 sm:px-12 md:px-20 lg:px-32 flex flex-col xl:flex-row items-center gap-24">
+        <div className="w-full max-w-[2000px] mx-auto px-6 sm:px-12 md:px-20 lg:px-32 flex flex-col xl:flex-row items-center gap-24">
           <div className="flex flex-col justify-center items-center">
             <div className="bg-[#00C1D5] text-[#303030] border-2 border-white w-[380px] h-[380px] sm:w-[500px] sm:h-[500px] p-4 rounded-full flex flex-col justify-center items-center text-center z-50">
               <h1 className={`text-xl mb-4 sm:text-3xl px-10 md:px-6 sm:mb-4`}>
@@ -335,7 +335,7 @@ const PartTwo = () => {
           className="py-8 md:py-16 pb-16 md:pb-32 w-full"
         >
           <div
-            className={`w-full max-w-[1800px] mx-auto px-6 sm:px-12 md:px-20 lg:px-26 ${session.textColor}`}
+            className={`w-full max-w-[2000px] mx-auto px-6 sm:px-12 md:px-20 lg:px-26 ${session.textColor}`}
           >
             <h1 className="text-3xl sm:text-5xl font-bold mt-2 mb-2 md:mb-16">
               <span style={{ color: session.highlightColor }}>

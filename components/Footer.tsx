@@ -30,7 +30,7 @@ const Footer = () => {
   return (
     <div className="bg-[#BFEBF0] py-8 md:py-16 w-full">
       {/* Main Footer Content */}
-      <div className="flex flex-col max-w-screen-2xl mx-auto md:flex-row flex-wrap justify-evenly items-start px-4 sm:px-8 lg:px-10  gap-8">
+      <div className="flex flex-col max-w-screen-2xl mx-auto md:flex-row justify-evenly items-start px-4 sm:px-8 lg:px-10">
         {/* Report Section */}
         <div className="w-full md:w-1/2 lg:w-1/3 min-w-[250px] px-4">
           <p className={`${roboto.className} mt-5 text-xl text-red-500`}>

@@ -109,7 +109,7 @@ const PricingPage = () => {
   return (
     <>
       <div className="w-full bg-[#303030] h-[80px] sm:h-[120px] flex items-center">
-        <div className="w-full max-w-[1800px] mx-auto px-6 sm:px-12 md:px-20 lg:px-26">
+        <div className="w-full max-w-[2000px] mx-auto px-6 sm:px-12 md:px-20 lg:px-26">
           <h1 className="text-white uppercase text-4xl sm:text-6xl lg:text-6xl">
             Pricing Plans
           </h1>

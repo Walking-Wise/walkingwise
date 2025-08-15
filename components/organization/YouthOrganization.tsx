@@ -75,7 +75,7 @@ const YouthOrganization = () => {
 
       {/* Safer Environments Section */}
       <div className="w-full bg-[#303030]">
-        <div className="max-w-[1800px] mx-auto px-6 sm:px-12 md:px-20 lg:px-26 flex flex-col xl:flex-row items-center gap-16 py-16 md:py-26">
+        <div className="max-w-[2000px] mx-auto px-6 sm:px-12 md:px-20 lg:px-26 flex flex-col xl:flex-row items-center gap-16 py-16 md:py-26">
           <div className="bg-white w-[350px] h-[350px] sm:min-w-[400px] sm:h-[400px] xl:min-w-[550px] xl:h-[550px] p-10 rounded-full flex flex-col justify-center items-center text-center pt-16 text-[#303030]">
             <p className={`${robotoItalic.className} text-md md:text-3xl`}>
               “Educating our children
@@ -179,12 +179,12 @@ const YouthOrganization = () => {
       </div>
 
       <div className="mx-auto px-6 text-center w-full py-32 bg-[#303030]">
-        <div className="max-w-[1800px] mx-auto md:px-26 ">
+        <div className="max-w-[2000px] mx-auto md:px-26 ">
           <h1 className="text-3xl md:text-6xl tracking-wide leading-8 lg:leading-16 text-white">
             Together, we can form a powerful partnership that strengthens both
             education & outreach in the fight against child exploitation.
           </h1>
-          <div className="max-w-[1800px] mx-auto px-6 flex flex-col sm:flex-row gap-4 sm:gap-6 md:gap-8 lg:gap-10 w-full justify-center mt-8 md:mt-16 bg-[#303030]">
+          <div className="max-w-[2000px] mx-auto px-6 flex flex-col sm:flex-row gap-4 sm:gap-6 md:gap-8 lg:gap-10 w-full justify-center mt-8 md:mt-16 bg-[#303030]">
             <Button onClick={() => (window.location.href = "/videos")}>
               Animated Videos
             </Button>

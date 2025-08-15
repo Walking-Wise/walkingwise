@@ -27,7 +27,7 @@ const PartOne = () => {
       />
 
       {/* Parent Engagement Section */}
-      <div className="w-full max-w-[1800px] mx-auto px-6 sm:px-12 md:px-20 lg:px-26 flex flex-col xl:flex-row items-center md:gap-24 pb-12 md:pb-16">
+      <div className="w-full max-w-[2000px] mx-auto px-6 sm:px-12 md:px-20 lg:px-26 flex flex-col xl:flex-row items-center md:gap-24 pb-12 md:pb-16">
         <div className="mt-12 max-w-3xl">
           <SectionHeaderText>Parent & Caregiver Engagement</SectionHeaderText>
           <BodyText className="mt-4">
