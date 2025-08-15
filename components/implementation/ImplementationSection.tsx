@@ -135,7 +135,7 @@ const ImplementationSection = () => {
         </div>
       </Section>
       <Section bgColor="white">
-        <div className="flex flex-col sm:flex-row gap-8 lg:gap-14 items-stretch">
+        <div className="flex flex-col md:flex-row gap-8 lg:gap-14 items-stretch">
           <div>
             <SectionHeaderText className="mb-6">
               Implementation Guide & Toolkit
