@@ -92,7 +92,7 @@ const ImplementationSection = () => {
         <div className="flex flex-col md:flex-row justify-evenly ">
           <div className="flex flex-col items-center gap-4">
             <a
-              href="https://walking-wise-2025-website-assets.s3.us-east-1.amazonaws.com/Website_Dashboard-Education_PDFs_and_Icons/PDFs_Guildes_OtherDocs/FIVE_S~1.PDF"
+              href="https://walking-wise-2025-website-assets.s3.us-east-1.amazonaws.com/Website_Dashboard-Education_PDFs_and_Icons/PDFs_Guildes_OtherDocs/Five_Step_Implementation-Walking_Wise.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="relative aspect-square w-[300px] md:w-[450px]"
@@ -107,7 +107,7 @@ const ImplementationSection = () => {
             <Button
               onClick={() =>
                 window.open(
-                  "https://walking-wise-2025-website-assets.s3.us-east-1.amazonaws.com/Website_Dashboard-Education_PDFs_and_Icons/PDFs_Guildes_OtherDocs/FIVE_S~1.PDF",
+                  "https://walking-wise-2025-website-assets.s3.us-east-1.amazonaws.com/Website_Dashboard-Education_PDFs_and_Icons/PDFs_Guildes_OtherDocs/Five_Step_Implementation-Walking_Wise.pdf",
                   "_blank"
                 )
               }
