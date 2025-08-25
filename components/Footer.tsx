@@ -69,6 +69,7 @@ const Footer = () => {
             {
               label: "CME/CE Accreditation",
               href: "https://walking-wise-2025-website-assets.s3.us-east-1.amazonaws.com/Website_Dashboard-Education_PDFs_and_Icons/PIM_Accreditation_Info_Walking-Wise-Website/content/index.html#/#/",
+              newPage: true
             },
           ],
           [
