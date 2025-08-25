@@ -58,7 +58,7 @@ const demoContent = [
     image:
       "https://walking-wise-2025-website-assets.s3.us-east-1.amazonaws.com/Website_Dashboard-Education_PDFs_and_Icons/Icons+for+Website/Icon-Education_Guide.png",
     objectClass: "!object-scale-down",
-    link: "https://walking-wise-2025-website-assets.s3.us-east-1.amazonaws.com/Website_Dashboard-Education_PDFs_and_Icons/PDFs_Guildes_OtherDocs/DEMO_L~1.PDF",
+    link: "https://walking-wise-2025-website-assets.s3.us-east-1.amazonaws.com/Website_Dashboard-Education_PDFs_and_Icons/PDFs_Guildes_OtherDocs/DEMO_Lesson-Myths_Reality_Walking-Wise.pdf",
   },
   {
     title: "Class Presentation",
