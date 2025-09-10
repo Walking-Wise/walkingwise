@@ -27,7 +27,7 @@ const plans = [
     ],
     buttonText: "Buy Now",
     popular: false,
-    link: "/request-a-quote"
+    link: "https://learn.walkingwise.com/enroll/3486923?price_id=4408860"
   },
   {
     name: Plans.Professional,
@@ -90,7 +90,7 @@ const plans = [
     ],
     buttonText: "Buy Now",
     popular: false,
-    link: "/request-a-quote"
+    link: "https://learn.walkingwise.com/enroll/3486950?price_id=4408888"
   },
 ];
 
@@ -247,7 +247,7 @@ const PricingPage = () => {
 
             <button
               onClick={() => {
-                window.location.href = "/request-a-quote";
+                window.location.href = "https://learn.walkingwise.com/enroll/3486696?price_id=4408602";
               }}
               className="bg-purple-600 hover:bg-purple-700 text-white py-2 mt-6 rounded-md text-center"
             >
