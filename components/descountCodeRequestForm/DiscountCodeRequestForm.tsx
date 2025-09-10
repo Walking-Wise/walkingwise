@@ -1,21 +1,19 @@
 "use client";
 
 import React, { useState } from "react";
-import PageBanner from "../ui/PageBanner/PageBanner";
 import Section from "../ui/Section/Section";
 import SectionHeaderText from "../ui/SectionHeaderText/SectionHeaderText";
 import BodyText from "../ui/BodyText/BodyText";
 import { roboto, robotoopo } from "../../public/fonts/Fonts";
 
-const QuoteRequest = () => {
+const DiscountCodeRequestForm = () => {
   const [form, setForm] = useState({
     name: "",
     jobTitle: "",
     company: "",
+    website: "",
     phone: "",
-    industry: "",
     email: "",
-    message: "",
     city: "",
     state: "",
   });
@@ -36,7 +34,7 @@ const QuoteRequest = () => {
     setSuccess(null);
 
     try {
-      const res = await fetch("/api/quote", {
+      const res = await fetch("/api/discount", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(form),
@@ -47,14 +45,13 @@ const QuoteRequest = () => {
           name: "",
           jobTitle: "",
           company: "",
+          website: "",
           phone: "",
-          industry: "",
           email: "",
-          message: "",
           city: "",
           state: "",
         });
-        setSuccess("Thank you! Your request has been submitted.");
+        setSuccess("Thank you! Your request for a discount code has been submitted.");
       } else {
         setSuccess("Something went wrong. Please try again.");
       }
@@ -67,17 +64,12 @@ const QuoteRequest = () => {
 
   return (
     <>
-      <PageBanner
-        title="Request a Quote"
-        image="https://walking-wise-2025-website-assets.s3.us-east-1.amazonaws.com/Website+Hero+Banners+300dpi/CONTACT_300dpi_1200x511_TEXT.jpg"
-        altText="Connect with us"
-      />
       <Section bgColor="white" className="mb-20 mt-0 lg:mt-20 lg:py-0">
         <form
           onSubmit={handleSubmit}
           className="w-full mx-auto p-6 sm:p-10 bg-[#00c1d5] rounded-md"
         >
-          <SectionHeaderText>Get in touch with us</SectionHeaderText>
+          <SectionHeaderText>Request a discount code for your nonprofit</SectionHeaderText>
           <BodyText className="text-white mt-2">
             Please allow us 24 hours to respond to your inquiry.
           </BodyText>
@@ -133,6 +125,24 @@ const QuoteRequest = () => {
               <label
                 className={`${robotoopo.className} text-[#303030] text-lg sm:text-xl`}
               >
+                Website <span className="text-red-500">*</span>
+              </label>
+              <input
+                name="website"
+                type="text"
+                value={form.website}
+                onChange={handleChange}
+                placeholder="Website"
+                required
+                className={`bg-white border-none outline-none py-3 px-3 rounded-sm ${robotoopo.className}`}
+              />
+            </div>
+          </div>
+          <div className="flex flex-col sm:flex-row justify-center mt-10 gap-6">
+            <div className="flex w-full flex-col">
+              <label
+                className={`${robotoopo.className} text-[#303030] text-lg sm:text-xl`}
+              >
                 Phone <span className="text-red-500">*</span>
               </label>
               <input
@@ -145,51 +155,7 @@ const QuoteRequest = () => {
                 className={`bg-white border-none outline-none py-3 px-3 rounded-sm ${robotoopo.className}`}
               />
             </div>
-
-            <div className="flex w-full flex-col">
-              <label
-                className={`${robotoopo.className} text-[#303030] text-lg sm:text-xl`}
-              >
-                Industry / Sector <span className="text-red-500">*</span>
-              </label>
-              <select
-                name="industry"
-                value={form.industry}
-                onChange={handleChange}
-                required
-                className={`bg-white border-none outline-none py-3 px-3 rounded-sm ${robotoopo.className}`}
-              >
-                <option value="" disabled>
-                  Select an industry
-                </option>
-                <option value="Medical Group">Medical Group</option>
-                <option value="Higher Education">Higher Education</option>
-                <option value="Corporate Training">Corporate Training</option>
-                <option value="Government">Government</option>
-                <option value="Individual">Individual</option>
-                <option value="Professional">Professional</option>
-                <option value="Nonprofit">Nonprofit</option>
-                <option value="School">School</option>
-              </select>
-            </div>
           </div>
-
-          <div className="flex w-full mt-10 flex-col">
-            <label
-              className={`${robotoopo.className} text-[#303030] text-lg sm:text-xl`}
-            >
-              Message <span className="text-red-500">*</span>
-            </label>
-            <textarea
-              name="message"
-              value={form.message}
-              onChange={handleChange}
-              placeholder="Share your message here..."
-              required
-              className={`bg-white border-none outline-none py-3 px-3 rounded-sm min-h-[120px] ${robotoopo.className}`}
-            />
-          </div>
-
           <div className="flex w-full mt-10 flex-col">
             <button
               type="submit"
@@ -209,4 +175,4 @@ const QuoteRequest = () => {
   );
 };
 
-export default QuoteRequest;
+export default DiscountCodeRequestForm;

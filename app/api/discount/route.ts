@@ -5,18 +5,17 @@ const ses = new SESv2Client({ region: process.env.AWS_REGION });
 
 export async function POST(req: Request) {
   const body = await req.json();
-  const { name, jobTitle, company, phone, industry, email, message, city, state } = body;
+  const { name, jobTitle, company, phone, email, city, website, state } = body;
 
   const text = `
-  Name: ${name}
-  Job Title: ${jobTitle}
-  Company: ${company}
-  Phone: ${phone}
-  Industry: ${industry}
-  Email: ${email}
-  Message: ${message}
-  City: ${city}
-  State: ${state}
+Name: ${name}
+Job Title: ${jobTitle}
+Company: ${company}
+Website: ${website}
+Phone: ${phone}
+Email: ${email}
+City: ${city}
+State: ${state}
   `.trim();
 
   try {
@@ -30,7 +29,7 @@ export async function POST(req: Request) {
         ReplyToAddresses: email ? [email] : undefined,
         Content: {
           Simple: {
-            Subject: { Data: `Quote Request from ${name}` },
+            Subject: { Data: `Nonprofit Discount Code Request from ${name}` },
             Body: { Text: { Data: text } },
           },
         },

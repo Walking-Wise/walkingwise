@@ -27,6 +27,7 @@ const plans = [
     ],
     buttonText: "Buy Now",
     popular: false,
+    link: "/request-a-quote"
   },
   {
     name: Plans.Professional,
@@ -47,6 +48,7 @@ const plans = [
     buttonText: "Get Professional",
     popular: true,
     discount: { text: "30% OFF", original: "$20" },
+    link: "/request-a-quote"
   },
   {
     name: Plans.NonProfit,
@@ -67,6 +69,7 @@ const plans = [
     ],
     buttonText: "Request Discount Code",
     popular: false,
+    link: "/request-a-discount-code"
   },
   {
     name: Plans.Schools,
@@ -87,6 +90,7 @@ const plans = [
     ],
     buttonText: "Buy Now",
     popular: false,
+    link: "/request-a-quote"
   },
 ];
 
@@ -102,6 +106,7 @@ const customPlans = [
     features: ["Connect to your LMS with SCORM, xAPI, etc."],
     buttonText: "Contact Us",
     enterprise: true,
+    link: "/request-a-quote"
   },
 ];
 
@@ -173,7 +178,7 @@ const PricingPage = () => {
                       : "bg-[#303030] hover:bg-[#303030]"
                   }`}
                   onClick={() => {
-                    window.location.href = "/request-a-quote";
+                    window.location.href = plan.link;
                   }}
                 >
                   {plan.buttonText}
