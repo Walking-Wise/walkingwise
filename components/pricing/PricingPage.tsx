@@ -32,8 +32,8 @@ const plans = [
     name: Plans.Professional,
     subtext:
       "Ideal for independent consultants, such as nurses, social workers, and trainers.",
-    price: "$7 / month",
-    annual: "Billed $84 annually",
+    price: "$21 / month",
+    annual: "Billed $250 annually",
     footer: "Annual Subscription, Cancel Anytime",
     numberOfUsers: "1 user",
     features: [
@@ -53,7 +53,7 @@ const plans = [
     subtext:
       "Created for youth-serving organizations and anti-exploitation advocates.",
     price: "$50 / month",
-    annual: "Billed $600 annually",
+    annual: "Billed $600 annually (With nonprofit discount code)",
     footer: "Annual Subscription, Cancel Anytime",
     numberOfUsers: "4 users",
     features: [
@@ -65,7 +65,7 @@ const plans = [
       "Anonymous Classroom Polling Tool",
       "Animated Videos: 12 Part Series",
     ],
-    buttonText: "Buy Now",
+    buttonText: "Request Discount Code",
     popular: false,
   },
   {
@@ -223,12 +223,12 @@ const PricingPage = () => {
             <div>
               <div className="flex items-center gap-2">
                 <span className="bg-purple-700 text-white text-xs font-semibold px-2 py-1 rounded">
-                  28% OFF
+                  38% OFF
                 </span>
-                <span className="text-gray-400 line-through">$139.00</span>
+                <span className="text-gray-400 line-through">$200.00</span>
               </div>
               <div className="text-xl lg:text-4xl font-bold mt-2 text-white">
-                Online Course: $99.99{" "}
+                Online Course: $125{" "}
                 <span className="text-sm font-normal">/ year</span>
               </div>
               <div className="text-xs text-gray-400 mt-1">USD ($)</div>
