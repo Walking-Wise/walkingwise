@@ -9,6 +9,7 @@ enum Plans {
   NonProfit = "NONPROFIT",
   Schools = "SCHOOLS",
   Enterprise = "ENTERPRISE",
+  OnlineCourse = "ADULT EDUCATION",
 }
 
 const plans = [
@@ -27,14 +28,14 @@ const plans = [
     ],
     buttonText: "Buy Now",
     popular: false,
-    link: "/request-a-quote"
+    link: "https://learn.walkingwise.com/enroll/3486923?price_id=4408860",
   },
   {
     name: Plans.Professional,
     subtext:
       "Ideal for independent consultants, such as nurses, social workers, and trainers.",
-    price: "$21 / month",
-    annual: "Billed $250 annually",
+    price: "$16 / month",
+    annual: "Billed $192 annually",
     footer: "Annual Subscription, Cancel Anytime",
     numberOfUsers: "1 user",
     features: [
@@ -48,7 +49,7 @@ const plans = [
     buttonText: "Get Professional",
     popular: true,
     discount: { text: "30% OFF", original: "$20" },
-    link: "/request-a-quote"
+    link: "https://learn.walkingwise.com/enroll/3486950?price_id=4427684",
   },
   {
     name: Plans.NonProfit,
@@ -69,7 +70,7 @@ const plans = [
     ],
     buttonText: "Request Discount Code",
     popular: false,
-    link: "/request-a-discount-code"
+    link: "https://tally.so/r/w459Bo",
   },
   {
     name: Plans.Schools,
@@ -89,12 +90,33 @@ const plans = [
       "Animated Videos: 12 Part Series",
     ],
     buttonText: "Buy Now",
+    button2Text: "Request Invoice",
     popular: false,
-    link: "/request-a-quote"
+    link: "https://learn.walkingwise.com/enroll/3486950?price_id=4408888",
+    link2: "https://tally.so/r/3xGWE9",
   },
 ];
 
 const customPlans = [
+  {
+    name: Plans.OnlineCourse,
+    subtext:
+      "Strengthen your role as a trusted adult with CME/CE-accredited learning that equips you to protect youth.",
+    price: "$11 / month",
+    annual: "Billed $125 annually",
+    footer: "Annual Subscription, Cancel Anytime",
+    numberOfUsers: "1 user",
+    features: [
+      "12 CME / CE Credits (PIM Accreditation)",
+      "Interviews with Survivor Leaders and Advocacy Experts",
+      "Evidence Based Content",
+      "Interactive and Engaging",
+    ],
+    buttonText: "Buy Now",
+    popular: false,
+    link: "https://learn.walkingwise.com/enroll/3486696?price_id=4408602",
+    variant: "dark",
+  },
   {
     name: Plans.Enterprise,
     subtext:
@@ -106,11 +128,13 @@ const customPlans = [
     features: ["Connect to your LMS with SCORM, xAPI, etc."],
     buttonText: "Contact Us",
     enterprise: true,
-    link: "/request-a-quote"
+    link: "https://tally.so/r/3E956o",
+    variant: "light",
   },
 ];
 
 const PricingPage = () => {
+
   return (
     <>
       <div className="w-full bg-[#303030] h-[80px] sm:h-[120px] flex items-center">
@@ -169,117 +193,90 @@ const PricingPage = () => {
                   )}
                 </ul>
               </div>
-
-              <div>
-                <button
-                  className={`w-full py-2 px-4 rounded-md text-white ${
-                    plan.popular
-                      ? "bg-purple-600 hover:bg-purple-700"
-                      : "bg-[#303030] hover:bg-[#303030]"
-                  }`}
-                  onClick={() => {
-                    window.location.href = plan.link;
-                  }}
-                >
-                  {plan.buttonText}
-                </button>
-                <p className="text-xs text-center text-gray-400 mt-2">
-                  {plan.footer}
-                </p>
-              </div>
+              {plan.button2Text ? (
+                <div>
+                  <div className="flex flex-col md:flex-row items-center">
+                    <button
+                      className={`w-full py-2 px-4 mb-3 md:mr-1 md:mb-0 rounded-md border-1 border-[#303030] text-[#303030] ${
+                        plan.popular
+                          ? "bg-purple-600 hover:bg-purple-700"
+                          : "bg-[#ffffff] hover:bg-[#fafafa]"
+                      }`}
+                      onClick={() => {
+                        window.location.href = plan.link2;
+                      }}
+                    >
+                      {plan.button2Text}
+                    </button>
+                    <button
+                      className={`w-full py-2 px-4 md:ml-1 rounded-md text-white ${
+                        plan.popular
+                          ? "bg-purple-600 hover:bg-purple-700"
+                          : "bg-[#303030] hover:bg-[#303030]"
+                      }`}
+                      onClick={() => {
+                        window.location.href = plan.link;
+                      }}
+                    >
+                      {plan.buttonText}
+                    </button>
+                  </div>
+                  <p className="text-xs text-center text-gray-400 mt-2">
+                    {plan.footer}
+                  </p>
+                </div>
+              ) : (
+                <div>
+                  <button
+                    className={`w-full py-2 px-4 rounded-md text-white ${
+                      plan.popular
+                        ? "bg-purple-600 hover:bg-purple-700"
+                        : "bg-[#303030] hover:bg-[#303030]"
+                    }`}
+                    onClick={() => {
+                      window.location.href = plan.link;
+                    }}
+                  >
+                    {plan.buttonText}
+                  </button>
+                  <p className="text-xs text-center text-gray-400 mt-2">
+                    {plan.footer}
+                  </p>
+                </div>
+              )}
             </div>
           ))}
         </div>
-        {/* Online course card */}
-        <div id="courseCard" className="rounded-xl overflow-hidden shadow-lg mt-10 bg-gradient-to-r from-[#00C1D5] to-[#36c5d8] flex flex-col lg:flex-row text-[#303030]">
-          {/* Left side */}
-          <div className="flex-1 p-8 flex flex-col justify-center">
-            <div className="flex items-center gap-2">
-              <svg
-                className="w-6 h-6 text-yellow-400 hidden md:flex"
-                fill="currentColor"
-                viewBox="0 0 20 20"
-              >
-                <path d="M10 15l-5.878 3.09 1.122-6.545L.488 6.91l6.561-.955L10 0l2.951 5.955 6.561.955-4.756 4.635 1.122 6.545z" />
-              </svg>
-              <h2 className=" text-sm md:text-lg font-extrabold text-white">
-                On-Demand 12 Lesson Course for Adults
-              </h2>
-            </div>
-            <h3 className="text-2xl lg:text-3xl mt-4 font-bold mb-2 text-white">
-              Walking Wise: Sexual Exploitation Education
-            </h3>
-            <p>
-              A self-paced course that offers a clear, comprehensive
-              understanding of the U.S. commercial sex trade—and how it affects
-              children and teens.
-            </p>
-
-            <ul className="mt-6 space-y-2 text-sm font-semibold lg:text-base">
-              <li>✔ 12 CME / CE Credits (PIM Accreditation)</li>
-              <li>✔ Interviews with Survivor Leaders and Advocacy Experts</li>
-              <li>✔ Evidence Based Content</li>
-              <li>✔ Interactive and Engaging</li>
-            </ul>
-          </div>
-
-          {/* Right side */}
-          <div className="flex-1 bg-[#303030] p-8 flex flex-col justify-center">
-            <div>
-              <div className="flex items-center gap-2">
-                <span className="bg-purple-700 text-white text-xs font-semibold px-2 py-1 rounded">
-                  38% OFF
-                </span>
-                <span className="text-gray-400 line-through">$200.00</span>
-              </div>
-              <div className="text-xl lg:text-4xl font-bold mt-2 text-white">
-                Online Course: $125{" "}
-                <span className="text-sm font-normal">/ year</span>
-              </div>
-              <div className="text-xs text-gray-400 mt-1">USD ($)</div>
-            </div>
-
-            <div className="mt-6 text-sm text-white">
-              <p>✔ For adult learners.</p>
-              <p>✔ Designed for individual use and team training.</p>
-              <p>✔ 12 month access.</p>
-            </div>
-
-            <button
-              onClick={() => {
-                window.location.href = "/request-a-quote";
-              }}
-              className="bg-purple-600 hover:bg-purple-700 text-white py-2 mt-6 rounded-md text-center"
-            >
-              Get The Online Course
-            </button>
-          </div>
-        </div>
-
-        {/* Enterprise block */}
         <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-4 gap-6">
           {customPlans.map((plan, idx) => (
             <div
               key={idx}
-              className="mt-10 flex flex-col bg-white rounded-xl shadow-lg border border-gray-200 p-6 relative col-span-2"
+              className={`mt-10 flex flex-col rounded-xl shadow-lg border p-6 relative col-span-2
+              ${
+                plan.variant === "dark"
+                  ? "bg-[#303030] text-white border-gray-700"
+                  : "bg-white text-gray-800 border-gray-200"
+              }`}
             >
               <div className="mb-4">
-                <h2 className="text-xl font-semibold text-gray-800">
-                  {plan.name}
-                </h2>
-                <p className="text-sm text-gray-500">{plan.subtext}</p>
+                <h2 className="text-xl font-semibold">{plan.name}</h2>
+                <p
+                  className={`text-sm dark:text-gray-300 ${
+                    plan.variant === "dark"
+                      ? "text-white"
+                      : "text-gray-500"
+                  }`}
+                >
+                  {plan.subtext}
+                </p>
               </div>
 
-              <div className="text-2xl font-bold text-gray-900 mt-2">
-                {plan.price}
-              </div>
-              <div className="text-xs text-gray-500">{plan.annual}</div>
+              <div className="text-2xl font-bold mt-2">{plan.price}</div>
+              <div className="text-xs opacity-70">{plan.annual}</div>
 
               <div className="flex-1 mt-4 mb-4">
-                <ul className="space-y-2 text-sm lg:text-md text-gray-700">
-                  <li className="font-semibold text-gray-800">
-                    ✔ {plan.numberOfUsers}
-                  </li>
+                <ul className="space-y-2 text-sm lg:text-md">
+                  <li className="font-semibold">✔ {plan.numberOfUsers}</li>
                   {plan.features.map((feature, i) => {
                     if (feature.includes("On-Demand 12 Lesson Course"))
                       return null;
@@ -287,10 +284,10 @@ const PricingPage = () => {
                   })}
                   {plan.enterprise && (
                     <>
-                      <li className="font-semibold text-blue-700">
+                      <li className="font-semibold text-blue-400">
                         ✔ On-Demand 12 Lesson Course for Adults
                       </li>
-                      <li className="font-semibold text-blue-700">
+                      <li className="font-semibold text-blue-400">
                         ✔ 12 CME / CE Credits (PIM Accreditation)
                       </li>
                     </>
@@ -300,14 +297,19 @@ const PricingPage = () => {
 
               <div>
                 <button
-                  className="w-full py-2 px-4 rounded-md text-white bg-[#303030] hover:bg-[#303030]"
+                  className={`w-full py-2 px-4 rounded-md
+                  ${
+                    plan.variant === "dark"
+                      ? "bg-white text-[#303030] hover:bg-gray-200"
+                      : "bg-[#303030] hover:bg-[#303030] text-white"
+                  }`}
                   onClick={() => {
-                    window.location.href = "/request-a-quote";
+                    window.location.href = plan.link;
                   }}
                 >
                   {plan.buttonText}
                 </button>
-                <p className="text-xs text-center text-gray-400 mt-2">
+                <p className="text-xs text-center mt-2 opacity-60">
                   {plan.footer}
                 </p>
               </div>

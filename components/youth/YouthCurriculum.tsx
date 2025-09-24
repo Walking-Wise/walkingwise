@@ -185,7 +185,7 @@ const YouthCurriculum = () => {
           </a>
           <Button
             className="mt-8"
-            onClick={() => (window.location.href = "/pricing#courseCard")}
+            onClick={() => (window.location.href = "https://learn.walkingwise.com/enroll/3486696?price_id=4408602")}
           >
             ENROLL Today!
           </Button>

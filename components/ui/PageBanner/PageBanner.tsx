@@ -10,12 +10,14 @@ const PageBanner: React.FC<PageBannerProps> = ({ title, image, altText }) => {
   return (
     <div className="w-full relative bg-[#303030]">
       <div className="relative w-full">
-        {image && (
+        {image ? (
           <img
             src={image}
             alt={altText}
             className="w-full object-contain pb-[80px] sm:pb-[120px]"
           />
+        ) : (
+          <div className="h-20 sm:h-25 md:h-30"></div>
         )}
 
         {/* Overlay bar at the bottom */}

@@ -218,7 +218,7 @@ const CourseSection = () => {
               </Button>
               <Button
                 className={`bg-[#9d1be3] ${roboto.className} mt-0 md:mt-4 rounded-full text-sm sm:text-[16px] px-6 py-3 sm:py-3 text-white text-center flex items-center justify-center whitespace-nowrap`}
-                onClick={() => (window.location.href = "/pricing#courseCard")}
+                onClick={() => (window.location.href = "https://learn.walkingwise.com/enroll/3486696?price_id=4408602")}
               >
                 Start Course
               </Button>
