@@ -118,7 +118,7 @@ const YouthCurriculum = () => {
             </BodyText>
           </div>
 
-          <div className="flex-1 bg-[#00c1d5] min-w-[400px] max-h-[450px] text-black p-6 sm:p-8 md:pt-10 md:ps-10 md:pb-10 md:pe-0 space-y-4 flex flex-col">
+          <div className="flex-1 bg-[#00c1d5] md:min-w-[400px] max-h-[450px] text-black p-6 sm:p-8 md:pt-10 md:ps-10 md:pb-10 md:pe-0 space-y-4 flex flex-col">
             <h1 className="font-bold text-lg sm:text-xl md:text-4xl">
               RESOURCES
             </h1>
@@ -135,13 +135,18 @@ const YouthCurriculum = () => {
           </div>
 
           <div className="flex-1 flex justify-center bg-white">
-            <div className="relative flex-shrink-0 w-[300px] sm:w-[350px] md:w-[400px] h-[450px]">
-              <Image
-                src="https://walking-wise-2025-website-assets.s3.us-east-1.amazonaws.com/Website_Dashboard-Education_PDFs_and_Icons/Icons+for+Website/Icon-Education_Guide.png"
-                alt="Guide Resources"
-                fill
-                className="object-cover"
-              />
+            <div className="w-full flex flex-col items-center">
+              <div className="relative flex-shrink-0 w-[300px] sm:w-[350px] md:w-[400px] h-[450px] mb-6">
+                <Image
+                  src="https://walking-wise-2025-website-assets.s3.us-east-1.amazonaws.com/Website_Dashboard-Education_PDFs_and_Icons/Icons+for+Website/Icon-Education_Guide.png"
+                  alt="Guide Resources"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <Button onClick={() => (window.location.href = "/pricing")}>
+                ENROLL Today! 
+              </Button>
             </div>
           </div>
         </div>
@@ -185,7 +190,10 @@ const YouthCurriculum = () => {
           </a>
           <Button
             className="mt-8"
-            onClick={() => (window.location.href = "https://learn.walkingwise.com/enroll/3486696?price_id=4408602")}
+            onClick={() =>
+              (window.location.href =
+                "https://learn.walkingwise.com/enroll/3486696?price_id=4408602")
+            }
           >
             ENROLL Today!
           </Button>
