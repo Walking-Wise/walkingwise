@@ -82,7 +82,7 @@ const Footer = () => {
             },
           ],
           [
-            { label: "Login", href: "/" },
+            { label: "Login", href: "https://learn.walkingwise.com/users/sign_in" },
             { label: "My Account", href: "/" },
             {
               label: "Contact Us",
