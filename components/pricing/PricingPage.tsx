@@ -203,7 +203,7 @@ const PricingPage = () => {
                           : "bg-[#ffffff] hover:bg-[#fafafa]"
                       }`}
                       onClick={() => {
-                        window.location.href = plan.link2;
+                        window.open(plan.link2, '_blank')
                       }}
                     >
                       {plan.button2Text}
@@ -215,7 +215,7 @@ const PricingPage = () => {
                           : "bg-[#303030] hover:bg-[#303030]"
                       }`}
                       onClick={() => {
-                        window.location.href = plan.link;
+                        window.open(plan.link, '_blank')
                       }}
                     >
                       {plan.buttonText}
@@ -234,7 +234,7 @@ const PricingPage = () => {
                         : "bg-[#303030] hover:bg-[#303030]"
                     }`}
                     onClick={() => {
-                      window.location.href = plan.link;
+                      window.open(plan.link, '_blank')
                     }}
                   >
                     {plan.buttonText}
@@ -304,7 +304,7 @@ const PricingPage = () => {
                       : "bg-[#303030] hover:bg-[#303030] text-white"
                   }`}
                   onClick={() => {
-                    window.location.href = plan.link;
+                    window.open(plan.link, '_blank')
                   }}
                 >
                   {plan.buttonText}

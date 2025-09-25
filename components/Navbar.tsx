@@ -15,10 +15,10 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isEducationOpen, setIsEducationOpen] = useState(false);
   const [isProgramsOpen, setIsProgramsOpen] = useState(false);
-  const [showModal, setShowModal] = useState(false);
+  // const [showModal, setShowModal] = useState(false);
 
-  const closeModal = () => setShowModal(false);
-  const openModal = () => setShowModal(true);
+  // const closeModal = () => setShowModal(false);
+  // const openModal = () => setShowModal(true);
 
   const toggleMenu = () => setIsOpen(!isOpen);
   const toggleEducation = () => {
@@ -29,6 +29,8 @@ const Navbar = () => {
     setIsEducationOpen(false);
     setIsProgramsOpen(!isProgramsOpen);
   };
+
+  const loginLink = "https://learn.walkingwise.com/users/sign_in"
 
   return (
     <>
@@ -140,7 +142,7 @@ const Navbar = () => {
             </div>
           </div>
           <div className="flex items-center hidden lg:flex mt-16 space-x-8 text-[#303030] text-2xl font-bold">
-            <button onClick={openModal}>Login</button>
+            <button onClick={() => window.open(loginLink)}>Login</button>
           </div>
 
           {/* Mobile Menu Button */}
@@ -260,8 +262,8 @@ const Navbar = () => {
             <button
               className="w-fit"
               onClick={() => {
-                setIsOpen(false);
-                openModal();
+                // setIsOpen(false);
+                window.open(loginLink)
               }}
             >
               Login
@@ -269,7 +271,7 @@ const Navbar = () => {
           </div>
         )}
       </nav>
-      {showModal && (
+      {/* {showModal && (
         <div className="fixed z-[9999] inset-0 bg-black/90 flex items-center justify-center px-4">
           <div className="bg-white p-6 rounded-lg w-full max-w-lg shadow-xl text-center relative">
             <button
@@ -300,7 +302,7 @@ const Navbar = () => {
             <p className="mt-4">Thank you for your patience.</p>
           </div>
         </div>
-      )}
+      )} */}
     </>
   );
 };
