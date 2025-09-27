@@ -4,7 +4,7 @@ import React from "react";
 import Section from "../ui/Section/Section";
 
 enum Plans {
-  Individual = "INDIVIDUAL",
+  Individual = "HOME EDUCATION",
   Professional = "PROFESSIONAL",
   NonProfit = "NONPROFIT",
   Schools = "SCHOOLS",
