@@ -56,7 +56,11 @@ const PublicPrivateSectorPage = () => {
                 title: "ENTERPRISE SUBSCRIPTION",
                 description:
                   "For organizations without an LMS, our Enterprise Subscription provides associates with individual login access to the Walking Wise Learning Platform. This flexible, on-demand model allows professionals to complete the lessons at their own pace while meeting compliance and development requirements.",
-                
+                linkText: "",
+                linkHref:
+                  "",
+                end: "",
+                newPage: false,
               },
             ].map((box, index) => (
               <div
