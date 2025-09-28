@@ -152,7 +152,7 @@ const customPlans = [
 	{
 		name: Plans.Enterprise,
 		subtext:
-			"Built for public and private organizations seeking to deliver adult-focused sexual exploitation education using their internal learning management system (LMS).",
+			"Designed for large enterprises providing adult education through an internal learning management system (LMS).",
 		price: "Custom Pricing",
 		annual: "Contact us for a quote",
 		footer: "Annual Subscription, Cancel Anytime",
@@ -173,7 +173,7 @@ const customPlans = [
 			"File options include SCORM, xAPI, AICC, and cmi5",
 			"Custom billing and terms",
 		],
-		buttonText: "Contact Us",
+		buttonText: "Request Quote",
 		enterprise: true,
 		link: "https://tally.so/r/3E956o",
 		variant: "dark",
