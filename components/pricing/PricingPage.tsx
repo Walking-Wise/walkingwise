@@ -22,8 +22,8 @@ const plans = [
 		footer: "Annual Subscription, Cancel Anytime",
 		numberOfUsers: "1 User",
 		features: [
-    " ",
-				"Education for Youth (11+)",
+     " ",
+    "Youth Curriculum (11+)",
 				"Teaching Tips for Home",
 				"Parent Resources",
 				"Lesson Plans: 12 Part Series",
