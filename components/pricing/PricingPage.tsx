@@ -130,7 +130,7 @@ const customPlans = [
 		name: Plans.OnlineCourse,
 		subtext:
 			"Developed for medical professionals, social workers, law enforcement, educators & youth leaders.",
-		price: "$125 ONLINE COURSE",
+		price: "$125 Online Course",
 		annual: "Billed $125 annually, with $45 renewal option",
 		footer: "Annual Subscription, Cancel Anytime",
 		numberOfUsers: "1 User",
