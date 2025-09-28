@@ -224,23 +224,23 @@ const PricingPage = () => {
 									</li>
 									{plan.features.map((feature, i) => {
 										if (feature.includes("1 User"))
-											return <li className="font-semibold" style="font-size: 14pt !important;">{feature}</li>;
+											return <li className="font-semibold" style={{font-size: 14pt !important;}}>{feature}</li>;
 										else if (feature.includes("6 Users"))
-											return <li className="font-semibold" style="font-size: 14pt !important;">{feature}</li>;
+											return <li className="font-semibold" style={{font-size: 14pt !important;}}>{feature}</li>;
 										else if (feature.includes("Unlimited Users"))
-											return <li className="font-semibold" style="font-size: 14pt !important;">{feature}</li>;
+											return <li className="font-semibold" style={{font-size: 14pt !important;}}>{feature}</li>;
 										else if (feature.includes("Course Features"))
-											return <li className="font-semibold" style="font-size: 14pt !important;">{feature}</li>;
+											return <li className="font-semibold" style={{font-size: 14pt !important;}}>{feature}</li>;
 										else if (feature.includes("Seamless Integration"))
-											return <li className="font-semibold" style="font-size: 14pt !important;">{feature}</li>;
+											return <li className="font-semibold" style={{font-size: 14pt !important;}}>{feature}</li>;
 										else if (feature.includes("Adult Education Courses"))
-											return <li className="font-semibold" style="font-size: 14pt !important;">{feature}</li>;
+											return <li className="font-semibold" style={{font-size: 14pt !important;}}>{feature}</li>;
 										else if (feature.includes("Youth Curriculum"))
-										return <li className="font-semibold" style="font-size: 14pt !important;">{feature}</li>;
+										return <li className="font-semibold" style={{font-size: 14pt !important;}}>{feature}</li>;
 										else if (feature.includes("SLIDO"))
-										return <li className="font-semibold" style="color:DarkGreen">✔ {feature}</li>;
+										return <li className="font-semibold" style={{color:DarkGreen}}>✔ {feature}</li>;
 										else if (feature === " ")
-										return <li style="line-height: 0.1em;">&nbsp;</li>;
+										return <li style={{line-height: 0.1em;}}>&nbsp;</li>;
 										else
 										return <li key={i}>✔ {feature}</li>;
 									})}
@@ -333,23 +333,23 @@ const PricingPage = () => {
 									<li className="font-semibold">✔ {plan.numberOfUsers}</li>
 									{plan.features.map((feature, i) => {
 										if (feature.includes("1 User"))
-											return <li className="font-semibold" style="font-size: 14pt !important;">{feature}</li>;
+											return <li className="font-semibold" style={{font-size: 14pt !important;}}>{feature}</li>;
 										else if (feature.includes("6 Users"))
-											return <li className="font-semibold" style="font-size: 14pt !important;">{feature}</li>;
+											return <li className="font-semibold" style={{font-size: 14pt !important;}}>{feature}</li>;
 										else if (feature.includes("Unlimited Users"))
-											return <li className="font-semibold" style="font-size: 14pt !important;">{feature}</li>;
+											return <li className="font-semibold" style={{font-size: 14pt !important;}}>{feature}</li>;
 										else if (feature.includes("Course Features"))
-											return <li className="font-semibold" style="font-size: 14pt !important;">{feature}</li>;
+											return <li className="font-semibold" style={{font-size: 14pt !important;}}>{feature}</li>;
 										else if (feature.includes("Seamless Integration"))
-											return <li className="font-semibold" style="font-size: 14pt !important;">{feature}</li>;
+											return <li className="font-semibold" style={{font-size: 14pt !important;}}>{feature}</li>;
 										else if (feature.includes("Adult Education Courses"))
-											return <li className="font-semibold" style="font-size: 14pt !important;">{feature}</li>;
+											return <li className="font-semibold" style={{font-size: 14pt !important;}}>{feature}</li>;
 										else if (feature.includes("Youth Curriculum"))
-										return <li className="font-semibold" style="font-size: 14pt !important;">{feature}</li>;
+										return <li className="font-semibold" style={{font-size: 14pt !important;}}>{feature}</li>;
 										else if (feature.includes("SLIDO"))
-										return <li className="font-semibold" style="color:DarkGreen">✔ {feature}</li>;
+										return <li className="font-semibold" style={{color:DarkGreen}}>✔ {feature}</li>;
 										else if (feature === " ")
-										return <li style="line-height: 0.1em;">&nbsp;</li>;
+										return <li style={{line-height: 0.1em;}}>&nbsp;</li>;
 										else
 										return <li key={i}>✔ {feature}</li>;
 
