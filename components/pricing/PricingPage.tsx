@@ -44,7 +44,7 @@ const plans = [
 		features: [
    " ",
 			"Adult Education Courses",
-			"Twelve contact hours",
+			"12 contact hours",
 			"12 Learning Modules",
 			"12 Continuing Education Credits",
 			" ",
