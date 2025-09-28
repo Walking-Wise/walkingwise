@@ -334,8 +334,6 @@ const PricingPage = () => {
            return <li className="font-semibold font14" >{feature}</li>;
           else if (feature.includes("Seamless Integration"))
            return <li className="font-semibold font14" >{feature}</li>;
-          else if (feature.includes("Adult Education Courses"))
-           return <li className="font-semibold font14" >{feature}</li>;
           else if (feature.includes("Youth Curriculum"))
           return <li className="font-semibold font14" >{feature}</li>;
           else if (feature.includes("SLIDO"))
