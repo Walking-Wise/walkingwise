@@ -28,7 +28,7 @@ const PartTwo = () => {
       description: {
         intro:
           "Groomers possess the skills to deceive victims, their families, and entire communities. The process is subtle and involves forming a relationship with a vulnerable person with the intention of future sexual assault or inducing the victim to participate in a crime. ",
-        boxTitle: "PART 1: LESSONS",
+        boxTitle: "PART 1: THE GROOMERS",
         lessons: [
           "#1 Myths & Reality",
           "#2 Trustworthy vs. Unsafe Adults",
@@ -57,7 +57,7 @@ const PartTwo = () => {
       description: {
         intro:
           "Children and adolescents are naturally vulnerable to sex offenders and human traffickers due to their cognitive immaturity and limited life experience, which affects their decision-making abilities. ",
-        boxTitle: "PART 2: LESSONS",
+        boxTitle: "PART 2: THE VULNERABLE",
         lessons: [
           "#5  Sextortion Scheme",
           "#6 Male Victims",
@@ -86,7 +86,7 @@ const PartTwo = () => {
       description: {
         intro:
           "Human traffickers and sexual predators often use love bonds, debt bonds, drug bonds, and family bonds to maintain control over their victims. These perpetrators commit emotionally and physically harmful acts against vulnerable populations, commonly persuading victims to believe they are responsible for the crimes inflicted upon them. ",
-        boxTitle: "PART 3: LESSONS",
+        boxTitle: "PART 3: THE PREDATORS",
         lessons: [
           "#9 Human Traffickers",
           "#10 Recruiters",
