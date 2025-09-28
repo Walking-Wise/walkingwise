@@ -195,7 +195,7 @@ const YouthCurriculum = () => {
                 "https://learn.walkingwise.com/enroll/3486696?price_id=4408602")
             }
           >
-            ENROLL Today!
+            Start Course!
           </Button>
         </div>
       </Section>
