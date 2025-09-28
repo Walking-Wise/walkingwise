@@ -219,17 +219,11 @@ const PricingPage = () => {
 
 							<div className="flex-1 mt-4 mb-4">
 								<ul className="space-y-2 text-sm lg:text-[15px] text-gray-700">
-									<li className="font-semibold text-gray-800">
-										✔ {plan.numberOfUsers}
+									<li className="font-semibold font14">
+										 {plan.numberOfUsers}
 									</li>
 									{plan.features.map((feature, i) => {
-          if (feature === "1 User")
-           return <li className="font-semibold font14" >{feature}</li>;
-          else if (feature === "6 Users")
-           return <li className="font-semibold font14" >{feature}</li>;
-          else if (feature === "Unlimited Users")
-           return <li className="font-semibold font14" >{feature}</li>;
-          else if (feature.includes("Course Features"))
+          if  (feature.includes("Course Features"))
            return <li className="font-semibold font14" >{feature}</li>;
           else if (feature.includes("Seamless Integration"))
            return <li className="font-semibold font14" >{feature}</li>;
@@ -331,28 +325,25 @@ const PricingPage = () => {
 
 							<div className="flex-1 mt-4 mb-4">
 								<ul className="space-y-2 text-sm lg:text-md">
-									<li className="font-semibold">✔ {plan.numberOfUsers}</li>
+									
+         <li className="font-semibold font14">
+           {plan.numberOfUsers}
+         </li>
 									{plan.features.map((feature, i) => {
-          if (feature === "1 User")
+          if  (feature.includes("Course Features"))
            return <li className="font-semibold font14" >{feature}</li>;
-          else if (feature === "6 Users")
+          else if (feature.includes("Seamless Integration"))
            return <li className="font-semibold font14" >{feature}</li>;
-          else if (feature === "Unlimited Users")
+          else if (feature.includes("Adult Education Courses"))
            return <li className="font-semibold font14" >{feature}</li>;
-										else if (feature.includes("Course Features"))
-											return <li className="font-semibold font14" >{feature}</li>;
-										else if (feature.includes("Seamless Integration"))
-											return <li className="font-semibold font14" >{feature}</li>;
-										else if (feature.includes("Adult Education Courses"))
-											return <li className="font-semibold font14" >{feature}</li>;
-										else if (feature.includes("Youth Curriculum"))
-										return <li className="font-semibold font14" >{feature}</li>;
-										else if (feature.includes("SLIDO"))
-										return <li className="font-semibold text-darkgreen" >✔ {feature}</li>;
-										else if (feature === " ")
-										return <li className="line-short" >&nbsp;</li>;
-										else
-										return <li key={i}>✔ {feature}</li>;
+          else if (feature.includes("Youth Curriculum"))
+          return <li className="font-semibold font14" >{feature}</li>;
+          else if (feature.includes("SLIDO"))
+          return <li className="font-semibold text-darkgreen" >✔ {feature}</li>;
+          else if (feature === " ")
+          return <li className="line-short" >&nbsp;</li>;
+          else
+          return <li key={i}>✔ {feature}</li>;
 
 									})}
 									
