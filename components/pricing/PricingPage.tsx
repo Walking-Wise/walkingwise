@@ -131,13 +131,14 @@ const customPlans = [
 		footer: "Annual Subscription, Cancel Anytime",
 		numberOfUsers: "1 User",
 		features: [
-		"Course Features",
-		"Adult Education Courses – 12 contact hours, 12 learning modules",
-		"Continuing Education Credits – Earn 12 CME/CE credits",
-		"Evidence-Based Content – Built on the latest research",
-		"Expert Interviews – Survivors and advocacy professionals",
-		"Knowledge Check – Reinforces learning in preparation for the quiz",
-		"Quizzes – Claim CME & CE Credits",
+				"Adult Education Courses",
+				"Twelve contact hours",
+				"12 Learning Modules",
+				"12 Continuing Education Credits",
+				" ",
+				"Evidence-Based Content",
+				"Interviews: Survivor & Advocacy Experts",
+				"Engaging Interaction",
 		],
 		buttonText: "Buy Now",
 		popular: false,
@@ -152,20 +153,7 @@ const customPlans = [
 		annual: "Contact us for a quote",
 		footer: "Annual Subscription, Cancel Anytime",
 		numberOfUsers: "Unlimited users",
-		features: [
-			"Course Features",
-			"Adult Education Courses – 12 contact hours, 12 learning modules",
-			"Continuing Education Credits – Earn 12 CME/CE credits",
-			"Evidence-Based Content – Built on the latest research",
-			"Expert Interviews – Survivors and advocacy professionals",
-			"Knowledge Check – Reinforces learning in preparation for the quiz",
-			"Quizzes – Claim CME & CE Credits ",
-			"Seamless Integration",
-			"Upload courses to your LMS",
-			"Customizable course features",
-			"File options include SCORM, xAPI, AICC, and cmi5",
-			"Custom billing and terms",
-		],
+		features: ["Connect to your LMS with SCORM, xAPI, etc."],
 		buttonText: "Contact Us",
 		enterprise: true,
 		link: "https://tally.so/r/3E956o",
@@ -222,10 +210,6 @@ const PricingPage = () => {
 											return <li className="font-semibold" style="font-size: 14pt !important;">{feature}</li><li style="line-height: 0.1em;">&nbsp;</li>;
 										else if (feature.includes("Unlimited Users"))
 											return <li className="font-semibold" style="font-size: 14pt !important;">{feature}</li><li style="line-height: 0.1em;">&nbsp;</li>;
-										else if (feature.includes("Course Features"))
-											return <li className="font-semibold" style="font-size: 14pt !important;">{feature}</li>;
-										else if (feature.includes("Seamless Integration"))
-											return <li className="font-semibold" style="font-size: 14pt !important;">{feature}</li>;
 										else if (feature.includes("Adult Education Courses"))
 											return <li className="font-semibold" style="font-size: 14pt !important;">{feature}</li>;
 										else if (feature.includes("Youth Curriculum"))
@@ -325,22 +309,12 @@ const PricingPage = () => {
 								<ul className="space-y-2 text-sm lg:text-md">
 									<li className="font-semibold">✔ {plan.numberOfUsers}</li>
 									{plan.features.map((feature, i) => {
-										if (feature.includes("1 User"))
-											return <li className="font-semibold" style="font-size: 14pt !important;">{feature}</li><li style="line-height: 0.1em;">&nbsp;</li>;
-										else if (feature.includes("6 Users"))
-											return <li className="font-semibold" style="font-size: 14pt !important;">{feature}</li><li style="line-height: 0.1em;">&nbsp;</li>;
-										else if (feature.includes("Unlimited Users"))
-											return <li className="font-semibold" style="font-size: 14pt !important;">{feature}</li><li style="line-height: 0.1em;">&nbsp;</li>;
-										else if (feature.includes("Course Features"))
-											return <li className="font-semibold" style="font-size: 14pt !important;">{feature}</li>;
-										else if (feature.includes("Seamless Integration"))
-											return <li className="font-semibold" style="font-size: 14pt !important;">{feature}</li>;
-										else if (feature.includes("Adult Education Courses"))
-											return <li className="font-semibold" style="font-size: 14pt !important;">{feature}</li>;
+										if (feature.includes("Adult Education Courses"))
+											return <li className="font-semibold">✔ {feature}</li>;
 										else if (feature.includes("Youth Curriculum"))
-										return <li style="line-height: 0.1em;">&nbsp;</li><li className="font-semibold" style="font-size: 14pt !important;">{feature}</li>;
+										return <li className="font-semibold">✔ {feature}</li>;
 										else if (feature.includes("SLIDO"))
-										return <li className="font-semibold" style="color:DarkGreen">✔ {feature}</li>;
+										return <li className="font-semibold text-green-400">✔ {feature}</li>;
 										else if (feature === " ")
 										return <li className="font-semibold">&nbsp;</li>;
 										else
