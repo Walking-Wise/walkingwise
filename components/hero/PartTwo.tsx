@@ -22,7 +22,7 @@ const StatCard = ({
   link2,
 }: StatCardProps) => {
   return (
-    <div className="bg-[#00C1D5] flex flex-col justify-between items-center text-center h-[450px] w-full max-w-[400px] px-3 py-4">
+    <div className="bg-[#00C1D5] flex flex-col nnjustify-between items-center text-center h-[450px] w-full max-w-[400px] px-3 py-4">
       <div>
         <h1 className="text-6xl sm:text-7xl md:text-8xl text-[#303030] mt-5">
           {value}
@@ -66,7 +66,7 @@ const PartTwo = () => {
       value: "460,000",
       title: "Missing U.S. Children",
       description:
-        "~460,000 U.S. children go missing every year, with 19% at risk for sex trafficking.",
+        "~460,000 U.S. children go missing every year, with 19% at risk for sex trafficking.<br><br>",
       source1: "U.S. Dept. of Justice, 2023",
       source2: "NCMEC Impact Report, 2023",
       maxWidth: "max-w-[220px]",
@@ -78,7 +78,7 @@ const PartTwo = () => {
       value: "90%",
       title: "Sexual Abuse",
       description:
-        "~90% of child victims are sexually abused by someone they know and trust.",
+        "~90% of child victims are sexually abused by someone they know and trust.<br><br>",
       source1: "Crimes Against Children Research Center",
       link1:
         "https://www.unh.edu/ccrc/sites/default/files/media/2022-03/characteristics-of-crimes-against-juveniles_0.pdf",
@@ -87,7 +87,7 @@ const PartTwo = () => {
       value: "36.2m",
       title: "Child Sexual Exploitation",
       description:
-        "~36 million reports were received of suspected child sexual exploitation in 2023.",
+        "~36 million reports were received of suspected child sexual exploitation in 2023.<br><br>",
       source1: "NCMEC CyberTipline Report, 2023",
       link1: "https://www.missingkids.org/cybertiplinedata",
     },
