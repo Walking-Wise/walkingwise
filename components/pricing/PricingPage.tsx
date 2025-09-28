@@ -47,7 +47,7 @@ const plans = [
 			"12 Continuing Education Credits",
 			" ",
 			"Youth Curriculum (11+)",
-			"Implementation Guidance",
+			"Implementation Guide",
 			"Reporting Protocol Tool",
 			"Risk Factor & Indicator Tools",
 			"Anonymous Assessment Tools",
@@ -78,7 +78,7 @@ const plans = [
 				"Implementation Guidance",
 				"SLIDO’s Anonymous Polling Tool",
 				"Reporting Protocol Tool",
-				"Risk Factor & Indicator Tools",
+				"ToolRisk Factor & Indicator Tools",
 				"Anonymous Assessment Tools",
 				"Teaching Tips for Classrooms",
 				"Lesson Plans: 12 Part Series",
@@ -157,7 +157,7 @@ const customPlans = [
 		buttonText: "Contact Us",
 		enterprise: true,
 		link: "https://tally.so/r/3E956o",
-		variant: "dark",
+		variant: "light",
 	},
 ];
 
@@ -204,18 +204,12 @@ const PricingPage = () => {
 										✔ {plan.numberOfUsers}
 									</li>
 									{plan.features.map((feature, i) => {
-										if (feature.includes("1 User"))
-											return <li className="font-semibold" style="font-size: 14pt !important;">{feature}</li><li style="line-height: 0.1em;">&nbsp;</li>;
-										else if (feature.includes("6 Users"))
-											return <li className="font-semibold" style="font-size: 14pt !important;">{feature}</li><li style="line-height: 0.1em;">&nbsp;</li>;
-										else if (feature.includes("Unlimited Users"))
-											return <li className="font-semibold" style="font-size: 14pt !important;">{feature}</li><li style="line-height: 0.1em;">&nbsp;</li>;
-										else if (feature.includes("Adult Education Courses"))
-											return <li className="font-semibold" style="font-size: 14pt !important;">{feature}</li>;
+										if (feature.includes("Adult Education Courses"))
+											return <li className="font-semibold">✔ {feature}</li>;
 										else if (feature.includes("Youth Curriculum"))
-										return <li style="line-height: 0.1em;">&nbsp;</li><li className="font-semibold" style="font-size: 14pt !important;">{feature}</li>;
+										return <li className="font-semibold">✔ {feature}</li>;
 										else if (feature.includes("SLIDO"))
-										return <li className="font-semibold" style="color:DarkGreen">✔ {feature}</li>;
+										return <li className="font-semibold text-green-400">✔ {feature}</li>;
 										else if (feature === " ")
 										return <li className="font-semibold">&nbsp;</li>;
 										else
