@@ -22,6 +22,7 @@ const plans = [
 		footer: "Annual Subscription, Cancel Anytime",
 		numberOfUsers: "1 User",
 		features: [
+    " ",
 				"Education for Youth (11+)",
 				"Teaching Tips for Home",
 				"Parent Resources",
@@ -41,13 +42,14 @@ const plans = [
 		footer: "Annual Subscription, Cancel Anytime",
 		numberOfUsers: "1 User",
 		features: [
+   " ",
 			"Adult Education Courses",
 			"Twelve contact hours",
 			"12 Learning Modules",
 			"12 Continuing Education Credits",
 			" ",
 			"Youth Curriculum (11+)",
-			"Implementation Guide",
+			"Implementation Guidance",
 			"Reporting Protocol Tool",
 			"Risk Factor & Indicator Tools",
 			"Anonymous Assessment Tools",
@@ -70,15 +72,16 @@ const plans = [
 		footer: "Annual Subscription, Cancel Anytime",
 		numberOfUsers: "6 Users",
 		features: [
+				" ",
 				"Adult Education Courses",
 				"12 Learning Modules",
 				"12 Continuing Education Credits",
-				" ",
+    " ",
 				"Youth Curriculum (11+)",
 				"Implementation Guidance",
 				"SLIDO’s Anonymous Polling Tool",
 				"Reporting Protocol Tool",
-				"ToolRisk Factor & Indicator Tools",
+				"Risk Factor & Indicator Tools",
 				"Anonymous Assessment Tools",
 				"Teaching Tips for Classrooms",
 				"Lesson Plans: 12 Part Series",
@@ -98,6 +101,7 @@ const plans = [
 		footer: "Annual Subscription, Cancel Anytime",
 		numberOfUsers: "6 Users",
 		features: [
+    " ",
 				"Adult Education Courses",
 				"12 Learning Modules",
 				"12 Continuing Education Credits",
@@ -131,14 +135,14 @@ const customPlans = [
 		footer: "Annual Subscription, Cancel Anytime",
 		numberOfUsers: "1 User",
 		features: [
-				"Adult Education Courses",
-				"Twelve contact hours",
-				"12 Learning Modules",
-				"12 Continuing Education Credits",
-				" ",
-				"Evidence-Based Content",
-				"Interviews: Survivor & Advocacy Experts",
-				"Engaging Interaction",
+    " ",
+		"Course Features",
+		"Adult Education Courses – 12 contact hours, 12 learning modules",
+		"Continuing Education Credits – Earn 12 CME/CE credits",
+		"Evidence-Based Content – Built on the latest research",
+		"Expert Interviews – Survivors and advocacy professionals",
+		"Knowledge Check – Reinforces learning in preparation for the quiz",
+		"Quizzes – Claim CME & CE Credits",
 		],
 		buttonText: "Buy Now",
 		popular: false,
@@ -153,11 +157,26 @@ const customPlans = [
 		annual: "Contact us for a quote",
 		footer: "Annual Subscription, Cancel Anytime",
 		numberOfUsers: "Unlimited users",
-		features: ["Connect to your LMS with SCORM, xAPI, etc."],
+		features: [
+    " ",
+			"Course Features",
+			"Adult Education Courses – 12 contact hours, 12 learning modules",
+			"Continuing Education Credits – Earn 12 CME/CE credits",
+			"Evidence-Based Content – Built on the latest research",
+			"Expert Interviews – Survivors and advocacy professionals",
+			"Knowledge Check – Reinforces learning in preparation for the quiz",
+			"Quizzes – Claim CME & CE Credits ",
+    " ",
+			"Seamless Integration",
+			"Upload courses to your LMS",
+			"Customizable course features",
+			"File options include SCORM, xAPI, AICC, and cmi5",
+			"Custom billing and terms",
+		],
 		buttonText: "Contact Us",
 		enterprise: true,
 		link: "https://tally.so/r/3E956o",
-		variant: "light",
+		variant: "dark",
 	},
 ];
 
@@ -204,69 +223,79 @@ const PricingPage = () => {
 										✔ {plan.numberOfUsers}
 									</li>
 									{plan.features.map((feature, i) => {
-										if (feature.includes("Adult Education Courses"))
-											return <li className="font-semibold">✔ {feature}</li>;
+										if (feature.includes("1 User"))
+											return <li className="font-semibold" style="font-size: 14pt !important;">{feature}</li>;
+										else if (feature.includes("6 Users"))
+											return <li className="font-semibold" style="font-size: 14pt !important;">{feature}</li>;
+										else if (feature.includes("Unlimited Users"))
+											return <li className="font-semibold" style="font-size: 14pt !important;">{feature}</li>;
+										else if (feature.includes("Course Features"))
+											return <li className="font-semibold" style="font-size: 14pt !important;">{feature}</li>;
+										else if (feature.includes("Seamless Integration"))
+											return <li className="font-semibold" style="font-size: 14pt !important;">{feature}</li>;
+										else if (feature.includes("Adult Education Courses"))
+											return <li className="font-semibold" style="font-size: 14pt !important;">{feature}</li>;
 										else if (feature.includes("Youth Curriculum"))
-										return <li className="font-semibold">✔ {feature}</li>;
+										return <li className="font-semibold" style="font-size: 14pt !important;">{feature}</li>;
 										else if (feature.includes("SLIDO"))
-										return <li className="font-semibold text-green-400">✔ {feature}</li>;
+										return <li className="font-semibold" style="color:DarkGreen">✔ {feature}</li>;
 										else if (feature === " ")
-										return <li className="font-semibold">&nbsp;</li>;
+										return <li style="line-height: 0.1em;">&nbsp;</li>;
 										else
 										return <li key={i}>✔ {feature}</li>;
 									})}
 									
 								</ul>
 							</div>
-							{plan.button2Text ? (
-								<div>
-									<div className="flex flex-col md:flex-row items-center">
-										<button
-											className={`w-full py-2 px-4 mb-3 md:mr-1 md:mb-0 rounded-md border-1 border-[#303030] text-[#303030] ${
-												plan.popular
-													? "bg-purple-600 hover:bg-purple-700"
-													: "bg-[#ffffff] hover:bg-[#fafafa]"
-											}`}
-											onClick={() => {
-												window.open(plan.link2, '_blank')
-											}}
-										>
-											{plan.button2Text}
-										</button>
-										<button
-											className={`w-full py-2 px-4 md:ml-1 rounded-md text-white ${
-												plan.popular
-													? "bg-purple-600 hover:bg-purple-700"
-													: "bg-[#303030] hover:bg-[#303030]"
-											}`}
-											onClick={() => {
-												window.open(plan.link, '_blank')
-											}}
-										>
-											{plan.buttonText}
-										</button>
-									</div>
-									<p className="text-xs text-center text-gray-400 mt-2">
-										{plan.footer}
-									</p>
-								</div>
-							) : (
-								<div>
-									<button
-										className={`w-full py-2 px-4 rounded-md text-white ${
-											plan.popular
-												? "bg-purple-600 hover:bg-purple-700"
-												: "bg-[#303030] hover:bg-[#303030]"
-										}`}
-										onClick={() => {
-											window.open(plan.link, '_blank')
-										}}
-									>
-										{plan.buttonText}
-									</button>
-									<p className="text-xs text-center text-gray-400 mt-2">
-										{plan.footer}
-									</p>
+        							{plan.button2Text ? (
+        								<div>
+        									<div className="flex flex-col md:flex-row items-center">
+        										<button
+        											className={`w-full py-2 px-4 mb-3 md:mr-1 md:mb-0 rounded-md border-1 border-[#303030] text-[#303030] ${
+        												plan.popular
+        													? "bg-purple-600 hover:bg-purple-700"
+        													: "bg-[#ffffff] hover:bg-[#fafafa]"
+        											}`}
+        											onClick={() => {
+        												window.open(plan.link2, '_blank')
+        											}}
+        										>
+        											{plan.button2Text}
+        										</button>
+        										<button
+        											className={`w-full py-2 px-4 md:ml-1 rounded-md text-white ${
+        												plan.popular
+        													? "bg-purple-600 hover:bg-purple-700"
+        													: "bg-[#303030] hover:bg-[#303030]"
+        											}`}
+        											onClick={() => {
+        												window.open(plan.link, '_blank')
+        											}}
+        										>
+        											{plan.buttonText}
+        										</button>
+        									</div>
+        									<p className="text-xs text-center text-gray-400 mt-2">
+        										{plan.footer}
+        									</p>
+        								</div>
+        							) : (
+        								<div>
+        									<button
+        										className={`w-full py-2 px-4 rounded-md text-white ${
+        											plan.popular
+        												? "bg-purple-600 hover:bg-purple-700"
+        												: "bg-[#303030] hover:bg-[#303030]"
+        										}`}
+        										onClick={() => {
+        											window.open(plan.link, '_blank')
+        										}}
+        									>
+        										{plan.buttonText}
+        									</button>
+        									<p className="text-xs text-center text-gray-400 mt-2">
+        										{plan.footer}
+        									</p>
 								</div>
 							)}
 						</div>
@@ -303,14 +332,24 @@ const PricingPage = () => {
 								<ul className="space-y-2 text-sm lg:text-md">
 									<li className="font-semibold">✔ {plan.numberOfUsers}</li>
 									{plan.features.map((feature, i) => {
-										if (feature.includes("Adult Education Courses"))
-											return <li className="font-semibold">✔ {feature}</li>;
+										if (feature.includes("1 User"))
+											return <li className="font-semibold" style="font-size: 14pt !important;">{feature}</li>;
+										else if (feature.includes("6 Users"))
+											return <li className="font-semibold" style="font-size: 14pt !important;">{feature}</li>;
+										else if (feature.includes("Unlimited Users"))
+											return <li className="font-semibold" style="font-size: 14pt !important;">{feature}</li>;
+										else if (feature.includes("Course Features"))
+											return <li className="font-semibold" style="font-size: 14pt !important;">{feature}</li>;
+										else if (feature.includes("Seamless Integration"))
+											return <li className="font-semibold" style="font-size: 14pt !important;">{feature}</li>;
+										else if (feature.includes("Adult Education Courses"))
+											return <li className="font-semibold" style="font-size: 14pt !important;">{feature}</li>;
 										else if (feature.includes("Youth Curriculum"))
-										return <li className="font-semibold">✔ {feature}</li>;
+										return <li className="font-semibold" style="font-size: 14pt !important;">{feature}</li>;
 										else if (feature.includes("SLIDO"))
-										return <li className="font-semibold text-green-400">✔ {feature}</li>;
+										return <li className="font-semibold" style="color:DarkGreen">✔ {feature}</li>;
 										else if (feature === " ")
-										return <li className="font-semibold">&nbsp;</li>;
+										return <li style="line-height: 0.1em;">&nbsp;</li>;
 										else
 										return <li key={i}>✔ {feature}</li>;
 
