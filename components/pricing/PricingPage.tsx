@@ -16,11 +16,11 @@ const plans = [
 	{
 		name: Plans.Individual,
 		subtext:
-			"Designed for home education & proactive parents who want to educate their children.",
+			"Created for homeschooling in addition to parents, grandparents, and caregivers who want to educate their children.",
 		price: "$3 / month",
 		annual: "Billed $36 annually",
 		footer: "Annual Subscription, Cancel Anytime",
-		numberOfUsers: "1 user",
+		numberOfUsers: "1 User",
 		features: [
 				"Education for Youth (11+)",
 				"Teaching Tips for Home",
@@ -39,7 +39,7 @@ const plans = [
 		price: "$16 / month",
 		annual: "Billed $192 annually",
 		footer: "Annual Subscription, Cancel Anytime",
-		numberOfUsers: "1 user",
+		numberOfUsers: "1 User",
 		features: [
 			"Adult Education Courses",
 			"Twelve contact hours",
@@ -47,7 +47,7 @@ const plans = [
 			"12 Continuing Education Credits",
 			" ",
 			"Youth Curriculum (11+)",
-			"Implementation Guide",
+			"Implementation Guidance",
 			"Reporting Protocol Tool",
 			"Risk Factor & Indicator Tools",
 			"Anonymous Assessment Tools",
@@ -68,7 +68,7 @@ const plans = [
 		price: "$50 / month",
 		annual: "Billed $600 annually with a 60% discount code",
 		footer: "Annual Subscription, Cancel Anytime",
-		numberOfUsers: "6 users",
+		numberOfUsers: "6 Users",
 		features: [
 				"Adult Education Courses",
 				"12 Learning Modules",
@@ -78,7 +78,7 @@ const plans = [
 				"Implementation Guidance",
 				"SLIDO’s Anonymous Polling Tool",
 				"Reporting Protocol Tool",
-				"ToolRisk Factor & Indicator Tools",
+				"Risk Factor & Indicator Tools",
 				"Anonymous Assessment Tools",
 				"Teaching Tips for Classrooms",
 				"Lesson Plans: 12 Part Series",
@@ -96,7 +96,7 @@ const plans = [
 		price: "$125 / month",
 		annual: "Billed $1,500 annually",
 		footer: "Annual Subscription, Cancel Anytime",
-		numberOfUsers: "6 users",
+		numberOfUsers: "6 Users",
 		features: [
 				"Adult Education Courses",
 				"12 Learning Modules",
@@ -129,16 +129,15 @@ const customPlans = [
 		price: "$125 ONLINE COURSE",
 		annual: "Billed $125 annually, with $45 renewal option",
 		footer: "Annual Subscription, Cancel Anytime",
-		numberOfUsers: "1 user",
+		numberOfUsers: "1 User",
 		features: [
-				"Adult Education Courses",
-				"Twelve contact hours",
-				"12 Learning Modules",
-				"12 Continuing Education Credits",
-				" ",
-				"Evidence-Based Content",
-				"Interviews: Survivor & Advocacy Experts",
-				"Engaging Interaction",
+		"Course Features",
+		"Adult Education Courses – 12 contact hours, 12 learning modules",
+		"Continuing Education Credits – Earn 12 CME/CE credits",
+		"Evidence-Based Content – Built on the latest research",
+		"Expert Interviews – Survivors and advocacy professionals",
+		"Knowledge Check – Reinforces learning in preparation for the quiz",
+		"Quizzes – Claim CME & CE Credits",
 		],
 		buttonText: "Buy Now",
 		popular: false,
@@ -153,11 +152,24 @@ const customPlans = [
 		annual: "Contact us for a quote",
 		footer: "Annual Subscription, Cancel Anytime",
 		numberOfUsers: "Unlimited users",
-		features: ["Connect to your LMS with SCORM, xAPI, etc."],
+		features: [
+			"Course Features",
+			"Adult Education Courses – 12 contact hours, 12 learning modules",
+			"Continuing Education Credits – Earn 12 CME/CE credits",
+			"Evidence-Based Content – Built on the latest research",
+			"Expert Interviews – Survivors and advocacy professionals",
+			"Knowledge Check – Reinforces learning in preparation for the quiz",
+			"Quizzes – Claim CME & CE Credits ",
+			"Seamless Integration",
+			"Upload courses to your LMS",
+			"Customizable course features",
+			"File options include SCORM, xAPI, AICC, and cmi5",
+			"Custom billing and terms",
+		],
 		buttonText: "Contact Us",
 		enterprise: true,
 		link: "https://tally.so/r/3E956o",
-		variant: "light",
+		variant: "dark",
 	},
 ];
 
@@ -204,12 +216,22 @@ const PricingPage = () => {
 										✔ {plan.numberOfUsers}
 									</li>
 									{plan.features.map((feature, i) => {
-										if (feature.includes("Adult Education Courses"))
-											return <li className="font-semibold">✔ {feature}</li>;
+										if (feature.includes("1 User"))
+											return <li className="font-semibold" style="font-size: 14pt !important;">{feature}</li><li style="line-height: 0.1em;">&nbsp;</li>;
+										else if (feature.includes("6 Users"))
+											return <li className="font-semibold" style="font-size: 14pt !important;">{feature}</li><li style="line-height: 0.1em;">&nbsp;</li>;
+										else if (feature.includes("Unlimited Users"))
+											return <li className="font-semibold" style="font-size: 14pt !important;">{feature}</li><li style="line-height: 0.1em;">&nbsp;</li>;
+										else if (feature.includes("Course Features"))
+											return <li className="font-semibold" style="font-size: 14pt !important;">{feature}</li>;
+										else if (feature.includes("Seamless Integration"))
+											return <li className="font-semibold" style="font-size: 14pt !important;">{feature}</li>;
+										else if (feature.includes("Adult Education Courses"))
+											return <li className="font-semibold" style="font-size: 14pt !important;">{feature}</li>;
 										else if (feature.includes("Youth Curriculum"))
-										return <li className="font-semibold">✔ {feature}</li>;
+										return <li style="line-height: 0.1em;">&nbsp;</li><li className="font-semibold" style="font-size: 14pt !important;">{feature}</li>;
 										else if (feature.includes("SLIDO"))
-										return <li className="font-semibold text-green-400">✔ {feature}</li>;
+										return <li className="font-semibold" style="color:DarkGreen">✔ {feature}</li>;
 										else if (feature === " ")
 										return <li className="font-semibold">&nbsp;</li>;
 										else
@@ -303,12 +325,22 @@ const PricingPage = () => {
 								<ul className="space-y-2 text-sm lg:text-md">
 									<li className="font-semibold">✔ {plan.numberOfUsers}</li>
 									{plan.features.map((feature, i) => {
-										if (feature.includes("Adult Education Courses"))
-											return <li className="font-semibold">✔ {feature}</li>;
+										if (feature.includes("1 User"))
+											return <li className="font-semibold" style="font-size: 14pt !important;">{feature}</li><li style="line-height: 0.1em;">&nbsp;</li>;
+										else if (feature.includes("6 Users"))
+											return <li className="font-semibold" style="font-size: 14pt !important;">{feature}</li><li style="line-height: 0.1em;">&nbsp;</li>;
+										else if (feature.includes("Unlimited Users"))
+											return <li className="font-semibold" style="font-size: 14pt !important;">{feature}</li><li style="line-height: 0.1em;">&nbsp;</li>;
+										else if (feature.includes("Course Features"))
+											return <li className="font-semibold" style="font-size: 14pt !important;">{feature}</li>;
+										else if (feature.includes("Seamless Integration"))
+											return <li className="font-semibold" style="font-size: 14pt !important;">{feature}</li>;
+										else if (feature.includes("Adult Education Courses"))
+											return <li className="font-semibold" style="font-size: 14pt !important;">{feature}</li>;
 										else if (feature.includes("Youth Curriculum"))
-										return <li className="font-semibold">✔ {feature}</li>;
+										return <li style="line-height: 0.1em;">&nbsp;</li><li className="font-semibold" style="font-size: 14pt !important;">{feature}</li>;
 										else if (feature.includes("SLIDO"))
-										return <li className="font-semibold text-green-400">✔ {feature}</li>;
+										return <li className="font-semibold" style="color:DarkGreen">✔ {feature}</li>;
 										else if (feature === " ")
 										return <li className="font-semibold">&nbsp;</li>;
 										else
