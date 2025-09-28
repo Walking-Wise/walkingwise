@@ -365,3 +365,13 @@ nav span{
 button {
   cursor: pointer !important;
 }
+.text-darkgreen{
+  color:DarkGreen !important;
+}
+.line-short{
+  line-height: 0.1em;
+}
+.font14{
+  font-size: 14pt !important;
+}
+
