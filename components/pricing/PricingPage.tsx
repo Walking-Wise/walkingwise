@@ -355,7 +355,7 @@ const PricingPage = () => {
 									className={`w-full py-2 px-4 rounded-md
 									${
 										plan.variant === "dark"
-											? "bg-white text-[#303030] hover:bg-gray-200"
+											? "bg-[#303030] hover:bg-[#303030] text-white"
 											: "bg-[#303030] hover:bg-[#303030] text-white"
 									}`}
 									onClick={() => {
