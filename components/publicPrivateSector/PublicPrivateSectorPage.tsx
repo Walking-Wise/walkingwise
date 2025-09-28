@@ -56,11 +56,7 @@ const PublicPrivateSectorPage = () => {
                 title: "ENTERPRISE SUBSCRIPTION",
                 description:
                   "For organizations without an LMS, our Enterprise Subscription provides associates with individual login access to the Walking Wise Learning Platform. This flexible, on-demand model allows professionals to complete the lessons at their own pace while meeting compliance and development requirements.",
-                linkText: "Schedule",
-                linkHref:
-                  "https://calendly.com/karla-highman-walkingwise/30min?back=1&amp;month=2025-07",
-                end: "a platform tour today to discover how Walking Wise can support your organization’s education initiatives.",
-                newPage: true,
+                
               },
             ].map((box, index) => (
               <div
@@ -92,6 +88,20 @@ const PublicPrivateSectorPage = () => {
           </div>
         </div>
       </div>
+      <Section bgColor="[#303030]" className="flex items-center justify-center md:py-4 lg:py-10">
+        <BodyText className="text-white md:max-w-[1200px]">
+          <a
+            href="https://calendly.com/karla-highman-walkingwise/30min?back=1&amp;month=2025-07"
+            target="_blank"
+            className="underline"
+          >
+            Schedule
+          </a>{" "}
+          a platform tour today to discover how Walking Wise can support your
+          organization's education initiatives.
+        </BodyText>
+      </Section>
+
     </>
   );
 };
