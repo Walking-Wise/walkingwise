@@ -165,7 +165,7 @@ const PricingPage = () => {
 
 	return (
 		<>
-			<div className="w-full bg-[#d7f3f7] h-[80px] sm:h-[120px] flex items-center">
+			<div className="w-full bg-[#303030] h-[80px] sm:h-[120px] flex items-center">
 				<div className="w-full max-w-[2000px] mx-auto px-6 sm:px-12 md:px-20 lg:px-26">
 					<h1 className="text-white uppercase text-4xl sm:text-6xl lg:text-6xl">
 						Pricing Plans
@@ -215,26 +215,14 @@ const PricingPage = () => {
 										else
 										return <li key={i}>✔ {feature}</li>;
 									})}
-									/*
-									{(plan.name === Plans.NonProfit ||
-										plan.name === Plans.Schools) && (
-										<>
-											<li className="font-semibold text-blue-700">
-												✔ On-Demand 12 Lesson Course for Adults
-											</li>
-											<li className="font-semibold text-blue-700">
-												✔ 12 CME / CE Credits (PIM Accreditation)
-											</li>
-										</>
-									)}
-									*/
+									
 								</ul>
 							</div>
 							{plan.button2Text ? (
 								<div>
 									<div className="flex flex-col md:flex-row items-center">
 										<button
-											className={`w-full py-2 px-4 mb-3 md:mr-1 md:mb-0 rounded-md border-1 border-[#d7f3f7] text-[#d7f3f7] ${
+											className={`w-full py-2 px-4 mb-3 md:mr-1 md:mb-0 rounded-md border-1 border-[#303030] text-[#303030] ${
 												plan.popular
 													? "bg-purple-600 hover:bg-purple-700"
 													: "bg-[#ffffff] hover:bg-[#fafafa]"
@@ -249,7 +237,7 @@ const PricingPage = () => {
 											className={`w-full py-2 px-4 md:ml-1 rounded-md text-white ${
 												plan.popular
 													? "bg-purple-600 hover:bg-purple-700"
-													: "bg-[#d7f3f7] hover:bg-[#d7f3f7]"
+													: "bg-[#303030] hover:bg-[#303030]"
 											}`}
 											onClick={() => {
 												window.open(plan.link, '_blank')
@@ -268,7 +256,7 @@ const PricingPage = () => {
 										className={`w-full py-2 px-4 rounded-md text-white ${
 											plan.popular
 												? "bg-purple-600 hover:bg-purple-700"
-												: "bg-[#d7f3f7] hover:bg-[#d7f3f7]"
+												: "bg-[#303030] hover:bg-[#303030]"
 										}`}
 										onClick={() => {
 											window.open(plan.link, '_blank')
@@ -291,16 +279,16 @@ const PricingPage = () => {
 							className={`mt-10 flex flex-col rounded-xl shadow-lg border p-6 relative col-span-2
 							${
 								plan.variant === "dark"
-									? "bg-[#d7f3f7] text-white border-gray-700"
+									? "bg-[#d7f3f7] text-gray-800 border-gray-200"
 									: "bg-white text-gray-800 border-gray-200"
 							}`}
 						>
 							<div className="mb-4">
-								<h2 className="text-xl font-semibold">{plan.name}</h2>
+								<h2 className="text-2xl font-semibold">{plan.name}</h2>
 								<p
 									className={`text-sm dark:text-gray-300 ${
 										plan.variant === "dark"
-											? "text-white"
+											? "text-gray-500"
 											: "text-gray-500"
 									}`}
 								>
@@ -328,16 +316,7 @@ const PricingPage = () => {
 
 									})}
 									
-									/*{plan.enterprise && (
-										<>
-											<li className="font-semibold text-blue-400">
-												✔ On-Demand 12 Lesson Course for Adults
-											</li>
-											<li className="font-semibold text-blue-400">
-												✔ 12 CME / CE Credits (PIM Accreditation)
-											</li>
-										</>
-									)}*/
+									
 
 								</ul>
 							</div>
@@ -347,8 +326,8 @@ const PricingPage = () => {
 									className={`w-full py-2 px-4 rounded-md
 									${
 										plan.variant === "dark"
-											? "bg-white text-[#d7f3f7] hover:bg-gray-200"
-											: "bg-[#d7f3f7] hover:bg-[#d7f3f7] text-white"
+											? "bg-white text-[#303030] hover:bg-gray-200"
+											: "bg-[#303030] hover:bg-[#303030] text-white"
 									}`}
 									onClick={() => {
 										window.open(plan.link, '_blank')
