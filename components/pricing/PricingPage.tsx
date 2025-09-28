@@ -223,7 +223,11 @@ const PricingPage = () => {
 										✔ {plan.numberOfUsers}
 									</li>
 									{plan.features.map((feature, i) => {
-          if (feature.includes("User"))
+          if (feature === "1 User")
+           return <li className="font-semibold font14" >{feature}</li>;
+          else if (feature === "6 Users")
+           return <li className="font-semibold font14" >{feature}</li>;
+          else if (feature === "Unlimited Users")
            return <li className="font-semibold font14" >{feature}</li>;
           else if (feature.includes("Course Features"))
            return <li className="font-semibold font14" >{feature}</li>;
@@ -329,22 +333,26 @@ const PricingPage = () => {
 								<ul className="space-y-2 text-sm lg:text-md">
 									<li className="font-semibold">✔ {plan.numberOfUsers}</li>
 									{plan.features.map((feature, i) => {
-          if (feature.includes("User"))
+          if (feature === "1 User")
            return <li className="font-semibold font14" >{feature}</li>;
-          else if (feature.includes("Course Features"))
+          else if (feature === "6 Users")
            return <li className="font-semibold font14" >{feature}</li>;
-          else if (feature.includes("Seamless Integration"))
+          else if (feature === "Unlimited Users")
            return <li className="font-semibold font14" >{feature}</li>;
-          else if (feature.includes("Adult Education Courses"))
-           return <li className="font-semibold font14" >{feature}</li>;
-          else if (feature.includes("Youth Curriculum"))
-          return <li className="font-semibold font14" >{feature}</li>;
-          else if (feature.includes("SLIDO"))
-          return <li className="font-semibold text-darkgreen" >✔ {feature}</li>;
-          else if (feature === " ")
-          return <li className="line-short" >&nbsp;</li>;
-          else
-          return <li key={i}>✔ {feature}</li>;
+										else if (feature.includes("Course Features"))
+											return <li className="font-semibold font14" >{feature}</li>;
+										else if (feature.includes("Seamless Integration"))
+											return <li className="font-semibold font14" >{feature}</li>;
+										else if (feature.includes("Adult Education Courses"))
+											return <li className="font-semibold font14" >{feature}</li>;
+										else if (feature.includes("Youth Curriculum"))
+										return <li className="font-semibold font14" >{feature}</li>;
+										else if (feature.includes("SLIDO"))
+										return <li className="font-semibold text-darkgreen" >✔ {feature}</li>;
+										else if (feature === " ")
+										return <li className="line-short" >&nbsp;</li>;
+										else
+										return <li key={i}>✔ {feature}</li>;
 
 									})}
 									
@@ -358,7 +366,7 @@ const PricingPage = () => {
 									className={`w-full py-2 px-4 rounded-md
 									${
 										plan.variant === "dark"
-											? "bg-[#303030] hover:bg-[#303030] text-white"
+											? "bg-white text-[#303030] hover:bg-gray-200"
 											: "bg-[#303030] hover:bg-[#303030] text-white"
 									}`}
 									onClick={() => {
