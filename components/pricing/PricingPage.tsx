@@ -66,7 +66,7 @@ const plans = [
  {
   name: Plans.NonProfit,
   subtext:
-   "Special pricing is provided for youth-serving organizations and anti-exploitation advocate groups.",
+   "Available for advocacy groups and youth-serving organizations, such as churches and youth clubs.",
   price: "$50 / month",
   annual: "Billed $600 annually with a 60% discount code",
   footer: "Annual Subscription, Cancel Anytime",
