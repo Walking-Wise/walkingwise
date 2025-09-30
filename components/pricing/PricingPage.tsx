@@ -88,9 +88,12 @@ const plans = [
     "Animated Videos: 12 Part Series",
     "Classroom Presentations: 12 Lessons",
   ],
+  buttonText: "Request Discount Code",
   popular: false,
-   buttonText: "Request Invoice",
-  link: "https://tally.so/r/3xGWE9",
+  link: "https://tally.so/r/w459Bo",
+  button2Text: "",
+  link2: "",
+
  },
  {
   name: Plans.Schools,
@@ -119,6 +122,9 @@ const plans = [
   ],
   buttonText: "Request Invoice",
   link: "https://tally.so/r/3xGWE9",
+
+  button2Text: "",
+  link2: "",
   popular: false,
  },
 ];
