@@ -97,7 +97,7 @@ const PartOne = () => {
               <button
                 onClick={() =>
                   window.open(
-                    "https://walking-wise-2025-website-assets.s3.us-east-1.amazonaws.com/Website_Dashboard-Education_PDFs_and_Icons/PIM_Accreditation_Info_Walking-Wise-Website/content/index.html#/",
+                  "https://walking-wise-12-part-course.s3.us-east-1.amazonaws.com/PIM+Accrediation+Info-Walking-Wise-eLearning/content/index.html?version=20250930165120",
                     "_blank"
                   )
                 }
