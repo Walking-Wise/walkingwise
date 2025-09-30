@@ -66,7 +66,7 @@ const plans = [
  {
   name: Plans.NonProfit,
   subtext:
-   "Available for advocacy groups and youth-serving organizations, such as churches and youth clubs, youth leaders & community members.",
+   "Available for advocacy groups and youth-serving organizations, such as churches and youth clubs.",
   price: "$50 / month",
   annual: "Billed $600 annually",
   footer: "Annual Subscription, Cancel Anytime",
@@ -133,7 +133,7 @@ const customPlans = [
  {
   name: Plans.OnlineCourse,
   subtext:
-   "Developed for medical professionals, social workers, law enforcement, educators & youth leaders.",
+   "Developed for medical professionals, social workers, law enforcement, educators, youth leaders and community members.",
   price: "$125 Online Course",
   annual: "Billed $125 annually, with $45 renewal option",
   footer: "Annual Subscription, Cancel Anytime",
