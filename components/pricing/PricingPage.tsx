@@ -88,9 +88,9 @@ const plans = [
     "Animated Videos: 12 Part Series",
     "Classroom Presentations: 12 Lessons",
   ],
-  buttonText: "Request Discount Code",
+  buttonText: "Request Invoice",
   popular: false,
-  link: "https://tally.so/r/w459Bo",
+  link: "https://tally.so/r/3xGWE9",
   button2Text: "",
   link2: "",
 
