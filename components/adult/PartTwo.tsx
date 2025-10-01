@@ -39,10 +39,10 @@ const PartTwo = () => {
           "Grooming is an illegal act, but prosecuting such cases is challenging due to the difficulty of proving criminal intent without a sexual assault occurring. Education for adults and adolescents will empower communities to recognize forms of manipulation and report grooming before offenders have the chance to commit sexual crimes.",
       },
       objectives: [
-        "Examine common sex trafficking myths and understand how these misconceptions enable society to overlook the tactics of force, fraud, and coercion that predators use to exploit victims in the commercial sex trade.",
-        "Discuss how young people can recognize inappropriate behaviors of unsafe adults and identify the key traits of trustworthy adults.",
-        "Describe the grooming techniques used by sexual predators and traffickers to manipulate their targets.",
-        "Examine how viewing pornography can harm young brains, normalize sexual exploitation, and contribute to the expansion of the commercial sex trade.",
+        "#1 Myths & Reality: Examine common sex trafficking myths and understand how these misconceptions enable society to overlook the tactics of force, fraud, and coercion that predators use to exploit victims in the commercial sex trade.",
+        "#2 Trustworthy vs. Unsafe Adults: Discuss how young people can recognize inappropriate behaviors of unsafe adults and identify the key traits of trustworthy adults.",
+        "#3 Grooming Process: Describe the grooming techniques used by sexual predators and traffickers to manipulate their targets.",
+        "#4 Pornography Link: Examine how viewing pornography can harm young brains, normalize sexual exploitation, and contribute to the expansion of the commercial sex trade.",
       ],
     },
     {
@@ -68,10 +68,10 @@ const PartTwo = () => {
           "A youth’s inherent obedience and financial dependence on adults can also make them easy targets when living with or in proximity to a sexual predator. Particularly vulnerable populations include individuals from marginalized communities, such as LGBTQ+ youth, undocumented immigrants, and those with a history of trauma or abuse. Providing education enables adults and adolescents to understand how human traffickers prey on at-risk populations and empowers them to recognize and respond to manipulation, intimidation, and coercion.",
       },
       objectives: [
-        "Discuss how the use of electronic devices and online platforms can increase an individual's vulnerability to sexual predators and traffickers in the commercial sex trade.",
-        "Examine how societal factors contribute to the overlooked sexual exploitation of young males and understand the barriers that may discourage them from seeking help.",
-        "Identify the reasons young and marginalized populations are at heightened risk of being victimized by sexual predators and traffickers in the commercial sex trade.",
-        "Appraise how living in rural or sparsely populated communities presents unique conditions that enable sexual predators or human traffickers to prey on vulnerable individuals.",
+        "#5  Sextortion Scheme: Discuss how the use of electronic devices and online platforms can increase an individual's vulnerability to sexual predators and traffickers in the commercial sex trade.",
+        "#6 Male Victims: Examine how societal factors contribute to the overlooked sexual exploitation of young males and understand the barriers that may discourage them from seeking help.",
+        "#7 Runaways as Targets: Identify the reasons young and marginalized populations are at heightened risk of being victimized by sexual predators and traffickers in the commercial sex trade.",
+        "#8 Rural Risks: Appraise how living in rural or sparsely populated communities presents unique conditions that enable sexual predators or human traffickers to prey on vulnerable individuals.",
       ],
     },
     {
@@ -97,10 +97,10 @@ const PartTwo = () => {
           "Educating adults and adolescents about the risk factors and indicators of human trafficking will help them recognize the vulnerabilities that sexual predators exploit and the signs that appear once someone has been entrapped in the commercial sex industry.",
       },
       objectives: [
-        "Describe the various personas human traffickers use to deceive their victims and how they instill fear to maintain power and control.",
-        "Analyze how human traffickers coerce individuals under their control to recruit friends and acquaintances into the commercial sex industry.",
-        "Examine the sexual exploitation of children by family members for financial gain or to obtain something of value.",
-        "Explore the factors that drive males to buy sex initially and examine how they rationalize purchasing sex acts from vulnerable individuals.",
+        "#9 Human Traffickers: Describe the various personas human traffickers use to deceive their victims and how they instill fear to maintain power and control.",
+        "#10 Recruiters: Analyze how human traffickers coerce individuals under their control to recruit friends and acquaintances into the commercial sex industry.",
+        "#11 Familial Traffickers: Examine the sexual exploitation of children by family members for financial gain or to obtain something of value.",
+        "#12 Hidden Buyers: Explore the factors that drive males to buy sex initially and examine how they rationalize purchasing sex acts from vulnerable individuals.",
       ],
     },
   ];
@@ -408,13 +408,13 @@ const PartTwo = () => {
               <Button
                 onClick={() =>
                   window.open(
-                    "https://walking-wise-2025-website-assets.s3.us-east-1.amazonaws.com/Website_Dashboard-Education_PDFs_and_Icons/PIM_Accreditation_Info_Walking-Wise-Website/content/index.html#/",
+                    "https://walking-wise-12-part-course.s3.us-east-1.amazonaws.com/PIM+Accrediation+Info-Walking-Wise-eLearning/content/index.html",
                     "_blank"
                   )
                 }
                 className={`bg-[#9d1be3] ${roboto.className} mt-4 rounded-full text-sm sm:text-[16px] px-6 py-3 sm:py-3 text-white text-center flex items-center justify-center whitespace-nowrap underline`}
               >
-                CME/CE Accreditation
+                About CE Credits
               </Button>
               <Button
                 className={`bg-[#9d1be3] ${roboto.className} mt-0 md:mt-4 rounded-full text-sm sm:text-[16px] px-6 py-3 sm:py-3 text-white text-center flex items-center justify-center whitespace-nowrap`}
