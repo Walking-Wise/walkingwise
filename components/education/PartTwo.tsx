@@ -88,6 +88,19 @@ const PartTwo = () => {
         </div>
       </Section>
 
+      <Section bgColor="[#36c5d8]">
+        <div className="flex justify-center items-center flex-col">
+          <Button
+            onClick={() => (window.location.href = "/pricing")}
+            className={`mt-8`}
+          >
+            {"Enroll Today"}
+          </Button>
+        </div>
+      </Section>
+
+
+      
       {/* Disclosure Section */}
       <Section bgColor="[#00c1d5]">
         <SectionHeaderText className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-[#303030] font-bold">
