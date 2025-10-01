@@ -140,7 +140,7 @@ const AboutUs = () => {
             >
               Our <strong className="font-extrabold">MISSION</strong> is to
               equip adults to educate young people about the commercial sex
-              industry.
+              trade.
             </p>
           </div>
 
