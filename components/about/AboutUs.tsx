@@ -207,7 +207,8 @@ const AboutUs = () => {
             <p
               className={`${robotoop.className} mt-4 text-center text-[#303030] sm:text-lg`}
             >
-              Karla Highman, Founder 
+              Karla Highman, Founder <br />
+              Walking Wise
               
             </p>
             <Button
