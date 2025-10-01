@@ -204,7 +204,12 @@ const AboutUs = () => {
                 priority
               />
             </div>
-            
+            <p
+              className={`${robotoop.className} mt-4 text-center text-[#303030] sm:text-lg`}
+            >
+              Karla Highman, Founder 
+              
+            </p>
             <Button
               className={`mt-10`}
               onClick={() => window.open("https://walking-wise-2025-website-assets.s3.us-east-1.amazonaws.com/Website_Dashboard-Education_PDFs_and_Icons/PDFs_Guildes_OtherDocs/About_Walking_Wise-and-Founder_Karla_Highman.pdf")}
