@@ -84,15 +84,7 @@ const PartTwo = () => {
             </div>
           ))}
 
-          <BodyText className="md:text-center md:px-32 mt-4">
-            Enroll today to unlock our complete animated video series.
-          </BodyText>
-          <Button
-            onClick={() => (window.location.href = "/pricing")}
-            className={`mt-8`}
-          >
-            {"Enroll Today"}
-          </Button>
+          
         </div>
       </Section>
 
