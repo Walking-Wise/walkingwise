@@ -101,7 +101,7 @@ const PartOne = () => {
                     "_blank"
                   )
                 }
-                className={`bg-[#1C4675] hover:bg-[#2e3e4f] text-white px-6 sm:px-10 py-4 text-base sm:text-xl rounded-3xl transition-colors ${robotoopo.className}`}
+                className={`bg-[#9d1be3] hover:bg-[#2e3e4f] text-white px-6 sm:px-10 py-4 text-base sm:text-xl rounded-3xl transition-colors ${robotoopo.className}`}
               >
                 About CE Credits
               </button>
