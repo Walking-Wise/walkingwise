@@ -103,7 +103,7 @@ const PartOne = () => {
                 }
                 className={`bg-[#1C4675] hover:bg-[#2e3e4f] text-white px-6 sm:px-10 py-4 text-base sm:text-xl rounded-3xl transition-colors ${robotoopo.className}`}
               >
-                PIM Issued CMEs/CEs
+                About CE Credits
               </button>
             </div>
           </div>
