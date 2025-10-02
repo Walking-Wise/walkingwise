@@ -312,12 +312,7 @@ const PricingPage = () => {
        }`}
       >
        <div className="mb-4">
-        <h2 className="text-2xl font-semibold">
-               <a name={
-        ${plan.enterprise===true
-        ? "enterprise"
-        :""}
-        }></a>{plan.name}</h2>
+        <h2 className="text-2xl font-semibold"><a name="{plan.name}"><a>{plan.name}</h2>
         <p
          className={`text-sm dark:text-gray-300 ${
           plan.variant === "dark"
