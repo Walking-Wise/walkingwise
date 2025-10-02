@@ -312,7 +312,7 @@ const PricingPage = () => {
        }`}
       >
        <div className="mb-4">
-        <h2 className="text-2xl font-semibold">{plan.name}</h2>
+        <h2 id={plan.name} className="text-2xl font-semibold">{plan.name}</h2>
         <p
          className={`text-sm dark:text-gray-300 ${
           plan.variant === "dark"
