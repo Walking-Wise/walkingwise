@@ -104,7 +104,7 @@ const PublicPrivateSectorPage = () => {
           a platform tour today to discover how Walking Wise can support your
           organization's education initiatives.<br></br>
           <a
-            href="https://www.walkingwise.com/pricing"
+            href="https://www.walkingwise.com/pricing#ENTERPRISE"
             target="_self"
             className="underline"
           >
