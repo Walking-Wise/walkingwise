@@ -86,9 +86,6 @@ const PartTwo = () => {
 
           
         </div>
-      </Section>
-
-      <Section bgColor="[#36c5d8]">
         <div className="flex justify-center items-center flex-col">
           <Button
             onClick={() => (window.location.href = "/pricing")}
