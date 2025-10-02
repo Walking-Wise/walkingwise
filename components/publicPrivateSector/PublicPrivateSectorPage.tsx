@@ -21,7 +21,7 @@ const PublicPrivateSectorPage = () => {
       <PageBanner
         title="Public & Private Sector"
         image=""
-        altText="Walking Wise Education Demo"
+        altText=""
       />
 
       <div className="bg-[#00C1D5] pt-8 md:pt-16 lg:pt-24 pb-32">
@@ -30,7 +30,7 @@ const PublicPrivateSectorPage = () => {
           id="p_p_sector"
         >
           <SectionHeaderText className="mt-8 mb-4">
-            Public & private sector organizations
+            Organizations with Educational Programs
           </SectionHeaderText>
           <BodyText className={`mb-10 lg:mb-18`}>
             Medical groups, hospitals, government agencies, universities, and
@@ -48,12 +48,12 @@ const PublicPrivateSectorPage = () => {
                 title: "In-House LMS Integration",
                 description:
                   "Walking Wise modules seamlessly integrate into corporate Learning Management Systems (LMS), allowing organizations to deliver education efficiently within their existing training platforms. Our SCORM-compliant modules can be uploaded directly into your LMS, ensuring associates have on-demand access to the 12 lesson series.",
-                linkText: "Contact us",
-                linkHref: "/request-a-quote",
-                end: "today for implementation options.",
+                linkText: "",
+                linkHref: "",
+                end: "",
               },
               {
-                title: "ENTERPRISE SUBSCRIPTION",
+                title: "Multi-Seat Access",
                 description:
                   "For organizations without an LMS, our Enterprise Subscription provides associates with individual login access to the Walking Wise Learning Platform. This flexible, on-demand model allows professionals to complete the lessons at their own pace while meeting compliance and development requirements.",
                 linkText: "",
@@ -102,7 +102,15 @@ const PublicPrivateSectorPage = () => {
             Schedule
           </a>{" "}
           a platform tour today to discover how Walking Wise can support your
-          organization's education initiatives.
+          organization's education initiatives.<br></br>
+          <a
+            href="https://www.walkingwise.com/pricing"
+            target="_self"
+            className="underline"
+          >
+            Learn more
+          </a>{" "}
+          about Walking Wise Adult Education
         </BodyText>
       </Section>
 
