@@ -4,6 +4,7 @@ import Link from "next/link";
 import Section from "../ui/Section/Section";
 import SectionHeaderText from "../ui/SectionHeaderText/SectionHeaderText";
 import BodyText from "../ui/BodyText/BodyText";
+import Button from "../ui/Button/Button";
 
 const cardData = [
   {
