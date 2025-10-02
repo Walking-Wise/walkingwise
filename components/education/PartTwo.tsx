@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import { robotoItalicop, robotoopo } from "../../public/fonts/Fonts";
 import Link from "next/link";
