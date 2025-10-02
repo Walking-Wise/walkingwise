@@ -223,6 +223,22 @@ const DemoPage = () => {
           </a>{" "}
           a platform tour today to discover how Walking Wise can support your
           organization's education initiatives.
+
+          <div className="flex justify-center items-center flex-col">
+          <Button
+            onClick={() => (window.location.href = "https://learn.walkingwise.com/enroll/3486696?price_id=4408602")}
+            className={`mt-8`}
+          >
+            {"Start Adult Course"}
+          </Button>
+          <Button
+            onClick={() => (window.location.href = "/pricing")}
+            className={`mt-8`}
+          >
+            {"Youth Curriculum Enrollment"}
+          </Button>
+        </div>
+
         </BodyText>
       </Section>
     </>
