@@ -187,14 +187,13 @@ const YouthOrganization = () => {
             education & outreach in the fight against child exploitation.
           </h1>
           <div className="max-w-[2000px] mx-auto px-6 flex flex-col sm:flex-row gap-4 sm:gap-6 md:gap-8 lg:gap-10 w-full justify-center mt-8 md:mt-16 bg-[#303030]">
-          <p>
+          <p className="text-white">
             Join our Affiliate Program to raise funds for your organization while advancing prevention education in your community. Receive your organization's unique link, share it with others, and help bring life-changing learning to schools and youth networks. 
           </p>
-          </div>
-            <div className="max-w-[2000px] mx-auto px-6 flex flex-col sm:flex-row gap-4 sm:gap-6 md:gap-8 lg:gap-10 w-full justify-center mt-8 md:mt-16 bg-[#303030]">
-              <Button onClick={() => (window.location.href = "/demo")}>
-              DEMO Curriculum
+              <Button onClick={() => (window.location.href = "https://tally.so/r/w459Bo")}>
+              Apply to Join our Affiliate Program
             </Button>
+
             
           </div>
         </div>
