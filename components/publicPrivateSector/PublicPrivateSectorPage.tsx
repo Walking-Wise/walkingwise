@@ -110,7 +110,7 @@ const PublicPrivateSectorPage = () => {
           >
             Learn more
           </a>{" "}
-          about Walking Wise adult education
+          about Walking Wise adult education.
         </BodyText>
       </Section>
 
