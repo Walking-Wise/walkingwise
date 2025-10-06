@@ -80,6 +80,7 @@ const Footer = () => {
               label: "Public & Private Sector",
               href: "/public-private-sector",
             },
+            { label: "Affiliate Program", href: " https://tally.so/r/w459Bo " },
           ],
           [
             { label: "Login", href: "https://learn.walkingwise.com/users/sign_in" },
