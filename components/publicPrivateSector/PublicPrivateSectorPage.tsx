@@ -102,7 +102,7 @@ const PublicPrivateSectorPage = () => {
             Schedule
           </a>{" "}
           a platform tour today to discover how Walking Wise can support your
-          organization's education initiatives.<br><br>
+          organization's education initiatives.<br></br><br></br>
           <a
             href="https://www.walkingwise.com/pricing#ENTERPRISE"
             target="_self"
