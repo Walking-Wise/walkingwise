@@ -173,30 +173,14 @@ const SchoolDistrictPrograms = () => {
             >
               <div className="flex justify-between px-4 sm:px-6 py-4 mb-6 md:px-2 xl:px-8 w-full bg-[#303030]">
                 <div className="flex flex-col items-center">
-                  <p
-                    className={`${roboto.className} text-sm sm:text-base md:text-md xl:text-xl text-white`}
+                  <h1
+                    className="text-4xl sm:text-6xl text-white"
                   >
-                    Middle Schools
-                  </p>
-                  <p
-                    className={`${roboto.className} text-white text-lg xl:text-2xl`}
-                  >
-                    {card.middle}
-                  </p>
-                </div>
-                <div className="flex flex-col items-center">
-                  <p
-                    className={`${roboto.className} text-sm sm:text-base md:text-md xl:text-xl text-white`}
-                  >
-                    High Schools
-                  </p>
-                  <p
-                    className={`${roboto.className} text-white text-lg xl:text-2xl`}
-                  >
-                    {card.high}
-                  </p>
+                    3-year track
+                    </h1>
                 </div>
               </div>
+
               <div className="text-center flex flex-col gap-2">
                 <h1
                   className={`${roboto.className} text-white text-2xl sm:text-3xl md:text-2xl xl:text-3xl`}
