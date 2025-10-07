@@ -216,7 +216,7 @@ const PartTwo = () => {
       >
         <div className="w-full text-[#303030] text-left">
           <SectionHeaderText>
-            3 Part Course: 12 Courses
+            3 Part Series: 12 Courses
           </SectionHeaderText>
           <BodyText className="mt-4 md:pe-8">
             Our 12 courses are organized into three sections - 
