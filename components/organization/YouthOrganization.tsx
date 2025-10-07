@@ -198,15 +198,15 @@ const YouthOrganization = () => {
             Together, we can form a powerful partnership that strengthens both
             education & outreach in the fight against child exploitation.
           </h1>
-          <p className="text-white text-xl text-center">
+         <BodyText className={`mt-4 sm:mt-6 text-white lg:text-white`}>
             Join our Affiliate Program to raise funds for your organization while advancing prevention education in your community. Receive your organization's unique link, share it with others, and help bring life-changing learning to schools and youth networks. 
-          </p>
+          
               <Button 
                 onClick={() => window.open("https://tally.so/r/w459Bo", "_blank")}
                 >
               Apply to Join our Affiliate Program
             </Button>
-
+          </BodyText>
             
         </div>
       </div>
