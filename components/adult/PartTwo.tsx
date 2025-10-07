@@ -219,16 +219,12 @@ const PartTwo = () => {
             3 Part Course: 12 Lessons
           </SectionHeaderText>
           <BodyText className="mt-4 md:pe-8">
-            Our 12-part course provides twelve contact hours, divided into three
-            sections:
+            Our 12 courses are organized into three sections - 
             <span className="italic font-medium">
               {" "}
               The Groomers, The Vulnerable, and The Predators
             </span>
-            —each containing four lessons. Participants will review course
-            content, watch interviews with survivor leaders and advocacy
-            experts, and respond to 10 questions to earn CME/CE credit upon the
-            completion of each lesson.
+            . Participants engage with course materials, view interviews with survivor leaders and advocacy experts, and complete a brief 10-question quiz to earn one continuing education credit following each course.
           </BodyText>
         </div>
 
