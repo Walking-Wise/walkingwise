@@ -111,48 +111,26 @@ const SchoolDistrictPrograms = () => {
         </div>
       </Section>
 
-      {/* District Rollout Section is now Adaptable Curriculum*/}
+      {/* District Rollout Section */}
       <Section
         bgColor="[#00C1D5]"
         className="text-[#303030] flex flex-col lg:flex-row gap-10"
       >
         {/* Left Content */}
         <div className="flex-1">
-          <SectionHeaderText>Adaptable Curriculum</SectionHeaderText>
+          <SectionHeaderText>District Rollout</SectionHeaderText>
           <BodyText className={`mt-4 `}>
-            Our curriculum is designed for flexibility, enabling educators to tailor materials to align with school policies and protocols, age appropriateness, teaching styles, and available class time. 
+            Introducing essential topics gradually throughout students’ academic
+            journey fosters consistent and impactful learning.
           </BodyText>
-        </div>
-
-        {/* Right Box */}
-        <div className=" md:max-h-[400px] p-6 sm:p-8 relative">
+          <BodyText className={`mt-4`}>
+            The Walking Wise curriculum is designed for flexibility, enabling
+            educators to tailor materials to align with school policies and
+            protocols, age appropriateness, teaching styles, and available class
+            time.
+          </BodyText>
           
-          <ul
-            className={`${robotoopo.className} text-md md:text-2xl space-y-2`}
-          >
-            <li>
-              
-            </li>
-            <li>
-              <Button onClick={() => (window.location.href = "/demo")}>
-              DEMO Curriculum
-            </Button>
-            </li>
-            <li>
-              
-            </li>
-            <li>
-            <Button onClick={() => (window.location.href = "/pricing")}>
-              ENROLL Today!
-            </Button>
-            </li>
-            <li>
-              
-            </li>
-           
-          </ul>
         </div>
-      </Section>
 
         {/* Right Box */}
         <div className="bg-[#303030] md:max-h-[400px] text-white p-6 sm:p-8 relative">
@@ -162,30 +140,7 @@ const SchoolDistrictPrograms = () => {
           <ul
             className={`${robotoopo.className} text-md md:text-2xl space-y-2`}
           >
-            <li>
-              <strong>Parent Awareness:</strong> #1 Myths & Reality
-            </li>
-            <li>
-              <strong>5th Grade:</strong> #2 Trustworthy vs. Unsafe Adult
-            </li>
-            <li>
-              <strong>6th Grade:</strong> #3 Grooming Process & #4 Pornography
-              Link
-            </li>
-            <li>
-              <strong>7th Grade:</strong> #5 Sextortion Scheme & #6 Male Victims
-            </li>
-            <li>
-              <strong>8th Grade:</strong> #7 Runaways as Targets & #8 Rural
-              Risks
-            </li>
-            <li>
-              <strong>9th Grade:</strong> #9 Human Traffickers & #10 Female
-              Recruiters
-            </li>
-            <li>
-              <strong>10th Grade:</strong> #11 Family Secret & #12 Hidden Buyers
-            </li>
+            
           </ul>
         </div>
       </Section>
