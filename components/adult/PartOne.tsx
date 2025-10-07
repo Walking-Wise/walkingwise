@@ -28,7 +28,7 @@ const PartOne = () => {
           {/* Text Content */}
           <div className="w-full">
             <SectionHeaderText>
-              Walking Wise: Sexual Exploitation Education
+              Sexual Exploitation Education
             </SectionHeaderText>
 
             <BodyText className={`mb-6 mt-4 sm:mt-6`}>
