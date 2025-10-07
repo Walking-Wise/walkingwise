@@ -126,14 +126,21 @@ const SchoolDistrictPrograms = () => {
         </div>
 
         {/* Right Box */}
-        <div className="bg-[#303030] md:max-h-[400px] text-white p-6 sm:p-8 relative">
-          <h3 className="text-xl sm:text-3xl font-semibold mb-4">
-            DISTRICT WIDE PROGRAM
-          </h3>
+        <div className=" md:max-h-[400px]  p-6 sm:p-8 relative">
+          
           <ul
             className={`${robotoopo.className} text-md md:text-2xl space-y-2`}
           >
-            <li>Button here</li>
+            <li>
+              <Button onClick={() => (window.location.href = "/demo")}>
+              DEMO Curriculum
+            </Button>
+            </li>
+            <li>
+            <Button onClick={() => (window.location.href = "/pricing")}>
+              ENROLL Today!
+            </Button>
+            </li>
           </ul>
         </div>
       </Section>
