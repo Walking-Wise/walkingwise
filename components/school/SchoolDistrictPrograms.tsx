@@ -111,140 +111,159 @@ const SchoolDistrictPrograms = () => {
         </div>
       </Section>
 
-      {/* District Rollout Section */}
+      {/* District Rollout Section is now Adaptable Curriculum*/}
       <Section
         bgColor="[#00C1D5]"
         className="text-[#303030] flex flex-col lg:flex-row gap-10"
       >
         {/* Left Content */}
         <div className="flex-1">
-          <SectionHeaderText>District Rollout</SectionHeaderText>
+          <SectionHeaderText>Adaptable Curriculum</SectionHeaderText>
           <BodyText className={`mt-4 `}>
-            Introducing essential topics gradually throughout students’ academic
-            journey fosters consistent and impactful learning.
+            Our curriculum is designed for flexibility, enabling educators to tailor materials to align with school policies and protocols, age appropriateness, teaching styles, and available class time. 
           </BodyText>
-          <BodyText className={`mt-4`}>
-            The Walking Wise curriculum is designed for flexibility, enabling
-            educators to tailor materials to align with school policies and
-            protocols, age appropriateness, teaching styles, and available class
-            time.
-          </BodyText>
-          <div className="flex gap-4 mt-12">
-            <Button onClick={() => (window.location.href = "/demo")}>
-              DEMO Curriculum
-            </Button>
-            <Button onClick={() => (window.location.href = "/pricing")}>
-              ENROLL Today!
-            </Button>
-          </div>
         </div>
 
         {/* Right Box */}
-        <div className="bg-[#303030] md:max-h-[400px] text-white p-6 sm:p-8 relative">
-          <h3 className="text-xl sm:text-3xl font-semibold mb-4">
-            DISTRICT WIDE PROGRAM
-          </h3>
+        <div className=" md:max-h-[400px] p-6 sm:p-8 relative">
+          
           <ul
             className={`${robotoopo.className} text-md md:text-2xl space-y-2`}
           >
             <li>
-              <strong>Parent Awareness:</strong> #1 Myths & Reality
+              
             </li>
             <li>
-              <strong>5th Grade:</strong> #2 Trustworthy vs. Unsafe Adult
+              <Button onClick={() => (window.location.href = "/demo")}>
+              DEMO Curriculum
+            </Button>
             </li>
             <li>
-              <strong>6th Grade:</strong> #3 Grooming Process & #4 Pornography
-              Link
+              
             </li>
             <li>
-              <strong>7th Grade:</strong> #5 Sextortion Scheme & #6 Male Victims
+            <Button onClick={() => (window.location.href = "/pricing")}>
+              ENROLL Today!
+            </Button>
             </li>
             <li>
-              <strong>8th Grade:</strong> #7 Runaways as Targets & #8 Rural
-              Risks
+              
             </li>
-            <li>
-              <strong>9th Grade:</strong> #9 Human Traffickers & #10 Female
-              Recruiters
-            </li>
-            <li>
-              <strong>10th Grade:</strong> #11 Family Secret & #12 Hidden Buyers
-            </li>
+           
           </ul>
         </div>
       </Section>
 
-      {/* School Program Rollout */}
+      {/* School Program Rollout is now Learning Journey*/}
       <Section bgColor="white">
         <div className="flex justify-between items-center">
           <SectionHeaderText className="text-4xl sm:text-6xl">
-            School Program Rollout
+            Learning Journey
           </SectionHeaderText>
-          <Image
-            src="/assets/11+.png"
-            alt="Ages 11 plus"
-            width={100}
-            height={100}
-          />
+          
         </div>
         <BodyText className={`mt-4 sm:mt-6`}>
-          For a smooth and sustainable rollout, we recommend teaching one
-          segment per grade level over three consecutive years. This flexible
-          approach works well for both middle schools (6th–8th grades) and high
-          schools (9th–11th grades), allowing educators to build knowledge
-          gradually without overwhelming students or staff.
+          Meaningful learning takes time. By introducing topics gradually over several years, schools can create steady growth in awareness and understanding. Our three- to five-year teaching plan offers a flexible path for middle and high school students to build knowledge and confidence. Download our Teaching Track.
         </BodyText>
 
         <div className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-3 xl:grid-cols-3 my-10 gap-6 md:gap-10 items-center">
-          {cardData.map((card, index) => (
+          
             <div
-              key={index}
+             
               className="bg-[#00c1d5] mx-auto w-full max-w-[400px] flex px-0 pb-8 pt-0 items-center flex-col"
             >
               <div className="flex justify-between px-4 sm:px-6 py-4 mb-6 md:px-2 xl:px-8 w-full bg-[#303030]">
                 <div className="flex flex-col items-center">
-                  <p
-                    className={`${roboto.className} text-sm sm:text-base md:text-md xl:text-xl text-white`}
-                  >
-                    Middle Schools
-                  </p>
-                  <p
-                    className={`${roboto.className} text-white text-lg xl:text-2xl`}
-                  >
-                    {card.middle}
-                  </p>
-                </div>
-                <div className="flex flex-col items-center">
-                  <p
-                    className={`${roboto.className} text-sm sm:text-base md:text-md xl:text-xl text-white`}
-                  >
-                    High Schools
-                  </p>
-                  <p
-                    className={`${roboto.className} text-white text-lg xl:text-2xl`}
-                  >
-                    {card.high}
-                  </p>
-                </div>
-              </div>
-              <div className="text-center flex flex-col gap-2">
-                <h1
-                  className={`${roboto.className} text-white text-2xl sm:text-3xl md:text-2xl xl:text-3xl`}
+                <h1 className="text-2xl sm:text-4xl font-bold mb-2 text-white">
+                  3-YEAR TRACK
+                  </h1>
+                  <svg  style="stroke: rgb(255, 255, 255); fill: rgb(255, 255, 255); width: 1275.58px; height: 9px;"><path d="M0,4.5L1275.5821399412046,4.5" stroke-linecap="butt" stroke-width="42.666666666666664" fill="none" pointer-events="auto" opacity="0" class="_682gpw" style="touch-action: pan-x pan-y pinch-zoom;"></path><g><path d="M0,4.5L1275.5821399412046,4.5" stroke-linecap="butt" stroke-width="9" fill="none" pointer-events="none"></path></g></svg>
+
+
+                <div
+                className={`w-full lg:w-[400px] xl:w-[400px] shrink-0  p-12 self-start md:mt-[-130px]`}
+               
                 >
-                  {card.title}
-                </h1>
-                {card.topics.map((topic, i) => (
-                  <p
-                    key={i}
-                    className={`${robotoopo.className} text-xl sm:text-2xl md:text-xl xl:text-xl`}
-                  >
-                    {topic}
-                  </p>
-                ))}
+                <h1 class="text-2xl sm:text-4xl font-bold mb-2 text-white">PART 1: THE GROOMERS</h1>
+                <ul class="space-y-2 text-white">
+                <li class="text-base sm:text-xl">#1 Myths &amp; Reality: Parents & Staff</li>
+                <li class="text-base sm:text-xl">#2 Trustworthy vs. Unsafe Adults: 6<sup>th</sup> grade</li>
+                <li class="text-base sm:text-xl">#3 Grooming Process: 6<sup>th</sup> grade</li>
+                <li class="text-base sm:text-xl">#4 Pornography Link: 6<sup>th</sup> grade</li>
+                </ul>
+                <br></br>
+                <br></br>
+                                <h1 class="text-2xl sm:text-4xl font-bold mb-2 text-white">PART 1: THE GROOMERS</h1>
+                <ul class="space-y-2 text-white">
+                <li class="text-base sm:text-xl">#1 Myths &amp; Reality: Parents & Staff</li>
+                <li class="text-base sm:text-xl">#2 Trustworthy vs. Unsafe Adults: 6<sup>th</sup> grade</li>
+                <li class="text-base sm:text-xl">#3 Grooming Process: 6<sup>th</sup> grade</li>
+                <li class="text-base sm:text-xl">#4 Pornography Link: 6<sup>th</sup> grade</li>
+                </ul>
+                <br></br>
+                <br></br>
+
+                <h1 class="text-2xl sm:text-4xl font-bold mb-2 text-white">PART 1: THE GROOMERS</h1>
+                <ul class="space-y-2 text-white">
+                <li class="text-base sm:text-xl">#1 Myths &amp; Reality: Parents & Staff</li>
+                <li class="text-base sm:text-xl">#2 Trustworthy vs. Unsafe Adults: 6<sup>th</sup> grade</li>
+                <li class="text-base sm:text-xl">#3 Grooming Process: 6<sup>th</sup> grade</li>
+                <li class="text-base sm:text-xl">#4 Pornography Link: 6<sup>th</sup> grade</li>
+                </ul>
+                <br></br>
+                <br></br>
+
+
+                </div>
+
+
+<div className="flex flex-col items-center bg-[#00c1d5]">
+                <h1 className="text-2xl sm:text-4xl font-bold mb-2 ">
+                  3-YEAR TRACK
+                  </h1>
+                  <svg  style="stroke: rgb(255, 255, 255); fill: rgb(255, 255, 255); width: 1275.58px; height: 9px;"><path d="M0,4.5L1275.5821399412046,4.5" stroke-linecap="butt" stroke-width="42.666666666666664" fill="none" pointer-events="auto" opacity="0" class="_682gpw" style="touch-action: pan-x pan-y pinch-zoom;"></path><g><path d="M0,4.5L1275.5821399412046,4.5" stroke-linecap="butt" stroke-width="9" fill="none" pointer-events="none"></path></g></svg>
+
+
+                <div
+                className={`w-full lg:w-[400px] xl:w-[400px] shrink-0  p-12 self-start md:mt-[-130px]`}
+               
+                >
+                <h1 class="text-2xl sm:text-4xl font-bold mb-2 ">PART 1: THE GROOMERS</h1>
+                <ul class="space-y-2 ">
+                <li class="text-base sm:text-xl">#1 Myths &amp; Reality: Parents & Staff</li>
+                <li class="text-base sm:text-xl">#2 Trustworthy vs. Unsafe Adults: 6<sup>th</sup> grade</li>
+                <li class="text-base sm:text-xl">#3 Grooming Process: 6<sup>th</sup> grade</li>
+                <li class="text-base sm:text-xl">#4 Pornography Link: 6<sup>th</sup> grade</li>
+                </ul>
+                <br></br>
+                <br></br>
+                                <h1 class="text-2xl sm:text-4xl font-bold mb-2 ">PART 1: THE GROOMERS</h1>
+                <ul class="space-y-2 ">
+                <li class="text-base sm:text-xl">#1 Myths &amp; Reality: Parents & Staff</li>
+                <li class="text-base sm:text-xl">#2 Trustworthy vs. Unsafe Adults: 6<sup>th</sup> grade</li>
+                <li class="text-base sm:text-xl">#3 Grooming Process: 6<sup>th</sup> grade</li>
+                <li class="text-base sm:text-xl">#4 Pornography Link: 6<sup>th</sup> grade</li>
+                </ul>
+                <br></br>
+                <br></br>
+
+                <h1 class="text-2xl sm:text-4xl font-bold mb-2 ">PART 1: THE GROOMERS</h1>
+                <ul class="space-y-2 ">
+                <li class="text-base sm:text-xl">#1 Myths &amp; Reality: Parents & Staff</li>
+                <li class="text-base sm:text-xl">#2 Trustworthy vs. Unsafe Adults: 6<sup>th</sup> grade</li>
+                <li class="text-base sm:text-xl">#3 Grooming Process: 6<sup>th</sup> grade</li>
+                <li class="text-base sm:text-xl">#4 Pornography Link: 6<sup>th</sup> grade</li>
+                </ul>
+                <br></br>
+                <br></br>
+
+
+                </div>
+
+
               </div>
             </div>
-          ))}
+          
         </div>
       </Section>
 
