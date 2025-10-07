@@ -111,23 +111,16 @@ const SchoolDistrictPrograms = () => {
         </div>
       </Section>
 
-      {/* District Rollout Section */}
+      {/* District Rollout Section is now Adaptable Curriculum*/}
       <Section
         bgColor="[#00C1D5]"
         className="text-[#303030] flex flex-col lg:flex-row gap-10"
       >
         {/* Left Content */}
         <div className="flex-1">
-          <SectionHeaderText>District Rollout</SectionHeaderText>
+           <SectionHeaderText>Adaptable Curriculum</SectionHeaderText>
           <BodyText className={`mt-4 `}>
-            Introducing essential topics gradually throughout students’ academic
-            journey fosters consistent and impactful learning.
-          </BodyText>
-          <BodyText className={`mt-4`}>
-            The Walking Wise curriculum is designed for flexibility, enabling
-            educators to tailor materials to align with school policies and
-            protocols, age appropriateness, teaching styles, and available class
-            time.
+            Our curriculum is designed for flexibility, enabling educators to tailor materials to align with school policies and protocols, age appropriateness, teaching styles, and available class time. 
           </BodyText>
           
         </div>
