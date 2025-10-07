@@ -23,12 +23,12 @@ const resourceItems = [
   {
     title: "Animated Video",
     description:
-      "Watch a 3-minute animation that brings key ideas from Myths & Reality to life.",
+      "Watch a 3-minute animation that brings key ideas to life.",
   },
   {
     title: "Lesson Plan",
     description:
-      "View the Myths & Reality lesson to see how we introduce core concepts to students.",
+      "View the Myths & Reality lesson to see how we introduce core concepts.",
   },
   {
     title: "Classroom Presentation",
@@ -163,7 +163,7 @@ const DemoPage = () => {
               key={index}
               className={`${robotoopo.className} text-[#303030] text-base sm:text-xl md:text-2xl lg:text-3xl mt-4 sm:mt-6 ms-6 md:ms-2`}
             >
-              <span className={`text-white md:text-4xl ${roboto.className}`}>
+              <span className={`text-white text-bold ${roboto.className}`}>
                 {title}:
               </span>{" "}
               {description}
