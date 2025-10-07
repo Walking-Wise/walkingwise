@@ -195,8 +195,7 @@ const YouthOrganization = () => {
       <div className="mx-auto px-6 text-center w-full py-32 bg-[#303030]">
         <div className="max-w-[2000px] mx-auto md:px-26 ">
           <h1 className="text-3xl md:text-6xl tracking-wide leading-8 lg:leading-16 text-white">
-            Together, we can form a powerful partnership that strengthens both
-            education & outreach in the fight against child exploitation.
+            Partnering in the fight against child exploitation.
           </h1>
          <BodyText className={`mt-4 sm:mt-6 text-white lg:text-white`}>
             Join our Affiliate Program to raise funds for your organization while advancing prevention education in your community. Receive your organization's unique link, share it with others, and help bring life-changing learning to schools and youth networks. 
