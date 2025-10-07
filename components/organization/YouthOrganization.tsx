@@ -129,7 +129,35 @@ const YouthOrganization = () => {
                
               </BodyText>
             ))}
-            
+            <div class="flex gap-4 mt-12">
+
+<button type="button" class="bg-[#9d1be3]
+         cursor-pointer 
+         text-white 
+         px-6 md:px-10 py-2 md:py-4 
+         rounded-4xl 
+         transition-colors 
+         md:text-lg 
+         whitespace-nowrap 
+         flex
+         items-center
+         justify-center
+         __className_19e408">DEMO Curriculum</button><button type="button" class="bg-[#9d1be3]
+         cursor-pointer 
+         text-white 
+         px-6 md:px-10 py-2 md:py-4 
+         rounded-4xl 
+         transition-colors 
+         md:text-lg 
+         whitespace-nowrap 
+         flex
+         items-center
+         justify-center
+         __className_19e408">ENROLL Today!</button>
+
+
+    
+</div>
           </div>
         </div>
         
