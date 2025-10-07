@@ -146,7 +146,7 @@ const PartTwo = () => {
 
           <div className="w-full max-w-3xl text-[#303030] sm:text-lg md:text-3xl text-left">
             <SectionHeaderText color="[#00C1D5]">
-              Accommodating Your Busy Schedule
+              Accommodating Your Schedule
             </SectionHeaderText>
             <BodyText color="white">
               Our Walking Wise subscription gives you one year to complete our
