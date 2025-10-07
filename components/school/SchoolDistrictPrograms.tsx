@@ -131,16 +131,19 @@ const SchoolDistrictPrograms = () => {
           <ul
             className={`${robotoopo.className} text-md md:text-2xl space-y-2`}
           >
+            <li>&nbsp;</li>
             <li>
               <Button onClick={() => (window.location.href = "/demo")}>
               DEMO Curriculum
             </Button>
             </li>
+            <li>&nbsp;</li>
             <li>
             <Button onClick={() => (window.location.href = "/pricing")}>
               ENROLL Today!
             </Button>
             </li>
+            <li>&nbsp;</li>
           </ul>
         </div>
       </Section>
