@@ -148,11 +148,11 @@ const SchoolDistrictPrograms = () => {
         </div>
       </Section>
 
-      {/* School Program Rollout */}
+     {/* School Program Rollout is now Learning Journey*/}
       <Section bgColor="white">
         <div className="flex justify-between items-center">
           <SectionHeaderText className="text-4xl sm:text-6xl">
-            School Program Rollout
+            Learning Journey
           </SectionHeaderText>
           <Image
             src="/assets/11+.png"
@@ -162,11 +162,7 @@ const SchoolDistrictPrograms = () => {
           />
         </div>
         <BodyText className={`mt-4 sm:mt-6`}>
-          For a smooth and sustainable rollout, we recommend teaching one
-          segment per grade level over three consecutive years. This flexible
-          approach works well for both middle schools (6th–8th grades) and high
-          schools (9th–11th grades), allowing educators to build knowledge
-          gradually without overwhelming students or staff.
+          Meaningful learning takes time. By introducing topics gradually over several years, schools can create steady growth in awareness and understanding. Our three- to five-year teaching plan offers a flexible path for middle and high school students to build knowledge and confidence. Download our Teaching Track.
         </BodyText>
 
         <div className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-3 xl:grid-cols-3 my-10 gap-6 md:gap-10 items-center">
