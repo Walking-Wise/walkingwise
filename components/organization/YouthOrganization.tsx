@@ -126,6 +126,12 @@ const YouthOrganization = () => {
                 color="white"
               >
                 {text}
+                <Button onClick={() => (window.location.href = "/demo")}>
+              DEMO Curriculum
+            </Button>
+            <Button onClick={() => (window.location.href = "/pricing")}>
+              ENROLL Today!
+            </Button>
               </BodyText>
             ))}
             
@@ -186,16 +192,16 @@ const YouthOrganization = () => {
             Together, we can form a powerful partnership that strengthens both
             education & outreach in the fight against child exploitation.
           </h1>
-          <div className="max-w-[2000px] mx-auto px-6 flex flex-col sm:flex-row gap-4 sm:gap-6 md:gap-8 lg:gap-10 w-full justify-center mt-8 md:mt-16 bg-[#303030]">
-          <p className="text-white">
+          <p className="text-white text-xl text-center">
             Join our Affiliate Program to raise funds for your organization while advancing prevention education in your community. Receive your organization's unique link, share it with others, and help bring life-changing learning to schools and youth networks. 
           </p>
-              <Button onClick={() => (window.location.href = "https://tally.so/r/w459Bo")}>
+              <Button 
+                onClick={() => window.open("https://tally.so/r/w459Bo", "_blank")}
+                >
               Apply to Join our Affiliate Program
             </Button>
 
             
-          </div>
         </div>
       </div>
     </>
