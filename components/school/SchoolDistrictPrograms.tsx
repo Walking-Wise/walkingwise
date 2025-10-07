@@ -165,61 +165,55 @@ const SchoolDistrictPrograms = () => {
           Meaningful learning takes time. By introducing topics gradually over several years, schools can create steady growth in awareness and understanding. Our three- to five-year teaching plan offers a flexible path for middle and high school students to build knowledge and confidence. Download our Teaching Track.
         </BodyText>
 
-<div className={`grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-3 xl:grid-cols-3 my-10 gap-6 md:gap-10 items-center`}>
-          
-            <div     className={`bg-[#00c1d5] mx-auto w-full max-w-[400px] flex px-0 pb-8 pt-0 items-center flex-col`} >
-              <div   className={`flex justify-between px-4 sm:px-6 py-4 mb-6 md:px-2 xl:px-8 w-full bg-[#303030]`}>
-                <div className={`flex flex-col items-center`}>
-                <h1 className={`text-2xl sm:text-4xl font-bold mb-2 text-white`}>
-                  3-YEAR TRACK
-                  </h1>
-                  <svg  style={`stroke: rgb(255, 255, 255); fill: rgb(255, 255, 255); width: 1275.58px; height: 9px;`}>
-                  <path d="M0,4.5L1275.5821399412046,4.5" stroke-linecap="butt" 
-                  stroke-width="42.666666666666664" fill="none" pointer-events="auto" opacity="0" 
-                  className={`_682gpw`} 
-                  ></path><g>
-                  <path d="M0,4.5L1275.5821399412046,4.5" stroke-linecap="butt" 
-                  stroke-width="9" fill="none" pointer-events="none"></path></g></svg>
-
-
-                <div
-                className={`w-full lg:w-[400px] xl:w-[400px] shrink-0  p-12 self-start md:mt-[-130px]`}
-                >
-                <h1 className={`text-2xl sm:text-4xl font-bold mb-2 text-white`}>PART 1: THE GROOMERS</h1>
-                <ul className={`space-y-2 text-white`}>
-                <li className={`text-base sm:text-xl`}>#1 Myths &amp; Reality: Parents & Staff</li>
-                <li className={`text-base sm:text-xl`}>#2 Trustworthy vs. Unsafe Adults: 6<sup>th</sup> grade</li>
-                <li className={`text-base sm:text-xl`}>#3 Grooming Process: 6<sup>th</sup> grade</li>
-                <li className={`text-base sm:text-xl`}>#4 Pornography Link: 6<sup>th</sup> grade</li>
-                </ul>
-                <br></br>
-                <br></br>
-                <h1 className={`text-2xl sm:text-4xl font-bold mb-2 text-white`}>PART 2: THE GROOMERS</h1>
-                <ul className={`space-y-2 text-white`}>
-                <li className={`text-base sm:text-xl`}>#1 Myths &amp; Reality: Parents & Staff</li>
-                <li className={`text-base sm:text-xl`}>#2 Trustworthy vs. Unsafe Adults: 6<sup>th</sup> grade</li>
-                <li className={`text-base sm:text-xl`}>#3 Grooming Process: 6<sup>th</sup> grade</li>
-                <li className={`text-base sm:text-xl`}>#4 Pornography Link: 6<sup>th</sup> grade</li>
-                </ul>
-                <br></br>
-                <br></br>
-
-                <h1 className={`text-2xl sm:text-4xl font-bold mb-2 text-white`}>PART 3: THE GROOMERS</h1>
-                <ul className={`space-y-2 text-white`}>
-                <li className={`text-base sm:text-xl`}>#1 Myths &amp; Reality: Parents & Staff</li>
-                <li className={`text-base sm:text-xl`}>#2 Trustworthy vs. Unsafe Adults: 6<sup>th</sup> grade</li>
-                <li className={`text-base sm:text-xl`}>#3 Grooming Process: 6<sup>th</sup> grade</li>
-                <li className={`text-base sm:text-xl`}>#4 Pornography Link: 6<sup>th</sup> grade</li>
-                </ul>
-                <br></br>
-                <br></br>
-
-
+        <div className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-3 xl:grid-cols-3 my-10 gap-6 md:gap-10 items-center">
+          {cardData.map((card, index) => (
+            <div
+              key={index}
+              className="bg-[#00c1d5] mx-auto w-full max-w-[400px] flex px-0 pb-8 pt-0 items-center flex-col"
+            >
+              <div className="flex justify-between px-4 sm:px-6 py-4 mb-6 md:px-2 xl:px-8 w-full bg-[#303030]">
+                <div className="flex flex-col items-center">
+                  <p
+                    className={`${roboto.className} text-sm sm:text-base md:text-md xl:text-xl text-white`}
+                  >
+                    Middle Schools
+                  </p>
+                  <p
+                    className={`${roboto.className} text-white text-lg xl:text-2xl`}
+                  >
+                    {card.middle}
+                  </p>
                 </div>
-        </div>
-        </div>
-        </div>
-        </div>
+                <div className="flex flex-col items-center">
+                  <p
+                    className={`${roboto.className} text-sm sm:text-base md:text-md xl:text-xl text-white`}
+                  >
+                    High Schools
+                  </p>
+                  <p
+                    className={`${roboto.className} text-white text-lg xl:text-2xl`}
+                  >
+                    {card.high}
+                  </p>
+                </div>
+              </div>
+              <div className="text-center flex flex-col gap-2">
+                <h1
+                  className={`${roboto.className} text-white text-2xl sm:text-3xl md:text-2xl xl:text-3xl`}
+                >
+                  {card.title}
+                </h1>
+                {card.topics.map((topic, i) => (
+                  <p
+                    key={i}
+                    className={`${robotoopo.className} text-xl sm:text-2xl md:text-xl xl:text-xl`}
+                  >
+                    {topic}
+                  </p>
+                ))}
+              </div>
+            </div>
+          ))}
         </div>
       </Section>
 
