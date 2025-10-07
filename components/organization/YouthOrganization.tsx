@@ -126,12 +126,7 @@ const YouthOrganization = () => {
                 color="white"
               >
                 {text}
-                <Button onClick={() => (window.location.href = "/demo")}>
-              DEMO Curriculum
-            </Button>
-            <Button onClick={() => (window.location.href = "/pricing")}>
-              ENROLL Today!
-            </Button>
+               
               </BodyText>
             ))}
             
