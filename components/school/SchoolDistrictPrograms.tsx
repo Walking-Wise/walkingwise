@@ -185,31 +185,31 @@ const SchoolDistrictPrograms = () => {
                 <div
                 className={`w-full lg:w-[400px] xl:w-[400px] shrink-0  p-12 self-start md:mt-[-130px]`}
                 >
-                <h1 className="text-2xl sm:text-4xl font-bold mb-2 text-white">PART 1: THE GROOMERS</h1>
-                <ul className="space-y-2 text-white">
-                <li className="text-base sm:text-xl">#1 Myths &amp; Reality: Parents & Staff</li>
-                <li className="text-base sm:text-xl">#2 Trustworthy vs. Unsafe Adults: 6<sup>th</sup> grade</li>
-                <li className="text-base sm:text-xl">#3 Grooming Process: 6<sup>th</sup> grade</li>
-                <li className="text-base sm:text-xl">#4 Pornography Link: 6<sup>th</sup> grade</li>
+                <h1 className={`text-2xl sm:text-4xl font-bold mb-2 text-white`}>PART 1: THE GROOMERS</h1>
+                <ul className={`space-y-2 text-white`}>
+                <li className={`text-base sm:text-xl`}>#1 Myths &amp; Reality: Parents & Staff</li>
+                <li className={`text-base sm:text-xl`}>#2 Trustworthy vs. Unsafe Adults: 6<sup>th</sup> grade</li>
+                <li className={`text-base sm:text-xl`}>#3 Grooming Process: 6<sup>th</sup> grade</li>
+                <li className={`text-base sm:text-xl`}>#4 Pornography Link: 6<sup>th</sup> grade</li>
                 </ul>
                 <br></br>
                 <br></br>
-                <h1 className="text-2xl sm:text-4xl font-bold mb-2 text-white">PART 2: THE GROOMERS</h1>
-                <ul className="space-y-2 text-white">
-                <li className="text-base sm:text-xl">#1 Myths &amp; Reality: Parents & Staff</li>
-                <li className="text-base sm:text-xl">#2 Trustworthy vs. Unsafe Adults: 6<sup>th</sup> grade</li>
-                <li className="text-base sm:text-xl">#3 Grooming Process: 6<sup>th</sup> grade</li>
-                <li className="text-base sm:text-xl">#4 Pornography Link: 6<sup>th</sup> grade</li>
+                <h1 className={`text-2xl sm:text-4xl font-bold mb-2 text-white`}>PART 2: THE GROOMERS</h1>
+                <ul className={`space-y-2 text-white`}>
+                <li className={`text-base sm:text-xl`}>#1 Myths &amp; Reality: Parents & Staff</li>
+                <li className={`text-base sm:text-xl`}>#2 Trustworthy vs. Unsafe Adults: 6<sup>th</sup> grade</li>
+                <li className={`text-base sm:text-xl`}>#3 Grooming Process: 6<sup>th</sup> grade</li>
+                <li className={`text-base sm:text-xl`}>#4 Pornography Link: 6<sup>th</sup> grade</li>
                 </ul>
                 <br></br>
                 <br></br>
 
-                <h1 className="text-2xl sm:text-4xl font-bold mb-2 text-white">PART 3: THE GROOMERS</h1>
-                <ul className="space-y-2 text-white">
-                <li className="text-base sm:text-xl">#1 Myths &amp; Reality: Parents & Staff</li>
-                <li className="text-base sm:text-xl">#2 Trustworthy vs. Unsafe Adults: 6<sup>th</sup> grade</li>
-                <li className="text-base sm:text-xl">#3 Grooming Process: 6<sup>th</sup> grade</li>
-                <li className="text-base sm:text-xl">#4 Pornography Link: 6<sup>th</sup> grade</li>
+                <h1 className={`text-2xl sm:text-4xl font-bold mb-2 text-white`}>PART 3: THE GROOMERS</h1>
+                <ul className={`space-y-2 text-white`}>
+                <li className={`text-base sm:text-xl`}>#1 Myths &amp; Reality: Parents & Staff</li>
+                <li className={`text-base sm:text-xl`}>#2 Trustworthy vs. Unsafe Adults: 6<sup>th</sup> grade</li>
+                <li className={`text-base sm:text-xl`}>#3 Grooming Process: 6<sup>th</sup> grade</li>
+                <li className={`text-base sm:text-xl`}>#4 Pornography Link: 6<sup>th</sup> grade</li>
                 </ul>
                 <br></br>
                 <br></br>
