@@ -12,6 +12,7 @@ import Section from "../ui/Section/Section";
 const cardDataTop = [
   {
     title: "3-YEAR TRACK",
+    bg: "bg-[#030303]",
     topics: [
       "Myths & Reality",
       "Trustworthy vs. Unsafe Adult",
@@ -23,6 +24,7 @@ const cardDataTop = [
   },
   {
     title: "5-YEAR TRACK",
+    bg: "bg-[#00c1d5]",
     topics: [
       "Sextortion Scheme",
       "Male Victims",
@@ -189,11 +191,11 @@ const SchoolDistrictPrograms = () => {
           Meaningful learning takes time. By introducing topics gradually over several years, schools can create steady growth in awareness and understanding. Our three- to five-year teaching plan offers a flexible path for middle and high school students to build knowledge and confidence. Download our Teaching Track.
         </BodyText>
 
-        <div className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-3 xl:grid-cols-3 my-10 gap-6 md:gap-10 items-center">
+        <div className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 my-10 gap-6 md:gap-10 items-center">
           {cardDataTop.map((card, index) => (
             <div
               key={index}
-              className="bg-[#00c1d5] mx-auto w-full max-w-[400px] flex px-0 pb-8 pt-0 items-center flex-col"
+              className="{card.bg} mx-auto w-full max-w-[400px] flex px-0 pb-8 pt-0 items-center flex-col"
             >
               <div className="flex justify-between px-4 sm:px-6 py-4 mb-6 md:px-2 xl:px-8 w-full bg-[#303030]">
                 <div className="flex flex-col items-center">
