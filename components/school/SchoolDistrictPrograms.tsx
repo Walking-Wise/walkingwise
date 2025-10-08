@@ -195,7 +195,7 @@ const SchoolDistrictPrograms = () => {
           {cardDataTop.map((card, index) => (
             <div
               key={index}
-              className="{card.bg} mx-auto w-full max-w-[400px] flex px-0 pb-8 pt-0 items-center flex-col"
+              className={`${card.bg} mx-auto w-full max-w-[400px] flex px-0 pb-8 pt-0 items-center flex-col`}
             >
               <div className="flex justify-between px-4 sm:px-6 py-4 mb-6 md:px-2 xl:px-8 w-full bg-[#303030]">
                 <div className="flex flex-col items-center">
