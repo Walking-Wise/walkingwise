@@ -194,9 +194,9 @@ const SchoolDistrictPrograms = () => {
       </Section>
 
       {/* District Rollout Section is now Adaptable Curriculum*/}
-      <Section
-        bgColor="[#00C1D5]"
-        className="text-[#303030] flex flex-col lg:flex-row gap-10 "
+      <div
+
+        className="bg-[#00C1D5] text-[#303030] flex flex-col lg:flex-row gap-10 "
         style={sectionStyles}
       >
         {/* Left Content */}
@@ -229,7 +229,7 @@ const SchoolDistrictPrograms = () => {
             <li>&nbsp;</li>
           </ul>
         </div>
-      </Section>
+      </div>
 
      {/* School Program Rollout is now Learning Journey*/}
       <Section bgColor="white">
