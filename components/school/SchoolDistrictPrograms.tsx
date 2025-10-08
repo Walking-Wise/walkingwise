@@ -200,7 +200,7 @@ const SchoolDistrictPrograms = () => {
 
                 ${
                     card.bg === "black"
-                      ? "bg-white text-[#303030] hover:bg-gray-200"
+                      ? "bg-[#00C1D5] text-[#303030] hover:bg-gray-200"
                       : "bg-[#303030] hover:bg-[#303030] text-white"
                   } 
               mx-auto w-full max-w-[400px] flex px-0 pb-8 pt-0 items-center flex-col`}
@@ -214,7 +214,14 @@ const SchoolDistrictPrograms = () => {
                     </h1>
                 </div>
                 <div className="text-center flex flex-col gap-2">
-                  <h1>header</h1>
+                  <h1
+                  className={`${roboto.className} text-white text-2xl sm:text-3xl md:text-2xl xl:text-3xl`}
+                >Lorem</h1>
+                <p
+                    
+                    className={`${robotoopo.className} text-xl sm:text-2xl md:text-xl xl:text-xl`}
+                  >Lorem Ipsum
+                  </p>
                 </div>
               </div>
 
