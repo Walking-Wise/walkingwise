@@ -262,7 +262,7 @@ const SchoolDistrictPrograms = () => {
           else if (feature === " ")
           return <li className="line-short" >&nbsp;</li>;
           else
-          return <li key={i} className={`mt-4 sm:mt-6`}>{feature.replace(/(\d+th)/g, `<sub>$1</sub>`)}</li>;
+          return <li key={i} className={`mt-4 sm:mt-6`}>{feature.replace(/(\d)+(th)/g, {`<sup>$2</sup>`})}</li>;
 
          })}
          
