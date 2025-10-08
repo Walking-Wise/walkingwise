@@ -32,7 +32,7 @@ const cardDataTop = [
       "#11 Familial Traffickers: 8th grade",
       "#12 Hidden Buyers: 8th grade",
         ],
-      },
+  
 
     topics: [
       "Myths & Reality",
@@ -65,7 +65,7 @@ const cardDataTop = [
       "#11 Familial Traffickers: 10th grade",
       "#12 Hidden Buyers: 10th grade",
         ],
-      },
+    
     topics: [
       "Sextortion Scheme",
       "Male Victims",
