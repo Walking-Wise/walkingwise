@@ -213,16 +213,7 @@ const SchoolDistrictPrograms = () => {
                     {card.title}
                     </h1>
                 </div>
-                <div className="text-center flex flex-col gap-2">
-                  <h1
-                  className={`${roboto.className} text-white text-2xl sm:text-3xl md:text-2xl xl:text-3xl`}
-                >Lorem</h1>
-                <p
-                    
-                    className={`${robotoopo.className} text-xl sm:text-2xl md:text-xl xl:text-xl`}
-                  >Lorem Ipsum
-                  </p>
-                </div>
+                
               </div>
 
              
