@@ -16,7 +16,7 @@ const cardDataTop = [
     features: [
       "PARENTS & STAFF",
       "#1 Myths & Reality",
-      " "
+      " ",
       "6th GRADE",
       "#2 Trustworthy vs. Unsafe Adults",
       "#3 Grooming Process",
@@ -51,7 +51,7 @@ const cardDataTop = [
     features: [
       "PARENTS & STAFF",
       "#1 Myths & Reality",
-      " "
+      " ",
       "6th GRADE",
       "#2 Trustworthy vs. Unsafe Adults",
       "#3 Grooming Process",
