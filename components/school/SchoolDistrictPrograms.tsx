@@ -207,13 +207,30 @@ const SchoolDistrictPrograms = () => {
             >
               <div className="flex justify-between px-4 sm:px-6 py-4 mb-6 md:px-2 xl:px-8 w-full">
                 <div className="flex flex-col items-center">
-                  <h1
+                  <h1 
                     className="text-4xl sm:text-6xl text-center"
                   >
                     {card.title}
                     </h1>
                 </div>
                 
+                <div
+                className={`w-full lg:w-[400px] xl:w-[400px] shrink-0 ${session.boxColor} p-12 self-start md:mt-[-130px]`}
+                style={{ color: session.boxTextColor }}
+              >
+                <h1 className="text-2xl sm:text-4xl font-bold mb-2">
+                  {session.description.boxTitle}
+                </h1>
+                <ul className="space-y-2">
+                  {session.description.lessons.map((lesson, i) => (
+                    <li key={i} className="text-base sm:text-xl">
+                      {lesson}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+
               </div>
 
              
