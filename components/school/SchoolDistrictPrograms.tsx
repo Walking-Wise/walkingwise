@@ -12,7 +12,7 @@ import Section from "../ui/Section/Section";
 const cardDataTop = [
   {
     title: "3-YEAR TRACK",
-    bg: "bg-[#030303]",
+    bg: "black",
     topics: [
       "Myths & Reality",
       "Trustworthy vs. Unsafe Adult",
@@ -24,7 +24,7 @@ const cardDataTop = [
   },
   {
     title: "5-YEAR TRACK",
-    bg: "bg-[#00c1d5]",
+    bg: "blue",
     topics: [
       "Sextortion Scheme",
       "Male Victims",
@@ -195,15 +195,26 @@ const SchoolDistrictPrograms = () => {
           {cardDataTop.map((card, index) => (
             <div
               key={index}
-              className={`${card.bg} mx-auto w-full max-w-[400px] flex px-0 pb-8 pt-0 items-center flex-col`}
+              className={`
+                
+
+                ${
+                    card.bg === "black"
+                      ? "bg-white text-[#303030] hover:bg-gray-200"
+                      : "bg-[#303030] hover:bg-[#303030] text-white"
+                  } 
+              mx-auto w-full max-w-[400px] flex px-0 pb-8 pt-0 items-center flex-col`}
             >
-              <div className="flex justify-between px-4 sm:px-6 py-4 mb-6 md:px-2 xl:px-8 w-full bg-[#303030]">
+              <div className="flex justify-between px-4 sm:px-6 py-4 mb-6 md:px-2 xl:px-8 w-full">
                 <div className="flex flex-col items-center">
                   <h1
-                    className="text-4xl sm:text-6xl text-white"
+                    className="text-4xl sm:text-6xl text-center"
                   >
                     {card.title}
                     </h1>
+                </div>
+                <div className="text-center flex flex-col gap-2">
+                  <h1>header</h1>
                 </div>
               </div>
 
