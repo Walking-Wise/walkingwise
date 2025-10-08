@@ -11,10 +11,8 @@ import Section from "../ui/Section/Section";
 
 
   const sectionStyles = {
-    paddingTop: '30px !important',
-    paddingBottom: '30px !important',
     paddingLeft: '7vw !important',
-    paddingRight: '4vw !important',
+    paddingRight: '5vw !important',
   };
 
   const listyle1 = {
@@ -205,7 +203,9 @@ const SchoolDistrictPrograms = () => {
       {/* District Rollout Section is now Adaptable Curriculum*/}
       <div
 
-        className="bg-[#00C1D5] text-[#303030] flex flex-col lg:flex-row gap-10 "
+        className="bg-[#00C1D5] text-[#303030] flex flex-col lg:flex-row gap-10 
+        pt-30 md:pt-60 pb-10 md:pb-70
+        "
         style={sectionStyles}
       >
         {/* Left Content */}
@@ -262,7 +262,8 @@ const SchoolDistrictPrograms = () => {
       <div
        key={idx}
        style={blueboxstyle}
-       className={`mt-10 flex flex-col  shadow-lg border p-6 relative col-span-2
+       className={`mt-10 flex flex-col  shadow-lg border p-6 relative col-span-2 
+
         grid 
                 ${
                     card.bg === "black"
