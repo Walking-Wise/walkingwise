@@ -240,7 +240,7 @@ const SchoolDistrictPrograms = () => {
                 ${
                     card.bg === "black"
                       ? "bg-[#00C1D5] text-[#303030] hover:bg-gray-200"
-                      : "bg-[#303030] hover:bg-[#303030] text-white"
+                      : "bg-[#303030] hover:bg-[#303030] text-white hover:bg-gray-200"
                   } 
        `}
       >
@@ -256,12 +256,12 @@ const SchoolDistrictPrograms = () => {
 
          {card.features.map((feature, i) => {
           if  (feature.includes("THE "))
-           return <li className="text-xl sm:text-2xl md:text-3xl text-bold text-italic" >{feature}</li>;
+           return <li className="text-xl sm:text-2xl md:text-2xl text-bold text-italic" >{feature}</li>;
           
           else if (feature === " ")
           return <li className="line-short" >&nbsp;</li>;
           else
-          return <li key={i} className="text-xl sm:text-2xl md:text-3xl">{feature}</li>;
+          return <li key={i} className="text-xl sm:text-2xl md:text-2xl">{feature}</li>;
 
          })}
          
