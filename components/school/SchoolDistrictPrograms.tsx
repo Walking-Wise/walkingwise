@@ -17,6 +17,10 @@ import Section from "../ui/Section/Section";
     paddingRight: '4vw !important',
   };
 
+  const listyle1 = {
+    paddingLeft: '10px !important',
+  };
+
 
 const cardDataTop = [
   {
@@ -287,7 +291,7 @@ const SchoolDistrictPrograms = () => {
           else if (feature === " ")
           return <li className="line-short" >&nbsp;</li>;
           else
-          return <li key={i} className="text-xl sm:text-2xl md:text-2xl">{feature}</li>;
+          return <li key={i} className="text-xl sm:text-xl md:text-xl" style={listyle1}>{feature}</li>;
 
          })}
          
