@@ -13,6 +13,16 @@ const cardDataTop = [
   {
     title: "3-YEAR TRACK",
     bg: "black",
+    description: {
+        boxTitle: "THE GROOMERS",
+        lessons: [
+          "#1 Myths & Reality",
+          "#2 Trustworthy vs. Unsafe Adults",
+          "#3 Grooming Process",
+          "#4 Pornography Link",
+        ],
+      },
+
     topics: [
       "Myths & Reality",
       "Trustworthy vs. Unsafe Adult",
@@ -25,6 +35,15 @@ const cardDataTop = [
   {
     title: "5-YEAR TRACK",
     bg: "blue",
+    description: {
+        boxTitle: "THE GROOMERS",
+        lessons: [
+          "#1 Myths & Reality",
+          "#2 Trustworthy vs. Unsafe Adults",
+          "#3 Grooming Process",
+          "#4 Pornography Link",
+        ],
+      },
     topics: [
       "Sextortion Scheme",
       "Male Victims",
@@ -215,14 +234,14 @@ const SchoolDistrictPrograms = () => {
                 </div>
                 
                 <div
-                className={`w-full lg:w-[400px] xl:w-[400px] shrink-0 ${session.boxColor} p-12 self-start md:mt-[-130px]`}
-                style={{ color: session.boxTextColor }}
+                className={`w-full lg:w-[400px] xl:w-[400px] shrink-0  p-12 self-start md:mt-[-130px]`}
+                
               >
                 <h1 className="text-2xl sm:text-4xl font-bold mb-2">
-                  {session.description.boxTitle}
+                  {card.description.boxTitle}
                 </h1>
                 <ul className="space-y-2">
-                  {session.description.lessons.map((lesson, i) => (
+                  {card.description.lessons.map((lesson, i) => (
                     <li key={i} className="text-base sm:text-xl">
                       {lesson}
                     </li>
