@@ -1,4 +1,4 @@
-import "./globals.css";
+import "./global.css";
 import type { Metadata, Viewport } from "next";
 import { Roboto } from "next/font/google";
 import { Geist, Geist_Mono } from "next/font/google";
