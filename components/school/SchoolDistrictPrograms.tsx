@@ -12,8 +12,8 @@ import Section from "../ui/Section/Section";
 
   const sectionStyles = {
     paddingTop: '30px !important',
-    paddingBottom: '1px !important',
-    paddingLeft: '5vw !important',
+    paddingBottom: '30px !important',
+    paddingLeft: '7vw !important',
     paddingRight: '4vw !important',
   };
 
@@ -216,13 +216,13 @@ const SchoolDistrictPrograms = () => {
           <ul
             className={`${robotoopo.className} text-md md:text-2xl space-y-2`}
           >
-            <li>&nbsp;</li>
+            
             <li>
               <Button onClick={() => (window.location.href = "/demo")}>
               DEMO Curriculum
             </Button>
             </li>
-            <li>&nbsp;</li>
+           
             <li>
             <Button onClick={() => (window.location.href = "/pricing")}>
               ENROLL Today!&nbsp;&nbsp;
@@ -250,15 +250,21 @@ const SchoolDistrictPrograms = () => {
           Meaningful learning takes time. By introducing topics gradually over several years, schools can create steady growth in awareness and understanding. Our three- to five-year teaching plan offers a flexible path for middle and high school students to build knowledge and confidence. Download our Teaching Track.
         </BodyText>
 
-      <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-4 gap-6">
+      <div className="grid grid-cols-6 gap-6">
      {cardDataTop.map((card, idx) => (
       <div
        key={idx}
        className={`mt-10 flex flex-col rounded-xl shadow-lg border p-6 relative col-span-2
+        grid 
                 ${
                     card.bg === "black"
-                      ? "bg-[#00C1D5] text-[#303030] hover:bg-gray-200"
-                      : "bg-[#303030] hover:bg-[#303030] text-white hover:bg-gray-200"
+                      ? "bg-[#00C1D5] text-[#303030] "
+                      : "bg-[#303030]  text-white "
+                  } 
+                ${
+                    card.bg === "black"
+                      ? "col-start-5 "
+                      : "col-start-2 "
                   } 
        `}
       >
