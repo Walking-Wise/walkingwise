@@ -9,9 +9,9 @@ import BodyText from "../ui/BodyText/BodyText";
 import Button from "../ui/Button/Button";
 import Section from "../ui/Section/Section";
 
-const cardData = [
+const cardDataTop = [
   {
-    title: "THE GROOMERS",
+    title: "3-YEAR TRACK",
     topics: [
       "Myths & Reality",
       "Trustworthy vs. Unsafe Adult",
@@ -22,7 +22,7 @@ const cardData = [
     high: "9th Grade",
   },
   {
-    title: "THE VULNERABLE",
+    title: "5-YEAR TRACK",
     topics: [
       "Sextortion Scheme",
       "Male Victims",
@@ -32,13 +32,37 @@ const cardData = [
     middle: "7th Grade",
     high: "10th Grade",
   },
+];
+const cardData = [
+  {
+    title: "THE GROOMERS",
+    topics: [
+      "#1 Myths & Reality: Parents & Staff",
+      "#2 Trustworthy vs. Unsafe Adult: 6th grade",
+      "#3 Grooming Process: 6th grade",
+      "#4 Pornography Link: 6th grade",
+    ],
+    middle: "6th Grade",
+    high: "9th Grade",
+  },
+  {
+    title: "THE VULNERABLE",
+    topics: [
+      "#5 Sextortion Scheme: 7th grade",
+      "#6 Male Victims: 7th grade",
+      "#7 Runaways as Targets: 7th grade",
+      "#8 Rural Risks: 7th grade",
+    ],
+    middle: "7th Grade",
+    high: "10th Grade",
+  },
   {
     title: "THE PREDATORS",
     topics: [
-      "Human Traffickers",
-      "Female Recruiters",
-      "Family Secret",
-      "Hidden Buyers",
+      "#9 Human Traffickers: 8th grade",
+      "#10 Female Recruiters: 8th grade",
+      "#11 Family Secret: 8th grade",
+      "#12 Hidden Buyers: 8th grade",
     ],
     middle: "8th Grade",
     high: "11th Grade",
@@ -166,7 +190,7 @@ const SchoolDistrictPrograms = () => {
         </BodyText>
 
         <div className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-3 xl:grid-cols-3 my-10 gap-6 md:gap-10 items-center">
-          {cardData.map((card, index) => (
+          {cardDataTop.map((card, index) => (
             <div
               key={index}
               className="bg-[#00c1d5] mx-auto w-full max-w-[400px] flex px-0 pb-8 pt-0 items-center flex-col"
@@ -176,24 +200,27 @@ const SchoolDistrictPrograms = () => {
                   <h1
                     className="text-4xl sm:text-6xl text-white"
                   >
-                    3-year track
+                    {card.title}
                     </h1>
                 </div>
               </div>
 
               <div className="text-center flex flex-col gap-2">
+                {cardData.map((card2, index2) => (
                 <h1
                   className={`${roboto.className} text-white text-2xl sm:text-3xl md:text-2xl xl:text-3xl`}
                 >
-                  {card.title}
+                  {card2.title}
                 </h1>
-                {card.topics.map((topic, i) => (
+                {card2.topics.map((topic, i) => (
                   <p
                     key={i}
                     className={`${robotoopo.className} text-xl sm:text-2xl md:text-xl xl:text-xl`}
                   >
                     {topic}
                   </p>
+                ))}
+                <br></br>
                 ))}
               </div>
             </div>
