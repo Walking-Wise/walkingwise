@@ -13,6 +13,8 @@ import Section from "../ui/Section/Section";
   const sectionStyles = {
     paddingTop: '30px !important',
     paddingBottom: '1px !important',
+    paddingLeft: '5vw !important',
+    paddingRight: '4vw !important',
   };
 
 
@@ -223,10 +225,10 @@ const SchoolDistrictPrograms = () => {
             <li>&nbsp;</li>
             <li>
             <Button onClick={() => (window.location.href = "/pricing")}>
-              ENROLL Today!
+              ENROLL Today!&nbsp;&nbsp;
             </Button>
             </li>
-            <li>&nbsp;</li>
+            
           </ul>
         </div>
       </div>
