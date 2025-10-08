@@ -9,6 +9,14 @@ import BodyText from "../ui/BodyText/BodyText";
 import Button from "../ui/Button/Button";
 import Section from "../ui/Section/Section";
 
+
+export default function MyPage() {
+  const sectionStyles = {
+    padding-top: 30px !important,
+    padding-bottom: 1px !important,
+  };
+
+
 const cardDataTop = [
   {
     title: "3-YEAR TRACK",
@@ -60,7 +68,6 @@ const cardDataTop = [
       "7th GRADE",
       "#5 Sextortion Scheme",
       "#6 Male Victims",
-      "8th GRADE",
       " ",
       "8th GRADE",
       "#7 Runaways as Targets: 8th grade",
@@ -190,7 +197,8 @@ const SchoolDistrictPrograms = () => {
       {/* District Rollout Section is now Adaptable Curriculum*/}
       <Section
         bgColor="[#00C1D5]"
-        className="text-[#303030] flex flex-col lg:flex-row gap-10 py-5 md:py-5"
+        className="text-[#303030] flex flex-col lg:flex-row gap-10 "
+        styles={sectionStyles}
       >
         {/* Left Content */}
         <div className="flex-1">
