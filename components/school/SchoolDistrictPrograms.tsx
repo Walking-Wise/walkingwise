@@ -9,7 +9,6 @@ import BodyText from "../ui/BodyText/BodyText";
 import Button from "../ui/Button/Button";
 import Section from "../ui/Section/Section";
 
-
 const cardDataTop = [
   {
     title: "3-YEAR TRACK",
@@ -246,7 +245,7 @@ const SchoolDistrictPrograms = () => {
        `}
       >
        <div className="mb-4">
-        <h2 id={card.title} className="text-4xl sm:text-6xl">{card.title}</h2>
+        <h1 id={card.title} className="text-4xl sm:text-6xl">{card.title}</h1>
        </div>
        
 
@@ -257,12 +256,12 @@ const SchoolDistrictPrograms = () => {
 
          {card.features.map((feature, i) => {
           if  (feature.includes("THE "))
-           return <li className="font-semibold font-parttitle" >{feature}</li>;
+           return <li className="text-xl sm:text-2xl md:text-3xl text-bold text-italic" >{feature}</li>;
           
           else if (feature === " ")
           return <li className="line-short" >&nbsp;</li>;
           else
-          return <li key={i} className={`mt-4 sm:mt-6`}>{feature.replace(/(\d)+(th)/g, {`<sup>$2</sup>`})}</li>;
+          return <li key={i} className="text-xl sm:text-2xl md:text-3xl">{feature}</li>;
 
          })}
          
