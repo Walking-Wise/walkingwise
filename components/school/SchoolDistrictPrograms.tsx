@@ -205,24 +205,7 @@ const SchoolDistrictPrograms = () => {
                 </div>
               </div>
 
-              <div className="text-center flex flex-col gap-2">
-                {cardData.map((card2, index2) => (
-                <h1
-                  className={`${roboto.className} text-white text-2xl sm:text-3xl md:text-2xl xl:text-3xl`}
-                >
-                  {card2.title}
-                </h1>
-                {card2.topics.map((topic, i) => (
-                  <p
-                    key={i}
-                    className={`${robotoopo.className} text-xl sm:text-2xl md:text-xl xl:text-xl`}
-                  >
-                    {topic}
-                  </p>
-                ))}
-                <br></br>
-                ))}
-              </div>
+             
             </div>
           ))}
         </div>
