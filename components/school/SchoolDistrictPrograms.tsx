@@ -197,7 +197,7 @@ const SchoolDistrictPrograms = () => {
       <Section
         bgColor="[#00C1D5]"
         className="text-[#303030] flex flex-col lg:flex-row gap-10 "
-        styles={sectionStyles}
+        style={sectionStyles}
       >
         {/* Left Content */}
         <div className="flex-1">
