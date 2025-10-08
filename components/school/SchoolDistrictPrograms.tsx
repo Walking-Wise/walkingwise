@@ -9,6 +9,9 @@ import BodyText from "../ui/BodyText/BodyText";
 import Button from "../ui/Button/Button";
 import Section from "../ui/Section/Section";
 
+function Superscript({ children }) {
+      return <sup>{children}</sup>;
+    }
 const cardDataTop = [
   {
     title: "3-YEAR TRACK",
@@ -21,7 +24,7 @@ const cardDataTop = [
       "#4 Pornography Link: 6th grade",
       " ",
       "THE VULNERABLE",
-      "#5 Sextortion Scheme: 7<sup>th</sup> grade",
+      "#5 Sextortion Scheme: 7th grade",
       "#6 Male Victims: 7th grade",
       "#7 Runaways as Targets: 7th grade",
       "#8 Rural Risks: 7th grade",
@@ -245,11 +248,9 @@ const SchoolDistrictPrograms = () => {
        `}
       >
        <div className="mb-4">
-        <h2 id={card.title} className="text-2xl font-semibold">{card.title}</h2>
+        <h2 id={card.title} className="text-4xl sm:text-6xl">{card.title}</h2>
        </div>
-       <div className="mb-4">
-        image here
-       </div>
+       
 
        
        <div className="flex-1 mt-4 mb-4">
@@ -258,12 +259,12 @@ const SchoolDistrictPrograms = () => {
 
          {card.features.map((feature, i) => {
           if  (feature.includes("THE "))
-           return <li className="font-semibold font14" >{feature}</li>;
+           return <li className="font-semibold font-parttitle" >{feature}</li>;
           
           else if (feature === " ")
           return <li className="line-short" >&nbsp;</li>;
           else
-          return <li key={i}>{feature}</li>;
+          return <li key={i} className={`mt-4 sm:mt-6`}>{feature}</li>;
 
          })}
          
