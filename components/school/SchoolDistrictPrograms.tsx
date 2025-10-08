@@ -276,7 +276,7 @@ const SchoolDistrictPrograms = () => {
                   } 
        `}
       >
-       <div className="mb-4">
+       <div className="mb-4 self-start">
         <h1 id={card.title} className="text-4xl sm:text-6xl">{card.title}</h1>
        </div>
        
