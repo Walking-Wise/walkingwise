@@ -204,7 +204,7 @@ const SchoolDistrictPrograms = () => {
       <div
 
         className="bg-[#00C1D5] text-[#303030] flex flex-col lg:flex-row gap-10 
-        pt-30 md:pt-60 pb-10 md:pb-70
+        pt-7 md:pt-15 pb-3 md:pb-16
         "
         style={sectionStyles}
       >
