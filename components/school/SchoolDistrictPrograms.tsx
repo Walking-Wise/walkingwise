@@ -9,9 +9,7 @@ import BodyText from "../ui/BodyText/BodyText";
 import Button from "../ui/Button/Button";
 import Section from "../ui/Section/Section";
 
-function Superscript({ children }) {
-      return <sup>{children}</sup>;
-    }
+
 const cardDataTop = [
   {
     title: "3-YEAR TRACK",
@@ -264,7 +262,7 @@ const SchoolDistrictPrograms = () => {
           else if (feature === " ")
           return <li className="line-short" >&nbsp;</li>;
           else
-          return <li key={i} className={`mt-4 sm:mt-6`}>{feature}</li>;
+          return <li key={i} className={`mt-4 sm:mt-6`}>{feature.replace(/(\d+th)/g, `<sub>$1</sub>`)}</li>;
 
          })}
          
