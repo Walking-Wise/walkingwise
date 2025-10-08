@@ -14,23 +14,25 @@ const cardDataTop = [
     title: "3-YEAR TRACK",
     bg: "black",
     features: [
-      "THE GROOMERS",
-      "#1 Myths & Reality: Parents & Staff",
-      "#2 Trustworthy vs. Unsafe Adults: 6th grade",
-      "#3 Grooming Process: 6th grade",
-      "#4 Pornography Link: 6th grade",
+      "PARENTS & STAFF",
+      "#1 Myths & Reality",
+      " "
+      "6th GRADE",
+      "#2 Trustworthy vs. Unsafe Adults",
+      "#3 Grooming Process",
+      "#4 Pornography Link",
       " ",
-      "THE VULNERABLE",
-      "#5 Sextortion Scheme: 7th grade",
-      "#6 Male Victims: 7th grade",
-      "#7 Runaways as Targets: 7th grade",
-      "#8 Rural Risks: 7th grade",
+      "7th GRADE",
+      "#5 Sextortion Scheme",
+      "#6 Male Victims",
+      "#7 Runaways as Targets",
+      "#8 Rural Risks",
       " ",
-      "THE PREDATORS",
-      "#9 Human Traffickers: 8th grade",
-      "#10 Recruiters: 8th grade",
-      "#11 Familial Traffickers: 8th grade",
-      "#12 Hidden Buyers: 8th grade",
+      "8th GRADE",
+      "#9 Human Traffickers",
+      "#10 Recruiters",
+      "#11 Familial Traffickers",
+      "#12 Hidden Buyers",
         ],
   
 
@@ -47,21 +49,28 @@ const cardDataTop = [
     title: "5-YEAR TRACK",
     bg: "blue",
     features: [
-      "THE GROOMERS",
-      "#1 Myths & Reality: Parents & Staff",
-      "#2 Trustworthy vs. Unsafe Adults: 6th grade",
-      "#3 Grooming Process: 6th grade",
-      "#4 Pornography Link: 6th grade",
+      "PARENTS & STAFF",
+      "#1 Myths & Reality",
+      " "
+      "6th GRADE",
+      "#2 Trustworthy vs. Unsafe Adults",
+      "#3 Grooming Process",
+      "#4 Pornography Link",
       " ",
-      "THE VULNERABLE",
-      "#5 Sextortion Scheme: 7th grade",
-      "#6 Male Victims: 7th grade",
+      "7th GRADE",
+      "#5 Sextortion Scheme",
+      "#6 Male Victims",
+      "8th GRADE",
+      " ",
+      "8th GRADE",
       "#7 Runaways as Targets: 8th grade",
       "#8 Rural Risks: 8th grade",
       " ",
-      "THE PREDATORS",
+      "9th GRADE",
       "#9 Human Traffickers: 9th grade",
       "#10 Recruiters: 9th grade",
+      " ",
+      "10th GRADE",
       "#11 Familial Traffickers: 10th grade",
       "#12 Hidden Buyers: 10th grade",
         ],
@@ -181,7 +190,7 @@ const SchoolDistrictPrograms = () => {
       {/* District Rollout Section is now Adaptable Curriculum*/}
       <Section
         bgColor="[#00C1D5]"
-        className="text-[#303030] flex flex-col lg:flex-row gap-10"
+        className="text-[#303030] flex flex-col lg:flex-row gap-10 py-5 md:py-5"
       >
         {/* Left Content */}
         <div className="flex-1">
@@ -255,7 +264,9 @@ const SchoolDistrictPrograms = () => {
          
 
          {card.features.map((feature, i) => {
-          if  (feature.includes("THE "))
+          if  (feature.includes("th GRADE"))
+           return <li className="text-xl sm:text-2xl md:text-2xl text-bold text-italic" >{feature}</li>;
+          else if  (feature.includes("PARENTS"))
            return <li className="text-xl sm:text-2xl md:text-2xl text-bold text-italic" >{feature}</li>;
           
           else if (feature === " ")
