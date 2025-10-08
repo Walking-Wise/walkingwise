@@ -13,13 +13,24 @@ const cardDataTop = [
   {
     title: "3-YEAR TRACK",
     bg: "black",
-    description: {
-        boxTitle: "THE GROOMERS",
-        lessons: [
-          "#1 Myths & Reality",
-          "#2 Trustworthy vs. Unsafe Adults",
-          "#3 Grooming Process",
-          "#4 Pornography Link",
+    features: [
+      "THE GROOMERS",
+      "#1 Myths & Reality: Parents & Staff",
+      "#2 Trustworthy vs. Unsafe Adults: 6th grade",
+      "#3 Grooming Process: 6th grade",
+      "#4 Pornography Link: 6th grade",
+      " ",
+      "THE VULNERABLE",
+      "#5  Sextortion Scheme: 7th grade",
+      "#6 Male Victimsv: 7th grade",
+      "#7 Runaways as Targets: 7th grade",
+      "#8 Rural Risks: 7th grade",
+      " ",
+      "THE PREDATORS",
+      "#9 Human Traffickers: 8th grade",
+      "#10 Recruiters: 8th grade",
+      "#11 Familial Traffickers: 8th grade",
+      "#12 Hidden Buyers: 8th grade",
         ],
       },
 
@@ -35,13 +46,24 @@ const cardDataTop = [
   {
     title: "5-YEAR TRACK",
     bg: "blue",
-    description: {
-        boxTitle: "THE GROOMERS",
-        lessons: [
-          "#1 Myths & Reality",
-          "#2 Trustworthy vs. Unsafe Adults",
-          "#3 Grooming Process",
-          "#4 Pornography Link",
+    features: [
+      "THE GROOMERS",
+      "#1 Myths & Reality: Parents & Staff",
+      "#2 Trustworthy vs. Unsafe Adults: 6th grade",
+      "#3 Grooming Process: 6th grade",
+      "#4 Pornography Link: 6th grade",
+      " ",
+      "THE VULNERABLE",
+      "#5  Sextortion Scheme: 7th grade",
+      "#6 Male Victimsv: 7th grade",
+      "#7 Runaways as Targets: 8th grade",
+      "#8 Rural Risks: 8th grade",
+      " ",
+      "THE PREDATORS",
+      "#9 Human Traffickers: 9th grade",
+      "#10 Recruiters: 9th grade",
+      "#11 Familial Traffickers: 10th grade",
+      "#12 Hidden Buyers: 10th grade",
         ],
       },
     topics: [
@@ -210,52 +232,51 @@ const SchoolDistrictPrograms = () => {
           Meaningful learning takes time. By introducing topics gradually over several years, schools can create steady growth in awareness and understanding. Our three- to five-year teaching plan offers a flexible path for middle and high school students to build knowledge and confidence. Download our Teaching Track.
         </BodyText>
 
-        <div className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 my-10 gap-6 md:gap-10 items-center">
-          {cardDataTop.map((card, index) => (
-            <div
-              key={index}
-              className={`
-                
-
+      <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-4 gap-6">
+     {cardDataTop.map((card, idx) => (
+      <div
+       key={idx}
+       className={`mt-10 flex flex-col rounded-xl shadow-lg border p-6 relative col-span-2
                 ${
                     card.bg === "black"
                       ? "bg-[#00C1D5] text-[#303030] hover:bg-gray-200"
                       : "bg-[#303030] hover:bg-[#303030] text-white"
                   } 
-              mx-auto w-full max-w-[400px] flex px-0 pb-8 pt-0 items-center flex-col`}
-            >
-              <div className="flex justify-between px-4 sm:px-6 py-4 mb-6 md:px-2 xl:px-8 w-full">
-                <div className="flex flex-col items-center">
-                  <h1 
-                    className="text-4xl sm:text-6xl text-center"
-                  >
-                    {card.title}
-                    </h1>
-                </div>
-                
-                <div
-                className={`w-full lg:w-[400px] xl:w-[400px] shrink-0  p-12 self-start md:mt-[-130px]`}
-                
-              >
-                <h1 className="text-2xl sm:text-4xl font-bold mb-2">
-                  {card.description.boxTitle}
-                </h1>
-                <ul className="space-y-2">
-                  {card.description.lessons.map((lesson, i) => (
-                    <li key={i} className="text-base sm:text-xl">
-                      {lesson}
-                    </li>
-                  ))}
-                </ul>
-              </div>
+       `}
+      >
+       <div className="mb-4">
+        <h2 id={card.title} className="text-2xl font-semibold">{card.title}</h2>
+       </div>
+       <div className="mb-4">
+        image here
+       </div>
 
+       
+       <div className="flex-1 mt-4 mb-4">
+        <ul className="space-y-2 text-sm lg:text-md">
+         
 
-              </div>
+         {card.features.map((feature, i) => {
+          if  (feature.includes("THE "))
+           return <li className="font-semibold font14" >{feature}</li>;
+          
+          else if (feature === " ")
+          return <li className="line-short" >&nbsp;</li>;
+          else
+          return <li key={i}>{feature}</li>;
 
-             
-            </div>
-          ))}
-        </div>
+         })}
+         
+         
+
+        </ul>
+       </div>
+
+       
+      </div>
+     ))}
+    </div>
+        
       </Section>
 
       {/* Safety Teams Section */}
