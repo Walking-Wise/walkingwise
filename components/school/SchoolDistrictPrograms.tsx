@@ -12,8 +12,8 @@ import Section from "../ui/Section/Section";
 
 export default function MyPage() {
   const sectionStyles = {
-    paddingTop: 30px !important,
-    paddingBottom: 1px !important,
+    paddingTop: '30px !important',
+    paddingBottom: '1px !important',
   };
 
 
