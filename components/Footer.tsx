@@ -4,7 +4,7 @@ import { roboto, robotoop, robotoopo } from "../public/fonts/Fonts";
 import { FaFacebook, FaInstagram, FaYoutube, FaLinkedin } from "react-icons/fa";
 import { SiTiktok } from "react-icons/si"; // TikTok from Simple Icons
 
-const linkstyle={    textDecoration: 'underline'};
+const linkstyle={    textDecoration: 'underline',fontWeight: 'normal'};
 const plainstyle={    fontWeight: 'normal'};
 const Footer = () => {
   const socialIcons = [
@@ -166,8 +166,8 @@ const Footer = () => {
         
         </div>
 
-        <div className="col-span-1 col-start-1 md:col-span-2 md:col-start-5">
-          <div className="flex gap-1 p-1 bg-[#006072] ">
+        <div className="col-span-1 col-start-1 md:col-span-2 md:col-start-5 flex items-center">
+          <div className="w-fit flex gap-1 p-1 bg-[#006072] ">
             {socialIcons.map(({ Icon, link }, index) => (
               <div
                 key={index}
