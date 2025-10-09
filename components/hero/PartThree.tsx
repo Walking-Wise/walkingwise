@@ -59,6 +59,8 @@ const PartThree = () => {
       </div>
 
       {/* Logo Images */}
+      <div className="flex items-center justify-center h-full">
+ 
       <div className="flex flex-row lg:flex-col justify-center md:items-center gap-6 lg:gap-10 mt-10 lg:mt-0">
         <div className="flex flex-col items-center w-1/2">
           <LogoItem
@@ -79,8 +81,8 @@ const PartThree = () => {
           />
         </div>
       </div>
-      <div className="flex items-center justify-center h-full">
-        <button
+
+          <button
             onClick={() =>
               (window.location.href =
                 "/adult-education")
@@ -89,7 +91,9 @@ const PartThree = () => {
           >
             Online Course for Adults
           </button>
-    </div>
+          </div>
+
+      
     </div>
   );
 };
