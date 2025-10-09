@@ -257,7 +257,7 @@ const SchoolDistrictPrograms = () => {
           Meaningful learning takes time. By introducing topics gradually over several years, schools can create steady growth in awareness and understanding. Our three- to five-year teaching plan offers a flexible path for middle and high school students to build knowledge and confidence. Download our Teaching Track.
         </BodyText>
 
-      <div className="grid grid-cols-1 md:grid-cols-6 lg:grid-cols-6 gap-5">
+      <div className="grid grid-cols-1 md:grid-cols-6 lg:grid-cols-6 gap-5  items-start">
      {cardDataTop.map((card, idx) => (
       <div
        key={idx}
@@ -283,7 +283,7 @@ const SchoolDistrictPrograms = () => {
        
 
        
-       <div className="flex-1 mt-4 mb-4">
+       <div className="flex-1 mt-4 mb-4  self-start">
         <ul className="space-y-2 text-sm lg:text-md" >
          
 
