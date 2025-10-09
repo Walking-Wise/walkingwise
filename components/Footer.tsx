@@ -38,10 +38,7 @@ const Footer = () => {
           </p>
           <p className={`${roboto.className} mt-3 text-[#303030] text-2xl`}>
             National Human Trafficking Hotline
-          </p>
-          <p
-            className={`${robotoopo.className} mt-2 text-[#303030] text-lg sm:text-xl`}
-          >
+          <br></br>
             Send a Text to 233733 (BEFREE); 1-888-373-7888
           </p>
           <p className={`${roboto.className} mt-3 text-[#303030] text-2xl`}>
