@@ -78,6 +78,8 @@ const PartThree = () => {
             link="https://www.goafn.org/news-1/afn-and-walking-wise-help-schools-build-an-anti-sex-trafficking-culture"
           />
         </div>
+      </div>
+      <div class="flex items-center justify-center h-full">
         <button
             onClick={() =>
               (window.location.href =
@@ -87,7 +89,7 @@ const PartThree = () => {
           >
             Online Course for Adults
           </button>
-      </div>
+    </div>
     </div>
   );
 };
