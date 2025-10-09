@@ -58,16 +58,12 @@ const Footer = () => {
         </div>
         {[
           [
-            colstart: "col-start-1",
-            colstartmd: "md:col-start-3",
             { label: "Home", href: "/" },
             { label: "About Us", href: "/about" },
             { label: "Pricing", href: "/pricing" },
             { label: "Demo", href: "/demo" },
           ],
           [
-            colstart: "col-start-1",
-            colstartmd: "md:col-start-4",
             { label: "Adult Education", href: "/adult-education" },
             { label: "Animated Videos", href: "/videos" },
             { label: "Youth Curriculum", href: "/youth-curriculum" },
@@ -80,8 +76,6 @@ const Footer = () => {
             },
           ],
           [
-            colstart: "col-start-1",
-            colstartmd: "md:col-start-5",
             { label: "School Programs", href: "/school-programs" },
             { label: "Youth Organization", href: "/youth-organization" },
             { label: "Home Education", href: "/home-education" },
@@ -92,8 +86,6 @@ const Footer = () => {
             { label: "Affiliate Program", href: " https://tally.so/r/w459Bo " },
           ],
           [
-            colstart: "col-start-1",
-            colstartmd: "md:col-start-6",
             { label: "Login", href: "https://learn.walkingwise.com/users/sign_in" },
             { label: "My Account", href: "/" },
             {
@@ -114,11 +106,11 @@ const Footer = () => {
         ].map((column, index) => (
           <div
             key={index}
+           
             className={`
-              ${colstart}  col-span-1 row-span-1
-              ${colstartmd}  md:col-span-1 md:row-span-1
-                  md:col-span-1 md:col-start-1 md:row-span-1
-                  min-w-[150px] px-4 md:my-16  items-center text-center`}
+              col-start-1  col-span-1 row-span-1
+              md:col-start-${index + 2}  md:col-span-1 md:row-span-1
+              min-w-[150px] px-4 md:my-16  items-center text-center`}
           >
             {column.map((item, i) => (
               <Link
