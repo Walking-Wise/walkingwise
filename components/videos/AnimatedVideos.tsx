@@ -205,7 +205,7 @@ const AnimatedVideos = () => {
       <Section bgColor="[#36c5d8]">
         <div className="flex justify-center items-center flex-col">
           <SectionHeaderText className="lg:text-7xl">
-            Walking Wise Animated Video Series
+            Animated Video Series
           </SectionHeaderText>
           <BodyText className="mt-4 sm:mt-8 md:text-center md:px-32">
             Watch our video trailers and DEMO video:{" "}
