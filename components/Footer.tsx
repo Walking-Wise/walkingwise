@@ -56,9 +56,11 @@ const Footer = () => {
             <br></br>
           </p>
       </div>
-      <div className=" col-start-1  col-span-1 row-span-1
+      <div className=" col-start-1  col-span-1 row-span-1 
               md:col-start-3  md:col-span-1 md:row-span-1
-              min-w-[150px] px-4 md:my-16  items-center text-center">
+              min-w-[150px] px-4 md:my-16  items-center 
+
+              md:text-left text-center">
               <a href="/" 
               className={`${robotoopo.className} text-lg sm:text-xl text-[#303030]  hover:text-[#05AFDB] cursor-pointer`}
               >Home</a>
@@ -78,7 +80,9 @@ const Footer = () => {
       </div>
       <div className=" col-start-1  col-span-1 row-span-1
               md:col-start-4  md:col-span-1 md:row-span-1
-              min-w-[150px] px-4 md:my-16  items-center text-center">
+              min-w-[150px] px-4 md:my-16  items-center 
+
+              md:text-left text-center">
               <a href="/adult-education" 
               className={`${robotoopo.className} text-lg sm:text-xl text-[#303030]  hover:text-[#05AFDB] cursor-pointer`}
               >Adult Education</a>
@@ -98,7 +102,9 @@ const Footer = () => {
       </div>
       <div className=" col-start-1  col-span-1 row-span-1
               md:col-start-5  md:col-span-1 md:row-span-1
-              min-w-[150px] px-4 md:my-16  items-center text-center">
+              min-w-[150px] px-4 md:my-16  items-center 
+
+              md:text-left text-center">
               <a href="/school-programs" 
               className={`${robotoopo.className} text-lg sm:text-xl text-[#303030]  hover:text-[#05AFDB] cursor-pointer`}
               >School Programs</a>
@@ -122,7 +128,9 @@ const Footer = () => {
       </div>
       <div className=" col-start-1  col-span-1 row-span-1
               md:col-start-6  md:col-span-1 md:row-span-1
-              min-w-[150px] px-4 md:my-16  items-center text-center">
+              min-w-[150px] px-4 md:my-16  items-center 
+
+              md:text-left text-center">
               <a href="https://learn.walkingwise.com/users/sign_in" 
               className={`${robotoopo.className} text-lg sm:text-xl text-[#303030]  hover:text-[#05AFDB] cursor-pointer`}
               >Login</a>
@@ -147,7 +155,7 @@ const Footer = () => {
   </div>
   
    <div className=" grid grid-cols-1 md:grid-cols-6 
-
+   bg-[#BFEBF0]
     max-w-screen-2xl mx-auto flex-col sm:flex-row justify-between items-center px-4 sm:px-8 lg:px-20  gap-4">
         
         <div className="col-span-1 col-start-1 md:col-span-2 md:col-start-1">
