@@ -34,6 +34,7 @@ const LogoItem = ({
 
 const PartThree = () => {
   return (
+    <>
     <div className="flex flex-col lg:flex-row max-w-screen-2xl mx-auto justify-evenly  px-4 sm:px-20 py-10 lg:py-32">
       {/* Text Content */}
       <div className="text-[#303030] flex flex-col justify-center items-center w-full lg:w-auto">
@@ -160,6 +161,7 @@ const PartThree = () => {
         </div>
       
     </div>
+    </>
   );
 };
 
