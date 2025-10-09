@@ -217,6 +217,9 @@ const DemoPage = () => {
         <div className="text-white md:max-w-[1200px]
         col-span-1 col-start-1 row-span-1
         md:col-span-2 md:col-start-1 md:row-span-1
+        text-xl sm:text-2xl md:text-3xl 
+        px-[7vw]
+        
         ">
           <a
             href="https://calendly.com/karla-highman-walkingwise/30min?back=1&amp;month=2025-07"
@@ -235,19 +238,20 @@ const DemoPage = () => {
             justify-center items-center ">
           <Button
             onClick={() => (window.location.href = "https://learn.walkingwise.com/enroll/3486696?price_id=4408602")}
-            className={`mt-8`}
+            className={`mt-8 mx-auto block`}
           >
             {"Start Adult Course"}
           </Button>
           </div>
           <div className="
+
             col-span-1 col-start-1 row-span-1
             md:col-span-1 md:col-start-2 md:row-span-1
             justify-center items-center ">
 
           <Button
             onClick={() => (window.location.href = "/pricing")}
-            className={`mt-8`}
+            className={`mt-8 mx-auto block`}
           >
             {"Youth Curriculum Enrollment"}
           </Button>
