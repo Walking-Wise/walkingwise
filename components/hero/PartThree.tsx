@@ -68,15 +68,6 @@ const PartThree = () => {
             textColor="rgb(27, 68, 116)"
             link="https://walking-wise-2025-website-assets.s3.us-east-1.amazonaws.com/Website_Dashboard-Education_PDFs_and_Icons/PIM_Accreditation_Info_Walking-Wise-Website/content/index.html#/"
           />
-          <button
-            onClick={() =>
-              (window.location.href =
-                "/adult-education")
-            }
-            className={`bg-[#9d1be3] ${roboto.className} mt-4 rounded-full text-sm sm:text-[16px] py-2 sm:py-3 px-4 text-white flex items-center whitespace-nowrap`}
-          >
-            Online Course for Adults
-          </button>
         </div>
         <div className="flex flex-col items-center w-1/2">
           <LogoItem
@@ -87,6 +78,15 @@ const PartThree = () => {
             link="https://www.goafn.org/news-1/afn-and-walking-wise-help-schools-build-an-anti-sex-trafficking-culture"
           />
         </div>
+        <button
+            onClick={() =>
+              (window.location.href =
+                "/adult-education")
+            }
+            className={`bg-[#9d1be3] ${roboto.className} mt-4 rounded-full text-sm sm:text-[16px] py-2 sm:py-3 px-4 text-white flex items-center whitespace-nowrap`}
+          >
+            Online Course for Adults
+          </button>
       </div>
     </div>
   );
