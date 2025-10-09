@@ -39,8 +39,7 @@ const Footer = () => {
       md:col-span-2 md:col-start-1 md:row-span-1
       max-w-screen-2xl 
       px-4 sm:px-8 lg:px-10">
-        {/* Report Section */}
-        <div className="w-full md:w-1/2 lg:w-1/3 min-w-[250px] px-4">
+        
           <p className={`${roboto.className} mt-5 text-xl text-red-500`}>
             Report Suspicions of Human Trafficking to:
           </p>
@@ -55,7 +54,7 @@ const Footer = () => {
             <a href="tel:18335993733"><span style={linkstyle}>833-599-FREE (3733)</span></a>
             <br></br>
           </p>
-        </div>
+      </div>
         {[
           [
             { label: "Home", href: "/" },
