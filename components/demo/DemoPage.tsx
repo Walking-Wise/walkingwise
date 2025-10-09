@@ -213,7 +213,7 @@ const DemoPage = () => {
         </div>
       </Section>
 
-      <div bgColor="" className="bg-[#303030] grid grid-cols-1 md:grid-cols-2 items-center justify-center md:py-4 lg:py-10">
+      <div className="bg-[#303030] grid grid-cols-1 md:grid-cols-2 items-center justify-center md:py-4 lg:py-10">
         <div className="text-white md:max-w-[1200px]
         col-span-1 col-start-1 row-span-1
         md:col-span-2 md:col-start-1 md:row-span-1
