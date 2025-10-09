@@ -15,6 +15,8 @@ import {
 } from "../../public/fonts/Fonts";
 import Button from "../ui/Button/Button";
 
+const boldimportant = { fontWeight:'bold !important'};
+
 const AnimatedVideos = () => {
   const [activeVideo, setActiveVideo] = useState<number | null>(null);
 
@@ -216,7 +218,7 @@ const AnimatedVideos = () => {
             Adults are encouraged to accompany young children throughout the
             learning process.
           </BodyText>
-          <BodyText className="md:text-center md:px-32 mt-4 text-bold">
+          <BodyText className="md:text-center md:px-32 mt-4 {boldimportant}">
             <br></br>
             Enroll today to unlock our complete animated video series.
           </BodyText>
