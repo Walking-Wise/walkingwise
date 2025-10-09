@@ -213,13 +213,14 @@ const DemoPage = () => {
         </div>
       </Section>
 
-      <div className="bg-[#303030] grid grid-cols-1 md:grid-cols-2 items-center justify-center md:py-4 lg:py-10">
+      <div className="bg-[#303030] grid grid-cols-1 md:grid-cols-12 items-center justify-center md:py-4 lg:py-10">
         <div className="text-white md:max-w-[1200px]
         col-span-1 col-start-1 row-span-1
-        md:col-span-2 md:col-start-1 md:row-span-1
+        md:col-span-8 md:col-start-3 md:row-span-1
         text-xl sm:text-2xl md:text-3xl 
+        text-justify
         px-[7vw]
-        
+
         ">
           <a
             href="https://calendly.com/karla-highman-walkingwise/30min?back=1&amp;month=2025-07"
@@ -234,8 +235,8 @@ const DemoPage = () => {
           
           <div className="
             col-span-1 col-start-1 row-span-1
-            md:col-span-1 md:col-start-1 md:row-span-1
-            justify-center items-center ">
+            md:col-span-4 md:col-start-3 md:row-span-1
+            justify-center items-center h-full py-5">
           <Button
             onClick={() => (window.location.href = "https://learn.walkingwise.com/enroll/3486696?price_id=4408602")}
             className={`mt-8 mx-auto block`}
@@ -246,8 +247,8 @@ const DemoPage = () => {
           <div className="
 
             col-span-1 col-start-1 row-span-1
-            md:col-span-1 md:col-start-2 md:row-span-1
-            justify-center items-center ">
+            md:col-span-4 md:col-start-7 md:row-span-1
+            justify-center items-center h-full py-5">
 
           <Button
             onClick={() => (window.location.href = "/pricing")}
