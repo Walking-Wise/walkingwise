@@ -213,7 +213,7 @@ const DemoPage = () => {
         </div>
       </Section>
 
-      <div className="bg-[#303030] grid grid-cols-1 md:grid-cols-12 items-center justify-center md:py-4 lg:py-10">
+      <div className="bg-[#303030] grid grid-cols-1 md:grid-cols-12 items-center justify-center py-5 md:py-4 lg:py-10">
         <div className="text-white md:max-w-[1200px]
         col-span-1 col-start-1 row-span-1
         md:col-span-8 md:col-start-3 md:row-span-1
@@ -236,7 +236,7 @@ const DemoPage = () => {
           <div className="
             col-span-1 col-start-1 row-span-1
             md:col-span-4 md:col-start-3 md:row-span-1
-            justify-center items-center h-full py-5">
+            justify-center items-center h-full ">
           <button
             onClick={() => (window.location.href = "https://learn.walkingwise.com/enroll/3486696?price_id=4408602")}
             className={`bg-[#9d1be3] ${roboto.className} block mx-auto mt-4 rounded-full text-sm sm:text-[16px] py-2 sm:py-3 px-4 text-white flex items-center whitespace-nowrap`}
@@ -248,7 +248,7 @@ const DemoPage = () => {
 
             col-span-1 col-start-1 row-span-1
             md:col-span-4 md:col-start-7 md:row-span-1
-            justify-center items-center h-full py-5">
+            justify-center items-center h-full ">
 
           <button
             onClick={() => (window.location.href = "/pricing")}
