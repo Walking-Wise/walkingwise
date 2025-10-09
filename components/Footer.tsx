@@ -12,7 +12,7 @@ const Footer = () => {
     },
     {
       Icon: FaYoutube,
-      link: "youtube.com/@walkingwise",
+      link: "https://youtube.com/@walkingwise",
     },
     {
       Icon: FaInstagram,
@@ -36,18 +36,13 @@ const Footer = () => {
           <p className={`${roboto.className} mt-5 text-xl text-red-500`}>
             Report Suspicions of Human Trafficking to:
           </p>
-          <p className={`${roboto.className} mt-3 text-[#303030] text-2xl`}>
-            National Human Trafficking Hotline
-          <br></br>
-            Send a Text to 233733 (BEFREE); 1-888-373-7888
+          <p className={`${roboto.className} mt-2 text-[#303030] text-lg sm:text-xl`}>
+            <strong> National Human Trafficking Hotline</strong><br></br>
+            Send a Text to <a href="sms://233733?">233733 (BEFREE)</a>; <a href="tel:18883737888">1-888-373-7888</a>
           </p>
-          <p className={`${roboto.className} mt-3 text-[#303030] text-2xl`}>
-            Rescue America
-          </p>
-          <p
-            className={`${robotoopo.className} mt-2 text-[#303030] text-lg sm:text-xl`}
-          >
-            833-599-FREE (3733)
+          <p className={`${roboto.className} mt-2 text-[#303030] text-lg sm:text-xl`}>
+            <strong>Rescue America</strong><br></br>
+            <a href="tel:18335993733">833-599-FREE (3733)</a>
           </p>
         </div>
         {[
