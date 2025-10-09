@@ -106,7 +106,7 @@ const Footer = () => {
         ].map((column, index) => (
           <div
             key={index}
-            className={`${styles.card} ${styles[`color${index + 1}`]}`}
+           
             className={`
               col-start-1  col-span-1 row-span-1
               md:col-start-${index + 2}  md:col-span-1 md:row-span-1
