@@ -134,7 +134,7 @@ const AnimatedVideos = () => {
       >
         <div className="lg:w-4xl md:py-10 text-white md:mt-8">
           <SectionHeaderText color="[#36c5d8]">
-            Empowerment through Animation
+            Empowerment Youth
           </SectionHeaderText>
           <BodyText className="mt-4 sm:mt-6 text-white">
             Walking Wise empowers young people with critical skills to evaluate
@@ -144,7 +144,7 @@ const AnimatedVideos = () => {
           </BodyText>
 
           <SectionHeaderText color="[#36c5d8]" className="mt-16">
-            Strategic Tactics of Sexual Predators
+            Exposing Tactics
           </SectionHeaderText>
           <BodyText className="mt-4 sm:mt-6 text-white">
             Understanding that many children experience sexual abuse and
@@ -216,7 +216,8 @@ const AnimatedVideos = () => {
             Adults are encouraged to accompany young children throughout the
             learning process.
           </BodyText>
-          <BodyText className="md:text-center md:px-32 mt-4">
+          <BodyText className="md:text-center md:px-32 mt-4 text-bold">
+            <br></br>
             Enroll today to unlock our complete animated video series.
           </BodyText>
           <Button
