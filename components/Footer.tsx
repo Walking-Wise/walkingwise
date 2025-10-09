@@ -56,92 +56,124 @@ const Footer = () => {
             <br></br>
           </p>
       </div>
-        {[
-          [
-            { label: "Home", href: "/" },
-            { label: "About Us", href: "/about" },
-            { label: "Pricing", href: "/pricing" },
-            { label: "Demo", href: "/demo" },
-          ],
-          [
-            { label: "Adult Education", href: "/adult-education" },
-            { label: "Animated Videos", href: "/videos" },
-            { label: "Youth Curriculum", href: "/youth-curriculum" },
-            { label: "Implementation", href: "/implementation " },
-            // { label: "Adult Course Description", href: "/course" },
-            {
-              label: "CE Credit",
-              href: "https://walking-wise-2025-website-assets.s3.us-east-1.amazonaws.com/Website_Dashboard-Education_PDFs_and_Icons/PIM_Accreditation_Info_Walking-Wise-Website/content/index.html?version=3001",
-              newPage: true
-            },
-          ],
-          [
-            { label: "School Programs", href: "/school-programs" },
-            { label: "Youth Organization", href: "/youth-organization" },
-            { label: "Home Education", href: "/home-education" },
-            {
-              label: "Public & Private Sector",
-              href: "/public-private-sector",
-            },
-            { label: "Affiliate Program", href: " https://tally.so/r/w459Bo " },
-          ],
-          [
-            { label: "Login", href: "https://learn.walkingwise.com/users/sign_in" },
-            { label: "My Account", href: "/" },
-            {
-              label: "Contact Us",
-              href: "/contact",
-            },
-            {
-              label: "Terms of Use",
-              href: "https://walking-wise-2025-website-assets.s3.us-east-1.amazonaws.com/Walking+Wise+Terms+of+Use+2025.pdf",
-              newPage: true,
-            },
-            {
-              label: "Privacy Policy",
-              href: "https://walking-wise-2025-website-assets.s3.us-east-1.amazonaws.com/Walking+Wise+-+Privacy+Policy+2025.pdf",
-              newPage: true,
-            },
-          ],
-        ].map((column, index) => (
-          <div
-            key={index}
-           
-            className={`
-              col-start-1  col-span-1 row-span-1
-              md:col-start-${index + 2}  md:col-span-1 md:row-span-1
-              min-w-[150px] px-4 md:my-16  items-center text-center`}
-          >
-            {column.map((item, i) => (
-              <Link
-                key={i}
-                href={item.href}
-                target={item.newPage ? "_blank" : "_self"}
-                className={`${robotoopo.className} text-lg sm:text-xl text-[#303030]  hover:text-[#05AFDB] cursor-pointer`}
-              >
-                {item.label}
-              </Link>
-            ))}
-          </div>
-        ))}
+      <div className=" col-start-1  col-span-1 row-span-1
+              md:col-start-3  md:col-span-1 md:row-span-1
+              min-w-[150px] px-4 md:my-16  items-center text-center">
+              <a href="/" 
+              className={`${robotoopo.className} text-lg sm:text-xl text-[#303030]  hover:text-[#05AFDB] cursor-pointer`}
+              >Home</a>
+              <br></br> 
+              <a href="/about" 
+              className={`${robotoopo.className} text-lg sm:text-xl text-[#303030]  hover:text-[#05AFDB] cursor-pointer`}
+              >About Us</a>
+              <br></br> 
+              <a href="/pricing" 
+              className={`${robotoopo.className} text-lg sm:text-xl text-[#303030]  hover:text-[#05AFDB] cursor-pointer`}
+              >Pricing</a>
+              <br></br> 
+              <a href="/demo" 
+              className={`${robotoopo.className} text-lg sm:text-xl text-[#303030]  hover:text-[#05AFDB] cursor-pointer`}
+              >Demo</a>
+              <br></br> 
       </div>
-      <div className="w-full flex max-w-screen-2xl mx-auto flex-col sm:flex-row justify-between items-center px-4 sm:px-8 lg:px-20  gap-4">
+      <div className=" col-start-1  col-span-1 row-span-1
+              md:col-start-4  md:col-span-1 md:row-span-1
+              min-w-[150px] px-4 md:my-16  items-center text-center">
+              <a href="/adult-education" 
+              className={`${robotoopo.className} text-lg sm:text-xl text-[#303030]  hover:text-[#05AFDB] cursor-pointer`}
+              >Adult Education</a>
+              <br></br> 
+              <a href="/videos" 
+              className={`${robotoopo.className} text-lg sm:text-xl text-[#303030]  hover:text-[#05AFDB] cursor-pointer`}
+              >Animated Videos</a>
+              <br></br> 
+              <a href="/youth-curriculum" 
+              className={`${robotoopo.className} text-lg sm:text-xl text-[#303030]  hover:text-[#05AFDB] cursor-pointer`}
+              >Youth Curriculum</a>
+              <br></br> 
+              <a href="https://walking-wise-2025-website-assets.s3.us-east-1.amazonaws.com/Website_Dashboard-Education_PDFs_and_Icons/PIM_Accreditation_Info_Walking-Wise-Website/content/index.html?version=3001" 
+              className={`${robotoopo.className} text-lg sm:text-xl text-[#303030]  hover:text-[#05AFDB] cursor-pointer`}
+              >CE Credit</a>
+              <br></br> 
+      </div>
+      <div className=" col-start-1  col-span-1 row-span-1
+              md:col-start-5  md:col-span-1 md:row-span-1
+              min-w-[150px] px-4 md:my-16  items-center text-center">
+              <a href="/school-programs" 
+              className={`${robotoopo.className} text-lg sm:text-xl text-[#303030]  hover:text-[#05AFDB] cursor-pointer`}
+              >School Programs</a>
+              <br></br> 
+              <a href="/youth-organization" 
+              className={`${robotoopo.className} text-lg sm:text-xl text-[#303030]  hover:text-[#05AFDB] cursor-pointer`}
+              >Youth Organization</a>
+              <br></br> 
+              <a href="/home-education" 
+              className={`${robotoopo.className} text-lg sm:text-xl text-[#303030]  hover:text-[#05AFDB] cursor-pointer`}
+              >Home Education</a>
+              <br></br> 
+              <a href="/public-private-sector" 
+              className={`${robotoopo.className} text-lg sm:text-xl text-[#303030]  hover:text-[#05AFDB] cursor-pointer`}
+              >Public & Private Sector</a>
+              <br></br> 
+              <a href="https://tally.so/r/w459Bo" 
+              className={`${robotoopo.className} text-lg sm:text-xl text-[#303030]  hover:text-[#05AFDB] cursor-pointer`}
+              >Affiliate Program</a>
+              <br></br> 
+      </div>
+      <div className=" col-start-1  col-span-1 row-span-1
+              md:col-start-6  md:col-span-1 md:row-span-1
+              min-w-[150px] px-4 md:my-16  items-center text-center">
+              <a href="https://learn.walkingwise.com/users/sign_in" 
+              className={`${robotoopo.className} text-lg sm:text-xl text-[#303030]  hover:text-[#05AFDB] cursor-pointer`}
+              >Login</a>
+              <br></br> 
+              <a href="https://learn.walkingwise.com/manage" 
+              className={`${robotoopo.className} text-lg sm:text-xl text-[#303030]  hover:text-[#05AFDB] cursor-pointer`}
+              >My Account</a>
+              <br></br> 
+              <a href="/contact" 
+              className={`${robotoopo.className} text-lg sm:text-xl text-[#303030]  hover:text-[#05AFDB] cursor-pointer`}
+              >Contact Us</a>
+              <br></br> 
+              <a href="https://walking-wise-2025-website-assets.s3.us-east-1.amazonaws.com/Walking+Wise+Terms+of+Use+2025.pdf" 
+              className={`${robotoopo.className} text-lg sm:text-xl text-[#303030]  hover:text-[#05AFDB] cursor-pointer`}
+              >Terms of Use</a>
+              <br></br> 
+              <a href="https://walking-wise-2025-website-assets.s3.us-east-1.amazonaws.com/Walking+Wise+-+Privacy+Policy+2025.pdf" 
+              className={`${robotoopo.className} text-lg sm:text-xl text-[#303030]  hover:text-[#05AFDB] cursor-pointer`}
+              >Privacy Policy</a>
+              <br></br> 
+      </div>
+  </div>
+  
+   <div className=" grid grid-cols-1 md:grid-cols-6 
+
+    max-w-screen-2xl mx-auto flex-col sm:flex-row justify-between items-center px-4 sm:px-8 lg:px-20  gap-4">
+        
+        <div className="col-span-1 col-start-1 md:col-span-2 md:col-start-1">
+        
         <p className={`${robotoop.className} text-[#303030] text-base `}>
           ©2025 Walking Wise. All Rights Reserved.
         </p>
-        <div className="flex gap-1 p-1 bg-[#006072] ">
-          {socialIcons.map(({ Icon, link }, index) => (
-            <div
-              key={index}
-              className="w-10 h-10 bg-[#5FCEE9] flex items-center justify-center cursor-pointer hover:opacity-80"
-            >
-              <a href={link} target="_blank">
-                <Icon className="text-white w-5 h-5 " />
-              </a>
-            </div>
-          ))}
+        
         </div>
-      </div>
+
+        <div className="col-span-1 col-start-1 md:col-span-2 md:col-start-5">
+          <div className="flex gap-1 p-1 bg-[#006072] ">
+            {socialIcons.map(({ Icon, link }, index) => (
+              <div
+                key={index}
+                className="w-10 h-10 bg-[#5FCEE9] flex items-center justify-center cursor-pointer hover:opacity-80"
+              >
+                <a href={link} target="_blank">
+                  <Icon className="text-white w-5 h-5 " />
+                </a>
+              </div>
+            ))}
+          </div>
+        </div>
+
+    </div>
     
     </>
   );
