@@ -4,7 +4,7 @@ import { roboto, robotoop, robotoopo } from "../public/fonts/Fonts";
 import { FaFacebook, FaInstagram, FaYoutube, FaLinkedin } from "react-icons/fa";
 import { SiTiktok } from "react-icons/si"; // TikTok from Simple Icons
 
-const linkstyle={    color: 'darkblue', textDecoration: 'underline'};
+const linkstyle={    textDecoration: 'underline'};
 const plainstyle={    fontWeight: 'normal'};
 const Footer = () => {
   const socialIcons = [
@@ -30,9 +30,15 @@ const Footer = () => {
     },
   ];
   return (
-    <div className="bg-[#BFEBF0] py-8 md:py-16 w-full">
+    <div className="bg-[#BFEBF0] py-8 md:py-16 w-full
+          grid grid-cols-1 md:grid-cols-6 gap-5  items-start
+          ">
       {/* Main Footer Content */}
-      <div className="flex flex-col max-w-screen-2xl mx-auto md:flex-row justify-evenly items-start px-4 sm:px-8 lg:px-10">
+      <div className="
+      col-span-1 col-start-1 row-span-1
+      md:col-span-2 md:col-start-1 md:row-span-1
+      max-w-screen-2xl 
+      px-4 sm:px-8 lg:px-10">
         {/* Report Section */}
         <div className="w-full md:w-1/2 lg:w-1/3 min-w-[250px] px-4">
           <p className={`${roboto.className} mt-5 text-xl text-red-500`}>
@@ -47,28 +53,35 @@ const Footer = () => {
           <p className={`${roboto.className} mt-2 text-[#303030] text-lg sm:text-xl`}>
             <strong>Rescue America</strong><br></br>
             <a href="tel:18335993733"><span style={linkstyle}>833-599-FREE (3733)</span></a>
+            <br></br>
           </p>
         </div>
         {[
           [
+            colstart: "col-start-1",
+            colstartmd: "md:col-start-3",
             { label: "Home", href: "/" },
             { label: "About Us", href: "/about" },
             { label: "Pricing", href: "/pricing" },
             { label: "Demo", href: "/demo" },
           ],
           [
+            colstart: "col-start-1",
+            colstartmd: "md:col-start-4",
             { label: "Adult Education", href: "/adult-education" },
             { label: "Animated Videos", href: "/videos" },
             { label: "Youth Curriculum", href: "/youth-curriculum" },
             { label: "Implementation", href: "/implementation " },
             // { label: "Adult Course Description", href: "/course" },
             {
-              label: "CME/CE Accreditation",
-              href: "https://walking-wise-2025-website-assets.s3.us-east-1.amazonaws.com/Website_Dashboard-Education_PDFs_and_Icons/PIM_Accreditation_Info_Walking-Wise-Website/content/index.html#/#/",
+              label: "CE Credit",
+              href: "https://walking-wise-2025-website-assets.s3.us-east-1.amazonaws.com/Website_Dashboard-Education_PDFs_and_Icons/PIM_Accreditation_Info_Walking-Wise-Website/content/index.html?version=3001",
               newPage: true
             },
           ],
           [
+            colstart: "col-start-1",
+            colstartmd: "md:col-start-5",
             { label: "School Programs", href: "/school-programs" },
             { label: "Youth Organization", href: "/youth-organization" },
             { label: "Home Education", href: "/home-education" },
@@ -79,6 +92,8 @@ const Footer = () => {
             { label: "Affiliate Program", href: " https://tally.so/r/w459Bo " },
           ],
           [
+            colstart: "col-start-1",
+            colstartmd: "md:col-start-6",
             { label: "Login", href: "https://learn.walkingwise.com/users/sign_in" },
             { label: "My Account", href: "/" },
             {
@@ -99,7 +114,11 @@ const Footer = () => {
         ].map((column, index) => (
           <div
             key={index}
-            className="flex flex-col min-w-[150px] px-4 md:my-16"
+            className={`
+              ${colstart}  col-span-1 row-span-1
+              ${colstartmd}  md:col-span-1 md:row-span-1
+                  md:col-span-1 md:col-start-1 md:row-span-1
+                  min-w-[150px] px-4 md:my-16  items-center text-center`}
           >
             {column.map((item, i) => (
               <Link
