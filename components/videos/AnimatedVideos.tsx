@@ -1,315 +1,149 @@
-"use client";
+import React from "react";
+import Link from "next/link";
+import { roboto, robotoop, robotoopo } from "../public/fonts/Fonts";
+import { FaFacebook, FaInstagram, FaYoutube, FaLinkedin } from "react-icons/fa";
+import { SiTiktok } from "react-icons/si"; // TikTok from Simple Icons
 
-import React, { useState } from "react";
-import Image from "next/image";
-import { Dialog } from "@headlessui/react";
-import Section from "../ui/Section/Section";
-import SectionHeaderText from "../ui/SectionHeaderText/SectionHeaderText";
-import BodyText from "../ui/BodyText/BodyText";
-import PageBanner from "../ui/PageBanner/PageBanner";
-import {
-  robotoopo,
-  robotoItalic,
-  robotoBold,
-  robotoItalicop,
-} from "../../public/fonts/Fonts";
-import Button from "../ui/Button/Button";
-
-const AnimatedVideos = () => {
-  const [activeVideo, setActiveVideo] = useState<number | null>(null);
-
-  const videoTitles: Record<
-    number,
-    { name: string; link: string; thumbnail: string }
-  > = {
-    1: {
-      name: "Myths & Reality",
-      thumbnail:
-        "https://walking-wise-2025-website-assets.s3.us-east-1.amazonaws.com/Videos-Animation/Thumbnails+-+Website+Animation/Myths+-+Thumbnail.png",
-      link: "https://walking-wise-2025-website-assets.s3.us-east-1.amazonaws.com/Videos-Animation/Videos+-+Website+Animation/Video-Myths_and_Reality-4-1-2025.mp4",
+const linkstyle={    textDecoration: 'underline'};
+const plainstyle={    fontWeight: 'normal'};
+const Footer = () => {
+  const socialIcons = [
+    {
+      Icon: FaFacebook,
+      link: "https://www.facebook.com/profile.php?id=100076611698755",
     },
-    2: {
-      name: "Trustworthy vs. Unsafe Adult",
-      thumbnail:
-        "https://walking-wise-2025-website-assets.s3.us-east-1.amazonaws.com/Videos-Animation/Thumbnails+-+Website+Animation/Trustworthy+vs+Unsafe+-+Thumbnail.png",
-      link: "https://walking-wise-2025-website-assets.s3.us-east-1.amazonaws.com/Videos-Animation/Trailers+-+Website+Animation/Trailer-Trustworthy_Vs_Unsafe_Adult-1080p-250125.mp4",
+    {
+      Icon: FaYoutube,
+      link: "https://youtube.com/@walkingwise",
     },
-    3: {
-      name: "Grooming Process",
-      thumbnail:
-        "https://walking-wise-2025-website-assets.s3.us-east-1.amazonaws.com/Videos-Animation/Thumbnails+-+Website+Animation/Grooming+Process+-+Thumbnail.png",
-      link: "https://walking-wise-2025-website-assets.s3.us-east-1.amazonaws.com/Videos-Animation/Trailers+-+Website+Animation/Trailer-Grooming_Process_of_Child_Sex_Trafficking-1080p-230618.mp4",
+    {
+      Icon: FaInstagram,
+      link: "https://www.instagram.com/walking.wise/",
     },
-    4: {
-      name: "Pornography Link",
-      thumbnail:
-        "https://walking-wise-2025-website-assets.s3.us-east-1.amazonaws.com/Videos-Animation/Thumbnails+-+Website+Animation/Pornography+Link+-+Thumbnail.png",
-      link: "https://walking-wise-2025-website-assets.s3.us-east-1.amazonaws.com/Videos-Animation/Trailers+-+Website+Animation/Trailer-Pornography_Link_of_Child_Sex_Trafficking-1080p-230618.mp4",
+    {
+      Icon: FaLinkedin,
+      link: "https://www.linkedin.com/company/walking-wise/about/?viewAsMember=true",
     },
-    5: {
-      name: "Sextortion Scheme",
-      thumbnail:
-        "https://walking-wise-2025-website-assets.s3.us-east-1.amazonaws.com/Videos-Animation/Thumbnails+-+Website+Animation/Sextortion+Scheme+-+Thumbnail.png",
-      link: "https://walking-wise-2025-website-assets.s3.us-east-1.amazonaws.com/Videos-Animation/Trailers+-+Website+Animation/Trailer-Sextortion_Scheme_of_Child_Sex_Trafficking-1080p-230618.mp4",
+    {
+      Icon: SiTiktok,
+      link: "https://www.tiktok.com/@walkingwise",
     },
-    6: {
-      name: "Male Victims",
-      thumbnail:
-        "https://walking-wise-2025-website-assets.s3.us-east-1.amazonaws.com/Videos-Animation/Thumbnails+-+Website+Animation/Male+Victims+-+Thumbnail.png",
-      link: "https://walking-wise-2025-website-assets.s3.us-east-1.amazonaws.com/Videos-Animation/Trailers+-+Website+Animation/Trailer-Male_Victims_of_Child_Sex_Trafficking-1080p-230618.mp4",
-    },
-    7: {
-      name: "Runaways as Targets",
-      thumbnail:
-        "https://walking-wise-2025-website-assets.s3.us-east-1.amazonaws.com/Videos-Animation/Thumbnails+-+Website+Animation/Runaways+As+Targets+-+Thumbnail.png",
-      link: "https://walking-wise-2025-website-assets.s3.us-east-1.amazonaws.com/Videos-Animation/Trailers+-+Website+Animation/Trailer-Runaways_are_Targets_of_Child_Sex_Traffick-1080p-230618.mp4",
-    },
-    8: {
-      name: "Rural Risks",
-      thumbnail:
-        "https://walking-wise-2025-website-assets.s3.us-east-1.amazonaws.com/Videos-Animation/Thumbnails+-+Website+Animation/Rural+Risks+-+Thumbnail.png",
-      link: "https://walking-wise-2025-website-assets.s3.us-east-1.amazonaws.com/Videos-Animation/Trailers+-+Website+Animation/Trailer-Rural_Risks_of_Child_Sex_Trafficking-1080p-230618.mp4",
-    },
-    9: {
-      name: "Human Traffickers",
-      thumbnail:
-        "https://walking-wise-2025-website-assets.s3.us-east-1.amazonaws.com/Videos-Animation/Thumbnails+-+Website+Animation/Human+Traffickers+-+Thumbnail.png",
-      link: "https://walking-wise-2025-website-assets.s3.us-east-1.amazonaws.com/Videos-Animation/Trailers+-+Website+Animation/Trailer-Human+Traffickers_of_Child_Sex_Trafficking-1080p-230618.mp4",
-    },
-    10: {
-      name: "Female Recruiters",
-      thumbnail:
-        "https://walking-wise-2025-website-assets.s3.us-east-1.amazonaws.com/Videos-Animation/Thumbnails+-+Website+Animation/Female+Recruiter+-+Thumbnail.png",
-      link: "https://walking-wise-2025-website-assets.s3.us-east-1.amazonaws.com/Videos-Animation/Trailers+-+Website+Animation/Trailer-Female_Recruiters_of_Child_Sex_Trafficking-1080p-230618.mp4",
-    },
-    11: {
-      name: "Family Secret",
-      thumbnail:
-        "https://walking-wise-2025-website-assets.s3.us-east-1.amazonaws.com/Videos-Animation/Thumbnails+-+Website+Animation/Family+Secrect+-+Thumbnail.png",
-      link: "https://walking-wise-2025-website-assets.s3.us-east-1.amazonaws.com/Videos-Animation/Trailers+-+Website+Animation/Trailer-Family_Secret_of_Child_Sex_Trafficking-1080p-230618.mp4",
-    },
-    12: {
-      name: "Hidden Buyers",
-      thumbnail:
-        "https://walking-wise-2025-website-assets.s3.us-east-1.amazonaws.com/Videos-Animation/Thumbnails+-+Website+Animation/Hidden+Buyers+Coming+Soon+-+Thumbnail.png",
-      link: "/assets/videos/hidden-buyers.mp4",
-    },
-  };
-
-  const handleVideoClick = (num: number) => {
-    if (videoTitles[num]?.link) {
-      setActiveVideo(num);
-    } else {
-      alert("Video not available yet.");
-    }
-  };
-
-  const closeModal = () => {
-    setActiveVideo(null);
-  };
-
+  ];
   return (
-    <>
-      <PageBanner
-        title="Animated Video Series"
-        image="https://walking-wise-2025-website-assets.s3.us-east-1.amazonaws.com/Website+Hero+Banners+300dpi/ANIMATED_VIDEOS_300dpi_1200x511_TEXT.jpg"
-        altText="Animated Video Series"
-      />
-
-      <Section bgColor="white">
-        <SectionHeaderText>Animated Explanation</SectionHeaderText>
-        <BodyText className="mt-4 sm:mt-6">
-          Storytelling creates a strong connection with audiences, while visual
-          learning enhances comprehension and retention. By combining these
-          elements, explainer-style animation becomes a powerful educational
-          tool that resonates with both children and adults. Walking Wise
-          subscribers receive full access to an animated video series that
-          covers 12 key issues related to child exploitation.
-        </BodyText>
-      </Section>
-
-      <Section
-        bgColor="[#303030]"
-        className="gap-10 xl:flex-row justify-between items-center xl:items-start"
-      >
-        <div className="lg:w-4xl md:py-10 text-white md:mt-8">
-          <SectionHeaderText color="[#36c5d8]">
-            Empowerment Youth
-          </SectionHeaderText>
-          <BodyText className="mt-4 sm:mt-6 text-white">
-            Walking Wise empowers young people with critical skills to evaluate
-            who is trustworthy, swiftly identify a potential online threat, and
-            judge when to end something as basic as a conversation or as
-            powerful as a relationship.
-          </BodyText>
-
-          <SectionHeaderText color="[#36c5d8]" className="mt-16">
-            Exposing Tactics
-          </SectionHeaderText>
-          <BodyText className="mt-4 sm:mt-6 text-white">
-            Understanding that many children experience sexual abuse and
-            exploitation, we worked diligently with survivors and advocacy
-            experts to produce animated explanations that are sensitive to those
-            who have experienced trauma. Each 3-minute video illustrates the
-            many tactics predators use to groom and exploit vulnerable children.
-          </BodyText>
-        </div>
-
-        <div>
-          <div className="bg-[#36c5d8] w-[250px] sm:w-[400px] lg:w-[500px] h-[250px] sm:h-[400px] lg:h-[500px] border-4 border-white rounded-full flex flex-col justify-center items-center text-center text-white p-4 xl:mt-10">
-            <p
-              className={`${robotoItalic.className} text-sm sm:text-xl lg:text-3xl text-[#303030]`}
-            >
-              "I believe the animated
-            </p>
-            <p
-              className={`${robotoItalic.className} text-sm sm:text-xl lg:text-3xl text-[#303030]`}
-            >
-              videos are valuable lessons &
-            </p>
-            <p
-              className={`${robotoItalic.className} text-sm sm:text-xl lg:text-3xl text-[#303030]`}
-            >
-              non-triggering for at-risk youth.
-            </p>
-            <h1 className="text-lg sm:text-3xl px-6 my-2 md:my-10 text-[#303030]">
-              It's a great concept and easy to teach"
-            </h1>
-            <p
-              className={`${robotoopo.className} text-[#303030] text-sm sm:text-xl lg:text-2xl`}
-            >
-              Abby, Advocate
-            </p>
-            <a
-              href="https://gozoe.org/"
-              target="_blank"
-              className={`${robotoopo.className} text-[#303030] text-sm sm:text-xl lg:text-2xl underline`}
-            >
-              ZOE International
-            </a>
-          </div>
-
-          <div className="flex flex-col justify-center items-center mb-10 gap-4 md:mt-8">
-            <Button
-              onClick={() => (window.location.href = "/demo")}
-              className={`mt-13`}
-            >
-              DEMO Curriculum
-            </Button>
-          </div>
-        </div>
-      </Section>
-
-      <Section bgColor="[#36c5d8]">
-        <div className="flex justify-center items-center flex-col">
-          <SectionHeaderText className="lg:text-7xl">
-            Walking Wise Animated Video Series
-          </SectionHeaderText>
-          <BodyText className="mt-4 sm:mt-8 md:text-center md:px-32">
-            Watch our video trailers and DEMO video:{" "}
-            <span className={`font-bold ${robotoItalicop.className}`}>
-              Myths and Reality
-            </span>
-            .
-          </BodyText>
-          <BodyText className="md:text-center md:px-32">
-            Adults are encouraged to accompany young children throughout the
-            learning process.
-          </BodyText>
-          <BodyText className="md:text-center md:px-32 mt-4 text-bold">
+    <div className="bg-[#BFEBF0] py-8 md:py-16 w-full
+          grid grid-cols-1 md:grid-cols-6 gap-5  items-start
+          ">
+      {/* Main Footer Content */}
+      <div className="
+      col-span-1 col-start-1 row-span-1
+      md:col-span-2 md:col-start-1 md:row-span-1
+      max-w-screen-2xl 
+      px-4 sm:px-8 lg:px-10">
+        {/* Report Section */}
+        <div className="w-full md:w-1/2 lg:w-1/3 min-w-[250px] px-4">
+          <p className={`${roboto.className} mt-5 text-xl text-red-500`}>
+            Report Suspicions of Human Trafficking to:
+          </p>
+          <p className={`${roboto.className} mt-2 text-[#303030] text-lg sm:text-xl`}>
+            <strong> National Human Trafficking Hotline</strong><br></br>
+            <span style={plainstyle}>Send a Text to </span><a href="sms://233733"><span style={linkstyle}>233733 (BEFREE)</span></a>
             <br></br>
-            Enroll today to unlock our complete animated video series.
-          </BodyText>
-          <Button
-            onClick={() => (window.location.href = "/pricing")}
-            className={`mt-8`}
-          >
-            {"Enroll Today"}
-          </Button>
+             <a href="tel:18883737888"><span style={linkstyle}>1-888-373-7888</span></a>
+          </p>
+          <p className={`${roboto.className} mt-2 text-[#303030] text-lg sm:text-xl`}>
+            <strong>Rescue America</strong><br></br>
+            <a href="tel:18335993733"><span style={linkstyle}>833-599-FREE (3733)</span></a>
+            <br></br>
+          </p>
         </div>
-      </Section>
-
-      <Section bgColor="white">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-10 max-w-[2000px] mx-auto">
-          {Array.from({ length: 12 }, (_, i) => i + 1).map((num) => (
-            <div
-              key={num}
-              className="group relative max-w-[500px] mx-auto w-full cursor-pointer"
-              onClick={() => handleVideoClick(num)}
-            >
-              <div className="relative max-w-[500px]">
-                <Image
-                  src={videoTitles[num].thumbnail}
-                  alt={`${videoTitles[num].name} thumbnail`}
-                  width={400}
-                  height={250}
-                  className="object-contain w-full h-full"
-                />
-                <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
-                  <div className="bg-black bg-opacity-50 rounded-full p-4">
-                    <svg
-                      className="w-12 h-12 text-white"
-                      fill="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path d="M8 5v14l11-7z" />
-                    </svg>
-                  </div>
-                </div>
-              </div>
-
-              <div
-                className={`bg-[#303030] p-3 sm:p-4 text-white ${robotoBold.className}`}
+        {[
+          [
+            { label: "Home", href: "/" },
+            { label: "About Us", href: "/about" },
+            { label: "Pricing", href: "/pricing" },
+            { label: "Demo", href: "/demo" },
+          ],
+          [
+            { label: "Adult Education", href: "/adult-education" },
+            { label: "Animated Videos", href: "/videos" },
+            { label: "Youth Curriculum", href: "/youth-curriculum" },
+            { label: "Implementation", href: "/implementation " },
+            // { label: "Adult Course Description", href: "/course" },
+            {
+              label: "CE Credit",
+              href: "https://walking-wise-2025-website-assets.s3.us-east-1.amazonaws.com/Website_Dashboard-Education_PDFs_and_Icons/PIM_Accreditation_Info_Walking-Wise-Website/content/index.html?version=3001",
+              newPage: true
+            },
+          ],
+          [
+            { label: "School Programs", href: "/school-programs" },
+            { label: "Youth Organization", href: "/youth-organization" },
+            { label: "Home Education", href: "/home-education" },
+            {
+              label: "Public & Private Sector",
+              href: "/public-private-sector",
+            },
+            { label: "Affiliate Program", href: " https://tally.so/r/w459Bo " },
+          ],
+          [
+            { label: "Login", href: "https://learn.walkingwise.com/users/sign_in" },
+            { label: "My Account", href: "/" },
+            {
+              label: "Contact Us",
+              href: "/contact",
+            },
+            {
+              label: "Terms of Use",
+              href: "https://walking-wise-2025-website-assets.s3.us-east-1.amazonaws.com/Walking+Wise+Terms+of+Use+2025.pdf",
+              newPage: true,
+            },
+            {
+              label: "Privacy Policy",
+              href: "https://walking-wise-2025-website-assets.s3.us-east-1.amazonaws.com/Walking+Wise+-+Privacy+Policy+2025.pdf",
+              newPage: true,
+            },
+          ],
+        ].map((column, index) => (
+          <div
+            key={index}
+            className={`${styles.card} ${styles[`color${index + 1}`]}`}
+            className={`
+              col-start-1  col-span-1 row-span-1
+              md:col-start-${index + 2}  md:col-span-1 md:row-span-1
+              min-w-[150px] px-4 md:my-16  items-center text-center`}
+          >
+            {column.map((item, i) => (
+              <Link
+                key={i}
+                href={item.href}
+                target={item.newPage ? "_blank" : "_self"}
+                className={`${robotoopo.className} text-lg sm:text-xl text-[#303030]  hover:text-[#05AFDB] cursor-pointer`}
               >
-                <p
-                  className={`text-center md:text-2xl sm:text-2xl ${robotoBold.className}`}
-                >
-                  {videoTitles[num].name}
-                </p>
-              </div>
+                {item.label}
+              </Link>
+            ))}
+          </div>
+        ))}
+      </div>
+      <div className="w-full flex max-w-screen-2xl mx-auto flex-col sm:flex-row justify-between items-center px-4 sm:px-8 lg:px-20  gap-4">
+        <p className={`${robotoop.className} text-[#303030] text-base `}>
+          ©2025 Walking Wise. All Rights Reserved.
+        </p>
+        <div className="flex gap-1 p-1 bg-[#006072] ">
+          {socialIcons.map(({ Icon, link }, index) => (
+            <div
+              key={index}
+              className="w-10 h-10 bg-[#5FCEE9] flex items-center justify-center cursor-pointer hover:opacity-80"
+            >
+              <a href={link} target="_blank">
+                <Icon className="text-white w-5 h-5 " />
+              </a>
             </div>
           ))}
         </div>
-      </Section>
-
-      <Dialog
-        open={activeVideo !== null}
-        onClose={closeModal}
-        className="fixed z-50 inset-0 flex items-center justify-center"
-      >
-        {/* Overlay */}
-        <div
-          className="fixed inset-0 bg-black/70"
-          onClick={closeModal} // explicitly closes when overlay is clicked
-        />
-
-        {activeVideo !== null && (
-          <div className="relative bg-white bg-opacity-95 rounded-lg overflow-hidden w-full max-w-2xl p-4 z-10 shadow-2xl">
-            {/* Close Button *inside* modal */}
-            <button
-              onClick={closeModal}
-              className="absolute top-4 right-4 bg-white border border-gray-300 rounded-full w-10 h-10 flex items-center justify-center text-gray-800 hover:bg-gray-100 hover:text-black text-2xl shadow"
-              aria-label="Close"
-            >
-              ×
-            </button>
-
-            <h2 className="text-lg font-semibold mb-4">
-              {videoTitles[activeVideo]?.name}
-            </h2>
-
-            <div className="relative">
-              <video
-                src={videoTitles[activeVideo]?.link}
-                controls
-                className="w-full rounded bg-black/80"
-              />
-            </div>
-          </div>
-        )}
-      </Dialog>
-    </>
+      </div>
+    </div>
   );
 };
 
-export default AnimatedVideos;
+export default Footer;
