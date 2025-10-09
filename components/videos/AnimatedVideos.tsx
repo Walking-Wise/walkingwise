@@ -218,9 +218,9 @@ const AnimatedVideos = () => {
             Adults are encouraged to accompany young children throughout the
             learning process.
           </BodyText>
-          <BodyText className="md:text-center md:px-32 mt-4 {boldimportant}">
+          <BodyText className="md:text-center md:px-32 mt-4 ">
             <br></br>
-            Enroll today to unlock our complete animated video series.
+            <span style={boldimportant}>Enroll today to unlock our complete animated video series.</span>
           </BodyText>
           <Button
             onClick={() => (window.location.href = "/pricing")}
