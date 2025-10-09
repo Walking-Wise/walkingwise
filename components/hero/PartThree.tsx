@@ -79,7 +79,7 @@ const PartThree = () => {
           />
         </div>
       </div>
-      <div class="flex items-center justify-center h-full">
+      <div className="flex items-center justify-center h-full">
         <button
             onClick={() =>
               (window.location.href =
