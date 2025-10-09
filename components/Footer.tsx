@@ -30,6 +30,7 @@ const Footer = () => {
     },
   ];
   return (
+    <>
     <div className="bg-[#BFEBF0] py-8 md:py-16 w-full
           grid grid-cols-1 md:grid-cols-6 gap-5  items-start
           ">
@@ -141,7 +142,8 @@ const Footer = () => {
           ))}
         </div>
       </div>
-    </div>
+    
+    </>
   );
 };
 
