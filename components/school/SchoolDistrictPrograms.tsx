@@ -47,6 +47,9 @@ const cardDataTop = [
       "#10 Recruiters",
       "#11 Familial Traffickers",
       "#12 Hidden Buyers",
+      " ",
+      " ",
+      " ",
         ],
   
 
