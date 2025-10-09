@@ -4,6 +4,7 @@ import { roboto, robotoop, robotoopo } from "../public/fonts/Fonts";
 import { FaFacebook, FaInstagram, FaYoutube, FaLinkedin } from "react-icons/fa";
 import { SiTiktok } from "react-icons/si"; // TikTok from Simple Icons
 
+const linkstyle={    color: 'darkblue', textDecoration: 'underline'};
 const Footer = () => {
   const socialIcons = [
     {
@@ -38,11 +39,13 @@ const Footer = () => {
           </p>
           <p className={`${roboto.className} mt-2 text-[#303030] text-lg sm:text-xl`}>
             <strong> National Human Trafficking Hotline</strong><br></br>
-            Send a Text to <a href="sms://233733?">233733 (BEFREE)</a>; <a href="tel:18883737888">1-888-373-7888</a>
+            Send a Text to <a href="sms://233733"><span style={linkstyle}>233733 (BEFREE)</span></a>
+            <br></br>
+             <a href="tel:18883737888"><span style={linkstyle}>1-888-373-7888</span></a>
           </p>
           <p className={`${roboto.className} mt-2 text-[#303030] text-lg sm:text-xl`}>
             <strong>Rescue America</strong><br></br>
-            <a href="tel:18335993733">833-599-FREE (3733)</a>
+            <a href="tel:18335993733"><span style={linkstyle}>833-599-FREE (3733)</span></a>
           </p>
         </div>
         {[
