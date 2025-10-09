@@ -220,7 +220,7 @@ const DemoPage = () => {
         text-xl sm:text-2xl md:text-3xl 
         text-justify
         px-[7vw]
-
+        py-[]
         ">
           <a
             href="https://calendly.com/karla-highman-walkingwise/30min?back=1&amp;month=2025-07"
@@ -237,12 +237,12 @@ const DemoPage = () => {
             col-span-1 col-start-1 row-span-1
             md:col-span-4 md:col-start-3 md:row-span-1
             justify-center items-center h-full py-5">
-          <Button
+          <button
             onClick={() => (window.location.href = "https://learn.walkingwise.com/enroll/3486696?price_id=4408602")}
-            className={`mt-8 mx-auto block`}
+            className={`bg-[#9d1be3] ${roboto.className} block mx-auto mt-4 rounded-full text-sm sm:text-[16px] py-2 sm:py-3 px-4 text-white flex items-center whitespace-nowrap`}
           >
             {"Start Adult Course"}
-          </Button>
+          </button>
           </div>
           <div className="
 
@@ -250,12 +250,12 @@ const DemoPage = () => {
             md:col-span-4 md:col-start-7 md:row-span-1
             justify-center items-center h-full py-5">
 
-          <Button
+          <button
             onClick={() => (window.location.href = "/pricing")}
-            className={`mt-8 mx-auto block`}
+            className={`bg-[#9d1be3] ${roboto.className} block mx-auto mt-4 rounded-full text-sm sm:text-[16px] py-2 sm:py-3 px-4 text-white flex items-center whitespace-nowrap`}
           >
             {"Youth Curriculum Enrollment"}
-          </Button>
+          </button>
         </div>
       </div>
 
