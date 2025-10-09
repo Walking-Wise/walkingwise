@@ -141,7 +141,7 @@ const SchoolDistrictPrograms = () => {
   return (
     <>
       <PageBanner
-        title="SCHOOL & DISTRICT PROGRAMS"
+        title="SCHOOL EDUCATION"
         image="https://walking-wise-2025-website-assets.s3.us-east-1.amazonaws.com/Website+Hero+Banners+300dpi/SCHOOLPROGRAMS_300dpi_1200x511_TEXT.jpg"
         altText="School and district programs"
       />
