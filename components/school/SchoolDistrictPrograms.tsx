@@ -10,10 +10,6 @@ import Button from "../ui/Button/Button";
 import Section from "../ui/Section/Section";
 
 
-  const sectionStyles = {
-    paddingLeft: '7vw !important',
-    paddingRight: '5vw !important',
-  };
 
   const listyle1 = {
     paddingLeft: '10px !important',
@@ -207,9 +203,9 @@ const SchoolDistrictPrograms = () => {
       <div
 
         className="bg-[#00C1D5] text-[#303030] flex flex-col lg:flex-row gap-10 
-        pt-7 md:pt-15 pb-3 md:pb-16
+        pt-7 md:pt-15 pb-3 md:pb-16 pl-[7vw] pr-[7vw]
         "
-        style={sectionStyles}
+       
       >
         {/* Left Content */}
         <div className="flex-1">
@@ -257,7 +253,16 @@ const SchoolDistrictPrograms = () => {
           />
         </div>
         <BodyText className={`mt-4 sm:mt-6`}>
-          Meaningful learning takes time. By introducing topics gradually over several years, schools can create steady growth in awareness and understanding. Our three- to five-year teaching plan offers a flexible path for middle and high school students to build knowledge and confidence. Download our Teaching Track.
+          Meaningful learning takes time. By introducing topics gradually over several years, schools can create steady growth in awareness and understanding. Our three- to five-year teaching plan offers a flexible path for 
+          middle and high school students to build knowledge and confidence.
+           <a
+            href=""
+            target="_blank"
+            className="underline"
+          >
+            Download our Teaching Track
+          </a>{" "}
+           .
         </BodyText>
 
       <div className="grid grid-cols-1 md:grid-cols-6 lg:grid-cols-6 gap-5  items-start">
