@@ -5,6 +5,7 @@ import { FaFacebook, FaInstagram, FaYoutube, FaLinkedin } from "react-icons/fa";
 import { SiTiktok } from "react-icons/si"; // TikTok from Simple Icons
 
 const linkstyle={    color: 'darkblue', textDecoration: 'underline'};
+const plainstyle={    fontWeight: 'normal'};
 const Footer = () => {
   const socialIcons = [
     {
@@ -39,7 +40,7 @@ const Footer = () => {
           </p>
           <p className={`${roboto.className} mt-2 text-[#303030] text-lg sm:text-xl`}>
             <strong> National Human Trafficking Hotline</strong><br></br>
-            Send a Text to <a href="sms://233733"><span style={linkstyle}>233733 (BEFREE)</span></a>
+            <span style={plainstyle}>Send a Text to </span><a href="sms://233733"><span style={linkstyle}>233733 (BEFREE)</span></a>
             <br></br>
              <a href="tel:18883737888"><span style={linkstyle}>1-888-373-7888</span></a>
           </p>
