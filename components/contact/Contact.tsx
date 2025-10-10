@@ -133,7 +133,7 @@ const Contact = () => {
               <label
                 className={`${robotoopo.className} text-[#303030] text-lg sm:text-xl`}
               >
-                Phone <span className="text-red-500">*</span>
+                Phone 
               </label>
               <input
                 name="phone"
@@ -141,7 +141,7 @@ const Contact = () => {
                 value={form.phone}
                 onChange={handleChange}
                 placeholder="Phone"
-                required
+                
                 className={`bg-white border-none outline-none py-3 px-3 rounded-sm ${robotoopo.className}`}
               />
             </div>
