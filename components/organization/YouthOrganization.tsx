@@ -199,11 +199,12 @@ const YouthOrganization = () => {
           </h1>
          <BodyText className={`mt-4 sm:mt-6 text-white lg:text-white text-partnering`}>
             Join our Affiliate Program to raise funds for your organization while advancing prevention education in your community. Receive your organization's unique link, share it with others, and help bring life-changing learning to schools and youth networks. 
-          <div className="flex justify-center items-center ">
+          
+           <div className="flex justify-center items-center  ">
               <Button 
+                className={`text-wrap md:text-nowrap`}
                 onClick={() => window.open("https://tally.so/r/w459Bo", "_blank")}
-                >
-              Apply to Join our Affiliate Program
+                ><span>Apply to Join our Affiliate Program<span>
             </Button>
            </div>
           </BodyText>
