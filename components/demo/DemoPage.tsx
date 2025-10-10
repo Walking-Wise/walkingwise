@@ -218,7 +218,7 @@ const DemoPage = () => {
         col-span-1 col-start-1 row-span-1
         md:col-span-8 md:col-start-3 md:row-span-1
         text-xl sm:text-2xl md:text-3xl 
-        text-justify
+        text-left md:text-left
         px-[7vw]
         py-[]
         ">
