@@ -52,11 +52,9 @@ const PartTwo = () => {
     <>
       <Section bgColor="white" className="md:pb-14">
         <SectionHeaderText className="text-center lg:text-7xl md:mt-8">
-          Walking Wise is recommended for adolescents,
+          RECOMMENDENDED FOR ADOLESCENTS (Ages 11+)
         </SectionHeaderText>
-        <SectionHeaderText className="text-center lg:text-7xl mt-1 mb-8">
-          11 and up.
-        </SectionHeaderText>
+        
 
         {/* Education Cards */}
         <div className="grid max-w-screen-2xl mx-auto grid-cols-1 text-[#303030] justify-center md:grid-cols-2 lg:grid-cols-3 my-6 sm:my-8 md:my-10 gap-4 sm:gap-6 md:gap-8 lg:gap-2 px-4 sm:px-6 md:px-8 lg:px-10">
