@@ -10,12 +10,6 @@ import Section from "../ui/Section/Section";
 import SectionHeaderText from "../ui/SectionHeaderText/SectionHeaderText";
 import BodyText from "../ui/BodyText/BodyText";
 import Button from "../ui/Button/Button";
-import { Metadata } from 'next';
- 
-export const metadata: Metadata = {
-  title: 'About Walking Wise® | Experts Unit to Help Prevent Child Exploitation',
-  description: 'Learn how 60+ experts partnered with Walking Wise to deliver evidence-based education, protecting children from sexual exploitation and trafficking.',
-};
 
 const imageData = [
   {
