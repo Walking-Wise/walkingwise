@@ -204,7 +204,7 @@ const YouthOrganization = () => {
               <button 
                 className={`text-wrap md:text-nowrap`}
                 onClick={() => window.open("https://tally.so/r/w459Bo", "_blank")}
-                ><span>Apply to Join our Affiliate Program<span>
+                >Apply to Join our Affiliate Program
             </button>
            </div>
           </BodyText>
