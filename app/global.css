@@ -386,3 +386,6 @@ font-style: italic;
     padding-right: 3vw;
     text-align: justify;
 }
+.whitespacebuttonwrap{
+white-space:normal !important;
+}
