@@ -11,7 +11,6 @@ import SectionHeaderText from "../ui/SectionHeaderText/SectionHeaderText";
 import BodyText from "../ui/BodyText/BodyText";
 import Button from "../ui/Button/Button";
 
-const wspacestyle = {whiteSpace:'normal'};
 const mentorRoles = [
   "Social Workers",
   "Case Managers",
@@ -203,7 +202,7 @@ const YouthOrganization = () => {
           
            <div className="flex justify-center items-center  ">
               <Button 
-                style={wspacestyle}
+                className=" whitespacebuttonwrap "
                 onClick={() => window.open("https://tally.so/r/w459Bo", "_blank")}
                 >Apply to Join our Affiliate Program
             </Button>
