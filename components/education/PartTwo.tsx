@@ -12,7 +12,7 @@ const cardData = [
     title: "THE GROOMERS",
     topics: [
       "Myths & Reality",
-      "Trustworthy vs. Unsafe Adult",
+      "Trustworthy vs. Unsafe",
       "Grooming Process",
       "Pornography Link",
     ],
@@ -55,7 +55,7 @@ const PartTwo = () => {
           Walking Wise is recommended for adolescents,
         </SectionHeaderText>
         <SectionHeaderText className="text-center lg:text-7xl mt-1 mb-8">
-          11 and up, with parental guidance for younger children.
+          11 and up.
         </SectionHeaderText>
 
         {/* Education Cards */}
@@ -65,12 +65,12 @@ const PartTwo = () => {
               key={index}
               className={`
         bg-white w-full max-w-[400px] mx-auto flex justify-evenly py-6 px-6 items-center flex-col
-        ${index === 1 ? "border-l-2 border-r-2 border-[#00c1d5] px-12" : ""}
+        ${index === 1 ? "" : ""}
       `}
             >
               <div className="text-center flex flex-col gap-1 sm:gap-2">
                 <h1
-                  className={`text-[#00c1d5] text-xl sm:text-2xl md:text-3xl lg:text-5xl mb-2`}
+                  className={`text-[#00c1d5] text-4xl sm:text-2xl md:text-3xl lg:text-5xl mb-2`}
                 >
                   {card.title}
                 </h1>
