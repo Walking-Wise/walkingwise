@@ -6,10 +6,7 @@ import { UserProvider } from "@/lib/auth";
 import { getTeamForUser, getUser } from "@/lib/db/queries";
 import { Team } from "@/lib/db/schema";
 
-export const metadata: Metadata = {
-  title: "Walking Wise",
-  description: "Get started quickly with Next.js, Postgres, and Stripe.",
-};
+
 
 export const viewport: Viewport = {
   maximumScale: 1,
