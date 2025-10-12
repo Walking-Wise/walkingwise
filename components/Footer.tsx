@@ -172,7 +172,7 @@ const Footer = () => {
         md:col-span-2 md:col-start-1 md:row-start-2
         ">
         
-        <p className={`${robotoop.className} text-[#303030] text-base `}>
+        <p className={`${robotoop.className} text-[#303030] text-base text-center `}>
           ©2025 Walking Wise. All Rights Reserved.
         </p>
         
@@ -182,7 +182,7 @@ const Footer = () => {
         md:col-span-2 md:col-start-5 md:row-start-2
         flex items-center
         ">
-          <div className="w-fit flex gap-1 p-1 bg-[#006072] ">
+          <div className="w-fit flex gap-1 p-1 bg-[#006072] text-center">
             {socialIcons.map(({ Icon, link }, index) => (
               <div
                 key={index}
