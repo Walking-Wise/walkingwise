@@ -1,3 +1,4 @@
+
 @import 'tailwindcss';
 /*
   ---break---
@@ -140,7 +141,7 @@
      
        /* — Radius — */
        --radius-sm: calc(var(--radius) - 4px);
-       --radius-md: calc(var(--radius) - 0px);   /* default 8 px */
+       --radius-md: calc(var(--radius) - 0px);   /* default 8 px */
        --radius-lg: calc(var(--radius) + 4px);
      
        /* — Elevation — */
@@ -389,3 +390,6 @@ font-style: italic;
 .whitespacebuttonwrap{
 white-space:normal !important;
 }
+.pad-ninevw{padding-left:9vw}
+.pad-sevenvw{padding-left:7vw}
+.pad-threevw{padding-left:3vw}
