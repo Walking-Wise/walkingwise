@@ -51,11 +51,11 @@ const Footer = () => {
             <strong> National Human Trafficking Hotline</strong><br></br>
             <span style={plainstyle}>Text: </span><a href="sms://233733"><span style={linkstyle}>233733 (BEFREE)</span></a>
             <br></br>
-             <span style={plainstyle}>Call: </span<a href="tel:18883737888"><span style={linkstyle}>1-888-373-7888</span></a>
+             <span style={plainstyle}>Call: </span><a href="tel:18883737888"><span style={linkstyle}>1-888-373-7888</span></a>
           </p>
           <p className={`${roboto.className} mt-2 text-[#303030] text-lg sm:text-xl`}>
             <strong>Rescue America</strong><br></br>
-            <span style={plainstyle}>Call: </span<a href="tel:18335993733"><span style={linkstyle}>833-599-FREE (3733)</span></a>
+            <span style={plainstyle}>Call: </span><a href="tel:18335993733"><span style={linkstyle}>833-599-FREE (3733)</span></a>
             <br></br>
           </p>
       </div>
