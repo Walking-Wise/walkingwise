@@ -4,6 +4,7 @@ import { roboto, robotoop, robotoopo } from "../public/fonts/Fonts";
 import { FaFacebook, FaInstagram, FaYoutube, FaLinkedin } from "react-icons/fa";
 import { SiTiktok } from "react-icons/si"; // TikTok from Simple Icons
 
+const bottomstyle={    paddingLeft:7vw;};
 const linkstyle={    textDecoration: 'underline',fontWeight: 'normal'};
 const plainstyle={    fontWeight: 'normal'};
 const Footer = () => {
@@ -31,9 +32,11 @@ const Footer = () => {
   ];
   return (
     <>
-    <div className="bg-[#BFEBF0] py-8 md:py-16 w-full
+    <div className="bg-[#BFEBF0] py-8 md:py-1 w-full
           grid grid-cols-1 md:grid-cols-6 gap-5  items-start
-          ">
+          "
+          style={bottomstyle}
+          >
       {/* Main Footer Content */}
       <div className="
       col-span-1 col-start-1 row-span-1
@@ -46,13 +49,13 @@ const Footer = () => {
           </p>
           <p className={`${roboto.className} mt-2 text-[#303030] text-lg sm:text-xl`}>
             <strong> National Human Trafficking Hotline</strong><br></br>
-            <span style={plainstyle}>Send a Text to </span><a href="sms://233733"><span style={linkstyle}>233733 (BEFREE)</span></a>
+            <span style={plainstyle}>Text: </span><a href="sms://233733"><span style={linkstyle}>233733 (BEFREE)</span></a>
             <br></br>
-             <a href="tel:18883737888"><span style={linkstyle}>1-888-373-7888</span></a>
+             <span style={plainstyle}>Call: </span<a href="tel:18883737888"><span style={linkstyle}>1-888-373-7888</span></a>
           </p>
           <p className={`${roboto.className} mt-2 text-[#303030] text-lg sm:text-xl`}>
             <strong>Rescue America</strong><br></br>
-            <a href="tel:18335993733"><span style={linkstyle}>833-599-FREE (3733)</span></a>
+            <span style={plainstyle}>Call: </span<a href="tel:18335993733"><span style={linkstyle}>833-599-FREE (3733)</span></a>
             <br></br>
           </p>
       </div>
@@ -135,10 +138,7 @@ const Footer = () => {
               className={`${robotoopo.className} text-lg sm:text-xl text-[#303030]  hover:text-[#05AFDB] cursor-pointer`}
               >Login</a>
               <br></br> 
-              <a href="https://learn.walkingwise.com/manage" 
-              className={`${robotoopo.className} text-lg sm:text-xl text-[#303030]  hover:text-[#05AFDB] cursor-pointer`}
-              >My Account</a>
-              <br></br> 
+              
               <a href="/contact" 
               className={`${robotoopo.className} text-lg sm:text-xl text-[#303030]  hover:text-[#05AFDB] cursor-pointer`}
               >Contact Us</a>
