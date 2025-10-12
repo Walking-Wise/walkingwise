@@ -42,11 +42,11 @@ const Footer = () => {
       <div className="
       col-span-1 col-start-1 row-span-1 row-start-1
       md:col-span-2 md:col-start-1 md:row-span-1 md:row-start-1
-      max-w-screen-2xl 
+      
 
       ">
         
-          <p className={`${roboto.className} mt-5 text-xl text-red-500`}>
+          <p className={`${roboto.className} mt-5 text-xl text-red-500 text-pretty text-wrap text-balance pr-5 md:pr-0 `}>
             Report Suspicions of Human Trafficking to:
           </p>
           <p className={`${roboto.className} mt-2 text-[#303030] text-lg sm:text-xl`}>
