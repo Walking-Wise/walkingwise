@@ -61,7 +61,7 @@ const Footer = () => {
             <br></br>
           </p>
       </div>
-      <div className=" col-start-1  col-span-1 row-span-1 row-start-1
+      <div className=" col-start-1  col-span-1 row-span-1 row-start-2
               md:col-start-3  md:col-span-1 md:row-span-1 md:row-start-1
               min-w-[150px] px-4 md:my-16  items-center 
 
@@ -83,7 +83,7 @@ const Footer = () => {
               >Demo</a>
               <br></br> 
       </div>
-      <div className=" col-start-1  col-span-1 row-span-1 row-start-1
+      <div className=" col-start-1  col-span-1 row-span-1 row-start-3
               md:col-start-4  md:col-span-1 md:row-span-1 md:row-start-1
               min-w-[150px] px-4 md:my-16  items-center 
 
@@ -105,7 +105,7 @@ const Footer = () => {
               >CE Credit</a>
               <br></br> 
       </div>
-      <div className=" col-start-1  col-span-1 row-span-1 row-start-1
+      <div className=" col-start-1  col-span-1 row-span-1 row-start-4
               md:col-start-5  md:col-span-1 md:row-span-1 md:row-start-1
               min-w-[150px] px-4 md:my-16  items-center 
 
@@ -131,7 +131,7 @@ const Footer = () => {
               >Affiliate Program</a>
               <br></br> 
       </div>
-      <div className=" col-start-1  col-span-1 row-span-1 row-start-1
+      <div className=" col-start-1  col-span-1 row-span-1 row-start-5
               md:col-start-6  md:col-span-1 md:row-span-1 md:row-start-1
               min-w-[150px] px-4 md:my-16  items-center 
 
