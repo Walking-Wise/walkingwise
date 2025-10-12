@@ -4,9 +4,9 @@ import { roboto, robotoop, robotoopo } from "../public/fonts/Fonts";
 import { FaFacebook, FaInstagram, FaYoutube, FaLinkedin } from "react-icons/fa";
 import { SiTiktok } from "react-icons/si"; // TikTok from Simple Icons
 
-const bottomstyle={    paddingLeft:'7vw';};
-const linkstyle={    textDecoration: 'underline',fontWeight: 'normal'};
-const plainstyle={    fontWeight: 'normal'};
+const bottomstyle={paddingLeft:'7vw'};
+const linkstyle={textDecoration: 'underline',fontWeight: 'normal'};
+const plainstyle={fontWeight: 'normal'};
 const Footer = () => {
   const socialIcons = [
     {
