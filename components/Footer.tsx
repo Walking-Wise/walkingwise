@@ -35,8 +35,8 @@ const Footer = () => {
     <>
     <div className="bg-[#BFEBF0] py-8 md:py-1 w-full
           grid grid-cols-1 md:grid-cols-6 gap-5  items-start
+          pad-threevw md:pad-sevenvw
           "
-          style={bottomstyle}
           >
       {/* Main Footer Content */}
       <div className="
@@ -182,7 +182,7 @@ const Footer = () => {
         md:col-span-2 md:col-start-5 md:row-start-2
         flex items-center
         ">
-          <div className="w-fit flex gap-1 p-1 bg-[#006072] text-center">
+          <div className="mx-auto w-fit flex gap-1 p-1 bg-[#006072] text-center">
             {socialIcons.map(({ Icon, link }, index) => (
               <div
                 key={index}
