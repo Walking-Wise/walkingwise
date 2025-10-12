@@ -46,16 +46,16 @@ const Footer = () => {
 
       ">
         
-          <p className={`${roboto.className} mt-5 text-xl text-red-500 text-pretty text-wrap text-balance pr-5 md:pr-0 `}>
+          <p className={`${roboto.className} text-center md:text-left  mt-5 text-xl text-red-500 text-pretty text-wrap text-balance pr-5 md:pr-0 `}>
             Report Suspicions of Human Trafficking to:
           </p>
-          <p className={`${roboto.className} mt-2 text-[#303030] text-lg sm:text-xl`}>
+          <p className={`${roboto.className} text-center md:text-left mt-2 text-[#303030] text-lg sm:text-xl`}>
             <strong> National Human Trafficking Hotline</strong><br></br>
             <span style={plainstyle}>Text: </span><a href="sms://233733"><span style={linkstyle}>233733 (BEFREE)</span></a>
             <br></br>
              <span style={plainstyle}>Call: </span><a href="tel:18883737888"><span style={linkstyle}>1-888-373-7888</span></a>
           </p>
-          <p className={`${roboto.className} mt-2 text-[#303030] text-lg sm:text-xl`}>
+          <p className={`${roboto.className} text-center md:text-left mt-2 text-[#303030] text-lg sm:text-xl`}>
             <strong>Rescue America</strong><br></br>
             <span style={plainstyle}>Call: </span><a href="tel:18335993733"><span style={linkstyle}>833-599-FREE (3733)</span></a>
             <br></br>
