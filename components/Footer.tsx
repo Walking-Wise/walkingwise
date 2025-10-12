@@ -5,6 +5,7 @@ import { FaFacebook, FaInstagram, FaYoutube, FaLinkedin } from "react-icons/fa";
 import { SiTiktok } from "react-icons/si"; // TikTok from Simple Icons
 
 const bottomstyle={paddingLeft:'7vw'};
+const bottomstyle9={paddingLeft:'9vw'};
 const linkstyle={textDecoration: 'underline',fontWeight: 'normal'};
 const plainstyle={fontWeight: 'normal'};
 const Footer = () => {
@@ -39,10 +40,11 @@ const Footer = () => {
           >
       {/* Main Footer Content */}
       <div className="
-      col-span-1 col-start-1 row-span-1
-      md:col-span-2 md:col-start-1 md:row-span-1
+      col-span-1 col-start-1 row-span-1 row-start-1
+      md:col-span-2 md:col-start-1 md:row-span-1 md:row-start-1
       max-w-screen-2xl 
-      px-4 sm:px-8 lg:px-10">
+
+      ">
         
           <p className={`${roboto.className} mt-5 text-xl text-red-500`}>
             Report Suspicions of Human Trafficking to:
@@ -59,8 +61,8 @@ const Footer = () => {
             <br></br>
           </p>
       </div>
-      <div className=" col-start-1  col-span-1 row-span-1 
-              md:col-start-3  md:col-span-1 md:row-span-1
+      <div className=" col-start-1  col-span-1 row-span-1 row-start-1
+              md:col-start-3  md:col-span-1 md:row-span-1 md:row-start-1
               min-w-[150px] px-4 md:my-16  items-center 
 
               md:text-left text-center">
@@ -81,8 +83,8 @@ const Footer = () => {
               >Demo</a>
               <br></br> 
       </div>
-      <div className=" col-start-1  col-span-1 row-span-1
-              md:col-start-4  md:col-span-1 md:row-span-1
+      <div className=" col-start-1  col-span-1 row-span-1 row-start-1
+              md:col-start-4  md:col-span-1 md:row-span-1 md:row-start-1
               min-w-[150px] px-4 md:my-16  items-center 
 
               md:text-left text-center">
@@ -103,8 +105,8 @@ const Footer = () => {
               >CE Credit</a>
               <br></br> 
       </div>
-      <div className=" col-start-1  col-span-1 row-span-1
-              md:col-start-5  md:col-span-1 md:row-span-1
+      <div className=" col-start-1  col-span-1 row-span-1 row-start-1
+              md:col-start-5  md:col-span-1 md:row-span-1 md:row-start-1
               min-w-[150px] px-4 md:my-16  items-center 
 
               md:text-left text-center">
@@ -129,8 +131,8 @@ const Footer = () => {
               >Affiliate Program</a>
               <br></br> 
       </div>
-      <div className=" col-start-1  col-span-1 row-span-1
-              md:col-start-6  md:col-span-1 md:row-span-1
+      <div className=" col-start-1  col-span-1 row-span-1 row-start-1
+              md:col-start-6  md:col-span-1 md:row-span-1 md:row-start-1
               min-w-[150px] px-4 md:my-16  items-center 
 
               md:text-left text-center">
@@ -152,13 +154,23 @@ const Footer = () => {
               >Privacy Policy</a>
               <br></br> 
       </div>
+  
+ {/* 
   </div>
   
-   <div className=" grid grid-cols-1 md:grid-cols-6 
+   <div className=" 
+   grid grid-cols-1 md:grid-cols-6 
+   
    bg-[#BFEBF0]
-    max-w-screen-2xl mx-auto flex-col sm:flex-row justify-between items-center px-4 sm:px-8 lg:px-20  gap-4">
+    max-w-screen-2xl mx-auto flex-col sm:flex-row justify-between items-center px-4 sm:px-8 lg:px-20  gap-4"
+  style={bottomstyle9}
+    >
+  */}
         
-        <div className="col-span-1 col-start-1 md:col-span-2 md:col-start-1">
+        <div className="
+        col-span-1 col-start-1  row-start-6
+        md:col-span-2 md:col-start-1 md:row-start-2
+        ">
         
         <p className={`${robotoop.className} text-[#303030] text-base `}>
           ©2025 Walking Wise. All Rights Reserved.
@@ -166,7 +178,10 @@ const Footer = () => {
         
         </div>
 
-        <div className="col-span-1 col-start-1 md:col-span-2 md:col-start-5 flex items-center">
+        <div className="col-span-1 col-start-1  row-start-7
+        md:col-span-2 md:col-start-5 md:row-start-2
+        flex items-center
+        ">
           <div className="w-fit flex gap-1 p-1 bg-[#006072] ">
             {socialIcons.map(({ Icon, link }, index) => (
               <div
