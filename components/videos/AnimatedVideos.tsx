@@ -207,14 +207,14 @@ const AnimatedVideos = () => {
           <SectionHeaderText className="lg:text-7xl">
             Animated Video Series
           </SectionHeaderText>
-          <BodyText className="mt-4 sm:mt-8 md:text-center md:px-32">
+          <BodyText className="mt-4 sm:mt-8 text-center md:text-center  md:px-32">
             Watch our video trailers and DEMO video:{" "}
             <span className={`font-bold ${robotoItalicop.className}`}>
               Myths and Reality
             </span>
             .
           </BodyText>
-          <BodyText className="md:text-center md:px-32">
+          <BodyText className="text-center md:text-center md:px-32">
             Adults are encouraged to accompany young children throughout the
             learning process.
           </BodyText>
