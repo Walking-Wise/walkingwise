@@ -172,7 +172,7 @@ const Footer = () => {
         md:col-span-2 md:col-start-1 md:row-start-2
         ">
         
-        <p className={`${robotoop.className} text-[#303030] text-base text-center `}>
+        <p className={`${robotoop.className} text-[#303030] text-base text-center md:text-left `}>
           ©2025 Walking Wise. All Rights Reserved.
         </p>
         
