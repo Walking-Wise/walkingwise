@@ -141,7 +141,7 @@ const Footer = () => {
               >Login</a>
               <br></br> 
               
-              <a href="/contact" 
+              <a href="https://tally.so/r/nWv96Q" target="_blank" 
               className={`${robotoopo.className} text-lg sm:text-xl text-[#303030]  hover:text-[#05AFDB] cursor-pointer`}
               >Contact Us</a>
               <br></br> 
