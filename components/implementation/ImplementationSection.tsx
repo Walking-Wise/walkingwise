@@ -168,10 +168,10 @@ const ImplementationSection = () => {
 
           <div className="flex-1 flex justify-center bg-white">
             <div className="relative flex-shrink-0 w-[300px] sm:w-[350px] md:w-[400px] h-[450px]">
-              <Image
-                src="https://walking-wise-2025-website-assets.s3.us-east-1.amazonaws.com/Website_Dashboard-Education_PDFs_and_Icons/Icons+for+Website/Icon-Implementation_Guide.png"
+              <img
+                src="/public/assets/ImplementationGuide.png"
                 alt="Guide Resources"
-                fill
+                
                 className="object-cover"
               />
             </div>
