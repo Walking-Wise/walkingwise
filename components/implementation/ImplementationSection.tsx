@@ -8,7 +8,7 @@ import BodyText from "../ui/BodyText/BodyText";
 import Section from "../ui/Section/Section";
 import Button from "../ui/Button/Button";
 
-const imagepad={paddingBottom:20px};
+const imagepad={paddingBottom:'20px'};
 const steps = [
   "Gain program approval among leadership.",
   "Establish a safety team to own and operate the program.",
