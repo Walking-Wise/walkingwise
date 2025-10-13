@@ -93,7 +93,7 @@ const AnimatedVideos = () => {
     12: {
       name: "Hidden Buyers",
       thumbnail:
-        "https://walking-wise-2025-website-assets.s3.us-east-1.amazonaws.com/Videos-Animation/Thumbnails+-+Website+Animation/Hidden+Buyers+Coming+Soon+-+Thumbnail.png",
+        "/assets/HiddenBuyersThumbnail.png",
       link: "/assets/videos/hidden-buyers.mp4",
     },
   };
