@@ -254,13 +254,13 @@ const SchoolDistrictPrograms = () => {
         </div>
         <BodyText className={`mt-4 sm:mt-6`}>
           Meaningful learning takes time. By introducing topics gradually over several years, schools can create steady growth in awareness and understanding. Our three- to five-year teaching plan offers a flexible path for 
-          middle and high school students to build knowledge and confidence.
+          middle and high school students to build knowledge and confidence. Download our 
            <a
-            href=""
+            href="https://walking-wise-2025-website-assets.s3.us-east-1.amazonaws.com/Website_Dashboard-Education_PDFs_and_Icons/PDFs_Guildes_OtherDocs/Learning+Journey.pdf"
             target="_blank"
             className="underline"
           >
-            Download our Teaching Track
+            Teaching Track
           </a>{" "}
            .
         </BodyText>
