@@ -8,6 +8,7 @@ import BodyText from "../ui/BodyText/BodyText";
 import Section from "../ui/Section/Section";
 import Button from "../ui/Button/Button";
 
+const imagepad={paddingBottom:20px};
 const steps = [
   "Gain program approval among leadership.",
   "Establish a safety team to own and operate the program.",
@@ -167,7 +168,8 @@ const ImplementationSection = () => {
           </div>
 
           <div className="flex-1 flex justify-center bg-white">
-            <div className="relative flex-shrink-0 w-[300px] sm:w-[350px] md:w-[400px] h-[450px]">
+            <div className="relative flex-shrink-0 w-[300px] sm:w-[350px] md:w-[400px] "
+              stylename={imagepad}>
               <img
                 src="/assets/ImplementationGuide.png"
                 alt="Guide Resources"
