@@ -100,6 +100,10 @@ const Footer = () => {
               className={`${robotoopo.className} text-lg sm:text-xl text-[#303030]  hover:text-[#05AFDB] cursor-pointer`}
               >Youth Curriculum</a>
               <br></br> 
+               <a href="/implementation" 
+              className={`${robotoopo.className} text-lg sm:text-xl text-[#303030]  hover:text-[#05AFDB] cursor-pointer`}
+              >Implementation</a>
+              <br></br> 
               <a href="https://walking-wise-12-part-course.s3.us-east-1.amazonaws.com/PIM+Accrediation+Info-Walking-Wise-eLearning/content/index.html?version=20251011" 
               className={`${robotoopo.className} text-lg sm:text-xl text-[#303030]  hover:text-[#05AFDB] cursor-pointer`}
               >CE Credit</a>
