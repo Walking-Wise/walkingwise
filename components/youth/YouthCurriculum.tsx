@@ -138,7 +138,7 @@ const YouthCurriculum = () => {
             <div className="w-full flex flex-col items-center">
               <div className="relative flex-shrink-0 w-[300px] sm:w-[350px] md:w-[400px] h-[450px] mb-6">
                 <Image
-                  src="src="/assets/EducationGuide.png""
+                  src="/assets/EducationGuide.png"
                   alt="Guide Resources"
                   fill
                   className="object-cover"
