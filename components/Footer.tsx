@@ -34,7 +34,7 @@ const Footer = () => {
   return (
     <>
     <div className="bg-[#BFEBF0] py-8 md:py-1 w-full
-          grid grid-cols-1 md:grid-cols-6 gap-5  items-start
+          grid grid-cols-1 md:grid-cols-6   items-start
           pad-sevenvw
           "
           >
@@ -189,8 +189,9 @@ const Footer = () => {
         text-left md:text-left
         flex items-left md:items-left
         pb-5
+         px-4
         ">
-          <div className=" w-fit flex gap-1 p-1 bg-[#006072] float-left px-4">
+          <div className=" w-fit flex gap-1 p-1 bg-[#006072] float-left">
             {socialIcons.map(({ Icon, link }, index) => (
               <div
                 key={index}
@@ -211,4 +212,3 @@ const Footer = () => {
 };
 
 export default Footer;
-
