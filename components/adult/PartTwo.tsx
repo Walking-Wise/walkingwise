@@ -68,10 +68,10 @@ const PartTwo = () => {
           "",
       },
       objectives: [
-        "5  Sextortion Scheme: Discuss how the use of electronic devices and online platforms can increase an individual's vulnerability to sexual predators and traffickers in the commercial sex trade.",
-        "6 Male Victims: Examine how societal factors contribute to the overlooked sexual exploitation of young males and understand the barriers that may discourage them from seeking help.",
-        "7 Runaways as Targets: Identify the reasons young and marginalized populations are at heightened risk of being victimized by sexual predators and traffickers in the commercial sex trade.",
-        "8 Rural Risks: Appraise how living in rural or sparsely populated communities presents unique conditions that enable sexual predators or human traffickers to prey on vulnerable individuals.",
+        "Sextortion Scheme: Discuss how the use of electronic devices and online platforms can increase an individual's vulnerability to sexual predators and traffickers in the commercial sex trade.",
+        "Male Victims: Examine how societal factors contribute to the overlooked sexual exploitation of young males and understand the barriers that may discourage them from seeking help.",
+        "Runaways as Targets: Identify the reasons young and marginalized populations are at heightened risk of being victimized by sexual predators and traffickers in the commercial sex trade.",
+        "Rural Risks: Appraise how living in rural or sparsely populated communities presents unique conditions that enable sexual predators or human traffickers to prey on vulnerable individuals.",
       ],
     },
     {
@@ -97,10 +97,10 @@ const PartTwo = () => {
           "",
       },
       objectives: [
-        "9 Human Traffickers: Describe the various personas human traffickers use to deceive their victims and how they instill fear to maintain power and control.",
-        "10 Recruiters: Analyze how human traffickers coerce individuals under their control to recruit friends and acquaintances into the commercial sex industry.",
-        "11 Familial Traffickers: Examine the sexual exploitation of children by family members for financial gain or to obtain something of value.",
-        "12 Hidden Buyers: Explore the factors that drive males to buy sex initially and examine how they rationalize purchasing sex acts from vulnerable individuals.",
+        "Human Traffickers: Describe the various personas human traffickers use to deceive their victims and how they instill fear to maintain power and control.",
+        "Recruiters: Analyze how human traffickers coerce individuals under their control to recruit friends and acquaintances into the commercial sex industry.",
+        "Familial Traffickers: Examine the sexual exploitation of children by family members for financial gain or to obtain something of value.",
+        "Hidden Buyers: Explore the factors that drive males to buy sex initially and examine how they rationalize purchasing sex acts from vulnerable individuals.",
       ],
     },
   ];
