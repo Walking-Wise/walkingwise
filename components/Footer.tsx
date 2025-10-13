@@ -4,7 +4,7 @@ import { roboto, robotoop, robotoopo } from "../public/fonts/Fonts";
 import { FaFacebook, FaInstagram, FaYoutube, FaLinkedin } from "react-icons/fa";
 import { SiTiktok } from "react-icons/si"; // TikTok from Simple Icons
 
-const bottomstyle={paddingLeft:'7vw'};
+const bottomstyle={paddingLeft:'9vw', paddingRight:'6vw'};
 const bottomstyle9={paddingLeft:'9vw'};
 const linkstyle={textDecoration: 'underline',fontWeight: 'normal'};
 const plainstyle={fontWeight: 'normal'};
@@ -167,7 +167,7 @@ const Footer = () => {
    
    bg-[#BFEBF0]
     max-w-screen-2xl mx-auto flex-col sm:flex-row justify-between items-center px-4 sm:px-8 lg:px-20  gap-4"
-  style={bottomstyle9}
+  style={bottomstyle}
     >
   */}
         
