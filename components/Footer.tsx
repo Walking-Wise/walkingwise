@@ -82,6 +82,24 @@ const Footer = () => {
               className={`${robotoopo.className} text-lg sm:text-xl text-[#303030]  hover:text-[#05AFDB] cursor-pointer`}
               >Demo</a>
               <br></br> 
+              <br></br> 
+              <br></br> 
+              <br></br> 
+              <br></br> 
+
+          <div className="mx-auto w-fit flex gap-1 p-1 bg-[#006072] text-center">
+            {socialIcons.map(({ Icon, link }, index) => (
+              <div
+                key={index}
+                className="w-10 h-10 bg-[#5FCEE9] flex items-center justify-center cursor-pointer hover:opacity-80"
+              >
+                <a href={link} target="_blank">
+                  <Icon className="text-white w-5 h-5 " />
+                </a>
+              </div>
+            ))}
+          </div>
+
       </div>
       <div className=" col-start-1  col-span-1 row-span-1 row-start-3
               md:col-start-4  md:col-span-1 md:row-span-1 md:row-start-1
