@@ -91,7 +91,7 @@ const ImplementationSection = () => {
       {/* 5-Step Framework */}
       <Section bgColor="[#303030]">
         <div className="flex flex-col md:flex-row justify-evenly ">
-          <div className="flex flex-col items-center gap-4">
+          <div className="flex flex-col items-center gap-4" style={imagepad}>
             <a
               href="https://walking-wise-2025-website-assets.s3.us-east-1.amazonaws.com/Website_Dashboard-Education_PDFs_and_Icons/PDFs_Guildes_OtherDocs/Five_Step_Implementation-Walking_Wise.pdf"
               target="_blank"
