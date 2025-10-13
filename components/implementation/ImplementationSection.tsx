@@ -150,7 +150,7 @@ const ImplementationSection = () => {
           </div>
 
           <div className="flex-1 bg-[#00c1d5] min-w-[350px] max-h-[450px] text-black p-6 sm:p-8 md:pt-10 md:ps-10 md:pb-10 md:pe-0 space-y-4 flex flex-col">
-            <h1 className="font-bold text-lg sm:text-xl md:text-4xl">
+            <h1 className="text-[#303030] font-bold text-4xl md:text-4xl">
               RESOURCES
             </h1>
             <ul className="list-disc list-inside space-y-1 text-xl">
