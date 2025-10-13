@@ -169,7 +169,7 @@ const ImplementationSection = () => {
 
           <div className="flex-1 flex justify-center bg-white">
             <div className="relative flex-shrink-0 w-[300px] sm:w-[350px] md:w-[400px] "
-              stylename={imagepad}>
+              style={imagepad}>
               <img
                 src="/assets/ImplementationGuide.png"
                 alt="Guide Resources"
