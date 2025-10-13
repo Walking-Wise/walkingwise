@@ -40,7 +40,7 @@ const Footer = () => {
           >
       {/* Main Footer Content */}
       <div className="
-      col-span-1 col-start-1 row-span-1 row-start-1
+      col-span-1 col-start-1 row-span-1 row-start-1 pb-5
       md:col-span-2 md:col-start-1 md:row-span-1 md:row-start-1
       
 
@@ -61,7 +61,7 @@ const Footer = () => {
             <br></br>
           </p>
       </div>
-      <div className=" col-start-1  col-span-1 row-span-1 row-start-2
+      <div className=" col-start-1  col-span-1 row-span-1 row-start-2 pb-5
               md:col-start-3  md:col-span-1 md:row-span-1 md:row-start-1
               min-w-[150px] px-4 md:my-16  items-center 
 
@@ -83,7 +83,7 @@ const Footer = () => {
               >Demo</a>
               <br></br> 
       </div>
-      <div className=" col-start-1  col-span-1 row-span-1 row-start-3
+      <div className=" col-start-1  col-span-1 row-span-1 row-start-3 pb-5
               md:col-start-4  md:col-span-1 md:row-span-1 md:row-start-1
               min-w-[150px] px-4 md:my-16  items-center 
 
@@ -109,7 +109,7 @@ const Footer = () => {
               >CE Credit</a>
               <br></br> 
       </div>
-      <div className=" col-start-1  col-span-1 row-span-1 row-start-4
+      <div className=" col-start-1  col-span-1 row-span-1 row-start-4 pb-5
               md:col-start-5  md:col-span-1 md:row-span-1 md:row-start-1
               min-w-[150px] px-4 md:my-16  items-center 
 
@@ -135,7 +135,7 @@ const Footer = () => {
               >Affiliate Program</a>
               <br></br> 
       </div>
-      <div className=" col-start-1  col-span-1 row-span-1 row-start-5
+      <div className=" col-start-1  col-span-1 row-span-1 row-start-5 pb-5
               md:col-start-6  md:col-span-1 md:row-span-1 md:row-start-1
               min-w-[150px] px-4 md:my-16  items-center 
 
@@ -175,6 +175,7 @@ const Footer = () => {
         col-span-1 col-start-1  row-start-6
         md:col-span-2 md:col-start-1 md:row-start-2
         text-center md:text-left
+        pb-5
         ">
         
         <p className={`${robotoop.className} text-[#303030] text-base text-center md:text-left `}>
@@ -187,8 +188,9 @@ const Footer = () => {
         md:col-span-2 md:col-start-3 md:row-start-2
         text-left md:text-left
         flex items-left md:items-left
+        pb-5
         ">
-          <div className="mx-auto w-fit flex gap-1 p-1 bg-[#006072] text-center">
+          <div className=" w-fit flex gap-1 p-1 bg-[#006072] float-left px-4">
             {socialIcons.map(({ Icon, link }, index) => (
               <div
                 key={index}
@@ -209,3 +211,4 @@ const Footer = () => {
 };
 
 export default Footer;
+
