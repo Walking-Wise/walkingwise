@@ -169,7 +169,7 @@ const ImplementationSection = () => {
           <div className="flex-1 flex justify-center bg-white">
             <div className="relative flex-shrink-0 w-[300px] sm:w-[350px] md:w-[400px] h-[450px]">
               <img
-                src="/public/assets/ImplementationGuide.png"
+                src="/assets/ImplementationGuide.png"
                 alt="Guide Resources"
                 
                 className="object-cover"
