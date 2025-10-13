@@ -154,7 +154,7 @@ const ImplementationSection = () => {
             <h1 className="text-[#303030] font-bold text-3xl md:text-4xl">
               RESOURCES
             </h1>
-            <ul className="list-disc list-inside space-y-1 text-xl">
+            <ul className="text-[#303030] list-disc list-inside space-y-1 text-xl">
               <li>Student Benefits</li>
               <li>Protective Factors</li>
               <li>Obstacles to Disclosure</li>
