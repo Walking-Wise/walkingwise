@@ -6,6 +6,9 @@ import Section from "../ui/Section/Section";
 import SectionHeaderText from "../ui/SectionHeaderText/SectionHeaderText";
 import BodyText from "../ui/BodyText/BodyText";
 import { roboto, robotoopo } from "../../public/fonts/Fonts";
+import { redirect, RedirectType } from 'next/navigation';
+
+redirect('https://tally.so/r/nWv96Q', RedirectType.replace);
 
 const Contact = () => {
   const [form, setForm] = useState({
