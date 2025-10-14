@@ -105,7 +105,8 @@ const Footer = () => {
               >Implementation</a>
               <br></br> 
               <a href="https://walking-wise-12-part-course.s3.us-east-1.amazonaws.com/PIM+Accrediation+Info-Walking-Wise-eLearning/content/index.html?version=20251011" 
-              className={`${robotoopo.className} text-lg sm:text-xl text-[#303030]  hover:text-[#05AFDB] cursor-pointer`}
+                target="_blank"
+                className={`${robotoopo.className} text-lg sm:text-xl text-[#303030]  hover:text-[#05AFDB] cursor-pointer`}
               >CE Credit</a>
               <br></br> 
       </div>
@@ -128,7 +129,7 @@ const Footer = () => {
               <br></br> 
               <a href="/public-private-sector" 
               className={`${robotoopo.className} text-lg sm:text-xl text-[#303030]  hover:text-[#05AFDB] cursor-pointer`}
-              >Public & Private Sector</a>
+              >Pub/Private Sector</a>
               <br></br> 
               <a href="https://tally.so/r/w459Bo" 
               className={`${robotoopo.className} text-lg sm:text-xl text-[#303030]  hover:text-[#05AFDB] cursor-pointer`}
