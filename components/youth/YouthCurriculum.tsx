@@ -51,7 +51,7 @@ const YouthCurriculum = () => {
       <Section bgColor="white">
         <SectionHeaderText> Youth Education </SectionHeaderText>
         <BodyText className="mt-3 sm:mt-6">
-          The Walking Wise Learning Platform offers engaging, easy-to-teach
+          The Walking Wise Learning Center offers engaging, easy-to-teach
           lessons designed for lasting impact for middle and high school youth
           ages 11+. Our curriculum uses multisensory teaching to enhance
           learning, combining technology and storytelling through interactive
