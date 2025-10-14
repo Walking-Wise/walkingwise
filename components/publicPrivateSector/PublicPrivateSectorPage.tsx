@@ -55,7 +55,7 @@ const PublicPrivateSectorPage = () => {
               {
                 title: "Multi-Seat Access",
                 description:
-                  "For organizations without an LMS, our Enterprise Subscription provides associates with individual login access to the Walking Wise Learning Platform. This flexible, on-demand model allows professionals to complete the lessons at their own pace while meeting compliance and development requirements.",
+                  "For organizations without an LMS, our Enterprise Subscription provides associates with individual login access to the Walking Wise Learning Center. This flexible, on-demand model allows professionals to complete the lessons at their own pace while meeting compliance and development requirements.",
                 linkText: "",
                 linkHref:
                   "",
