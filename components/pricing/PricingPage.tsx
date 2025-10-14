@@ -61,7 +61,7 @@ const plans = [
   buttonText: "Buy Now",
   popular: false,
   discount: { text: "30% OFF", original: "$20" },
-  link: "https://learn.walkingwise.com/enroll/3486950?price_id=4427684",
+  link: "https://learn.walkingwise.com/enroll/3486950?price_id=4408888",
  },
  {
   name: Plans.NonProfit,
