@@ -94,7 +94,7 @@ const AnimatedVideos = () => {
       name: "Hidden Buyers",
       thumbnail:
         "/assets/HiddenBuyersThumbnail.png",
-      link: "/assets/videos/hidden-buyers.mp4",
+      link: "https://walking-wise-2025-website-assets.s3.us-east-1.amazonaws.com/Videos-Animation/Trailers+-+Website+Animation/Trailer-Hidden_Buyers_of_Sexual_Exploitation.mp4",
     },
   };
 
