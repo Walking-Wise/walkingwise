@@ -372,6 +372,11 @@ button {
 .line-short{
   line-height: 0.1em;
 }
+.line-full{
+  line-height: 1em;
+  min-height:1em;
+}
+
 .font14{
   font-size: 14pt !important;
 }
