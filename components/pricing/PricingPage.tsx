@@ -69,7 +69,7 @@ const plans = [
    "Available for advocacy groups and youth-serving organizations, such as churches and youth clubs.",
   price: "$50 / month",
   annual: "Billed $600 annually",
-  footer: "Annual Subscription, Cancel Anytime",
+  footer: "",
   numberOfUsers: "6 Users",
   features: [
     " ",
@@ -101,7 +101,7 @@ const plans = [
    "Tailored for middle and high schools to educate staff, parents, and students.",
   price: "$125 / month",
   annual: "Billed $1,500 annually",
-  footer: "Annual Subscription, Cancel Anytime",
+  footer: "",
   numberOfUsers: "6 Users",
   features: [
     " ",
@@ -156,11 +156,11 @@ const customPlans = [
  {
   name: Plans.Enterprise,
   subtext:
-   "Designed for large enterprises providing adult education through an internal learning management system (LMS).",
+   "Designed for organizations delivering adult education through their own learning management system (LMS) or coordinating large group access to the Walking Wise Learning Center.",
   price: "Custom Pricing",
   annual: "Contact us for a quote",
-  footer: "Annual Subscription, Cancel Anytime",
-  numberOfUsers: "Unlimited users",
+  footer: "",
+  numberOfUsers: "Unlimited Users",
   features: [
     " ",
  "Course Features",
