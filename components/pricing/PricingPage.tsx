@@ -274,7 +274,7 @@ const PricingPage = () => {
                    {plan.buttonText}
                   </button>
                  </div>
-                 <p className="text-xs text-center text-gray-400 mt-2">
+                 <p className="text-xs text-center text-gray-400 mt-2 line-full">
                   {plan.footer}
                  </p>
                 </div>
@@ -292,7 +292,7 @@ const PricingPage = () => {
                  >
                   {plan.buttonText}
                  </button>
-                 <p className="text-xs text-center text-gray-400 mt-2">
+                 <p className="text-xs text-center text-gray-400 mt-2 line-full">
                   {plan.footer}
                  </p>
         </div>
@@ -368,7 +368,7 @@ const PricingPage = () => {
         >
          {plan.buttonText}
         </button>
-        <p className="text-xs text-center mt-2 opacity-60">
+        <p className="text-xs text-center mt-2 opacity-60 line-full">
          {plan.footer}
         </p>
        </div>
