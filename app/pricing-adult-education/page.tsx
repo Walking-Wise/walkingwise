@@ -1,7 +1,7 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import React from "react";
-import PricingPage from "@/components/pricing-adult-education/PricingAdult";
+import PricingAdult from "@/components/pricing-adult-education/PricingAdult";
 import { Metadata } from 'next';
  
 export const metadata: Metadata = {
