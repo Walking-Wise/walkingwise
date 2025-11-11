@@ -198,14 +198,14 @@ const PricingPage = () => {
      <h1 className=" uppercase text-4xl sm:text-6xl lg:text-6xl">
       Pricing Plans
      </h1>
-     <h2 className=" uppercase text-4xl sm:text-6xl lg:text-6xl">
+     <p className=" font14 ">
      Adult learning modules for individual and enterprise access 
-     </h2>
+     </p>
     </div>
    </div>
 
-   <Section bgColor="white">
-    <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 gap-6">
+   <Section bgColor="white" className="section-ypad-min">
+    <div className="grid grid-cols-2 lg:grid-cols-4 xl:grid-cols-4 gap-6">
      {customPlans.map((plan, idx) => (
       <div
        key={idx}
