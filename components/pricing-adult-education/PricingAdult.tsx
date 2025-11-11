@@ -1,4 +1,3 @@
-
 "use client";
 
 import React from "react";
@@ -191,17 +190,22 @@ const PricingPage = () => {
   <>
    <div className="w-full bg-[#303030] h-[80px] sm:h-[120px] flex items-center">
     <div className="w-full max-w-[2000px] mx-auto px-6 sm:px-12 md:px-20 lg:px-26">
-     <h1 className="text-white uppercase text-4xl sm:text-6xl lg:text-6xl">
+    </div>
+   </div>
+
+   <div className="w-full bg-[#303030] h-[80px] sm:h-[120px] flex items-center">
+    <div className="w-full max-w-[2000px] mx-auto px-6 sm:px-12 md:px-20 lg:px-26">
+     <h1 className=" uppercase text-4xl sm:text-6xl lg:text-6xl">
       Pricing Plans
      </h1>
-     <h3>
+     <h2 className=" uppercase text-4xl sm:text-6xl lg:text-6xl">
      Adult learning modules for individual and enterprise access 
-     </h3>
+     </h2>
     </div>
    </div>
 
    <Section bgColor="white">
-    <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-4 gap-6">
+    <div className="grid grid-cols-1 lg:grid-cols-3 xl:grid-cols-3 gap-6">
      {customPlans.map((plan, idx) => (
       <div
        key={idx}
