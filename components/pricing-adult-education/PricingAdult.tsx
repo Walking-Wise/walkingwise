@@ -195,7 +195,7 @@ const PricingPage = () => {
 
    <div className="w-full  flex items-center">
     <div className="w-full max-w-[2000px] mx-auto px-6 sm:px-12 md:px-20 lg:px-26">
-     <h1 className=" uppercase text-4xl sm:text-6xl lg:text-6xl">
+     <h1 className=" uppercase text-4xl sm:text-6xl lg:text-6xl pt-5 lg:pt-5">
       Pricing Plans
      </h1>
      <p className=" font14 ">
