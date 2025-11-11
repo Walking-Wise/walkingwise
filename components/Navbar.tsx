@@ -293,9 +293,41 @@ const Navbar = () => {
               )}
             </div>
 
-            <Link href="/pricing" onClick={() => setIsOpen(false)}>
-              Pricing
-            </Link>
+
+            <div className="flex flex-col">
+              <button
+                onClick={togglePricing}
+                className="flex items-center space-x-2 text-[#303030]"
+              >
+                <span>Pricing</span>
+                <ChevronDown
+                  size={24}
+                  className={`transform transition-transform ${
+                    isPricingOpen ? "rotate-180" : ""
+                  }`}
+                />
+              </button>
+              {isPricingOpen && (
+                <div className="pl-4 mt-2 space-y-2">
+                  <Link
+                    href="/pricing-adult-education"
+                    className={`block px-4 py-2 text-lg hover:bg-gray-100 ${roboto.className}`}
+                  >
+                    Adult Education
+                  </Link>
+                  <Link
+                    href="/pricing-youth-curriculum"
+                    className={`block px-4 py-2 text-lg hover:bg-gray-100 ${roboto.className}`}
+                  >
+                    Youth Curriculum
+                  </Link>
+                  
+                </div>
+              )}
+            </div>
+
+
+
             <Link href="/demo" onClick={() => setIsOpen(false)}>
               Demo
             </Link>
