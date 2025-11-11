@@ -13,7 +13,7 @@ const page = () => {
   return (
     <>
       <Navbar />
-      <PricingPage />
+      <PricingYouth />
       <Footer />
     </>
   );
