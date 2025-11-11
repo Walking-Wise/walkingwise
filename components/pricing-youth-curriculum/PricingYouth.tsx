@@ -75,6 +75,8 @@ const plans = [
     "12 Continuing Education Credits",
     " ",
     " ",
+    " ",
+    " ",
     "Youth Curriculum (11+)",
     "Implementation Guidance",
     "Reporting Protocol Tool",
