@@ -15,6 +15,7 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isEducationOpen, setIsEducationOpen] = useState(false);
   const [isProgramsOpen, setIsProgramsOpen] = useState(false);
+  const [isPricingOpen, setIsPricingOpen] = useState(false);
   // const [showModal, setShowModal] = useState(false);
 
   // const closeModal = () => setShowModal(false);
@@ -24,10 +25,17 @@ const Navbar = () => {
   const toggleEducation = () => {
     setIsEducationOpen(!isEducationOpen);
     setIsProgramsOpen(false);
+    setIsPricingOpen(false);
   };
   const togglePrograms = () => {
-    setIsEducationOpen(false);
     setIsProgramsOpen(!isProgramsOpen);
+    setIsEducationOpen(false);
+    setIsPricingOpen(false);
+  };
+  const togglePricing = () => {
+    setIsPricingOpen(!isPricingOpen);
+    setIsEducationOpen(false);
+    setIsProgramsOpen(false);
   };
 
   const loginLink = "https://learn.walkingwise.com/users/sign_in"
@@ -137,7 +145,39 @@ const Navbar = () => {
                   </div>
                 )}
               </div>
-              <Link href="/pricing">Pricing</Link>
+
+
+               <div className="relative">
+                <button
+                  onClick={togglePricing}
+                  className="flex items-center space-x-2 text-[#303030] cursor-pointer"
+                >
+                  <span>Pricing</span>
+                  <ChevronDown
+                    size={24}
+                    className={`transform transition-transform ${
+                      isPricingOpen ? "rotate-180" : ""
+                    }`}
+                  />
+                </button>
+                {isPricingOpen && (
+                  <div className="absolute left-0 mt-2 w-65 bg-white rounded-lg shadow-lg py-2 z-50">
+                    <Link
+                      href="/pricing-adult-education"
+                      className={`block px-4 py-2 text-lg hover:bg-gray-100 ${roboto.className}`}
+                    >
+                      Adult Education
+                    </Link>
+                    <Link
+                      href="/pricing-youth-curriculum"
+                      className={`block px-4 py-2 text-lg hover:bg-gray-100 ${roboto.className}`}
+                    >
+                      Youth Curriculum
+                    </Link>
+                  </div>
+                )}
+              </div>
+
               <Link href="/demo">Demo</Link>
             </div>
           </div>
@@ -253,11 +293,11 @@ const Navbar = () => {
               )}
             </div>
 
-            <Link href="/demo" onClick={() => setIsOpen(false)}>
-              Demo
-            </Link>
             <Link href="/pricing" onClick={() => setIsOpen(false)}>
               Pricing
+            </Link>
+            <Link href="/demo" onClick={() => setIsOpen(false)}>
+              Demo
             </Link>
             <button
               className="w-fit"
