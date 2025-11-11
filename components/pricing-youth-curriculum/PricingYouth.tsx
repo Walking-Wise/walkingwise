@@ -113,8 +113,7 @@ const PricingPage = () => {
      </h1>
      <p className=" font14 ">
      Package plans for educating youth, ages 11+
-     </p>
-     <br>
+     </p><br></br>
     </div>
    </div>
 
