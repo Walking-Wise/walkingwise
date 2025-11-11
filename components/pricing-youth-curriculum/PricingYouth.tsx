@@ -76,7 +76,6 @@ const plans = [
     " ",
     "Youth Curriculum (11+)",
     "Implementation Guidance",
-    "SLIDO’s Anonymous Polling Tool",
     "Reporting Protocol Tool",
     "Risk Factor & Indicator Tools",
     "Anonymous Assessment Tools",
