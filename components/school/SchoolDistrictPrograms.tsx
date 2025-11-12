@@ -230,7 +230,7 @@ const SchoolDistrictPrograms = () => {
             </li>
            
             <li>
-            <Button onClick={() => (window.location.href = "/pricing")}>
+            <Button onClick={() => (window.location.href = "/pricing-youth-curriculum")}>
               ENROLL Today!&nbsp;&nbsp;
             </Button>
             </li>
