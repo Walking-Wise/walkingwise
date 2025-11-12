@@ -144,7 +144,7 @@ const YouthCurriculum = () => {
                   className="object-cover"
                 />
               </div>
-              <Button onClick={() => (window.location.href = "/pricing")}>
+              <Button onClick={() => (window.location.href = "/pricing-youth-curriculum")}>
                 ENROLL Today! 
               </Button>
             </div>
