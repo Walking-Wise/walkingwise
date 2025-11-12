@@ -223,7 +223,7 @@ const AnimatedVideos = () => {
             <span style={boldimportant}>Enroll today to unlock our complete animated video series.</span>
           </BodyText>
           <Button
-            onClick={() => (window.location.href = "/pricing")}
+            onClick={() => (window.location.href = "/pricing-youth-curriculum")}
             className={`mt-8`}
           >
             {"Enroll Today"}
