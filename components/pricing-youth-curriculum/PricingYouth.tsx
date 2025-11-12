@@ -33,7 +33,7 @@ const plans = [
  {
   name: Plans.Professional,
   subtext:
-   "Ideal for independent consultants, such as social workers, nurses, anti-trafficking advocates, and others delivering youth education.",
+   "Ideal for independent consultants, such as social workers, healthcare providers, anti-trafficking advocates, and others delivering youth education.",
   price: "$16 / month",
   annual: "Billed $192 annually",
   footer: "Annual Subscription, Cancel Anytime",
