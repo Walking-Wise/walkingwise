@@ -74,13 +74,13 @@ const Footer = () => {
               className={`${robotoopo.className} text-lg sm:text-xl text-[#303030]  hover:text-[#05AFDB] cursor-pointer`}
               >About Us</a>
               <br></br> 
-              <a href="/pricing" 
-              className={`${robotoopo.className} text-lg sm:text-xl text-[#303030]  hover:text-[#05AFDB] cursor-pointer`}
-              >Pricing</a>
-              <br></br> 
               <a href="/demo" 
               className={`${robotoopo.className} text-lg sm:text-xl text-[#303030]  hover:text-[#05AFDB] cursor-pointer`}
               >Demo</a>
+              <br></br> 
+              <a href="https://tally.so/r/w459Bo" 
+              className={`${robotoopo.className} text-lg sm:text-xl text-[#303030]  hover:text-[#05AFDB] cursor-pointer`}
+              >Affiliate Program</a>
               <br></br> 
       </div>
       <div className=" col-start-1  col-span-1 row-span-1 row-start-3 pb-5
@@ -131,10 +131,7 @@ const Footer = () => {
               className={`${robotoopo.className} text-lg sm:text-xl text-[#303030]  hover:text-[#05AFDB] cursor-pointer`}
               >Pub/Private Sector</a>
               <br></br> 
-              <a href="https://tally.so/r/w459Bo" 
-              className={`${robotoopo.className} text-lg sm:text-xl text-[#303030]  hover:text-[#05AFDB] cursor-pointer`}
-              >Affiliate Program</a>
-              <br></br> 
+              
       </div>
       <div className=" col-start-1  col-span-1 row-span-1 row-start-5 pb-5
               md:col-start-6  md:col-span-1 md:row-span-1 md:row-start-1
