@@ -278,7 +278,7 @@ const ImplementationSection = () => {
                 />
               </div>
               <Button
-                onClick={() => (window.location.href = "/pricing")}
+                onClick={() => (window.location.href = "/pricing-youth-curriculum")}
                 className="md:mt-6"
               >
                 ENROLL Today!
