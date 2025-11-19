@@ -136,7 +136,7 @@ const customPlans = [
    "Developed for healthcare providers, social workers, law enforcement, educators, youth leaders, and community members.",
   price: "$125 Online Course",
   annual: "Billed $125 annually, with $45 renewal option",
-  footer: "Annual Subscription, Cancel Anytime",
+  footer: "",
   numberOfUsers: "1 User",
   features: [
     " ",
