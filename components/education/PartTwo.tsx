@@ -88,7 +88,7 @@ const PartTwo = () => {
         </div>
         <div className="flex justify-center items-center flex-col">
           <Button
-            onClick={() => (window.location.href = "/pricing-youth-curriculum")}
+            onClick={() => (window.location.href = "https://learn.walkingwise.com/order?ct=6ca6b419-9c58-4888-999d-114f405812ec")}
             className={`mt-8`}
           >
             {"Enroll Today"}
