@@ -136,7 +136,7 @@ const AnimatedVideos = () => {
       >
         <div className="lg:w-4xl md:py-10 text-white md:mt-8">
           <SectionHeaderText color="[#36c5d8]">
-            Empowerment Youth
+            Empowering Youth
           </SectionHeaderText>
           <BodyText className="mt-4 sm:mt-6 text-white">
             Walking Wise empowers young people with critical skills to evaluate
