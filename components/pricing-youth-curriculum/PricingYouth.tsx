@@ -65,7 +65,7 @@ const plans = [
   subtext:
    "Designed for any youth-serving organization, including schools, faith-based programs, youth clubs, and nonprofits providing prevention education.",
   price: "$100 / month",
-  annual: "Billed $1200 annually",
+  annual: "Billed $1,200 annually",
   footer: "     ",
   numberOfUsers: "4 Users",
   features: [
