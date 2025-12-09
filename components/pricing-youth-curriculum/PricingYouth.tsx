@@ -64,8 +64,8 @@ const plans = [
   name: Plans.Schools,
   subtext:
    "Designed for any youth-serving organization, including schools, faith-based programs, youth clubs, and nonprofits providing prevention education.",
-  price: "$50 / month",
-  annual: "Billed $600 annually",
+  price: "$100 / month",
+  annual: "Billed $1200 annually",
   footer: "     ",
   numberOfUsers: "4 Users",
   features: [
