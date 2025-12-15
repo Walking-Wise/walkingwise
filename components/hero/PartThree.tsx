@@ -41,7 +41,7 @@ const PartThree = () => {
       col-span-2 col-start-1 row-span-1
       md:col-span-5 md:col-start-1 md:row-span-3
       justify-center items-center w-full lg:w-auto">
-        <h1 className="text-4xl sm:text-6xl px-4 max-w-4xl sm:px-8 text-left lg:text-center mb-2">
+        <h1 className="text-4xl sm:text-6xl px-4  sm:px-8 text-center lg:text-center mb-2 purplecolor">
           Postgraduate Institute for Medicine & Academy of Forensic Nursing
         </h1>
 
