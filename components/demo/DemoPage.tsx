@@ -38,7 +38,7 @@ const demoContent = [
     subtitle: "",
     image:
       "https://walking-wise-2025-website-assets.s3.us-east-1.amazonaws.com/Website_Dashboard-Education_PDFs_and_Icons/Icons+for+Website/Icon-Adult_Online_Learning.png",
-    link: "https://walking-wise-12-part-course.s3.us-east-1.amazonaws.com/DEMO-Myths-Reality-Walking-Wise-Website/content/index.html",
+    link: "https://walking-wise-12-part-course.s3.us-east-1.amazonaws.com/WW-1-Myths-Reality-Course/content/index.html",
   },
   {
     title: "Animated Video",
@@ -60,7 +60,7 @@ const demoContent = [
     subtitle: "",
     image:
       "https://walking-wise-2025-website-assets.s3.us-east-1.amazonaws.com/Website_Dashboard-Education_PDFs_and_Icons/Icons+for+Website/Icon-Classroom_Presentations.png",
-    link: "https://walking-wise-2025-website-assets.s3.us-east-1.amazonaws.com/Classroom+Presentation+Assets/Classroom+PowerPoint+Presentations/DEMO+PowerPoint-Myths%2BReality_WalkingWise-7-1-2025.pptx?v=2DABAAE4-724A-48C4-BDE1F40435C8E3C6",
+    link: "https://walking-wise-2025-website-assets.s3.us-east-1.amazonaws.com/Classroom+Presentation+Assets/Classroom+PowerPoint+Presentations/PowerPoint-Myths%2BReality_WalkingWise-2026.pptx",
   },
 ];
 
