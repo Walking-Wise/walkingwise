@@ -219,7 +219,7 @@ This lesson may be used to:
         col-span-1 col-start-1 row-span-1
         md:col-span-8 md:col-start-3 md:row-span-1
         text-xl sm:text-2xl md:text-3xl 
-        text-left md:text-left
+        text-center md:text-center
         px-[7vw]
         py-[]
         ">
@@ -246,7 +246,7 @@ This lesson may be used to:
             onClick={() => (window.location.href = "https://learn.walkingwise.com/enroll/3486696?price_id=4408602")}
             className={`bg-[#9d1be3] ${roboto.className} block mx-auto mt-4 rounded-full text-sm sm:text-[16px] py-2 sm:py-3 px-4 text-white flex items-center whitespace-nowrap float-right`}
           >
-            {"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Start Adult Course&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"}
+            {"           Start Adult Course           "}
           </button>
           </div>
           <div className="
