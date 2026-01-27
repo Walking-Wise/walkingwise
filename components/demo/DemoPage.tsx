@@ -235,15 +235,16 @@ This lesson may be used to:
           </div>
           
           <div 
-           style="padding-right:10px"
+           
            className="
+           pr-[10px]
             col-span-1 col-start-1 row-span-1
             md:col-span-4 md:col-start-3 md:row-span-1
             justify-center items-center h-full ">
           <button
-           style="float:right"
+           
             onClick={() => (window.location.href = "https://learn.walkingwise.com/enroll/3486696?price_id=4408602")}
-            className={`bg-[#9d1be3] ${roboto.className} block mx-auto mt-4 rounded-full text-sm sm:text-[16px] py-2 sm:py-3 px-4 text-white flex items-center whitespace-nowrap`}
+            className={`bg-[#9d1be3] ${roboto.className} block mx-auto mt-4 rounded-full text-sm sm:text-[16px] py-2 sm:py-3 px-4 text-white flex items-center whitespace-nowrap float-right`}
           >
             {"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Start Adult Course&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"}
           </button>
@@ -255,9 +256,9 @@ This lesson may be used to:
             justify-center items-center h-full ">
 
           <button
-           style="float:left"
+           
             onClick={() => (window.location.href = "/pricing-youth-curriculum")}
-            className={`bg-[#9d1be3] ${roboto.className} block mx-auto mt-4 rounded-full text-sm sm:text-[16px] py-2 sm:py-3 px-4 text-white flex items-center whitespace-nowrap`}
+            className={`bg-[#9d1be3] ${roboto.className} block mx-auto mt-4 rounded-full text-sm sm:text-[16px] py-2 sm:py-3 px-4 text-white flex items-center whitespace-nowrap float-left`}
           >
             {"Youth Curriculum Enrollment"}
           </button>
