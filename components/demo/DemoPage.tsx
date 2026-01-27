@@ -151,7 +151,9 @@ This lesson may be used to:
           {resourceItems.map(({ title, description }, index) => (
             <li
               key={index}
-              className={`${robotoopo.className} text-[#303030] text-base sm:text-xl md:text-2xl lg:text-3xl mt-4 sm:mt-6 ms-6 md:ms-2`}
+              className={`${robotoopo.className} text-[#303030] text-base 
+              text-xl sm:text-2xl md:text-3xl
+              mt-4 sm:mt-6 ms-6 md:ms-2`}
             >
               <span className={`text-white text-bold ${roboto.className}`}>
                 {title}
