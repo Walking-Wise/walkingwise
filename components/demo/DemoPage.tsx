@@ -173,7 +173,7 @@ This lesson may be used to:
           className={`${robotoopo.className} text-base text-base  text-xl sm:text-2xl md:text-3xl mt-4 sm:mt-8 sm:mb-10`}
         >
        Piloting <strong><i>Myths & Reality</i></strong> allows districts to experience the structure, tone, and educational outcomes of Walking Wise before {" "}
-        <a href="https://www.walkingwise.com/implementation" target="_blank">implementation</a>
+        <a className="underline" href="https://www.walkingwise.com/implementation" target="_blank">implementation</a>
                                                                                                                                      .
        </p>
       </Section>
