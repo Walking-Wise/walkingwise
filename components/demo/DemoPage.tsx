@@ -16,17 +16,17 @@ import Button from "../ui/Button/Button";
 
 const resourceItems = [
   {
-    title: "Evaluate",
+    title: "",
     description:
       "Evaluate Walking Wise’s instructional approach across all 12 curriculum topics.",
   },
   {
-    title: "Provide",
+    title: "",
     description:
       "Provide a professional learning overview for staff, educators, and parent groups.",
   },
   {
-    title: "Deliver",
+    title: "",
     description:
       "Deliver an introductory, age-appropriate classroom presentation for middle and high school students.",
   },
@@ -126,9 +126,9 @@ const DemoPage = () => {
             on-demand education
           </SectionHeaderText>
           <BodyText className="md:mt-8">
-            sexual exploitation with confidence and care.
+          Walking Wise provides evidence-informed education that equips educators and prevention professionals to address sexual exploitation with confidence and care.
 Districts and organizations are invited to explore "Myths & Reality", the first lesson in the Walking Wise curriculum, as a complimentary demonstration of how all 12 instructional topics are presented.
-Participants may complete the adult learning module to earn 1 CE/CME credit and preview the animated video, lesson plan, and classroom presentation to evaluate instructional quality, age appropriateness, and trauma-informed design.
+Participants may complete the adult learning module to earn 1 CE/CME credit and preview the animated video, lesson plan, and classroom presentation to evaluate instructional quality, age appropriateness, and trauma-informed design. 
           </BodyText>
         </div>
       </Section>
