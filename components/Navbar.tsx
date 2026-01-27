@@ -178,7 +178,7 @@ const Navbar = () => {
                 )}
               </div>
 
-              <Link href="/demo">Demo</Link>
+              <Link href="/demo" className="{purplecolor}">Demo</Link>
             </div>
           </div>
           <div className="flex items-center hidden lg:flex mt-16 space-x-8 text-[#303030] text-2xl font-bold">
@@ -328,7 +328,7 @@ const Navbar = () => {
 
 
 
-            <Link href="/demo" onClick={() => setIsOpen(false)}>
+            <Link className="{purplecolor}" href="/demo" onClick={() => setIsOpen(false)}>
               Demo
             </Link>
             <button
