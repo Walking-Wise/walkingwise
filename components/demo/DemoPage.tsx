@@ -220,7 +220,7 @@ This lesson may be used to:
       </Section>
 
       <div className="bg-[#303030] grid grid-cols-1 md:grid-cols-12 items-center justify-center py-5 md:py-4 lg:py-10">
-        <div className="text-white md:max-w-[1200px]
+        <div className="text-white 
         col-span-1 col-start-1 row-span-1
         md:col-span-8 md:col-start-3 md:row-span-1
         text-xl sm:text-2xl md:text-3xl 
