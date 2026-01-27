@@ -154,7 +154,7 @@ Participants may complete the adult learning module to earn 1 CE/CME credit and 
 This lesson may be used to:
         </p>
 
-        <ul className="list-disc sm:ms-12">
+        <ul className="list-disc sm:ms-12 pb-[20]">
           {resourceItems.map(({ title, description }, index) => (
             <li
               key={index}
