@@ -129,7 +129,12 @@ const DemoPage = () => {
           className={`${robotoopo.className} text-base text-base  text-xl sm:text-2xl md:text-3xl mt-4 sm:mt-8 sm:mb-10`}
         >
           Walking Wise provides evidence-informed education that equips educators and prevention professionals to address sexual exploitation with confidence and care.
-Districts and organizations are invited to explore <strong><i>Myths & Reality</i></strong>, the first lesson in the Walking Wise curriculum, as a complimentary demonstration of how all 12 instructional topics are presented.
+          </p>
+                   <p
+          className={`${robotoopo.className} text-base text-base  text-xl sm:text-2xl md:text-3xl mt-4 sm:mt-8 sm:mb-10`}
+        >
+
+           Districts and organizations are invited to explore <strong><i>Myths & Reality</i></strong>, the first lesson in the Walking Wise curriculum, as a complimentary demonstration of how all 12 instructional topics are presented.
 Participants may complete the adult learning module to earn 1 CE/CME credit and preview the animated video, lesson plan, and classroom presentation to evaluate instructional quality, age appropriateness, and trauma-informed design. 
           </p>
         </div>
