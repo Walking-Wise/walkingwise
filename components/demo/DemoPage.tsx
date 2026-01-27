@@ -125,11 +125,13 @@ const DemoPage = () => {
           <SectionHeaderText className="mb-4">
             on-demand education
           </SectionHeaderText>
-          <BodyText className="md:mt-8">
+          <p
+          className={`${robotoopo.className} text-base text-base  text-xl sm:text-2xl md:text-3xl mt-4 sm:mt-8 sm:mb-10`}
+        >
           Walking Wise provides evidence-informed education that equips educators and prevention professionals to address sexual exploitation with confidence and care.
-Districts and organizations are invited to explore "Myths & Reality", the first lesson in the Walking Wise curriculum, as a complimentary demonstration of how all 12 instructional topics are presented.
+Districts and organizations are invited to explore <em><i>Myths & Reality</i></em>, the first lesson in the Walking Wise curriculum, as a complimentary demonstration of how all 12 instructional topics are presented.
 Participants may complete the adult learning module to earn 1 CE/CME credit and preview the animated video, lesson plan, and classroom presentation to evaluate instructional quality, age appropriateness, and trauma-informed design. 
-          </BodyText>
+          </p>
         </div>
       </Section>
 
@@ -143,7 +145,7 @@ Participants may complete the adult learning module to earn 1 CE/CME credit and 
         <p
           className={`${robotoopo.className} text-base text-base  text-xl sm:text-2xl md:text-3xl mt-4 sm:mt-8 sm:mb-10`}
         >
-         School districts and nonprofit organizations may pilot the Myths & Reality lesson to assess alignment with district goals, student needs, and prevention priorities.
+         School districts and nonprofit organizations may pilot the <em><i>Myths & Reality</i></em> lesson to assess alignment with district goals, student needs, and prevention priorities.
 This lesson may be used to:
         </p>
 
