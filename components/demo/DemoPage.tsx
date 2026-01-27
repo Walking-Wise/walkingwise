@@ -244,7 +244,8 @@ This lesson may be used to:
           <button
            
             onClick={() => (window.location.href = "https://learn.walkingwise.com/enroll/3486696?price_id=4408602")}
-            className={`bg-[#9d1be3] ${roboto.className} block mx-auto mt-4 rounded-full text-sm sm:text-[16px] py-2 sm:py-3 px-4 text-white flex items-center whitespace-nowrap float-right`}
+            className={`bg-[#9d1be3] ${roboto.className} block mx-auto mt-4 rounded-full text-sm sm:text-[16px] py-2 sm:py-3 px-4 text-white flex items-center whitespace-nowrap 
+            text-center lg:float-right md:float-right `}
           >
             {"           Start Adult Course           "}
           </button>
@@ -258,7 +259,8 @@ This lesson may be used to:
           <button
            
             onClick={() => (window.location.href = "/pricing-youth-curriculum")}
-            className={`bg-[#9d1be3] ${roboto.className} block mx-auto mt-4 rounded-full text-sm sm:text-[16px] py-2 sm:py-3 px-4 text-white flex items-center whitespace-nowrap float-left`}
+            className={`bg-[#9d1be3] ${roboto.className} block mx-auto mt-4 rounded-full text-sm sm:text-[16px] py-2 sm:py-3 px-4 text-white flex items-center whitespace-nowrap 
+            text-center lg:float-left md:float-left `}
           >
             {"Youth Curriculum Enrollment"}
           </button>
