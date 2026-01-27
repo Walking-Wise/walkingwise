@@ -245,7 +245,7 @@ This lesson may be used to:
            
             onClick={() => (window.location.href = "https://learn.walkingwise.com/enroll/3486696?price_id=4408602")}
             className={`bg-[#9d1be3] ${roboto.className} block mx-auto mt-4 rounded-full text-sm sm:text-[16px] py-2 sm:py-3 px-4 text-white flex 
-            justify-center min-width-240
+            justify-center min-w-240
             whitespace-nowrap 
             text-center lg:float-right md:float-right `}
           >
