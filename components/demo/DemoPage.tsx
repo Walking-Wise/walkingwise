@@ -150,7 +150,7 @@ Participants may complete the adult learning module to earn 1 CE/CME credit and 
         <p
           className={`${robotoopo.className} text-base text-base  text-xl sm:text-2xl md:text-3xl mt-4 sm:mt-8 sm:mb-10`}
         >
-         School districts and nonprofit organizations may pilot the <strong><i>Myths & Reality</i></strong> lesson to assess alignment with district goals, student needs, and prevention priorities.
+         School districts and nonprofit organizations may pilot the <strong><i>Myths & Reality</i></strong> lesson to assess alignment with district goals and prevention priorities.
 This lesson may be used to:
         </p>
 
