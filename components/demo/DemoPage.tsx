@@ -1,4 +1,4 @@
-"use client";
+ "use client";
 import React from "react";
 import Image from "next/image";
 import PageBanner from "../ui/PageBanner/PageBanner";
@@ -140,8 +140,8 @@ Participants may complete the adult learning module to earn 1 CE/CME credit and 
           </h1>
         </div>
 
-        <p
-          className={`${robotoopo.className} text-base text-base sm:text-xl md:text-2xl lg:text-4xl mt-4 sm:mt-8 sm:mb-10`}
+        <p className="md:mt-8"
+          
         >
          School districts and nonprofit organizations may pilot the Myths & Reality lesson to assess alignment with district goals, student needs, and prevention priorities.
 This lesson may be used to:
@@ -162,6 +162,10 @@ This lesson may be used to:
             </li>
           ))}
         </ul>
+        <p className="md:mt-8">
+        Piloting Myths & Reality allows districts to experience the structure, tone, and educational outcomes of Walking Wise before 
+          <a href="https://www.walkingwise.com/implementation" target="_blank">implementation</a>.
+        </p>
       </Section>
 
       <div className="bg-[#303030] flex justify-center py-4 lg:py-14">
