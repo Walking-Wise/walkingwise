@@ -16,24 +16,19 @@ import Button from "../ui/Button/Button";
 
 const resourceItems = [
   {
-    title: "Online Course",
+    title: "Evaluate",
     description:
-      "Take the first module of the Walking Wise online course for adults.",
+      "Evaluate Walking Wise’s instructional approach across all 12 curriculum topics.",
   },
   {
-    title: "Animated Video",
+    title: "Provide",
     description:
-      "Watch a 3-minute animation that brings key ideas to life.",
+      "Provide a professional learning overview for staff, educators, and parent groups.",
   },
   {
-    title: "Lesson Plan",
+    title: "Deliver",
     description:
-      "View the Myths & Reality lesson to see how we introduce core concepts.",
-  },
-  {
-    title: "Classroom Presentation",
-    description:
-      "Preview the Myths & Reality slides to see how we engage parents and students.",
+      "Deliver an introductory, age-appropriate classroom presentation for middle and high school students.",
   },
 ];
 
@@ -131,14 +126,9 @@ const DemoPage = () => {
             on-demand education
           </SectionHeaderText>
           <BodyText className="md:mt-8">
-            Walking Wise equips adults to talk about sexual exploitation with
-            clarity and confidence. To begin the learning journey, we offer a
-            comprehensive 12-topic online course specifically designed for
-            adults. We also provide a classroom-style lesson on the “Myths &
-            Reality” of sexual exploitation, modeled after the lessons used with
-            students. This provides adults with a firsthand look at the youth
-            curriculum, helping them understand how key topics are presented in
-            middle and high school settings.
+            sexual exploitation with confidence and care.
+Districts and organizations are invited to explore "Myths & Reality", the first lesson in the Walking Wise curriculum, as a complimentary demonstration of how all 12 instructional topics are presented.
+Participants may complete the adult learning module to earn 1 CE/CME credit and preview the animated video, lesson plan, and classroom presentation to evaluate instructional quality, age appropriateness, and trauma-informed design.
           </BodyText>
         </div>
       </Section>
@@ -146,15 +136,15 @@ const DemoPage = () => {
       <Section bgColor="[#00c1d5]" className="md:pb-32">
         <div className="flex justify-between flex-wrap">
           <h1 className="text-4xl sm:text-6xl text-[#303030]">
-            explore our materials
+            Pilot the Curriculum
           </h1>
         </div>
 
         <p
           className={`${robotoopo.className} text-base text-base sm:text-xl md:text-2xl lg:text-4xl mt-4 sm:mt-8 sm:mb-10`}
         >
-          Become familiar with the program by checking out our educational
-          materials:
+         School districts and nonprofit organizations may pilot the Myths & Reality lesson to assess alignment with district goals, student needs, and prevention priorities.
+This lesson may be used to:
         </p>
 
         <ul className="list-disc sm:ms-12">
@@ -164,7 +154,7 @@ const DemoPage = () => {
               className={`${robotoopo.className} text-[#303030] text-base sm:text-xl md:text-2xl lg:text-3xl mt-4 sm:mt-6 ms-6 md:ms-2`}
             >
               <span className={`text-white text-bold ${roboto.className}`}>
-                {title}:
+                {title}
               </span>{" "}
               {description}
             </li>
