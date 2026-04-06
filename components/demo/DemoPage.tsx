@@ -53,14 +53,14 @@ const demoContent = [
     image:
       "https://walking-wise-2025-website-assets.s3.us-east-1.amazonaws.com/Website_Dashboard-Education_PDFs_and_Icons/Icons+for+Website/Icon-Education_Guide.png",
     objectClass: "!object-scale-down",
-    link: "https://walking-wise-2025-website-assets.s3.us-east-1.amazonaws.com/Website_Dashboard-Education_PDFs_and_Icons/PDFs_Guildes_OtherDocs/DEMO_Lesson-Myths_Reality_Walking-Wise.pdf",
+    link: "https://walking-wise-2025-website-assets.s3.us-east-1.amazonaws.com/Classroom+Presentation+Assets/Youth+Lesson+Plans+PDF/Youth_Lesson_Plan-Myths_Reality-Walking_Wise.pdf",
   },
   {
     title: "Class Presentation",
     subtitle: "",
     image:
       "https://walking-wise-2025-website-assets.s3.us-east-1.amazonaws.com/Website_Dashboard-Education_PDFs_and_Icons/Icons+for+Website/Icon-Classroom_Presentations.png",
-    link: "https://walking-wise-2025-website-assets.s3.us-east-1.amazonaws.com/Classroom+Presentation+Assets/Classroom+PowerPoint+Presentations/PowerPoint-Myths%2BReality_WalkingWise-2026.pptx",
+    link: "https://walking-wise-2025-website-assets.s3.us-east-1.amazonaws.com/Classroom+Presentation+Assets/Classroom+PowerPoint+Presentations/PowerPoint-Myths%2BReality_WalkingWise-3-26-2026.pptx",
   },
 ];
 
