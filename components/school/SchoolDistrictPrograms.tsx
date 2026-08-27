@@ -59,6 +59,7 @@ const cardDataTop = [
     bg: "blue",
     features: [
       "5-YEAR TEACHING TRACK",
+      "Student Instruction: ~8 Hours",
       " ",
       "PARENTS & STAFF",
       "#1 Myths & Reality",
@@ -251,17 +252,14 @@ const SchoolDistrictPrograms = () => {
            
            
             <li>
-            <Button onClick={() => (window.location.href = "https://walking-wise-2025-website-assets.s3.us-east-1.amazonaws.com/Website_Dashboard-Education_PDFs_and_Icons/PDFs_Guildes_OtherDocs/Learning+Journey.pdf")}>
+            <Button onClick={() => (window.open("https://walking-wise-2025-website-assets.s3.us-east-1.amazonaws.com/Website_Dashboard-Education_PDFs_and_Icons/PDFs_Guildes_OtherDocs/Learning+Journey.pdf"))}>
               Teaching Track
             </Button>
             </li>
             
           </ul>
         </div>
-        <BodyText className={`mt-4 sm:mt-6`}>
-         
-           .
-        </BodyText>
+        
 
       <div className="grid grid-cols-1 md:grid-cols-6 lg:grid-cols-6 gap-5  items-start">
      {cardDataTop.map((card, idx) => (
