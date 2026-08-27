@@ -21,29 +21,24 @@ import Section from "../ui/Section/Section";
 
 const cardDataTop = [
   {
-    title: "3-YEAR TRACK",
+    title: "LEARNING JOURNEY",
+    subtitle: "",
     bg: "black",
     features: [
-      "PARENTS & STAFF",
-      "#1 Myths & Reality",
+      "Walking Wise prevention curriculum helps students understand the grooming process, vulnerability risks, and the predatory behavior of some adults and peers.",
       " ",
-      "6th GRADE",
-      "#2 Trustworthy vs. Unsafe Adults",
-      "#3 Grooming Process",
-      "#4 Pornography Link",
+      "Rather than presenting all content at once, Walking Wise uses a developmental approach that introduces age-appropriate concepts over five years. ",
       " ",
-      "7th GRADE",
-      "#5 Sextortion Scheme",
-      "#6 Male Victims",
-      "#7 Runaways as Targets",
-      "#8 Rural Risks",
+      "Students receive prevention education annually from grades 6–10, allowing schools to reinforce key safety concepts as students encounter new social, emotional, and digital challenges. ",
       " ",
-      "8th GRADE",
-      "#9 Human Traffickers",
-      "#10 Recruiters",
-      "#11 Familial Traffickers",
-      "#12 Hidden Buyers",
+      "The curriculum consists of 12 lessons delivered through animated videos, classroom presentations, and guided discussions. Schools may teach the lessons during health classes, advisory periods, or as part of other safety or prevention initiatives.",
       " ",
+      " ",
+      "Recommended Implementation",
+      "• Begin with staff and parent education to establish shared understanding and support. ",
+      "• Reinforce learning annually from grades 6–10.",
+      "• Deliver 2–3 student lessons per year, up to 40 minutes per lesson.",
+      "• Adapt discussion depth and activities to meet student maturity levels and local school policies.",
       " ",
       " ",
         ],
@@ -59,31 +54,32 @@ const cardDataTop = [
     high: "9th Grade",
   },
   {
-    title: "5-YEAR TRACK",
+    title: "5-YEAR TEACHING TRACK",
+    subtitle: "Student Instruction: ~8 Hours",
     bg: "blue",
     features: [
       "PARENTS & STAFF",
       "#1 Myths & Reality",
       " ",
-      "6th GRADE",
+      "6th GRADE - Grooming",
       "#2 Trustworthy vs. Unsafe Adults",
       "#3 Grooming Process",
-      "#4 Pornography Link",
       " ",
-      "7th GRADE",
+      "7th GRADE - Online Risks",
+      "#4 Pornography & Exploitation",
       "#5 Sextortion Scheme",
-      "#6 Male Victims",
       " ",
-      "8th GRADE",
+      "8th GRADE - Vulnerability",
+      "#6 Male Victims",
       "#7 Runaways as Targets",
       "#8 Rural Risks",
       " ",
-      "9th GRADE",
+      "9th GRADE - Predators",
       "#9 Human Traffickers",
-      "#10 Recruiters",
+      "#10 Femail and Peer Recruiters",
       " ",
-      "10th GRADE",
-      "#11 Familial Traffickers",
+      "10th GRADE - Hidden Exploitation",
+      "#11 Family Secret",
       "#12 Hidden Buyers",
         ],
     
@@ -183,7 +179,7 @@ const SchoolDistrictPrograms = () => {
             Sustainable Education
           </SectionHeaderText>
           <BodyText className={`mt-4 sm:mt-6`}>
-            Many schools invite guest speakers to address sex trafficking with
+            Many schools invite guest speakers to address sex sexual exploitation 11 pwith
             staff, parents, and students. While a presentation can raise
             important awareness, its impact is often short-lived. Walking Wise
             offers a sustainable, school-led solution—empowering school safety
@@ -245,24 +241,23 @@ const SchoolDistrictPrograms = () => {
           <SectionHeaderText className="text-4xl sm:text-6xl">
             Learning Journey
           </SectionHeaderText>
-          <Image
-            src="/assets/11+.png"
-            alt="Ages 11 plus"
-            width={100}
-            height={100}
-          />
+          
+          <ul
+            className={`${robotoopo.className} text-md md:text-2xl space-y-2`}
+          >
+            
+           
+           
+            <li>
+            <Button onClick={() => (window.location.href = "https://walking-wise-2025-website-assets.s3.us-east-1.amazonaws.com/Website_Dashboard-Education_PDFs_and_Icons/PDFs_Guildes_OtherDocs/Learning+Journey.pdf")}>
+              Teaching Track
+            </Button>
+            </li>
+            
+          </ul>
         </div>
         <BodyText className={`mt-4 sm:mt-6`}>
-          Meaningful learning takes time. By introducing topics gradually over several years, schools can create steady growth in awareness and understanding. Our three- to five-year teaching plan offers a flexible path for 
-          middle and high school students to build knowledge and confidence. Download our 
-          {" "}
-           <a
-            href="https://walking-wise-2025-website-assets.s3.us-east-1.amazonaws.com/Website_Dashboard-Education_PDFs_and_Icons/PDFs_Guildes_OtherDocs/Learning+Journey.pdf"
-            target="_blank"
-            className="underline"
-          >
-            Teaching Track
-          </a>
+         
            .
         </BodyText>
 
@@ -271,23 +266,29 @@ const SchoolDistrictPrograms = () => {
       <div
        key={idx}
        style={blueboxstyle}
-       className={`mt-10 flex flex-col  shadow-lg border p-6 relative col-span-2 
+       className={`mt-10 flex flex-col  shadow-lg  p-6 relative 
 
         grid 
                 ${
                     card.bg === "black"
-                      ? "bg-[#00C1D5] text-[#303030] "
+                      ? "bg-[#FFFFFF] text-[#303030] "
                       : "bg-[#303030]  text-white "
                   } 
                 ${
                     card.bg === "black"
-                      ? "col-start-1 md:col-start-2 "
-                      : "col-start-1 md:col-start-4 "
+                      ? "col-start-1 md:col-start-1 "
+                      : "col-start-1 md:col-start-5 "
+                  } 
+                ${
+                    card.bg === "black"
+                      ? "col-span-1 md:col-span-4 "
+                      : "col-span-1 md:col-span-2 "
                   } 
        `}
       >
        <div className="mb-4 self-start">
         <h1 id={card.title} className="text-4xl sm:text-6xl">{card.title}</h1>
+         <span className="space-y-2 text-sm lg:text-md" >{card.subtitle}</span>
        </div>
        
 
@@ -301,6 +302,10 @@ const SchoolDistrictPrograms = () => {
            return <li className="text-xl sm:text-2xl md:text-2xl text-bold text-italic" >{feature}</li>;
           else if  (feature.includes("PARENTS"))
            return <li className="text-xl sm:text-2xl md:text-2xl text-bold text-italic" >{feature}</li>;
+          else if  (feature.includes("Recommended Implementations"))
+           return <li className="text-2xl sm:text-4xl font-bold uppercase mt-18 mb-4" style="color:#00c1d5" >{feature}</li>;
+          else if  (feature.includes("LEARNING JOURNEY"))
+           return <li className="text-2xl sm:text-4xl font-bold uppercase mt-18 mb-4" style="color:#00c1d5" >{feature}</li>;
           
           else if (feature === " ")
           return <li className="line-short" >&nbsp;</li>;
@@ -332,8 +337,8 @@ const SchoolDistrictPrograms = () => {
           trafficking.
         </BodyText>
         <BodyText className={`mt-4 sm:mt-6 text-white lg:text-white`}>
-          Safety teams are recommended to include school social workers, nurses,
-          resource officers, psychologists, counselors, principals,
+          Safety teams are recommended to include school counselors, social workers, nurses,
+          resource officers, psychologists, principals,
           wellness-focused educators, and members of their local anti-human
           trafficking coalition. With this diverse expertise, these teams are
           well-equipped to provide staff training, raise awareness among parents, and educate students.
@@ -343,7 +348,7 @@ const SchoolDistrictPrograms = () => {
           U.S. Department of Education, Office of Safe and Supportive Schools,
           called{" "}
           <a
-            href="https://safesupportivelearning.ed.gov/sites/default/files/NCSSLE-2021HumanTraffickingGuide-508.pdf"
+            href="https://www.ed.gov/sites/ed/files/documents/human-trafficking/human-trafficking-americas-schools.pdf"
             target="_blank"
             className="underline"
           >
