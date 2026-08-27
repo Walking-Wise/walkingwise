@@ -58,6 +58,8 @@ const cardDataTop = [
     subtitle: "Student Instruction: ~8 Hours",
     bg: "blue",
     features: [
+      "5-YEAR TEACHING TRACK",
+      " ",
       "PARENTS & STAFF",
       "#1 Myths & Reality",
       " ",
