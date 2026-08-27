@@ -15,7 +15,7 @@ import Section from "../ui/Section/Section";
     paddingLeft: '10px !important',
   };
   const blueboxstyle = {
-    paddingLeft: '5vw !important',
+    paddingLeft: '3vw !important',
   };
 
 
@@ -60,6 +60,7 @@ const cardDataTop = [
     features: [
       "5-YEAR TEACHING TRACK",
       "Student Instruction: ~8 Hours",
+      " ",
       " ",
       "PARENTS & STAFF",
       "#1 Myths & Reality",
@@ -303,7 +304,7 @@ const SchoolDistrictPrograms = () => {
           else if  (feature.includes("PARENTS"))
            return <li className="text-xl sm:text-2xl md:text-2xl text-bold text-italic" >{feature}</li>;
           else if  (feature.includes("Recommended Implementations"))
-           return <h2 className="text-2xl sm:text-4xl">{feature}</h2>;
+           return <h2 className="text-xl sm:text-2xl md:text-2xl text-bold text-italic">{feature}</h2>;
           
           else if (feature === " ")
           return <li className="line-short" >&nbsp;</li>;
