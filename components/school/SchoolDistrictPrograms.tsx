@@ -21,7 +21,7 @@ import Section from "../ui/Section/Section";
 
 const cardDataTop = [
   {
-    title: "LEARNING JOURNEY",
+    title: "",
     subtitle: "",
     bg: "black",
     features: [
@@ -303,9 +303,7 @@ const SchoolDistrictPrograms = () => {
           else if  (feature.includes("PARENTS"))
            return <li className="text-xl sm:text-2xl md:text-2xl text-bold text-italic" >{feature}</li>;
           else if  (feature.includes("Recommended Implementations"))
-           return <li className="text-2xl sm:text-4xl font-bold uppercase mt-18 mb-4"  >{feature}</li>;
-          else if  (feature.includes("LEARNING JOURNEY"))
-           return <li className="text-2xl sm:text-4xl font-bold uppercase mt-18 mb-4"  >{feature}</li>;
+           return <h2 className="text-2xl sm:text-4xl">{feature}</h2>;
           
           else if (feature === " ")
           return <li className="line-short" >&nbsp;</li>;
