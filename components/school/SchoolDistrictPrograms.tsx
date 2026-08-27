@@ -286,10 +286,8 @@ const SchoolDistrictPrograms = () => {
                   } 
        `}
       >
-       <div className="mb-4 self-start">
-        <h1 id={card.title} className="text-4xl sm:text-6xl">{card.title}</h1>
-         <span className="space-y-2 text-sm lg:text-md" >{card.subtitle}</span>
-       </div>
+       
+       
        
 
        
@@ -298,7 +296,9 @@ const SchoolDistrictPrograms = () => {
          
 
          {card.features.map((feature, i) => {
-          if  (feature.includes("th GRADE"))
+          if  (feature.includes("TRACK"))
+           return <li><h1 id={card.title} className="text-4xl sm:text-6xl">{feature}</h1></li>;
+          else if  (feature.includes("th GRADE"))
            return <li className="text-xl sm:text-2xl md:text-2xl text-bold text-italic" >{feature}</li>;
           else if  (feature.includes("PARENTS"))
            return <li className="text-xl sm:text-2xl md:text-2xl text-bold text-italic" >{feature}</li>;
