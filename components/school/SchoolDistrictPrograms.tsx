@@ -183,7 +183,7 @@ const SchoolDistrictPrograms = () => {
             Sustainable Education
           </SectionHeaderText>
           <BodyText className={`mt-4 sm:mt-6`}>
-            Many schools invite guest speakers to address sex sexual exploitation 11 pwith
+            Many schools invite guest speakers to address sexual exploitation 11 pwith
             staff, parents, and students. While a presentation can raise
             important awareness, its impact is often short-lived. Walking Wise
             offers a sustainable, school-led solution—empowering school safety
