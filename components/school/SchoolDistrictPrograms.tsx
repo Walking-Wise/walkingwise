@@ -17,7 +17,7 @@ import Section from "../ui/Section/Section";
   const blueboxstyle = {
     paddingLeft: '3vw !important',
   };
-  const bluetextitalic = { color: '#68d2df'; font-style:'italic'};
+  const bluetextitalic = { color: '#68d2df', font-style:'italic'};
 
 const cardDataTop = [
   {
@@ -267,7 +267,7 @@ const SchoolDistrictPrograms = () => {
       <div
        key={idx}
        style={blueboxstyle}
-       className={`mt-10 flex flex-col  shadow-lg  p-6 relative 
+       className={`mt-10 flex flex-col   p-6 relative 
 
         grid 
                 ${
