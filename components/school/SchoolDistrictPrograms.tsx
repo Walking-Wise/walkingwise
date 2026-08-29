@@ -300,11 +300,11 @@ const SchoolDistrictPrograms = () => {
           if  (feature.includes("TRACK"))
            return <li><h1 id={card.title} className="text-4xl sm:text-6xl">{feature}</h1></li>;
           else if  (feature.includes("th GRADE"))
-           return <li className="text-xl sm:text-2xl md:text-2xl text-bold text-italic" style={bluetext} >{feature}</li>;
+           return <li className="text-xl sm:text-2xl md:text-2xl text-bold italic" style={bluetext} >{feature}</li>;
           else if  (feature.includes("PARENTS"))
-           return <li className="text-xl sm:text-2xl md:text-2xl text-bold text-italic" style={bluetext} >{feature}</li>;
+           return <li className="text-xl sm:text-2xl md:text-2xl text-bold italic" style={bluetext} >{feature}</li>;
           else if  (feature.includes("Recommended Implementations"))
-           return <h2 className="text-xl sm:text-2xl md:text-2xl text-bold text-italic" >{feature}</h2>;
+           return <h2 className="text-xl sm:text-2xl md:text-2xl text-bold italic" >{feature}</h2>;
           
           else if (feature === " ")
           return <li className="line-short" >&nbsp;</li>;
