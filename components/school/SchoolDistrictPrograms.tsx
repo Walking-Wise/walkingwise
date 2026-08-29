@@ -17,7 +17,7 @@ import Section from "../ui/Section/Section";
   const blueboxstyle = {
     paddingLeft: '3vw !important',
   };
-  const bluetextitalic = { color: '#68d2df', font-style:'italic'};
+  const bluetextitalic = { color: '#68d2df'};
 
 const cardDataTop = [
   {
