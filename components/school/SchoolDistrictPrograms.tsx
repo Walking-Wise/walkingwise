@@ -262,7 +262,7 @@ const SchoolDistrictPrograms = () => {
         </div>
         
 
-      <div className="grid grid-cols-1 md:grid-cols-6 lg:grid-cols-6 gap-5  items-start">
+      <div className="grid grid-cols-1 md:grid-cols-12 lg:grid-cols-12 gap-5  items-start">
      {cardDataTop.map((card, idx) => (
       <div
        key={idx}
@@ -277,13 +277,13 @@ const SchoolDistrictPrograms = () => {
                   } 
                 ${
                     card.bg === "black"
-                      ? "col-start-1 md:col-start-1 "
-                      : "col-start-1 md:col-start-5 "
+                      ? "col-start-1 md:col-start-2 "
+                      : "col-start-1 md:col-start-8 "
                   } 
                 ${
                     card.bg === "black"
-                      ? "col-span-1 md:col-span-4 "
-                      : "col-span-1 md:col-span-2 "
+                      ? "col-span-1 md:col-span-6 "
+                      : "col-span-1 md:col-span-4 "
                   } 
        `}
       >
