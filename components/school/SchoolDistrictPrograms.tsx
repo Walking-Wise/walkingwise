@@ -17,7 +17,10 @@ import Section from "../ui/Section/Section";
   const blueboxstyle = {
     paddingLeft: '3vw !important',
   };
-  const bluetext = { color: '#68d2df'};
+  const blackpadding = {
+    paddingLeft: '3vw !important',
+  };
+  const bluetext = { color: '#68d2df', paddingLeft: '3vw !important',};
 
 const cardDataTop = [
   {
@@ -273,11 +276,16 @@ const SchoolDistrictPrograms = () => {
 
          {card.features.map((feature, i) => {
           if  (feature.includes("TRACK"))
-           return <li><h1 id={card.title} className="text-4xl sm:text-6xl">{feature}</h1></li>;
+           return <li><h1 id={card.title} className="text-4xl sm:text-6xl"style={blackpadding}>{feature}</h1></li>;
           else if  (feature.includes("th GRADE"))
            return <li className="text-xl sm:text-2xl md:text-2xl text-bold italic" style={bluetext} >{feature}</li>;
+          else if (feature.includes("#"))
+          return <li key={i} className="text-xl sm:text-2xl md:text-3xl" style={blackpadding}>{feature}</li>;
+          else if (feature.includes("Student instruction"))
+          return <li key={i} className="text-xl sm:text-2xl md:text-3xl" style={blackpadding}>{feature}</li>;
           else if  (feature.includes("PARENTS"))
            return <li className="text-xl sm:text-2xl md:text-2xl text-bold italic" style={bluetext} >{feature}</li>;
+
           else if  (feature.includes("Recommended Implementations"))
            return <h2 className="text-xl sm:text-2xl md:text-2xl text-bold italic" >{feature}</h2>;
  
@@ -285,7 +293,7 @@ const SchoolDistrictPrograms = () => {
            return <h1 className="text-3xl sm:text-4xl md:text-6xl text-[#303030]">Learning Journey</h1>;
           
           else if (feature === "BUTTON1")
-          return <li className="line-short" ><button type="button" className="bg-[#9d1be3]mx-autocursor-pointer text-white px-6 md:px-10 py-2 md:py-4 rounded-4xl transition-colors md:text-lg whitespace-nowrap flexitems-centerjustify-centerroboto_8d2838e4-module__oXDxdq__className">ENROLL Today!&nbsp;&nbsp;</button>
+          return <li className="line-short" ><button type="button" className="bg-[#9d1be3] mx-auto cursor-pointer  text-white  px-6 md:px-10 py-2 md:py-4  rounded-4xl  transition-colors  md:text-lg  whitespace-nowrap  flex items-center justify-center roboto_8d2838e4-module__oXDxdq__className">ENROLL Today!&nbsp;&nbsp;</button>
          </li>;
 
           else if (feature === "BUTTON2")
@@ -295,6 +303,7 @@ const SchoolDistrictPrograms = () => {
 
           else if (feature === " ")
           return <li className="line-short" >&nbsp;</li>;
+
 
 
           else
