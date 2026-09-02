@@ -223,8 +223,8 @@ const SchoolDistrictPrograms = () => {
       >
         {/* Left Content */}
         <div className="flex-1">
-          <div class="grid grid-cols-1 md:grid-cols-12 lg:grid-cols-12 gap-5  items-start">
-          <div class="mt-10 flex flex-col relative grid 
+          <div className="grid grid-cols-1 md:grid-cols-12 lg:grid-cols-12 gap-5  items-start">
+          <div className="mt-10 flex flex-col relative grid 
                 bg-[#FFFFFF] text-[#303030]  
                 col-start-1 md:col-start-1  
                 col-span-1 md:col-span-11  
