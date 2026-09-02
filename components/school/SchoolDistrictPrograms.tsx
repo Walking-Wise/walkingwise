@@ -241,6 +241,7 @@ const SchoolDistrictPrograms = () => {
      {cardDataTop.map((card, idx) => (
       <div
        key={idx}
+       ${card.bg === "black" ? style="":style="{blueboxstyle}"}
        className={`mt-10 flex flex-col relative 
 
         grid 
