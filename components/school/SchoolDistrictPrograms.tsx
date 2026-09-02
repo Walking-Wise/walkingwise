@@ -18,7 +18,7 @@ import Section from "../ui/Section/Section";
     paddingLeft: '3vw !important',
   };
   const blackpaddingtop = {
-    paddingLeft: '3vw !important', paddingTop: 1vh,
+    paddingLeft: '3vw !important', paddingTop: '1vh',
   };
   const blackpadding = {
     paddingLeft: '3vw !important',
