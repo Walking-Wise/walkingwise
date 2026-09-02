@@ -241,7 +241,7 @@ const SchoolDistrictPrograms = () => {
      {cardDataTop.map((card, idx) => (
       <div
        key={idx}
-       ${card.bg === "black" ? style="":style="{blueboxstyle}"}
+       
        className={`mt-10 flex flex-col relative 
 
         grid 
@@ -253,7 +253,7 @@ const SchoolDistrictPrograms = () => {
                 ${
                     card.bg === "black"
                       ? "col-start-1 md:col-start-1 "
-                      : "col-start-1 md:col-start-7 "
+                      : "col-start-1 md:col-start-7 pl-2"
                   } 
                 ${
                     card.bg === "black"
@@ -316,7 +316,17 @@ const SchoolDistrictPrograms = () => {
 
 
       {/* Safety Teams Section */}
-      <Section bgColor="[#303030]" className="text-white">
+
+      <div
+
+        className="bg-[#303030]  text-white flex flex-col lg:flex-row gap-10 
+        pt-7 md:pt-15 pb-3 md:pb-16 pl-[7vw] pr-[7vw]
+        "
+       
+      >
+
+      <div className="flex-1">
+
         <SectionHeaderText color="white">School Safety Teams</SectionHeaderText>
         <BodyText className={`mt-4 sm:mt-6 text-white lg:text-white`}>
           In 2021, the U.S. Department of Education provided guidelines for
@@ -345,7 +355,8 @@ const SchoolDistrictPrograms = () => {
           </a>
           .
         </BodyText>
-      </Section>
+        </div></div>
+
     </>
   );
 };
