@@ -225,7 +225,7 @@ const SchoolDistrictPrograms = () => {
         <div className="flex-1">
           <div className="grid grid-cols-1 md:grid-cols-12 lg:grid-cols-12 gap-5  items-start">
           <div className="mt-10 flex flex-col relative grid 
-                bg-[#FFFFFF] text-[#303030]  
+                 
                 col-start-1 md:col-start-1  
                 col-span-1 md:col-span-11  
                ">
@@ -351,6 +351,12 @@ const SchoolDistrictPrograms = () => {
       >
 
       <div className="flex-1">
+          <div className="grid grid-cols-1 md:grid-cols-12 lg:grid-cols-12 gap-5  items-start">
+          <div className="mt-10 flex flex-col relative grid 
+                 
+                col-start-1 md:col-start-1  
+                col-span-1 md:col-span-11  
+               ">
 
         <SectionHeaderText color="white">School Safety Teams</SectionHeaderText>
         <BodyText className={`mt-4 sm:mt-6 text-white lg:text-white`}>
@@ -380,6 +386,7 @@ const SchoolDistrictPrograms = () => {
           </a>
           .
         </BodyText>
+        </div></div>
         </div></div>
 
     </>
