@@ -47,6 +47,7 @@ const cardDataTop = [
       " ",
       " ",
       "BUTTON1",
+      " "
         ],
   
 
@@ -92,7 +93,9 @@ const cardDataTop = [
       "#11 Family Secret",
       "#12 Hidden Buyers",
       " ",
-      "BUTTON2"
+      "BUTTON2",
+      " ",
+      " ",
         ],
     
     topics: [
@@ -256,12 +259,12 @@ const SchoolDistrictPrograms = () => {
                 ${
                     card.bg === "black"
                       ? "col-start-1 md:col-start-1 "
-                      : "col-start-1 md:col-start-7 pl-2"
+                      : "col-start-1 md:col-start-7"
                   } 
                 ${
                     card.bg === "black"
                       ? "col-span-1 md:col-span-6 "
-                      : "col-span-1 md:col-span-6 "
+                      : "col-span-1 md:col-span-5 "
                   } 
        `}
       >
@@ -281,7 +284,7 @@ const SchoolDistrictPrograms = () => {
            return <li className="text-xl sm:text-2xl md:text-2xl text-bold italic" style={bluetext} >{feature}</li>;
           else if (feature.includes("#"))
           return <li key={i} className="text-xl sm:text-2xl md:text-3xl" style={blackpadding}>{feature}</li>;
-          else if (feature.includes("Student instruction"))
+          else if (feature.includes("Student"))
           return <li key={i} className="text-xl sm:text-2xl md:text-3xl" style={blackpadding}>{feature}</li>;
           else if  (feature.includes("PARENTS"))
            return <li className="text-xl sm:text-2xl md:text-2xl text-bold italic" style={bluetext} >{feature}</li>;
@@ -307,7 +310,7 @@ const SchoolDistrictPrograms = () => {
 
 
           else
-          return <li key={i} className="text-xl sm:text-2xl md:text-3xl" style={listyle1}>{feature}</li>;
+          return <li key={i} className="text-xl sm:text-2xl md:text-3xl">{feature}</li>;
 
          })}
          
