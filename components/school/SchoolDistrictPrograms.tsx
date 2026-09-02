@@ -25,6 +25,8 @@ const cardDataTop = [
     subtitle: "",
     bg: "black",
     features: [
+      "HEADERL",
+      " ",
       "Walking Wise prevention curriculum helps students understand the grooming process, vulnerability risks, and the predatory behavior of some adults and peers.",
       " ",
       "Rather than presenting all content at once, Walking Wise uses a developmental approach that introduces age-appropriate concepts over five years. ",
@@ -41,6 +43,7 @@ const cardDataTop = [
       "• Adapt discussion depth and activities to meet student maturity levels and local school policies.",
       " ",
       " ",
+      "BUTTON1",
         ],
   
 
@@ -216,27 +219,7 @@ const SchoolDistrictPrograms = () => {
           
         </div>
 
-        {/* Right Box */}
-        <div className=" md:max-h-[400px]  p-6 sm:p-8 relative">
-          
-          <ul
-            className={`${robotoopo.className} text-md md:text-2xl space-y-2`}
-          >
-            
-            <li>
-              <Button onClick={() => (window.location.href = "/demo")}>
-              DEMO Curriculum
-            </Button>
-            </li>
-           
-            <li>
-            <Button onClick={() => (window.location.href = "/pricing-youth-curriculum")}>
-              ENROLL Today!&nbsp;&nbsp;
-            </Button>
-            </li>
-            
-          </ul>
-        </div>
+        
       </div>
 
      {/* School Program Rollout is now Learning Journey*/}
@@ -245,7 +228,7 @@ const SchoolDistrictPrograms = () => {
         
 <div
 
-        className="bg-[#00C1D5] text-[#303030] flex flex-col lg:flex-row gap-10 
+        className="bg-white text-[#303030] flex flex-col lg:flex-row gap-10 
         pt-7 md:pt-15 pb-3 md:pb-16 pl-[7vw] pr-[7vw]
         "
        
@@ -295,9 +278,45 @@ const SchoolDistrictPrograms = () => {
            return <li className="text-xl sm:text-2xl md:text-2xl text-bold italic" style={bluetext} >{feature}</li>;
           else if  (feature.includes("Recommended Implementations"))
            return <h2 className="text-xl sm:text-2xl md:text-2xl text-bold italic" >{feature}</h2>;
+ 
+          else if  (feature=== "HEADERL")
+           return <h1 class="text-3xl sm:text-4xl md:text-6xl text-[#303030]">Learning Journey</h1>;
           
+          else if (feature === "BUTTON1")
+          return <li className="line-short" ><button type="button" class="bg-[#9d1be3]
+         mx-auto
+         cursor-pointer 
+         text-white 
+         px-6 md:px-10 py-2 md:py-4 
+         rounded-4xl 
+         transition-colors 
+         md:text-lg 
+         whitespace-nowrap 
+         flex
+         items-center
+         justify-center
+         roboto_8d2838e4-module__oXDxdq__className">ENROLL Today!&nbsp;&nbsp;</button>
+         &nbsp;&nbsp;
+         <button type="button" class="bg-[#9d1be3]
+         mx-auto
+         cursor-pointer 
+         text-white 
+         px-6 md:px-10 py-2 md:py-4 
+         rounded-4xl 
+         transition-colors 
+         md:text-lg 
+         whitespace-nowrap 
+         flex
+         items-center
+         justify-center
+         roboto_8d2838e4-module__oXDxdq__className">Teaching Track</button>
+
+         </li>;
+
           else if (feature === " ")
           return <li className="line-short" >&nbsp;</li>;
+
+
           else
           return <li key={i} className="text-xl sm:text-2xl md:text-3xl" style={listyle1}>{feature}</li>;
 
