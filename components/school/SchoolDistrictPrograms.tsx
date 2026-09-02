@@ -297,7 +297,7 @@ const SchoolDistrictPrograms = () => {
            return <li className="text-xl sm:text-2xl md:text-2xl text-bold italic" style={bluetext} >{feature}</li>;
           else if (feature.includes("#"))
           return <li key={i} className="text-xl sm:text-2xl md:text-3xl" style={blackpadding}>{feature}</li>;
-          else if (feature.includes("Student"))
+          else if (feature.includes("Student "))
           return <li key={i} className="text-xl sm:text-2xl md:text-3xl" style={blackpadding}>{feature}</li>;
           else if  (feature.includes("PARENTS"))
            return <li className="text-xl sm:text-2xl md:text-2xl text-bold italic" style={bluetext} >{feature}</li>;
