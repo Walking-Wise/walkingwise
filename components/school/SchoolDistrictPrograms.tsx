@@ -41,6 +41,7 @@ const cardDataTop = [
       "• Adapt discussion depth and activities to meet student maturity levels and local school policies.",
       " ",
       " ",
+      "BUTTON1",
         ],
   
 
@@ -85,6 +86,8 @@ const cardDataTop = [
       "10th GRADE - Hidden Exploitation",
       "#11 Family Secret",
       "#12 Hidden Buyers",
+      " ",
+      "BUTTON2",
         ],
     
     topics: [
@@ -216,58 +219,19 @@ const SchoolDistrictPrograms = () => {
           
         </div>
 
-        {/* Right Box */}
-        <div className=" md:max-h-[400px]  p-6 sm:p-8 relative">
-          
-          <ul
-            className={`${robotoopo.className} text-md md:text-2xl space-y-2`}
-          >
-            
-            <li>
-              <Button onClick={() => (window.location.href = "/demo")}>
-              DEMO Curriculum
-            </Button>
-            </li>
-           
-            <li>
-            <Button onClick={() => (window.location.href = "/pricing-youth-curriculum")}>
-              ENROLL Today!&nbsp;&nbsp;
-            </Button>
-            </li>
-            
-          </ul>
-        </div>
-      </div>
-
-     {/* School Program Rollout is now Learning Journey*/}
-      <Section bgColor="white">
-        <div className="flex justify-between items-center">
-          <SectionHeaderText className="text-4xl sm:text-6xl">
-            Learning Journey
-          </SectionHeaderText>
-          
-          <ul
-            className={`${robotoopo.className} text-md md:text-2xl space-y-2`}
-          >
-            
-           
-           
-            <li>
-            <Button onClick={() => (window.open("https://walking-wise-2025-website-assets.s3.us-east-1.amazonaws.com/Website_Dashboard-Education_PDFs_and_Icons/PDFs_Guildes_OtherDocs/Learning+Journey.pdf"))}>
-              Teaching Track
-            </Button>
-            </li>
-            
-          </ul>
-        </div>
+       
         
-
-      <div className="grid grid-cols-1 md:grid-cols-12 lg:grid-cols-12 gap-5  items-start">
+        <div
+        className="       text-[#303030] flex flex-col lg:flex-row gap-10 
+        pt-7 md:pt-15 pb-3 md:pb-16 pl-[7vw] pr-[7vw] bg-white
+        ">
+        <div className="flex-1"> 
+        <div className="grid grid-cols-1 md:grid-cols-12 lg:grid-cols-12 gap-5  items-start">
      {cardDataTop.map((card, idx) => (
       <div
        key={idx}
        style={blueboxstyle}
-       className={`mt-10 flex flex-col   p-6 relative 
+       className={`mt-10 flex flex-col relative 
 
         grid 
                 ${
@@ -277,13 +241,13 @@ const SchoolDistrictPrograms = () => {
                   } 
                 ${
                     card.bg === "black"
-                      ? "col-start-1 md:col-start-2 "
-                      : "col-start-1 md:col-start-8 "
+                      ? "col-start-1 md:col-start-1 "
+                      : "col-start-1 md:col-start-6 "
                   } 
                 ${
                     card.bg === "black"
                       ? "col-span-1 md:col-span-6 "
-                      : "col-span-1 md:col-span-4 "
+                      : "col-span-1 md:col-span-6 "
                   } 
        `}
       >
@@ -306,6 +270,38 @@ const SchoolDistrictPrograms = () => {
           else if  (feature.includes("Recommended Implementations"))
            return <h2 className="text-xl sm:text-2xl md:text-2xl text-bold italic" >{feature}</h2>;
           
+          else if (feature === "BUTTON1")
+          return <li className="line-short" >
+        <button type="button" class="bg-[#9d1be3]
+         mx-auto 
+         cursor-pointer 
+         text-white 
+         px-6 md:px-10 py-2 md:py-4 
+         rounded-4xl     
+         transition-colors 
+         md:text-lg 
+         whitespace-nowrap 
+         flex
+         items-center
+         justify-center
+         roboto_8d2838e4-module__oXDxdq__className">Teaching Track</button>
+          </li>;
+          else if (feature === "BUTTON2")
+          return <li className="line-short" >
+        <button type="button" class="bg-[#9d1be3]
+         mx-auto
+         cursor-pointer 
+         text-white 
+         px-6 md:px-10 py-2 md:py-4 
+         rounded-4xl 
+         transition-colors 
+         md:text-lg 
+         whitespace-nowrap 
+         flex
+         items-center
+         justify-center
+         roboto_8d2838e4-module__oXDxdq__className">ENROLL Today!&nbsp;&nbsp;</button>
+          </li>;
           else if (feature === " ")
           return <li className="line-short" >&nbsp;</li>;
           else
@@ -322,11 +318,18 @@ const SchoolDistrictPrograms = () => {
       </div>
      ))}
     </div>
-        
-      </Section>
+
+    </div>
+    </div>
+
 
       {/* Safety Teams Section */}
-      <Section bgColor="[#303030]" className="text-white">
+
+      <div
+        className="   bg-[#303030]  text-white flex flex-col lg:flex-row gap-10 
+        pt-7 md:pt-15 pb-3 md:pb-16 pl-[7vw] pr-[7vw] bg-white
+        ">
+        <div className="flex-1"> 
         <SectionHeaderText color="white">School Safety Teams</SectionHeaderText>
         <BodyText className={`mt-4 sm:mt-6 text-white lg:text-white`}>
           In 2021, the U.S. Department of Education provided guidelines for
@@ -355,7 +358,9 @@ const SchoolDistrictPrograms = () => {
           </a>
           .
         </BodyText>
-      </Section>
+        </div>
+        </div>
+
     </>
   );
 };
