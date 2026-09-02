@@ -88,6 +88,8 @@ const cardDataTop = [
       "10th GRADE - Hidden Exploitation",
       "#11 Family Secret",
       "#12 Hidden Buyers",
+      " ",
+      "BUTTON2"
         ],
     
     topics: [
@@ -239,7 +241,6 @@ const SchoolDistrictPrograms = () => {
      {cardDataTop.map((card, idx) => (
       <div
        key={idx}
-       style={blueboxstyle}
        className={`mt-10 flex flex-col relative 
 
         grid 
@@ -284,7 +285,10 @@ const SchoolDistrictPrograms = () => {
           
           else if (feature === "BUTTON1")
           return <li className="line-short" ><button type="button" className="bg-[#9d1be3]mx-autocursor-pointer text-white px-6 md:px-10 py-2 md:py-4 rounded-4xl transition-colors md:text-lg whitespace-nowrap flexitems-centerjustify-centerroboto_8d2838e4-module__oXDxdq__className">ENROLL Today!&nbsp;&nbsp;</button>
-         &nbsp;&nbsp;
+         </li>;
+
+          else if (feature === "BUTTON2")
+          return <li className="line-short" >
          <button type="button" className="bg-[#9d1be3] mx-auto cursor-pointer  text-white  px-6 md:px-10 py-2 md:py-4  rounded-4xl  transition-colors  md:text-lg  whitespace-nowrap  flex items-center justify-center roboto_8d2838e4-module__oXDxdq__className">Teaching Track</button>
          </li>;
 
