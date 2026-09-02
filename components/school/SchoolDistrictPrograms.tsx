@@ -17,6 +17,9 @@ import Section from "../ui/Section/Section";
   const blueboxstyle = {
     paddingLeft: '3vw !important',
   };
+  const blackpaddingtop = {
+    paddingLeft: '3vw !important', paddingTop: 1vh,
+  };
   const blackpadding = {
     paddingLeft: '3vw !important',
   };
@@ -220,11 +223,21 @@ const SchoolDistrictPrograms = () => {
       >
         {/* Left Content */}
         <div className="flex-1">
+          <div class="grid grid-cols-1 md:grid-cols-12 lg:grid-cols-12 gap-5  items-start">
+          <div class="mt-10 flex flex-col relative grid 
+                bg-[#FFFFFF] text-[#303030]  
+                col-start-1 md:col-start-1  
+                col-span-1 md:col-span-11  
+               ">
+       
            <SectionHeaderText>Adaptable Curriculum</SectionHeaderText>
+          
           <BodyText className={`mt-4 `}>
             Our curriculum is designed for flexibility, enabling educators to tailor materials to align with school policies and protocols, age appropriateness, teaching styles, and available class time. 
           </BodyText>
           
+          </div>
+          </div>
         </div>
 
         
@@ -279,7 +292,7 @@ const SchoolDistrictPrograms = () => {
 
          {card.features.map((feature, i) => {
           if  (feature.includes("TRACK"))
-           return <li><h1 id={card.title} className="text-4xl sm:text-6xl"style={blackpadding}>{feature}</h1></li>;
+           return <li><h1 id={card.title} className="text-3xl sm:text-4xl md:text-6xl " style={blackpaddingtop}>{feature}</h1></li>;
           else if  (feature.includes("th GRADE"))
            return <li className="text-xl sm:text-2xl md:text-2xl text-bold italic" style={bluetext} >{feature}</li>;
           else if (feature.includes("#"))
