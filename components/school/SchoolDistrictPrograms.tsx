@@ -309,7 +309,10 @@ const SchoolDistrictPrograms = () => {
            return <h1 className="text-3xl sm:text-4xl md:text-6xl text-[#303030]">Learning Journey</h1>;
           
           else if (feature === "BUTTON1")
-          return <li className="line-short" ><a href="https://www.walkingwise.com/pricing-youth-curriculum" target="_blank" className="bg-[#9d1be3] mx-auto cursor-pointer  text-white  px-6 md:px-10 py-2 md:py-4  rounded-4xl  transition-colors  md:text-lg  whitespace-nowrap  flex items-center justify-center roboto_8d2838e4-module__oXDxdq__className">ENROLL Today!&nbsp;&nbsp;</a>
+          return <li className="line-short" >
+            <Button onClick={() => (window.location.href = "https://www.walkingwise.com/pricing-youth-curriculum")}>
+              ENROLL Today!
+            </Button>
          </li>;
 
           else if (feature === "BUTTON2")
