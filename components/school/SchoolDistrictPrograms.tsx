@@ -310,15 +310,15 @@ const SchoolDistrictPrograms = () => {
            return <h1 className="text-3xl sm:text-4xl md:text-6xl text-[#303030]">Learning Journey</h1>;
           
           else if (feature === "BUTTON1")
-          return <li className="line-short" style={centerbutton}>
-            <Button onClick={() => (window.location.href = "https://www.walkingwise.com/pricing-youth-curriculum")}>
+          return <li className="line-short" >
+            <Button className="mx-auto" onClick={() => (window.location.href = "https://www.walkingwise.com/pricing-youth-curriculum")}>
               ENROLL Today!
             </Button>
          </li>;
 
           else if (feature === "BUTTON2")
-          return <li className="line-short"  style={centerbutton} >
-            <Button onClick={() => (window.location.href = "https://walking-wise-assets.s3.us-east-1.amazonaws.com/Learning+Journey+Walking+Wise.pdf")}>
+          return <li className="line-short"   >
+            <Button className="mx-auto"  onClick={() => (window.location.href = "https://walking-wise-assets.s3.us-east-1.amazonaws.com/Learning+Journey+Walking+Wise.pdf")}>
           Teaching Track
           </Button>
          </li>;
