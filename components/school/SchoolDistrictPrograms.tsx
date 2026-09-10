@@ -303,7 +303,7 @@ const SchoolDistrictPrograms = () => {
           else if  (feature.includes("PARENTS"))
            return <li className="text-xl sm:text-2xl md:text-2xl text-bold italic" style={bluetext} >{feature}</li>;
 
-          else if  (feature.includes("Recommended Implementations"))
+          else if  (feature.includes("Recommended Implementation"))
            return <h2 className="text-xl sm:text-2xl md:text-2xl text-bold italic" >{feature}</h2>;
  
           else if  (feature=== "HEADERL")
