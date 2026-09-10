@@ -24,7 +24,7 @@ import Section from "../ui/Section/Section";
     paddingLeft: '3vw !important',
   };
   const bluetext = { color: '#68d2df', paddingLeft: '3vw !important',};
-  const centerbutton = { textAlign:'center !important',};
+  const centerbutton = { textAlign: 'center' as const };
 
 const cardDataTop = [
   {
